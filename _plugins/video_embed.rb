@@ -14,7 +14,7 @@ class YouTube < Liquid::Tag
   end
 
   def render(context)
-    "<div class=\"responsive-video-container\"><iframe width=\"#{@width}\" height=\"#{@height}\" data-src=\"https://www.youtube-nocookie.com/embed/#{@id}?showinfo=0\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen class=\"lazyload\"></iframe></div>"
+    "<div class=\"responsive-video-container\"><iframe width=\"#{@width}\" height=\"#{@height}\" src=\"https://www.youtube-nocookie.com/embed/#{@id}?showinfo=0\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen class=\"lazyload\"></iframe></div>"
   end
 
   Liquid::Template.register_tag("youtube", self)
