@@ -11,6 +11,7 @@ url: "https://www.joshuadavidthomas.com" # the base hostname & protocol for your
 twitter_username: jimmyjosh
 github_username:  joshuadavidthomas
 instagram_username: jimmyjosh
+itchio_username: joshuadavidthomas
 
 # Build settings
 markdown: kramdown
