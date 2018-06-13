@@ -11,4 +11,4 @@ He works mainly within the Microsoft Windows environment, though he has been kno
 
 During his free time he enjoys cooking for his wife and playing with his 10-yr-old beagle Buster. He currently is obsessed with making the perfect homemade pizza dough.
 
-You can say hi via [email](mailto:contact@joshuadavidthomas.com).
+If you are interested in hiring me, you can view my up-to-date [resume](https://drive.google.com/file/d/1V2KL5vjbBWJ5V3BiM3qheILJduaHHYMl/view?usp=sharing). Or if you just want to say hi, [email me](mailto:contact@joshuadavidthomas.com).
