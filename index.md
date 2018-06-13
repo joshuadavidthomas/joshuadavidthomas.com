@@ -5,10 +5,10 @@
 layout: defaulthome
 ---
 
-Josh Thomas is a Junior System Administrator in Birmingham, AL.
+Josh Thomas is a Junior System Administrator currently located in Birmingham, AL.
 
-He currently works mainly within the Microsoft Windows environment, though he has been known to dabble in the GPL/FOSS world of Ubuntu and CentOS during his free time.
+He works mainly within the Microsoft Windows environment, though he has been known to dabble/push his employer towards the GPL/FOSS world of Ubuntu and CentOS.
 
-During his free time he enjoys cooking for his wife and playing with his 10-yr-old beagle Buster.
+During his free time he enjoys cooking for his wife and playing with his 10-yr-old beagle Buster. He currently is obsessed with making the perfect homemade pizza dough.
 
 You can say hi via [email](mailto:contact@joshuadavidthomas.com).
