@@ -3,11 +3,12 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: defaulthome
+title: HOMEPAGE
 ---
 
 Josh Thomas is a Junior System Administrator currently located in Birmingham, AL.
 
-He works mainly within the Microsoft Windows environment, though he has been known to dabble in the GPL/FOSS world of Ubuntu and CentOS & in the future of containers with Docker.
+He works mainly within the Microsoft Windows environment, though he has been known to dabble in the GNU/FOSS world of Ubuntu and CentOS & in the future of containers with Docker.
 
 During his free time he enjoys cooking for his wife and playing with his 10-yr-old beagle Buster. He is currently obsessed with making the perfect homemade pizza dough.
 
