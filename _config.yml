@@ -4,10 +4,17 @@ description: >- # this means to ignore newlines until "baseurl:"
   WEBSITE
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.joshuadavidthomas.com" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /:title/
 
 # social
 twitter_username: jimmyjosh
 github_username:  joshuadavidthomas
+
+show_excerpts: true
+header_pages:
+  - index.md
+  - blog.md
+  - cv.md
 
 # Build settings
 markdown: kramdown
@@ -23,3 +30,10 @@ exclude:
  - vendor/cache/
  - vendor/gems/
  - vendor/ruby/
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      permalink: /blog/:title/
