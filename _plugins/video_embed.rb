@@ -5,7 +5,6 @@ module Jekyll
 
     Hosts = {
       "ted"     => ->(id) { "https://embed-ssl.ted.com/talks/#{id}.html" },
-      "ustream" => ->(id) { "https://ustream.tv/embed/#{id}" },
       "vimeo"   => ->(id) { "https://player.vimeo.com/video/#{id}" },
       "youtube" => ->(id) { "https://youtube.com/embed/#{id}" },
       "twitch"  => ->(id) { "https://player.twitch.tv/?autoplay=false&muted=false&channel=#{id}" },
