@@ -13,8 +13,6 @@ github_username:  joshuadavidthomas
 show_excerpts: true
 header_pages:
   - index.md
-  - blog.md
-  - cv.md
 
 # Build settings
 markdown: kramdown
