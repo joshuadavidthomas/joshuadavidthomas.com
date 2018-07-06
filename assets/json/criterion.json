@@ -1,0 +1,8948 @@
+[
+  {
+    "Spine #": 1.0,
+    "Title": "Grand Illusion",
+    "Director": "Jean Renoir",
+    "Year": "1937",
+    "Country": "France"
+  },
+  {
+    "Spine #": 2.0,
+    "Title": "Seven Samurai",
+    "Director": "Akira Kurosawa",
+    "Year": "1954",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 3.0,
+    "Title": "The Lady Vanishes",
+    "Director": "Alfred Hitchcock",
+    "Year": "1938",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 4.0,
+    "Title": "Amarcord",
+    "Director": "Federico Fellini",
+    "Year": "1973",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 5.0,
+    "Title": "The 400 Blows",
+    "Director": "Fran\u00e7ois Truffaut",
+    "Year": "1959",
+    "Country": "France"
+  },
+  {
+    "Spine #": 6.0,
+    "Title": "Beauty and the Beast",
+    "Director": "Jean Cocteau",
+    "Year": "1946",
+    "Country": "France"
+  },
+  {
+    "Spine #": 7.0,
+    "Title": "A Night to Remember",
+    "Director": "Roy Ward Baker",
+    "Year": "1958",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 8.0,
+    "Title": "The Killer",
+    "Director": "John Woo",
+    "Year": "1989",
+    "Country": "Hong Kong"
+  },
+  {
+    "Spine #": 9.0,
+    "Title": "Hard Boiled",
+    "Director": "John Woo",
+    "Year": "1992",
+    "Country": "Hong Kong"
+  },
+  {
+    "Spine #": 10.0,
+    "Title": "Walkabout",
+    "Director": "Nicolas Roeg",
+    "Year": "1971",
+    "Country": "Australia"
+  },
+  {
+    "Spine #": 11.0,
+    "Title": "The Seventh Seal",
+    "Director": "Ingmar Bergman",
+    "Year": "1957",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 12.0,
+    "Title": "This Is Spinal Tap",
+    "Director": "Rob Reiner",
+    "Year": "1984",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 13.0,
+    "Title": "The Silence of the Lambs",
+    "Director": "Jonathan Demme",
+    "Year": "1991",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 14.0,
+    "Title": "Samurai I: Musashi Miyamoto",
+    "Director": "Hiroshi Inagaki",
+    "Year": "1954",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 15.0,
+    "Title": "Samurai II: Duel at Ichijoji Temple",
+    "Director": "Hiroshi Inagaki",
+    "Year": "1955",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 16.0,
+    "Title": "Samurai III: Duel at Ganryu Island",
+    "Director": "Hiroshi Inagaki",
+    "Year": "1956",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 17.0,
+    "Title": "Sal\u00f2, or The 120 Days of Sodom",
+    "Director": "Pier Paolo Pasolini",
+    "Year": "1976",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 18.0,
+    "Title": "The Naked Kiss",
+    "Director": "Samuel Fuller",
+    "Year": "1964",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 19.0,
+    "Title": "Shock Corridor",
+    "Director": "Samuel Fuller",
+    "Year": "1963",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 20.0,
+    "Title": "Sid & Nancy",
+    "Director": "Alex Cox",
+    "Year": "1986",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 21.0,
+    "Title": "Dead Ringers",
+    "Director": "David Cronenberg",
+    "Year": "1988",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 22.0,
+    "Title": "Summertime",
+    "Director": "David Lean",
+    "Year": "1955",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 23.0,
+    "Title": "RoboCop",
+    "Director": "Paul Verhoeven",
+    "Year": "1987",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 24.0,
+    "Title": "High and Low",
+    "Director": "Akira Kurosawa",
+    "Year": "1963",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 25.0,
+    "Title": "Alphaville",
+    "Director": "Jean-Luc Godard",
+    "Year": "1965",
+    "Country": "France"
+  },
+  {
+    "Spine #": 26.0,
+    "Title": "The Long Good Friday",
+    "Director": "John Mackenzie",
+    "Year": "1979",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 27.0,
+    "Title": "Flesh for Frankenstein",
+    "Director": "Paul Morrissey",
+    "Year": "1973",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 28.0,
+    "Title": "Blood for Dracula",
+    "Director": "Paul Morrissey",
+    "Year": "1974",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 29.0,
+    "Title": "Picnic at Hanging Rock",
+    "Director": "Peter Weir",
+    "Year": "1975",
+    "Country": "Australia"
+  },
+  {
+    "Spine #": 30.0,
+    "Title": "M",
+    "Director": "Fritz Lang",
+    "Year": "1931",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 31.0,
+    "Title": "Great Expectations",
+    "Director": "David Lean",
+    "Year": "1946",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 32.0,
+    "Title": "Oliver Twist",
+    "Director": "David Lean",
+    "Year": "1948",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 33.0,
+    "Title": "Nanook of the North",
+    "Director": "Robert Flaherty",
+    "Year": "1922",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 34.0,
+    "Title": "Andrei Rublev",
+    "Director": "Andrei Tarkovsky",
+    "Year": "1966",
+    "Country": "Soviet Union"
+  },
+  {
+    "Spine #": 35.0,
+    "Title": "Diabolique",
+    "Director": "Henri-Georges Clouzot",
+    "Year": "1955",
+    "Country": "France"
+  },
+  {
+    "Spine #": 36.0,
+    "Title": "The Wages of Fear",
+    "Director": "Henri-Georges Clouzot",
+    "Year": "1953",
+    "Country": "France"
+  },
+  {
+    "Spine #": 37.0,
+    "Title": "Time Bandits",
+    "Director": "Terry Gilliam",
+    "Year": "1981",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 38.0,
+    "Title": "Branded to Kill",
+    "Director": "Seijun Suzuki",
+    "Year": "1967",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 39.0,
+    "Title": "Tokyo Drifter",
+    "Director": "Seijun Suzuki",
+    "Year": "1966",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 40.0,
+    "Title": "Armageddon",
+    "Director": "Michael Bay",
+    "Year": "1998",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 41.0,
+    "Title": "Henry V",
+    "Director": "Laurence Olivier",
+    "Year": "1944",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 42.0,
+    "Title": "Fishing with John",
+    "Director": "John Lurie",
+    "Year": "1992",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 43.0,
+    "Title": "Lord of the Flies",
+    "Director": "Peter Brook",
+    "Year": "1963",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 44.0,
+    "Title": "The Red Shoes",
+    "Director": "Michael Powell\u2026",
+    "Year": "1948",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 45.0,
+    "Title": "Taste of Cherry",
+    "Director": "Abbas Kiarostami",
+    "Year": "1997",
+    "Country": "Iran"
+  },
+  {
+    "Spine #": 46.0,
+    "Title": "The Most Dangerous Game",
+    "Director": "Ernest B. Schoedsack\u2026",
+    "Year": "1932",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 47.0,
+    "Title": "Insomnia",
+    "Director": "Erik Skjoldbj\u00e6rg",
+    "Year": "1997",
+    "Country": "Norway"
+  },
+  {
+    "Spine #": 48.0,
+    "Title": "Black Orpheus",
+    "Director": "Marcel Camus",
+    "Year": "1959",
+    "Country": "France"
+  },
+  {
+    "Spine #": 49.0,
+    "Title": "Nights of Cabiria",
+    "Director": "Federico Fellini",
+    "Year": "1957",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 50.0,
+    "Title": "And the Ship Sails On",
+    "Director": "Federico Fellini",
+    "Year": "1984",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 51.0,
+    "Title": "Brazil",
+    "Director": "Terry Gilliam",
+    "Year": "1985",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 52.0,
+    "Title": "Yojimbo",
+    "Director": "Akira Kurosawa",
+    "Year": "1961",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 53.0,
+    "Title": "Sanjuro",
+    "Director": "Akira Kurosawa",
+    "Year": "1962",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 54.0,
+    "Title": "For All Mankind",
+    "Director": "Al Reinert",
+    "Year": "1989",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 55.0,
+    "Title": "The Unbearable Lightness of Being",
+    "Director": "Philip Kaufman",
+    "Year": "1988",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 56.0,
+    "Title": "The 39 Steps",
+    "Director": "Alfred Hitchcock",
+    "Year": "1935",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 57.0,
+    "Title": "Charade",
+    "Director": "Stanley Donen",
+    "Year": "1963",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 58.0,
+    "Title": "Peeping Tom",
+    "Director": "Michael Powell",
+    "Year": "1960",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 59.0,
+    "Title": "The Night Porter",
+    "Director": "Liliana Cavani",
+    "Year": "1974",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 60.0,
+    "Title": "Autumn Sonata",
+    "Director": "Ingmar Bergman",
+    "Year": "1978",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 61.0,
+    "Title": "Monty Python\u2019s Life of Brian",
+    "Director": "Terry Jones",
+    "Year": "1979",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 62.0,
+    "Title": "The Passion of Joan of Arc",
+    "Director": "Carl Th. Dreyer",
+    "Year": "1928",
+    "Country": "France"
+  },
+  {
+    "Spine #": 63.0,
+    "Title": "Carnival of Souls",
+    "Director": "Herk Harvey",
+    "Year": "1962",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 64.0,
+    "Title": "The Third Man",
+    "Director": "Carol Reed",
+    "Year": "1949",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 65.0,
+    "Title": "Rushmore",
+    "Director": "Wes Anderson",
+    "Year": "1998",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 66.0,
+    "Title": "The Orphic Trilogy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 67.0,
+    "Title": "The Blood of a Poet",
+    "Director": "Jean Cocteau",
+    "Year": "1930",
+    "Country": "France"
+  },
+  {
+    "Spine #": 68.0,
+    "Title": "Orpheus",
+    "Director": "Jean Cocteau",
+    "Year": "1950",
+    "Country": "France"
+  },
+  {
+    "Spine #": 69.0,
+    "Title": "Testament of Orpheus",
+    "Director": "Jean Cocteau",
+    "Year": "1959",
+    "Country": "France"
+  },
+  {
+    "Spine #": 70.0,
+    "Title": "The Last Temptation of Christ",
+    "Director": "Martin Scorsese",
+    "Year": "1988",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 71.0,
+    "Title": "The Magic Flute",
+    "Director": "Ingmar Bergman",
+    "Year": "1975",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 72.0,
+    "Title": "Le million",
+    "Director": "Ren\u00e9 Clair",
+    "Year": "1931",
+    "Country": "France"
+  },
+  {
+    "Spine #": 73.0,
+    "Title": "Cl\u00e9o from 5 to 7",
+    "Director": "Agn\u00e8s Varda",
+    "Year": "1962",
+    "Country": "France"
+  },
+  {
+    "Spine #": 74.0,
+    "Title": "Vagabond",
+    "Director": "Agn\u00e8s Varda",
+    "Year": "1985",
+    "Country": "France"
+  },
+  {
+    "Spine #": 75.0,
+    "Title": "Chasing Amy",
+    "Director": "Kevin Smith",
+    "Year": "1997",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 76.0,
+    "Title": "Brief Encounter",
+    "Director": "David Lean",
+    "Year": "1945",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 77.0,
+    "Title": "And God Created Woman",
+    "Director": "Roger Vadim",
+    "Year": "1956",
+    "Country": "France"
+  },
+  {
+    "Spine #": 78.0,
+    "Title": "The Bank Dick",
+    "Director": "Edward Cline",
+    "Year": "1940",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 79.0,
+    "Title": "W. C. Fields\u2014Six Short Films",
+    "Director": "Monte Brice\u2026",
+    "Year": "1933",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 80.0,
+    "Title": "The Element of Crime",
+    "Director": "Lars von Trier",
+    "Year": "1984",
+    "Country": "Denmark"
+  },
+  {
+    "Spine #": 81.0,
+    "Title": "Variety Lights",
+    "Director": "Federico Fellini\u2026",
+    "Year": "1950",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 82.0,
+    "Title": "Hamlet",
+    "Director": "Laurence Olivier",
+    "Year": "1948",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 83.0,
+    "Title": "The Harder They Come",
+    "Director": "Perry Henzell",
+    "Year": "1973",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 84.0,
+    "Title": "Good Morning",
+    "Director": "Yasujiro Ozu",
+    "Year": "1959",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 85.0,
+    "Title": "Pygmalion",
+    "Director": "Anthony Asquith\u2026",
+    "Year": "1938",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 86.0,
+    "Title": "Eisenstein: The Sound Years",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 87.0,
+    "Title": "Alexander Nevsky",
+    "Director": "Sergei Eisenstein",
+    "Year": "1938",
+    "Country": "Soviet Union"
+  },
+  {
+    "Spine #": 88.0,
+    "Title": "Ivan the Terrible, Part II",
+    "Director": "Sergei Eisenstein",
+    "Year": "1958",
+    "Country": "Soviet Union"
+  },
+  {
+    "Spine #": 89.0,
+    "Title": "Sisters",
+    "Director": "Brian De Palma",
+    "Year": "1973",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 90.0,
+    "Title": "Kwaidan",
+    "Director": "Masaki Kobayashi",
+    "Year": "1965",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 91.0,
+    "Title": "The Blob",
+    "Director": "Irvin S. Yeaworth Jr.",
+    "Year": "1958",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 92.0,
+    "Title": "Fiend Without a Face",
+    "Director": "Arthur Crabtree",
+    "Year": "1958",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 93.0,
+    "Title": "Black Narcissus",
+    "Director": "Michael Powell\u2026",
+    "Year": "1947",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 94.0,
+    "Title": "I Know Where I\u2019m Going!",
+    "Director": "Michael Powell\u2026",
+    "Year": "1945",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 95.0,
+    "Title": "All That Heaven Allows",
+    "Director": "Douglas Sirk",
+    "Year": "1955",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 96.0,
+    "Title": "Written on the Wind",
+    "Director": "Douglas Sirk",
+    "Year": "1956",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 97.0,
+    "Title": "Do the Right Thing",
+    "Director": "Spike Lee",
+    "Year": "1989",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 98.0,
+    "Title": "L\u2019avventura",
+    "Director": "Michelangelo Antonioni",
+    "Year": "1960",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 99.0,
+    "Title": "Gimme Shelter",
+    "Director": "David Maysles\u2026",
+    "Year": "1970",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 100.0,
+    "Title": "Beastie Boys Video Anthology",
+    "Director": "Various",
+    "Year": "2000",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 101.0,
+    "Title": "Cries and Whispers",
+    "Director": "Ingmar Bergman",
+    "Year": "1972",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 102.0,
+    "Title": "The Discreet Charm of the Bourgeoisie",
+    "Director": "Luis Bu\u00f1uel",
+    "Year": "1972",
+    "Country": "France"
+  },
+  {
+    "Spine #": 103.0,
+    "Title": "The Lady Eve",
+    "Director": "Preston Sturges",
+    "Year": "1941",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 104.0,
+    "Title": "Double Suicide",
+    "Director": "Masahiro Shinoda",
+    "Year": "1969",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 105.0,
+    "Title": "Spartacus",
+    "Director": "Stanley Kubrick",
+    "Year": "1960",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 106.0,
+    "Title": "Coup de torchon",
+    "Director": "Bertrand Tavernier",
+    "Year": "1981",
+    "Country": "France"
+  },
+  {
+    "Spine #": 107.0,
+    "Title": "Mona Lisa",
+    "Director": "Neil Jordan",
+    "Year": "1986",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 108.0,
+    "Title": "The Rock",
+    "Director": "Michael Bay",
+    "Year": "1996",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 109.0,
+    "Title": "The Scarlet Empress",
+    "Director": "Josef von Sternberg",
+    "Year": "1934",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 110.0,
+    "Title": "Monsieur Hulot\u2019s Holiday",
+    "Director": "Jacques Tati",
+    "Year": "1953",
+    "Country": "France"
+  },
+  {
+    "Spine #": 111.0,
+    "Title": "Mon oncle",
+    "Director": "Jacques Tati",
+    "Year": "1958",
+    "Country": "France"
+  },
+  {
+    "Spine #": 112.0,
+    "Title": "PlayTime",
+    "Director": "Jacques Tati",
+    "Year": "1967",
+    "Country": "France"
+  },
+  {
+    "Spine #": 113.0,
+    "Title": "Big Deal on Madonna Street",
+    "Director": "Mario Monicelli",
+    "Year": "1958",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 114.0,
+    "Title": "My Man Godfrey",
+    "Director": "Gregory La Cava",
+    "Year": "1936",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 115.0,
+    "Title": "Rififi",
+    "Director": "Jules Dassin",
+    "Year": "1955",
+    "Country": "France"
+  },
+  {
+    "Spine #": 116.0,
+    "Title": "The Hidden Fortress",
+    "Director": "Akira Kurosawa",
+    "Year": "1958",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 117.0,
+    "Title": "Diary of a Chambermaid",
+    "Director": "Luis Bu\u00f1uel",
+    "Year": "1964",
+    "Country": "France"
+  },
+  {
+    "Spine #": 118.0,
+    "Title": "Sullivan\u2019s Travels",
+    "Director": "Preston Sturges",
+    "Year": "1941",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 119.0,
+    "Title": "Withnail and I",
+    "Director": "Bruce Robinson",
+    "Year": "1986",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 120.0,
+    "Title": "How to Get Ahead in Advertising",
+    "Director": "Bruce Robinson",
+    "Year": "1988",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 121.0,
+    "Title": "Billy Liar",
+    "Director": "John Schlesinger",
+    "Year": "1963",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 122.0,
+    "Title": "Salesman",
+    "Director": "Albert Maysles\u2026",
+    "Year": "1968",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 123.0,
+    "Title": "Grey Gardens",
+    "Director": "Albert Maysles\u2026",
+    "Year": "1976",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 124.0,
+    "Title": "Carl Theodor Dreyer Box Set",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 125.0,
+    "Title": "Day of Wrath",
+    "Director": "Carl Th. Dreyer",
+    "Year": "1943",
+    "Country": "Denmark"
+  },
+  {
+    "Spine #": 126.0,
+    "Title": "Ordet",
+    "Director": "Carl Th. Dreyer",
+    "Year": "1955",
+    "Country": "Denmark"
+  },
+  {
+    "Spine #": 127.0,
+    "Title": "Gertrud",
+    "Director": "Carl Th. Dreyer",
+    "Year": "1964",
+    "Country": "Denmark"
+  },
+  {
+    "Spine #": 128.0,
+    "Title": "Carl Th. Dreyer\u2014My Metier",
+    "Director": "Torben Skj\u00f8dt Jensen",
+    "Year": "1995",
+    "Country": "Denmark"
+  },
+  {
+    "Spine #": 129.0,
+    "Title": "Le trou",
+    "Director": "Jacques Becker",
+    "Year": "1960",
+    "Country": "France"
+  },
+  {
+    "Spine #": 130.0,
+    "Title": "The Shop on Main Street",
+    "Director": "J\u00e1n Kad\u00e1r\u2026",
+    "Year": "1965",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": 131.0,
+    "Title": "Closely Watched Trains",
+    "Director": "Ji\u0159\u00ed Menzel",
+    "Year": "1966",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": 132.0,
+    "Title": "The Ruling Class",
+    "Director": "Peter Medak",
+    "Year": "1972",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 133.0,
+    "Title": "The Vanishing",
+    "Director": "George Sluizer",
+    "Year": "1988",
+    "Country": "Netherlands"
+  },
+  {
+    "Spine #": 134.0,
+    "Title": "H\u00e4xan",
+    "Director": "Benjamin Christensen",
+    "Year": "1922",
+    "Country": "Denmark"
+  },
+  {
+    "Spine #": 135.0,
+    "Title": "Rebecca",
+    "Director": "Alfred Hitchcock",
+    "Year": "1940",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 136.0,
+    "Title": "Spellbound",
+    "Director": "Alfred Hitchcock",
+    "Year": "1945",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 137.0,
+    "Title": "Notorious",
+    "Director": "Alfred Hitchcock",
+    "Year": "1946",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 138.0,
+    "Title": "Rashomon",
+    "Director": "Akira Kurosawa",
+    "Year": "1950",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 139.0,
+    "Title": "Wild Strawberries",
+    "Director": "Ingmar Bergman",
+    "Year": "1957",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 140.0,
+    "Title": "8\u00bd",
+    "Director": "Federico Fellini",
+    "Year": "1963",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 141.0,
+    "Title": "Children of Paradise",
+    "Director": "Marcel Carn\u00e9",
+    "Year": "1945",
+    "Country": "France"
+  },
+  {
+    "Spine #": 142.0,
+    "Title": "The Last Wave",
+    "Director": "Peter Weir",
+    "Year": "1977",
+    "Country": "Australia"
+  },
+  {
+    "Spine #": 143.0,
+    "Title": "That Obscure Object of Desire",
+    "Director": "Luis Bu\u00f1uel",
+    "Year": "1977",
+    "Country": "France"
+  },
+  {
+    "Spine #": 144.0,
+    "Title": "Loves of a Blonde",
+    "Director": "Milo\u0161 Forman",
+    "Year": "1965",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": 145.0,
+    "Title": "The Firemen\u2019s Ball",
+    "Director": "Milo\u0161 Forman",
+    "Year": "1967",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": 146.0,
+    "Title": "The Cranes Are Flying",
+    "Director": "Mikhail Kalatozov",
+    "Year": "1957",
+    "Country": "Soviet Union"
+  },
+  {
+    "Spine #": 147.0,
+    "Title": "In the Mood for Love",
+    "Director": "Wong Kar-wai",
+    "Year": "2000",
+    "Country": "Hong Kong"
+  },
+  {
+    "Spine #": 148.0,
+    "Title": "Ballad of a Soldier",
+    "Director": "Grigori Chukhrai",
+    "Year": "1959",
+    "Country": "Soviet Union"
+  },
+  {
+    "Spine #": 149.0,
+    "Title": "Juliet of the Spirits",
+    "Director": "Federico Fellini",
+    "Year": "1965",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 150.0,
+    "Title": "Bob le flambeur",
+    "Director": "Jean-Pierre Melville",
+    "Year": "1956",
+    "Country": "France"
+  },
+  {
+    "Spine #": 151.0,
+    "Title": "Traffic",
+    "Director": "Steven Soderbergh",
+    "Year": "2000",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 152.0,
+    "Title": "George Washington",
+    "Director": "David Gordon Green",
+    "Year": "2000",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 153.0,
+    "Title": "General Idi Amin Dada: A Self-Portrait",
+    "Director": "Barbet Schroeder",
+    "Year": "1974",
+    "Country": "France"
+  },
+  {
+    "Spine #": 154.0,
+    "Title": "The Horse\u2019s Mouth",
+    "Director": "Ronald Neame",
+    "Year": "1958",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 155.0,
+    "Title": "Tokyo Olympiad",
+    "Director": "Kon Ichikawa",
+    "Year": "1965",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 156.0,
+    "Title": "Hearts and Minds",
+    "Director": "Peter Davis",
+    "Year": "1974",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 157.0,
+    "Title": "The Royal Tenenbaums",
+    "Director": "Wes Anderson",
+    "Year": "2001",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 158.0,
+    "Title": "The Importance of Being Earnest",
+    "Director": "Anthony Asquith",
+    "Year": "1952",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 159.0,
+    "Title": "Red Beard",
+    "Director": "Akira Kurosawa",
+    "Year": "1965",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 160.0,
+    "Title": "\u00c0 nous la libert\u00e9",
+    "Director": "Ren\u00e9 Clair",
+    "Year": "1931",
+    "Country": "France"
+  },
+  {
+    "Spine #": 161.0,
+    "Title": "Under the Roofs of Paris",
+    "Director": "Ren\u00e9 Clair",
+    "Year": "1930",
+    "Country": "France"
+  },
+  {
+    "Spine #": 162.0,
+    "Title": "Ratcatcher",
+    "Director": "Lynne Ramsay",
+    "Year": "1999",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 163.0,
+    "Title": "Hopscotch",
+    "Director": "Ronald Neame",
+    "Year": "1980",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 164.0,
+    "Title": "Solaris",
+    "Director": "Andrei Tarkovsky",
+    "Year": "1972",
+    "Country": "Soviet Union"
+  },
+  {
+    "Spine #": 165.0,
+    "Title": "Man Bites Dog",
+    "Director": "R\u00e9my Belvaux\u2026",
+    "Year": "1992",
+    "Country": "France"
+  },
+  {
+    "Spine #": 166.0,
+    "Title": "Down by Law",
+    "Director": "Jim Jarmusch",
+    "Year": "1986",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 167.0,
+    "Title": "The Complete Monterey Pop Festival",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 168.0,
+    "Title": "Monterey Pop",
+    "Director": "D. A. Pennebaker",
+    "Year": "1968",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 169.0,
+    "Title": "Jimi Plays Monterey & Shake! Otis at Monterey",
+    "Director": "Chris Hegedus\u2026",
+    "Year": "1986",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 170.0,
+    "Title": "Trouble in Paradise",
+    "Director": "Ernst Lubitsch",
+    "Year": "1932",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 171.0,
+    "Title": "Contempt",
+    "Director": "Jean-Luc Godard",
+    "Year": "1963",
+    "Country": "France"
+  },
+  {
+    "Spine #": 172.0,
+    "Title": "P\u00e9p\u00e9 le moko",
+    "Director": "Julien Duvivier",
+    "Year": "1937",
+    "Country": "France"
+  },
+  {
+    "Spine #": 173.0,
+    "Title": "The Life and Death of Colonel Blimp",
+    "Director": "Michael Powell\u2026",
+    "Year": "1943",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 174.0,
+    "Title": "Band of Outsiders",
+    "Director": "Jean-Luc Godard",
+    "Year": "1964",
+    "Country": "France"
+  },
+  {
+    "Spine #": 175.0,
+    "Title": "Fear and Loathing in Las Vegas",
+    "Director": "Terry Gilliam",
+    "Year": "1998",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 176.0,
+    "Title": "The Killers",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 177.0,
+    "Title": "The Lost Honor of Katharina Blum",
+    "Director": "Volker Schl\u00f6ndorff\u2026",
+    "Year": "1975",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 178.0,
+    "Title": "My Life as a Dog",
+    "Director": "Lasse Hallstr\u00f6m",
+    "Year": "1985",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 179.0,
+    "Title": "I Am Curious . . . Box set",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 180.0,
+    "Title": "I Am Curious\u2014Yellow",
+    "Director": "Vilgot Sj\u00f6man",
+    "Year": "1967",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 181.0,
+    "Title": "I Am Curious\u2014Blue",
+    "Director": "Vilgot Sj\u00f6man",
+    "Year": "1967",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 182.0,
+    "Title": "Straw Dogs",
+    "Director": "Sam Peckinpah",
+    "Year": "1971",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 183.0,
+    "Title": "Les dames du Bois de Boulogne",
+    "Director": "Robert Bresson",
+    "Year": "1945",
+    "Country": "France"
+  },
+  {
+    "Spine #": 184.0,
+    "Title": "By Brakhage: An Anthology, Volume One",
+    "Director": "Stan Brakhage",
+    "Year": null,
+    "Country": "United States"
+  },
+  {
+    "Spine #": 185.0,
+    "Title": "The Adventures of Antoine Doinel",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 186.0,
+    "Title": "Stolen Kisses",
+    "Director": "Fran\u00e7ois Truffaut",
+    "Year": "1968",
+    "Country": "France"
+  },
+  {
+    "Spine #": 187.0,
+    "Title": "Bed and Board",
+    "Director": "Fran\u00e7ois Truffaut",
+    "Year": "1970",
+    "Country": "France"
+  },
+  {
+    "Spine #": 188.0,
+    "Title": "Love on the Run",
+    "Director": "Fran\u00e7ois Truffaut",
+    "Year": "1979",
+    "Country": "France"
+  },
+  {
+    "Spine #": 189.0,
+    "Title": "The White Sheik",
+    "Director": "Federico Fellini",
+    "Year": "1952",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 190.0,
+    "Title": "Throne of Blood",
+    "Director": "Akira Kurosawa",
+    "Year": "1957",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 191.0,
+    "Title": "Jubilee",
+    "Director": "Derek Jarman",
+    "Year": "1978",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 192.0,
+    "Title": "Coup de gr\u00e2ce",
+    "Director": "Volker Schl\u00f6ndorff",
+    "Year": "1976",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 193.0,
+    "Title": "Quai des Orf\u00e8vres",
+    "Director": "Henri-Georges Clouzot",
+    "Year": "1947",
+    "Country": "France"
+  },
+  {
+    "Spine #": 194.0,
+    "Title": "Il posto",
+    "Director": "Ermanno Olmi",
+    "Year": "1961",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 195.0,
+    "Title": "I fidanzati",
+    "Director": "Ermanno Olmi",
+    "Year": "1962",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 196.0,
+    "Title": "Hiroshima mon amour",
+    "Director": "Alain Resnais",
+    "Year": "1959",
+    "Country": "France"
+  },
+  {
+    "Spine #": 197.0,
+    "Title": "Night and Fog",
+    "Director": "Alain Resnais",
+    "Year": "1955",
+    "Country": "France"
+  },
+  {
+    "Spine #": 198.0,
+    "Title": "Ali: Fear Eats the Soul",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1974",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 199.0,
+    "Title": "Schizopolis",
+    "Director": "Steven Soderbergh",
+    "Year": "1996",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 200.0,
+    "Title": "The Honeymoon Killers",
+    "Director": "Leonard Kastle",
+    "Year": "1969",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 201.0,
+    "Title": "Umberto D.",
+    "Director": "Vittorio De Sica",
+    "Year": "1952",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 202.0,
+    "Title": "Indiscretion of an American Wife",
+    "Director": "Vittorio De Sica",
+    "Year": "1953",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 203.0,
+    "Title": "The BRD Trilogy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 204.0,
+    "Title": "The Marriage of Maria Braun",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1978",
+    "Country": "West Germany"
+  },
+  {
+    "Spine #": 205.0,
+    "Title": "Veronika Voss",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1982",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 206.0,
+    "Title": "Lola",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1981",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 207.0,
+    "Title": "The Pornographers",
+    "Director": "Shohei Imamura",
+    "Year": "1966",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 208.0,
+    "Title": "A Film Trilogy by Ingmar Bergman",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 209.0,
+    "Title": "Through a Glass Darkly",
+    "Director": "Ingmar Bergman",
+    "Year": "1961",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 210.0,
+    "Title": "Winter Light",
+    "Director": "Ingmar Bergman",
+    "Year": "1962",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 211.0,
+    "Title": "The Silence",
+    "Director": "Ingmar Bergman",
+    "Year": "1963",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 212.0,
+    "Title": "Ingmar Bergman Makes a Movie",
+    "Director": "Vilgot Sj\u00f6man",
+    "Year": "1962",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 213.0,
+    "Title": "Richard III",
+    "Director": "Laurence Olivier",
+    "Year": "1955",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 214.0,
+    "Title": "The Devil and Daniel Webster",
+    "Director": "William Dieterle",
+    "Year": "1941",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 215.0,
+    "Title": "Knife in the Water",
+    "Director": "Roman Polanski",
+    "Year": "1962",
+    "Country": "Poland"
+  },
+  {
+    "Spine #": 216.0,
+    "Title": "The Rules of the Game",
+    "Director": "Jean Renoir",
+    "Year": "1939",
+    "Country": "France"
+  },
+  {
+    "Spine #": 217.0,
+    "Title": "Tokyo Story",
+    "Director": "Yasujiro Ozu",
+    "Year": "1953",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 218.0,
+    "Title": "Le cercle rouge",
+    "Director": "Jean-Pierre Melville",
+    "Year": "1970",
+    "Country": "France"
+  },
+  {
+    "Spine #": 219.0,
+    "Title": "La strada",
+    "Director": "Federico Fellini",
+    "Year": "1954",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 220.0,
+    "Title": "Naked Lunch",
+    "Director": "David Cronenberg",
+    "Year": "1991",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": 221.0,
+    "Title": "Ikiru",
+    "Director": "Akira Kurosawa",
+    "Year": "1952",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 222.0,
+    "Title": "Diary of a Country Priest",
+    "Director": "Robert Bresson",
+    "Year": "1951",
+    "Country": "France"
+  },
+  {
+    "Spine #": 223.0,
+    "Title": "Ma\u00eetresse",
+    "Director": "Barbet Schroeder",
+    "Year": "1976",
+    "Country": "France"
+  },
+  {
+    "Spine #": 224.0,
+    "Title": "Pickup on South Street",
+    "Director": "Samuel Fuller",
+    "Year": "1953",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 225.0,
+    "Title": "Tunes of Glory",
+    "Director": "Ronald Neame",
+    "Year": "1960",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 226.0,
+    "Title": "Onibaba",
+    "Director": "Kaneto Shindo",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 227.0,
+    "Title": "Le Corbeau",
+    "Director": "Henri-Georges Clouzot",
+    "Year": "1943",
+    "Country": "France"
+  },
+  {
+    "Spine #": 228.0,
+    "Title": "Salvatore Giuliano",
+    "Director": "Francesco Rosi",
+    "Year": "1962",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 229.0,
+    "Title": "Scenes from a Marriage",
+    "Director": "Ingmar Bergman",
+    "Year": "1973",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 230.0,
+    "Title": "3 Women",
+    "Director": "Robert Altman",
+    "Year": "1977",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 231.0,
+    "Title": "The Testament of Dr. Mabuse",
+    "Director": "Fritz Lang",
+    "Year": "1933",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 232.0,
+    "Title": "A Story of Floating Weeds/Floating Weeds: Two Films by Yasujiro Ozu",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 233.0,
+    "Title": "Stray Dog",
+    "Director": "Akira Kurosawa",
+    "Year": "1949",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 234.0,
+    "Title": "The Tin Drum",
+    "Director": "Volker Schl\u00f6ndorff",
+    "Year": "1979",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 235.0,
+    "Title": "The Leopard",
+    "Director": "Luchino Visconti",
+    "Year": "1963",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 236.0,
+    "Title": "Mamma Roma",
+    "Director": "Pier Paolo Pasolini",
+    "Year": "1962",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 237.0,
+    "Title": "Smiles of a Summer Night",
+    "Director": "Ingmar Bergman",
+    "Year": "1955",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 238.0,
+    "Title": "A Woman Is a Woman",
+    "Director": "Jean-Luc Godard",
+    "Year": "1961",
+    "Country": "France"
+  },
+  {
+    "Spine #": 239.0,
+    "Title": "The Lower Depths",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 240.0,
+    "Title": "Early Summer",
+    "Director": "Yasujiro Ozu",
+    "Year": "1951",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 241.0,
+    "Title": "Stage and Spectacle: Three Films by Jean Renoir",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 242.0,
+    "Title": "The Golden Coach",
+    "Director": "Jean Renoir",
+    "Year": "1953",
+    "Country": "France"
+  },
+  {
+    "Spine #": 243.0,
+    "Title": "French Cancan",
+    "Director": "Jean Renoir",
+    "Year": "1955",
+    "Country": "France"
+  },
+  {
+    "Spine #": 244.0,
+    "Title": "Elena and Her Men",
+    "Director": "Jean Renoir",
+    "Year": "1956",
+    "Country": "France"
+  },
+  {
+    "Spine #": 245.0,
+    "Title": "Port of Shadows",
+    "Director": "Marcel Carn\u00e9",
+    "Year": "1938",
+    "Country": "France"
+  },
+  {
+    "Spine #": 246.0,
+    "Title": "I vitelloni",
+    "Director": "Federico Fellini",
+    "Year": "1953",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 247.0,
+    "Title": "Slacker",
+    "Director": "Richard Linklater",
+    "Year": "1991",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 248.0,
+    "Title": "Videodrome",
+    "Director": "David Cronenberg",
+    "Year": "1983",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": 249.0,
+    "Title": "The Battle of Algiers",
+    "Director": "Gillo Pontecorvo",
+    "Year": "1966",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 250.0,
+    "Title": "John Cassavetes: Five Films",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 251.0,
+    "Title": "Shadows",
+    "Director": "John Cassavetes",
+    "Year": "1959",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 252.0,
+    "Title": "Faces",
+    "Director": "John Cassavetes",
+    "Year": "1968",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 253.0,
+    "Title": "A Woman Under the Influence",
+    "Director": "John Cassavetes",
+    "Year": "1974",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 254.0,
+    "Title": "The Killing of a Chinese Bookie",
+    "Director": "John Cassavetes",
+    "Year": "1976",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 255.0,
+    "Title": "Opening Night",
+    "Director": "John Cassavetes",
+    "Year": "1977",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 256.0,
+    "Title": "A Constant Forge",
+    "Director": "Charles Kiselyak",
+    "Year": "2000",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 257.0,
+    "Title": "Secret Honor",
+    "Director": "Robert Altman",
+    "Year": "1984",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 258.0,
+    "Title": "Tanner \u201988",
+    "Director": "Robert Altman",
+    "Year": "1988",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 259.0,
+    "Title": "Fat Girl",
+    "Director": "Catherine Breillat",
+    "Year": "2001",
+    "Country": "France"
+  },
+  {
+    "Spine #": 260.0,
+    "Title": "Eyes Without a Face",
+    "Director": "Georges Franju",
+    "Year": "1960",
+    "Country": "France"
+  },
+  {
+    "Spine #": 261.0,
+    "Title": "Fanny and Alexander Box Set",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 262.0,
+    "Title": "Fanny and Alexander \u2014 The Television Version",
+    "Director": "Ingmar Bergman",
+    "Year": "1982",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 263.0,
+    "Title": "Fanny and Alexander \u2014 The Theatrical Version",
+    "Director": "Ingmar Bergman",
+    "Year": "1982",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 264.0,
+    "Title": "The Making of Fanny and Alexander",
+    "Director": "Ingmar Bergman",
+    "Year": "1982",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 265.0,
+    "Title": "Short Cuts",
+    "Director": "Robert Altman",
+    "Year": "1993",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 266.0,
+    "Title": "The King of Kings",
+    "Director": "Cecil B. DeMille",
+    "Year": "1927",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 267.0,
+    "Title": "Kagemusha",
+    "Director": "Akira Kurosawa",
+    "Year": "1980",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 268.0,
+    "Title": "Youth of the Beast",
+    "Director": "Seijun Suzuki",
+    "Year": "1963",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 269.0,
+    "Title": "Fighting Elegy",
+    "Director": "Seijun Suzuki",
+    "Year": "1966",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 270.0,
+    "Title": "Casque d\u2019or",
+    "Director": "Jacques Becker",
+    "Year": "1952",
+    "Country": "France"
+  },
+  {
+    "Spine #": 271.0,
+    "Title": "Touchez pas au grisbi",
+    "Director": "Jacques Becker",
+    "Year": "1954",
+    "Country": "France"
+  },
+  {
+    "Spine #": 272.0,
+    "Title": "La commare secca",
+    "Director": "Bernardo Bertolucci",
+    "Year": "1962",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 273.0,
+    "Title": "Thieves\u2019 Highway",
+    "Director": "Jules Dassin",
+    "Year": "1949",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 274.0,
+    "Title": "Night and the City",
+    "Director": "Jules Dassin",
+    "Year": "1950",
+    "Country": null
+  },
+  {
+    "Spine #": 275.0,
+    "Title": "Tout va bien",
+    "Director": "Jean-Luc Godard\u2026",
+    "Year": "1972",
+    "Country": "France"
+  },
+  {
+    "Spine #": 276.0,
+    "Title": "The River",
+    "Director": "Jean Renoir",
+    "Year": "1951",
+    "Country": "France"
+  },
+  {
+    "Spine #": 277.0,
+    "Title": "My Own Private Idaho",
+    "Director": "Gus Van Sant",
+    "Year": "1991",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 278.0,
+    "Title": "L\u2019eclisse",
+    "Director": "Michelangelo Antonioni",
+    "Year": "1962",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 279.0,
+    "Title": "Young T\u00f6rless",
+    "Director": "Volker Schl\u00f6ndorff",
+    "Year": "1966",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 280.0,
+    "Title": "The Sword of Doom",
+    "Director": "Kihachi Okamoto",
+    "Year": "1966",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 281.0,
+    "Title": "Jules and Jim",
+    "Director": "Fran\u00e7ois Truffaut",
+    "Year": "1962",
+    "Country": "France"
+  },
+  {
+    "Spine #": 282.0,
+    "Title": "Andrzej Wajda: Three War Films",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 283.0,
+    "Title": "A Generation",
+    "Director": "Andrzej Wajda",
+    "Year": "1955",
+    "Country": "Poland"
+  },
+  {
+    "Spine #": 284.0,
+    "Title": "Kanal",
+    "Director": "Andrzej Wajda",
+    "Year": "1957",
+    "Country": "Poland"
+  },
+  {
+    "Spine #": 285.0,
+    "Title": "Ashes and Diamonds",
+    "Director": "Andrzej Wajda",
+    "Year": "1958",
+    "Country": "Poland"
+  },
+  {
+    "Spine #": 286.0,
+    "Title": "Divorce Italian Style",
+    "Director": "Pietro Germi",
+    "Year": "1961",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 287.0,
+    "Title": "Burden of Dreams",
+    "Director": "Les Blank",
+    "Year": "1982",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 288.0,
+    "Title": "F for Fake",
+    "Director": "Orson Welles",
+    "Year": "1975",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 289.0,
+    "Title": "Hoop Dreams",
+    "Director": "Steve James",
+    "Year": "1994",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 290.0,
+    "Title": "The Phantom of Liberty",
+    "Director": "Luis Bu\u00f1uel",
+    "Year": "1974",
+    "Country": "France"
+  },
+  {
+    "Spine #": 291.0,
+    "Title": "Heaven Can Wait",
+    "Director": "Ernst Lubitsch",
+    "Year": "1943",
+    "Country": null
+  },
+  {
+    "Spine #": 292.0,
+    "Title": "Unfaithfully Yours",
+    "Director": "Preston Sturges",
+    "Year": "1948",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 293.0,
+    "Title": "The Flowers of St. Francis",
+    "Director": "Roberto Rossellini",
+    "Year": "1950",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 294.0,
+    "Title": "The Browning Version",
+    "Director": "Anthony Asquith",
+    "Year": "1951",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 295.0,
+    "Title": "Crazed Fruit",
+    "Director": "K\u00f4 Nakahira",
+    "Year": "1956",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 296.0,
+    "Title": "Le notti bianche",
+    "Director": "Luchino Visconti",
+    "Year": "1957",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 297.0,
+    "Title": "Au hasard Balthazar",
+    "Director": "Robert Bresson",
+    "Year": "1966",
+    "Country": "France"
+  },
+  {
+    "Spine #": 298.0,
+    "Title": "Gate of Flesh",
+    "Director": "Seijun Suzuki",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 299.0,
+    "Title": "Story of a Prostitute",
+    "Director": "Seijun Suzuki",
+    "Year": "1965",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 300.0,
+    "Title": "The Life Aquatic with Steve Zissou",
+    "Director": "Wes Anderson",
+    "Year": "2004",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 301.0,
+    "Title": "An Angel at My Table",
+    "Director": "Jane Campion",
+    "Year": "1990",
+    "Country": "New Zealand"
+  },
+  {
+    "Spine #": 302.0,
+    "Title": "Harakiri",
+    "Director": "Masaki Kobayashi",
+    "Year": "1962",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 303.0,
+    "Title": "Bad Timing",
+    "Director": "Nicolas Roeg",
+    "Year": "1980",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 304.0,
+    "Title": "The Man Who Fell to Earth",
+    "Director": "Nicolas Roeg",
+    "Year": "1976",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 305.0,
+    "Title": "Boudu Saved from Drowning",
+    "Director": "Jean Renoir",
+    "Year": "1932",
+    "Country": "France"
+  },
+  {
+    "Spine #": 306.0,
+    "Title": "Le samoura\u00ef",
+    "Director": "Jean-Pierre Melville",
+    "Year": "1967",
+    "Country": "France"
+  },
+  {
+    "Spine #": 307.0,
+    "Title": "Naked",
+    "Director": "Mike Leigh",
+    "Year": "1993",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 308.0,
+    "Title": "Masculin f\u00e9minin",
+    "Director": "Jean-Luc Godard",
+    "Year": "1966",
+    "Country": "France"
+  },
+  {
+    "Spine #": 309.0,
+    "Title": "Ugetsu",
+    "Director": "Kenji Mizoguchi",
+    "Year": "1953",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 310.0,
+    "Title": "Samurai Rebellion",
+    "Director": "Masaki Kobayashi",
+    "Year": "1967",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 311.0,
+    "Title": "Sword of the Beast",
+    "Director": "Hideo Gosha",
+    "Year": "1965",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 312.0,
+    "Title": "Samurai Spy",
+    "Director": "Masahiro Shinoda",
+    "Year": "1965",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 313.0,
+    "Title": "Kill!",
+    "Director": "Kihachi Okamoto",
+    "Year": "1968",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 314.0,
+    "Title": "Pickpocket",
+    "Director": "Robert Bresson",
+    "Year": "1959",
+    "Country": "France"
+  },
+  {
+    "Spine #": 315.0,
+    "Title": "Shoot the Piano Player",
+    "Director": "Fran\u00e7ois Truffaut",
+    "Year": "1960",
+    "Country": "France"
+  },
+  {
+    "Spine #": 316.0,
+    "Title": "Ran",
+    "Director": "Akira Kurosawa",
+    "Year": "1985",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 317.0,
+    "Title": "The Tales of Hoffmann",
+    "Director": "Michael Powell\u2026",
+    "Year": "1951",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 318.0,
+    "Title": "Forbidden Games",
+    "Director": "Ren\u00e9 Cl\u00e9ment",
+    "Year": "1952",
+    "Country": "France"
+  },
+  {
+    "Spine #": 319.0,
+    "Title": "The Bad Sleep Well",
+    "Director": "Akira Kurosawa",
+    "Year": "1960",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 320.0,
+    "Title": "Young Mr. Lincoln",
+    "Director": "John Ford",
+    "Year": "1939",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 321.0,
+    "Title": "The Virgin Spring",
+    "Director": "Ingmar Bergman",
+    "Year": "1960",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 322.0,
+    "Title": "The Complete Mr. Arkadin",
+    "Director": "Orson Welles",
+    "Year": "1955",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 323.0,
+    "Title": "The Children Are Watching Us",
+    "Director": "Vittorio De Sica",
+    "Year": "1944",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 324.0,
+    "Title": "La b\u00eate humaine",
+    "Director": "Jean Renoir",
+    "Year": "1938",
+    "Country": "France"
+  },
+  {
+    "Spine #": 325.0,
+    "Title": "Kind Hearts and Coronets",
+    "Director": "Robert Hamer",
+    "Year": "1949",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 326.0,
+    "Title": "Metropolitan",
+    "Director": "Whit Stillman",
+    "Year": "1990",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 327.0,
+    "Title": "3 Films by Louis Malle",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 328.0,
+    "Title": "Murmur of the Heart",
+    "Director": "Louis Malle",
+    "Year": "1971",
+    "Country": "France"
+  },
+  {
+    "Spine #": 329.0,
+    "Title": "Lacombe, Lucien",
+    "Director": "Louis Malle",
+    "Year": "1974",
+    "Country": "France"
+  },
+  {
+    "Spine #": 330.0,
+    "Title": "Au revoir les enfants",
+    "Director": "Louis Malle",
+    "Year": "1987",
+    "Country": "France"
+  },
+  {
+    "Spine #": 331.0,
+    "Title": "Late Spring",
+    "Director": "Yasujiro Ozu",
+    "Year": "1949",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 332.0,
+    "Title": "Viridiana",
+    "Director": "Luis Bu\u00f1uel",
+    "Year": "1961",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": 333.0,
+    "Title": "Fists in the Pocket",
+    "Director": "Marco Bellocchio",
+    "Year": "1965",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 334.0,
+    "Title": "Harlan County USA",
+    "Director": "Barbara Kopple",
+    "Year": "1976",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 335.0,
+    "Title": "Elevator to the Gallows",
+    "Director": "Louis Malle",
+    "Year": "1958",
+    "Country": "France"
+  },
+  {
+    "Spine #": 336.0,
+    "Title": "Dazed and Confused",
+    "Director": "Richard Linklater",
+    "Year": "1993",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 337.0,
+    "Title": "\u00c0 nos amours",
+    "Director": "Maurice Pialat",
+    "Year": "1983",
+    "Country": "France"
+  },
+  {
+    "Spine #": 338.0,
+    "Title": "Equinox",
+    "Director": "Jack Woods",
+    "Year": "1970",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 339.0,
+    "Title": "Yi Yi",
+    "Director": "Edward Yang",
+    "Year": "2000",
+    "Country": "Taiwan"
+  },
+  {
+    "Spine #": 340.0,
+    "Title": "Koko: A Talking Gorilla",
+    "Director": "Barbet Schroeder",
+    "Year": "1978",
+    "Country": "France"
+  },
+  {
+    "Spine #": 341.0,
+    "Title": "A Canterbury Tale",
+    "Director": "Michael Powell\u2026",
+    "Year": "1944",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 342.0,
+    "Title": "Six Moral Tales",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 343.0,
+    "Title": "The Bakery Girl of Monceau",
+    "Director": "Eric Rohmer",
+    "Year": "1963",
+    "Country": "France"
+  },
+  {
+    "Spine #": 344.0,
+    "Title": "Suzanne\u2019s Career",
+    "Director": "Eric Rohmer",
+    "Year": "1963",
+    "Country": "France"
+  },
+  {
+    "Spine #": 345.0,
+    "Title": "My Night at Maud\u2019s",
+    "Director": "Eric Rohmer",
+    "Year": "1969",
+    "Country": "France"
+  },
+  {
+    "Spine #": 346.0,
+    "Title": "La collectionneuse",
+    "Director": "Eric Rohmer",
+    "Year": "1967",
+    "Country": "France"
+  },
+  {
+    "Spine #": 347.0,
+    "Title": "Claire\u2019s Knee",
+    "Director": "Eric Rohmer",
+    "Year": "1970",
+    "Country": "France"
+  },
+  {
+    "Spine #": 348.0,
+    "Title": "Love in the Afternoon",
+    "Director": "Eric Rohmer",
+    "Year": "1972",
+    "Country": "France"
+  },
+  {
+    "Spine #": 349.0,
+    "Title": "Kicking and Screaming",
+    "Director": "Noah Baumbach",
+    "Year": "1995",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 350.0,
+    "Title": "Seduced and Abandoned",
+    "Director": "Pietro Germi",
+    "Year": "1964",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 351.0,
+    "Title": "The Spirit of the Beehive",
+    "Director": "V\u00edctor Erice",
+    "Year": "1973",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": 352.0,
+    "Title": "Jigoku",
+    "Director": "Nobuo Nakagawa",
+    "Year": "1960",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 353.0,
+    "Title": "S\u00f3lo con tu pareja",
+    "Director": "Alfonso Cuar\u00f3n",
+    "Year": "1991",
+    "Country": "Mexico"
+  },
+  {
+    "Spine #": 354.0,
+    "Title": "Clean, Shaven",
+    "Director": "Lodge Kerrigan",
+    "Year": "1994",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 355.0,
+    "Title": "Hands over the City",
+    "Director": "Francesco Rosi",
+    "Year": "1963",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 356.0,
+    "Title": "Sweetie",
+    "Director": "Jane Campion",
+    "Year": "1989",
+    "Country": "New Zealand"
+  },
+  {
+    "Spine #": 357.0,
+    "Title": "The Fallen Idol",
+    "Director": "Carol Reed",
+    "Year": "1948",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 358.0,
+    "Title": "Pandora\u2019s Box",
+    "Director": "Georg Wilhelm Pabst",
+    "Year": "1929",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 359.0,
+    "Title": "The Double Life of V\u00e9ronique",
+    "Director": "Krzysztof Kie\u015blowski",
+    "Year": "1991",
+    "Country": "France"
+  },
+  {
+    "Spine #": 360.0,
+    "Title": "Symbiopsychotaxiplasm",
+    "Director": "William Greaves",
+    "Year": "1968",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 361.0,
+    "Title": "The Beales of Grey Gardens",
+    "Director": "Albert Maysles\u2026",
+    "Year": "2006",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 362.0,
+    "Title": "Border Radio",
+    "Director": "Allison Anders\u2026",
+    "Year": "1987",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 363.0,
+    "Title": "Mouchette",
+    "Director": "Robert Bresson",
+    "Year": "1967",
+    "Country": "France"
+  },
+  {
+    "Spine #": 364.0,
+    "Title": "Monsters and Madmen",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 365.0,
+    "Title": "First Man into Space",
+    "Director": "Robert Day",
+    "Year": "1959",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 366.0,
+    "Title": "The Atomic Submarine",
+    "Director": "Spencer G. Bennet",
+    "Year": "1959",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 367.0,
+    "Title": "The Haunted Strangler",
+    "Director": "Robert Day",
+    "Year": "1958",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 368.0,
+    "Title": "Corridors of Blood",
+    "Director": "Robert Day",
+    "Year": "1959",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 369.0,
+    "Title": "Paul Robeson: Portraits of the Artist",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 370.0,
+    "Title": "The Emperor Jones",
+    "Director": "Dudley Murphy",
+    "Year": "1933",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 371.0,
+    "Title": "Body and Soul",
+    "Director": "Oscar Micheaux",
+    "Year": "1925",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 372.0,
+    "Title": "Sanders of the River",
+    "Director": "Zolt\u00e1n Korda",
+    "Year": "1935",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 373.0,
+    "Title": "The Proud Valley",
+    "Director": "Pen Tennyson",
+    "Year": "1940",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 374.0,
+    "Title": "Bicycle Thieves",
+    "Director": "Vittorio De Sica",
+    "Year": "1948",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 375.0,
+    "Title": "Green for Danger",
+    "Director": "Sidney Gilliat",
+    "Year": "1946",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 376.0,
+    "Title": "49th Parallel",
+    "Director": "Michael Powell",
+    "Year": "1941",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 377.0,
+    "Title": "When a Woman Ascends the Stairs",
+    "Director": "Mikio Naruse",
+    "Year": "1960",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 378.0,
+    "Title": "Fires on the Plain",
+    "Director": "Kon Ichikawa",
+    "Year": "1959",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 379.0,
+    "Title": "The Burmese Harp",
+    "Director": "Kon Ichikawa",
+    "Year": "1956",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 380.0,
+    "Title": "The Naked City",
+    "Director": "Jules Dassin",
+    "Year": "1948",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 381.0,
+    "Title": "La haine",
+    "Director": "Mathieu Kassovitz",
+    "Year": "1995",
+    "Country": "France"
+  },
+  {
+    "Spine #": 382.0,
+    "Title": "Overlord",
+    "Director": "Stuart Cooper",
+    "Year": "1975",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 383.0,
+    "Title": "Brute Force",
+    "Director": "Jules Dassin",
+    "Year": "1947",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 384.0,
+    "Title": "Vengeance Is Mine",
+    "Director": "Shohei Imamura",
+    "Year": "1979",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 385.0,
+    "Title": "Army of Shadows",
+    "Director": "Jean-Pierre Melville",
+    "Year": "1969",
+    "Country": "France"
+  },
+  {
+    "Spine #": 386.0,
+    "Title": "Sansho the Bailiff",
+    "Director": "Kenji Mizoguchi",
+    "Year": "1954",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 387.0,
+    "Title": "La Jet\u00e9e/Sans Soleil",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 388.0,
+    "Title": "The Two of Us",
+    "Director": "Claude Berri",
+    "Year": "1967",
+    "Country": "France"
+  },
+  {
+    "Spine #": 389.0,
+    "Title": "WR: Mysteries of the Organism",
+    "Director": "Du\u0161an Makavejev",
+    "Year": "1971",
+    "Country": "Yugoslavia"
+  },
+  {
+    "Spine #": 390.0,
+    "Title": "Sweet Movie",
+    "Director": "Du\u0161an Makavejev",
+    "Year": "1974",
+    "Country": "France"
+  },
+  {
+    "Spine #": 391.0,
+    "Title": "If....",
+    "Director": "Lindsay Anderson",
+    "Year": "1968",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 392.0,
+    "Title": "Three Films by Hiroshi Teshigahara",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 393.0,
+    "Title": "Pitfall",
+    "Director": "Hiroshi Teshigahara",
+    "Year": "1962",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 394.0,
+    "Title": "Woman in the Dunes",
+    "Director": "Hiroshi Teshigahara",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 395.0,
+    "Title": "The Face of Another",
+    "Director": "Hiroshi Teshigahara",
+    "Year": "1966",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 396.0,
+    "Title": "Ace in the Hole",
+    "Director": "Billy Wilder",
+    "Year": "1951",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 397.0,
+    "Title": "Ivan\u2019s Childhood",
+    "Director": "Andrei Tarkovsky",
+    "Year": "1962",
+    "Country": "Soviet Union"
+  },
+  {
+    "Spine #": 398.0,
+    "Title": "Les enfants terribles",
+    "Director": "Jean-Pierre Melville",
+    "Year": "1950",
+    "Country": "France"
+  },
+  {
+    "Spine #": 399.0,
+    "Title": "House of Games",
+    "Director": "David Mamet",
+    "Year": "1987",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 400.0,
+    "Title": "Stranger Than Paradise",
+    "Director": "Jim Jarmusch",
+    "Year": "1984",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 401.0,
+    "Title": "Night on Earth",
+    "Director": "Jim Jarmusch",
+    "Year": "1991",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 402.0,
+    "Title": "The Milky Way",
+    "Director": "Luis Bu\u00f1uel",
+    "Year": "1969",
+    "Country": "France"
+  },
+  {
+    "Spine #": 403.0,
+    "Title": "Cr\u00eda cuervos . . .",
+    "Director": "Carlos Saura",
+    "Year": "1976",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": 404.0,
+    "Title": "Robinson Crusoe on Mars",
+    "Director": "Byron Haskin",
+    "Year": "1964",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 405.0,
+    "Title": "The Threepenny Opera",
+    "Director": "Georg Wilhelm Pabst",
+    "Year": "1931",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 406.0,
+    "Title": "Martha Graham: Dance on Film",
+    "Director": "Nathan Kroll",
+    "Year": "1959",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 407.0,
+    "Title": "Mala Noche",
+    "Director": "Gus Van Sant",
+    "Year": "1985",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 408.0,
+    "Title": "Breathless",
+    "Director": "Jean-Luc Godard",
+    "Year": "1960",
+    "Country": "France"
+  },
+  {
+    "Spine #": 409.0,
+    "Title": "Days of Heaven",
+    "Director": "Terrence Malick",
+    "Year": "1978",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 410.0,
+    "Title": "Under the Volcano",
+    "Director": "John Huston",
+    "Year": "1984",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 411.0,
+    "Title": "Berlin Alexanderplatz",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1980",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 412.0,
+    "Title": "Sawdust and Tinsel",
+    "Director": "Ingmar Bergman",
+    "Year": "1953",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 413.0,
+    "Title": "Drunken Angel",
+    "Director": "Akira Kurosawa",
+    "Year": "1948",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 414.0,
+    "Title": "Two-Lane Blacktop",
+    "Director": "Monte Hellman",
+    "Year": "1971",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 415.0,
+    "Title": "The Naked Prey",
+    "Director": "Cornel Wilde",
+    "Year": "1966",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 416.0,
+    "Title": "Miss Julie",
+    "Director": "Alf Sj\u00f6berg",
+    "Year": "1951",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 417.0,
+    "Title": "This Sporting Life",
+    "Director": "Lindsay Anderson",
+    "Year": "1963",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 418.0,
+    "Title": "4 by Agn\u00e8s Varda",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 419.0,
+    "Title": "La Pointe Courte",
+    "Director": "Agn\u00e8s Varda",
+    "Year": "1956",
+    "Country": "France"
+  },
+  {
+    "Spine #": 420.0,
+    "Title": "Le bonheur",
+    "Director": "Agn\u00e8s Varda",
+    "Year": "1965",
+    "Country": "France"
+  },
+  {
+    "Spine #": 421.0,
+    "Title": "Pierrot le fou",
+    "Director": "Jean-Luc Godard",
+    "Year": "1965",
+    "Country": "France"
+  },
+  {
+    "Spine #": 422.0,
+    "Title": "The Last Emperor",
+    "Director": "Bernardo Bertolucci",
+    "Year": "1987",
+    "Country": "China"
+  },
+  {
+    "Spine #": 423.0,
+    "Title": "Walker",
+    "Director": "Alex Cox",
+    "Year": "1987",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 424.0,
+    "Title": "Mafioso",
+    "Director": "Alberto Lattuada",
+    "Year": "1962",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 425.0,
+    "Title": "Antonio Gaud\u00ed",
+    "Director": "Hiroshi Teshigahara",
+    "Year": "1984",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 426.0,
+    "Title": "The Ice Storm",
+    "Director": "Ang Lee",
+    "Year": "1997",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 427.0,
+    "Title": "Death of a Cyclist",
+    "Director": "Juan Antonio Bardem",
+    "Year": "1955",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": 428.0,
+    "Title": "Blast of Silence",
+    "Director": "Allen Baron",
+    "Year": "1961",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 429.0,
+    "Title": "The Lovers",
+    "Director": "Louis Malle",
+    "Year": "1958",
+    "Country": "France"
+  },
+  {
+    "Spine #": 430.0,
+    "Title": "The Fire Within",
+    "Director": "Louis Malle",
+    "Year": "1963",
+    "Country": "France"
+  },
+  {
+    "Spine #": 431.0,
+    "Title": "The Thief of Bagdad",
+    "Director": "Tim Whelan\u2026",
+    "Year": "1940",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 432.0,
+    "Title": "Mishima: A Life in Four Chapters",
+    "Director": "Paul Schrader",
+    "Year": "1985",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 433.0,
+    "Title": "Patriotism",
+    "Director": "Yukio Mishima\u2026",
+    "Year": "1966",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 434.0,
+    "Title": "Classe tous risques",
+    "Director": "Claude Sautet",
+    "Year": "1960",
+    "Country": "France"
+  },
+  {
+    "Spine #": 435.0,
+    "Title": "The Furies",
+    "Director": "Anthony Mann",
+    "Year": "1950",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 436.0,
+    "Title": "Before the Rain",
+    "Director": "Milcho Manchevski",
+    "Year": "1994",
+    "Country": "Macedonia"
+  },
+  {
+    "Spine #": 437.0,
+    "Title": "Vampyr",
+    "Director": "Carl Th. Dreyer",
+    "Year": "1932",
+    "Country": null
+  },
+  {
+    "Spine #": 438.0,
+    "Title": "Mon oncle Antoine",
+    "Director": "Claude Jutra",
+    "Year": "1971",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": 439.0,
+    "Title": "Trafic",
+    "Director": "Jacques Tati",
+    "Year": "1971",
+    "Country": "France"
+  },
+  {
+    "Spine #": 440.0,
+    "Title": "Brand upon the Brain!",
+    "Director": "Guy Maddin",
+    "Year": "2006",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": 441.0,
+    "Title": "The Small Back Room",
+    "Director": "Michael Powell\u2026",
+    "Year": "1949",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 442.0,
+    "Title": "Twenty-Four Eyes",
+    "Director": "Keisuke Kinoshita",
+    "Year": "1954",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 443.0,
+    "Title": "La ronde",
+    "Director": "Max Ophuls",
+    "Year": "1950",
+    "Country": "France"
+  },
+  {
+    "Spine #": 444.0,
+    "Title": "Le plaisir",
+    "Director": "Max Ophuls",
+    "Year": "1952",
+    "Country": "France"
+  },
+  {
+    "Spine #": 445.0,
+    "Title": "The Earrings of Madame de . . .",
+    "Director": "Max Ophuls",
+    "Year": "1953",
+    "Country": "France"
+  },
+  {
+    "Spine #": 446.0,
+    "Title": "An Autumn Afternoon",
+    "Director": "Yasujiro Ozu",
+    "Year": "1962",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 447.0,
+    "Title": "Le doulos",
+    "Director": "Jean-Pierre Melville",
+    "Year": "1962",
+    "Country": "France"
+  },
+  {
+    "Spine #": 448.0,
+    "Title": "Le deuxi\u00e8me souffle",
+    "Director": "Jean-Pierre Melville",
+    "Year": "1966",
+    "Country": "France"
+  },
+  {
+    "Spine #": 449.0,
+    "Title": "Missing",
+    "Director": "Costa-Gavras",
+    "Year": "1982",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 450.0,
+    "Title": "Bottle Rocket",
+    "Director": "Wes Anderson",
+    "Year": "1996",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 451.0,
+    "Title": "Fanfan la Tulipe",
+    "Director": "Christian-Jaque",
+    "Year": "1952",
+    "Country": "France"
+  },
+  {
+    "Spine #": 452.0,
+    "Title": "The Spy Who Came in from the Cold",
+    "Director": "Martin Ritt",
+    "Year": "1965",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 453.0,
+    "Title": "Chungking Express",
+    "Director": "Wong Kar-wai",
+    "Year": "1994",
+    "Country": "Hong Kong"
+  },
+  {
+    "Spine #": 454.0,
+    "Title": "Europa",
+    "Director": "Lars von Trier",
+    "Year": "1991",
+    "Country": "Denmark"
+  },
+  {
+    "Spine #": 455.0,
+    "Title": "White Dog",
+    "Director": "Samuel Fuller",
+    "Year": "1982",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 456.0,
+    "Title": "The Taking of Power by Louis XIV",
+    "Director": "Roberto Rossellini",
+    "Year": "1966",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 457.0,
+    "Title": "Magnificent Obsession",
+    "Director": "Douglas Sirk",
+    "Year": "1954",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 458.0,
+    "Title": "El Norte",
+    "Director": "Gregory Nava",
+    "Year": "1983",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 459.0,
+    "Title": "The Exterminating Angel",
+    "Director": "Luis Bu\u00f1uel",
+    "Year": "1962",
+    "Country": "Mexico"
+  },
+  {
+    "Spine #": 460.0,
+    "Title": "Simon of the Desert",
+    "Director": "Luis Bu\u00f1uel",
+    "Year": "1965",
+    "Country": "Mexico"
+  },
+  {
+    "Spine #": 461.0,
+    "Title": "Hobson\u2019s Choice",
+    "Director": "David Lean",
+    "Year": "1954",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 462.0,
+    "Title": "The Last Metro",
+    "Director": "Fran\u00e7ois Truffaut",
+    "Year": "1980",
+    "Country": "France"
+  },
+  {
+    "Spine #": 463.0,
+    "Title": "Il Generale Della Rovere",
+    "Director": "Roberto Rossellini",
+    "Year": "1959",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 464.0,
+    "Title": "Danton",
+    "Director": "Andrzej Wajda",
+    "Year": "1983",
+    "Country": "France"
+  },
+  {
+    "Spine #": 465.0,
+    "Title": "Dodes\u2019ka-den",
+    "Director": "Akira Kurosawa",
+    "Year": "1970",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 466.0,
+    "Title": "In the Realm of the Senses",
+    "Director": "Nagisa Oshima",
+    "Year": "1976",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 467.0,
+    "Title": "Empire of Passion",
+    "Director": "Nagisa Oshima",
+    "Year": "1978",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 468.0,
+    "Title": "Science Is Fiction: 23 Films by Jean Painlev\u00e9",
+    "Director": "Jean Painlev\u00e9",
+    "Year": null,
+    "Country": "France"
+  },
+  {
+    "Spine #": 469.0,
+    "Title": "The Hit",
+    "Director": "Stephen Frears",
+    "Year": "1984",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 470.0,
+    "Title": "Wise Blood",
+    "Director": "John Huston",
+    "Year": "1979",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 471.0,
+    "Title": "Pigs, Pimps & Prostitutes: 3 Films by Shohei Imamura",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 472.0,
+    "Title": "Pigs and Battleships",
+    "Director": "Shohei Imamura",
+    "Year": "1962",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 473.0,
+    "Title": "The Insect Woman",
+    "Director": "Shohei Imamura",
+    "Year": "1963",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 474.0,
+    "Title": "Intentions of Murder",
+    "Director": "Shohei Imamura",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 475.0,
+    "Title": "The Friends of Eddie Coyle",
+    "Director": "Peter Yates",
+    "Year": "1973",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 476.0,
+    "Title": "The Curious Case of Benjamin Button",
+    "Director": "David Fincher",
+    "Year": "2008",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 477.0,
+    "Title": "Bergman Island",
+    "Director": "Marie Nyrer\u00f6d",
+    "Year": "2006",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 478.0,
+    "Title": "Last Year at Marienbad",
+    "Director": "Alain Resnais",
+    "Year": "1961",
+    "Country": "France"
+  },
+  {
+    "Spine #": 479.0,
+    "Title": "My Dinner with Andr\u00e9",
+    "Director": "Louis Malle",
+    "Year": "1981",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 480.0,
+    "Title": "The Human Condition",
+    "Director": "Masaki Kobayashi",
+    "Year": "1959",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 481.0,
+    "Title": "Made in U.S.A",
+    "Director": "Jean-Luc Godard",
+    "Year": "1966",
+    "Country": "France"
+  },
+  {
+    "Spine #": 482.0,
+    "Title": "2 or 3 Things I Know About Her",
+    "Director": "Jean-Luc Godard",
+    "Year": "1967",
+    "Country": "France"
+  },
+  {
+    "Spine #": 483.0,
+    "Title": "Repulsion",
+    "Director": "Roman Polanski",
+    "Year": "1965",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 484.0,
+    "Title": "Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",
+    "Director": "Chantal Akerman",
+    "Year": "1975",
+    "Country": "Belgium"
+  },
+  {
+    "Spine #": 485.0,
+    "Title": "The Last Days of Disco",
+    "Director": "Whit Stillman",
+    "Year": "1998",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 486.0,
+    "Title": "Homicide",
+    "Director": "David Mamet",
+    "Year": "1991",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 487.0,
+    "Title": "That Hamilton Woman",
+    "Director": "Alexander Korda",
+    "Year": "1941",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 488.0,
+    "Title": "Howards End",
+    "Director": "James Ivory",
+    "Year": "1992",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 489.0,
+    "Title": "Monsoon Wedding",
+    "Director": "Mira Nair",
+    "Year": "2001",
+    "Country": "India"
+  },
+  {
+    "Spine #": 490.0,
+    "Title": "Wings of Desire",
+    "Director": "Wim Wenders",
+    "Year": "1987",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 491.0,
+    "Title": "Z",
+    "Director": "Costa-Gavras",
+    "Year": "1969",
+    "Country": "France"
+  },
+  {
+    "Spine #": 492.0,
+    "Title": "A Christmas Tale",
+    "Director": "Arnaud Desplechin",
+    "Year": "2008",
+    "Country": "France"
+  },
+  {
+    "Spine #": 493.0,
+    "Title": "Gomorrah",
+    "Director": "Matteo Garrone",
+    "Year": "2008",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 494.0,
+    "Title": "Downhill Racer",
+    "Director": "Michael Ritchie",
+    "Year": "1969",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 495.0,
+    "Title": "The Golden Age of Television",
+    "Director": null,
+    "Year": null,
+    "Country": "United States"
+  },
+  {
+    "Spine #": 496.0,
+    "Title": "Che",
+    "Director": "Steven Soderbergh",
+    "Year": "2008",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 497.0,
+    "Title": "Rome Open City",
+    "Director": "Roberto Rossellini",
+    "Year": "1945",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 498.0,
+    "Title": "Paisan",
+    "Director": "Roberto Rossellini",
+    "Year": "1946",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 499.0,
+    "Title": "Germany Year Zero",
+    "Director": "Roberto Rossellini",
+    "Year": "1948",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 500.0,
+    "Title": "Roberto Rossellini\u2019s War Trilogy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 501.0,
+    "Title": "Paris, Texas",
+    "Director": "Wim Wenders",
+    "Year": "1984",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 502.0,
+    "Title": "Revanche",
+    "Director": "G\u00f6tz Spielmann",
+    "Year": "2008",
+    "Country": "Austria"
+  },
+  {
+    "Spine #": 503.0,
+    "Title": "Lola Mont\u00e8s",
+    "Director": "Max Ophuls",
+    "Year": "1955",
+    "Country": "France"
+  },
+  {
+    "Spine #": 504.0,
+    "Title": "Hunger",
+    "Director": "Steve McQueen",
+    "Year": "2008",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 505.0,
+    "Title": "Make Way for Tomorrow",
+    "Director": "Leo McCarey",
+    "Year": "1937",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 506.0,
+    "Title": "Dillinger Is Dead",
+    "Director": "Marco Ferreri",
+    "Year": "1969",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 507.0,
+    "Title": "Bigger Than Life",
+    "Director": "Nicholas Ray",
+    "Year": "1956",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 508.0,
+    "Title": "Letters from Fontainhas: Three Films by Pedro Costa",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 509.0,
+    "Title": "Ossos",
+    "Director": "Pedro Costa",
+    "Year": "1997",
+    "Country": "Portugal"
+  },
+  {
+    "Spine #": 510.0,
+    "Title": "In Vanda\u2019s Room",
+    "Director": "Pedro Costa",
+    "Year": "2000",
+    "Country": "Portugal"
+  },
+  {
+    "Spine #": 511.0,
+    "Title": "Colossal Youth",
+    "Director": "Pedro Costa",
+    "Year": "2006",
+    "Country": "Portugal"
+  },
+  {
+    "Spine #": 512.0,
+    "Title": "Vivre sa vie",
+    "Director": "Jean-Luc Godard",
+    "Year": "1962",
+    "Country": "France"
+  },
+  {
+    "Spine #": 513.0,
+    "Title": "Summer Hours",
+    "Director": "Olivier Assayas",
+    "Year": "2008",
+    "Country": "France"
+  },
+  {
+    "Spine #": 514.0,
+    "Title": "Ride with the Devil",
+    "Director": "Ang Lee",
+    "Year": "1999",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 515.0,
+    "Title": "The Fugitive Kind",
+    "Director": "Sidney Lumet",
+    "Year": "1960",
+    "Country": null
+  },
+  {
+    "Spine #": 516.0,
+    "Title": "Stagecoach",
+    "Director": "John Ford",
+    "Year": "1939",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 517.0,
+    "Title": "By Brakhage: An Anthology, Volume Two",
+    "Director": "Stan Brakhage",
+    "Year": null,
+    "Country": "United States"
+  },
+  {
+    "Spine #": 518.0,
+    "Title": "By Brakhage: An Anthology, Volumes One and Two",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 519.0,
+    "Title": "Close-up",
+    "Director": "Abbas Kiarostami",
+    "Year": "1990",
+    "Country": "Iran"
+  },
+  {
+    "Spine #": 520.0,
+    "Title": "Everlasting Moments",
+    "Director": "Jan Troell",
+    "Year": "2008",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 521.0,
+    "Title": "Mystery Train",
+    "Director": "Jim Jarmusch",
+    "Year": "1989",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 522.0,
+    "Title": "Red Desert",
+    "Director": "Michelangelo Antonioni",
+    "Year": "1964",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 523.0,
+    "Title": "Night Train to Munich",
+    "Director": "Carol Reed",
+    "Year": "1940",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 524.0,
+    "Title": "The Only Son/There Was a Father: Two Films by Yasujiro Ozu",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 525.0,
+    "Title": "The Only Son",
+    "Director": "Yasujiro Ozu",
+    "Year": "1936",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 526.0,
+    "Title": "There Was a Father",
+    "Director": "Yasujiro Ozu",
+    "Year": "1942",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 527.0,
+    "Title": "The Secret of the Grain",
+    "Director": "Abdellatif Kechiche",
+    "Year": "2007",
+    "Country": "France"
+  },
+  {
+    "Spine #": 528.0,
+    "Title": "3 Silent Classics by Josef von Sternberg",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 529.0,
+    "Title": "Underworld",
+    "Director": "Josef von Sternberg",
+    "Year": "1927",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 530.0,
+    "Title": "The Last Command",
+    "Director": "Josef von Sternberg",
+    "Year": "1928",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 531.0,
+    "Title": "The Docks of New York",
+    "Director": "Josef von Sternberg",
+    "Year": "1928",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 532.0,
+    "Title": "Louie Bluie",
+    "Director": "Terry Zwigoff",
+    "Year": "1985",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 533.0,
+    "Title": "Crumb",
+    "Director": "Terry Zwigoff",
+    "Year": "1995",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 534.0,
+    "Title": "L\u2019enfance nue",
+    "Director": "Maurice Pialat",
+    "Year": "1968",
+    "Country": "France"
+  },
+  {
+    "Spine #": 535.0,
+    "Title": "Merry Christmas Mr. Lawrence",
+    "Director": "Nagisa Oshima",
+    "Year": "1983",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 536.0,
+    "Title": "The Thin Red Line",
+    "Director": "Terrence Malick",
+    "Year": "1998",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 537.0,
+    "Title": "The Magician",
+    "Director": "Ingmar Bergman",
+    "Year": "1958",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 538.0,
+    "Title": "Paths of Glory",
+    "Director": "Stanley Kubrick",
+    "Year": "1957",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 539.0,
+    "Title": "House",
+    "Director": "Nobuhiko Obayashi",
+    "Year": "1977",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 540.0,
+    "Title": "The Darjeeling Limited",
+    "Director": "Wes Anderson",
+    "Year": "2007",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 541.0,
+    "Title": "The Night of the Hunter",
+    "Director": "Charles Laughton",
+    "Year": "1955",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 542.0,
+    "Title": "Antichrist",
+    "Director": "Lars von Trier",
+    "Year": "2009",
+    "Country": "Denmark"
+  },
+  {
+    "Spine #": 543.0,
+    "Title": "Modern Times",
+    "Director": "Charlie Chaplin",
+    "Year": "1936",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 544.0,
+    "Title": "Head",
+    "Director": "Bob Rafelson",
+    "Year": "1968",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 545.0,
+    "Title": "Easy Rider",
+    "Director": "Dennis Hopper",
+    "Year": "1969",
+    "Country": null
+  },
+  {
+    "Spine #": 546.0,
+    "Title": "Five Easy Pieces",
+    "Director": "Bob Rafelson",
+    "Year": "1970",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 547.0,
+    "Title": "Drive, He Said",
+    "Director": "Jack Nicholson",
+    "Year": "1970",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 548.0,
+    "Title": "A Safe Place",
+    "Director": "Henry Jaglom",
+    "Year": "1971",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 549.0,
+    "Title": "The Last Picture Show",
+    "Director": "Peter Bogdanovich",
+    "Year": "1971",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 550.0,
+    "Title": "The King of Marvin Gardens",
+    "Director": "Bob Rafelson",
+    "Year": "1972",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 551.0,
+    "Title": "Cronos",
+    "Director": "Guillermo del Toro",
+    "Year": "1993",
+    "Country": "Mexico"
+  },
+  {
+    "Spine #": 552.0,
+    "Title": "Broadcast News",
+    "Director": "James L. Brooks",
+    "Year": "1987",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 553.0,
+    "Title": "Fish Tank",
+    "Director": "Andrea Arnold",
+    "Year": "2009",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 554.0,
+    "Title": "Still Walking",
+    "Director": "Hirokazu Kore-eda",
+    "Year": "2008",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 555.0,
+    "Title": "Sweet Smell of Success",
+    "Director": "Alexander Mackendrick",
+    "Year": "1957",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 556.0,
+    "Title": "Senso",
+    "Director": "Luchino Visconti",
+    "Year": "1954",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 557.0,
+    "Title": "The Times of Harvey Milk",
+    "Director": "Robert Epstein",
+    "Year": "1984",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 558.0,
+    "Title": "Topsy-Turvy",
+    "Director": "Mike Leigh",
+    "Year": "1999",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 559.0,
+    "Title": "The Mikado",
+    "Director": "Victor Schertzinger",
+    "Year": "1939",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 560.0,
+    "Title": "White Material",
+    "Director": "Claire Denis",
+    "Year": "2009",
+    "Country": "France"
+  },
+  {
+    "Spine #": 561.0,
+    "Title": "Kes",
+    "Director": "Ken Loach",
+    "Year": "1970",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 562.0,
+    "Title": "Blow Out",
+    "Director": "Brian De Palma",
+    "Year": "1981",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 563.0,
+    "Title": "Something Wild",
+    "Director": "Jonathan Demme",
+    "Year": "1986",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 564.0,
+    "Title": "Pale Flower",
+    "Director": "Masahiro Shinoda",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 565.0,
+    "Title": "The Great Dictator",
+    "Director": "Charles Chaplin",
+    "Year": "1940",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 566.0,
+    "Title": "Insignificance",
+    "Director": "Nicolas Roeg",
+    "Year": "1985",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 567.0,
+    "Title": "The Makioka Sisters",
+    "Director": "Kon Ichikawa",
+    "Year": "1983",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 568.0,
+    "Title": "Kiss Me Deadly",
+    "Director": "Robert Aldrich",
+    "Year": "1955",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 569.0,
+    "Title": "People on Sunday",
+    "Director": "Robert Siodmak\u2026",
+    "Year": "1930",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 570.0,
+    "Title": "Zazie dans le m\u00e9tro",
+    "Director": "Louis Malle",
+    "Year": "1960",
+    "Country": "France"
+  },
+  {
+    "Spine #": 571.0,
+    "Title": "Black Moon",
+    "Director": "Louis Malle",
+    "Year": "1975",
+    "Country": "France"
+  },
+  {
+    "Spine #": 572.0,
+    "Title": "L\u00e9on Morin, Priest",
+    "Director": "Jean-Pierre Melville",
+    "Year": "1961",
+    "Country": "France"
+  },
+  {
+    "Spine #": 573.0,
+    "Title": "The Music Room",
+    "Director": "Satyajit Ray",
+    "Year": "1958",
+    "Country": "India"
+  },
+  {
+    "Spine #": 574.0,
+    "Title": "Life During Wartime",
+    "Director": "Todd Solondz",
+    "Year": "2010",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 575.0,
+    "Title": "The Killing",
+    "Director": "Stanley Kubrick",
+    "Year": "1956",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 576.0,
+    "Title": "Secret Sunshine",
+    "Director": "Lee Chang-dong",
+    "Year": "2007",
+    "Country": "South Korea"
+  },
+  {
+    "Spine #": 577.0,
+    "Title": "Cul-de-sac",
+    "Director": "Roman Polanski",
+    "Year": "1966",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 578.0,
+    "Title": "The Complete Jean Vigo",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 579.0,
+    "Title": "The Phantom Carriage",
+    "Director": "Victor Sj\u00f6str\u00f6m",
+    "Year": "1921",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 580.0,
+    "Title": "Le beau Serge",
+    "Director": "Claude Chabrol",
+    "Year": "1958",
+    "Country": "France"
+  },
+  {
+    "Spine #": 581.0,
+    "Title": "Les cousins",
+    "Director": "Claude Chabrol",
+    "Year": "1959",
+    "Country": "France"
+  },
+  {
+    "Spine #": 582.0,
+    "Title": "Carlos",
+    "Director": "Olivier Assayas",
+    "Year": "2010",
+    "Country": "France"
+  },
+  {
+    "Spine #": 583.0,
+    "Title": "The Four Feathers",
+    "Director": "Zolt\u00e1n Korda",
+    "Year": "1939",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 584.0,
+    "Title": "Kuroneko",
+    "Director": "Kaneto Shindo",
+    "Year": "1968",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 585.0,
+    "Title": "Identification of a Woman",
+    "Director": "Michelangelo Antonioni",
+    "Year": "1982",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 586.0,
+    "Title": "Island of Lost Souls",
+    "Director": "Erle C. Kenton",
+    "Year": "1932",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 587.0,
+    "Title": "Three Colors",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 588.0,
+    "Title": "Three Colors: Blue",
+    "Director": "Krzysztof Kie\u015blowski",
+    "Year": "1993",
+    "Country": "France"
+  },
+  {
+    "Spine #": 589.0,
+    "Title": "Three Colors: White",
+    "Director": "Krzysztof Kie\u015blowski",
+    "Year": "1994",
+    "Country": "France"
+  },
+  {
+    "Spine #": 590.0,
+    "Title": "Three Colors: Red",
+    "Director": "Krzysztof Kie\u015blowski",
+    "Year": "1994",
+    "Country": "France"
+  },
+  {
+    "Spine #": 591.0,
+    "Title": "12 Angry Men",
+    "Director": "Sidney Lumet",
+    "Year": "1957",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 592.0,
+    "Title": "Design for Living",
+    "Director": "Ernst Lubitsch",
+    "Year": "1933",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 593.0,
+    "Title": "Belle de jour",
+    "Director": "Luis Bu\u00f1uel",
+    "Year": "1967",
+    "Country": "France"
+  },
+  {
+    "Spine #": 594.0,
+    "Title": "Godzilla",
+    "Director": "Ishiro Honda",
+    "Year": "1954",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 595.0,
+    "Title": "The Moment of Truth",
+    "Director": "Francesco Rosi",
+    "Year": "1965",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 596.0,
+    "Title": "Three Outlaw Samurai",
+    "Director": "Hideo Gosha",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 597.0,
+    "Title": "Tiny Furniture",
+    "Director": "Lena Dunham",
+    "Year": "2010",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 598.0,
+    "Title": "World on a Wire",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1973",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 599.0,
+    "Title": "Vanya on 42nd Street",
+    "Director": "Louis Malle",
+    "Year": "1994",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 600.0,
+    "Title": "Anatomy of a Murder",
+    "Director": "Otto Preminger",
+    "Year": "1959",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 601.0,
+    "Title": "Letter Never Sent",
+    "Director": "Mikhail Kalatozov",
+    "Year": "1959",
+    "Country": "Soviet Union"
+  },
+  {
+    "Spine #": 602.0,
+    "Title": "The War Room",
+    "Director": "Chris Hegedus\u2026",
+    "Year": "1993",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 603.0,
+    "Title": "David Lean Directs No\u00ebl Coward",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 604.0,
+    "Title": "In Which We Serve",
+    "Director": "David Lean\u2026",
+    "Year": "1942",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 605.0,
+    "Title": "This Happy Breed",
+    "Director": "David Lean",
+    "Year": "1944",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 606.0,
+    "Title": "Blithe Spirit",
+    "Director": "David Lean",
+    "Year": "1945",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 607.0,
+    "Title": "A Hollis Frampton Odyssey",
+    "Director": "Hollis Frampton",
+    "Year": null,
+    "Country": "United States"
+  },
+  {
+    "Spine #": 608.0,
+    "Title": "Harold and Maude",
+    "Director": "Hal Ashby",
+    "Year": "1971",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 609.0,
+    "Title": "\u00a1Alambrista!",
+    "Director": "Robert M. Young",
+    "Year": "1977",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 610.0,
+    "Title": "The Organizer",
+    "Director": "Mario Monicelli",
+    "Year": "1963",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 611.0,
+    "Title": "Being John Malkovich",
+    "Director": "Spike Jonze",
+    "Year": "1999",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 612.0,
+    "Title": "Certified Copy",
+    "Director": "Abbas Kiarostami",
+    "Year": "2010",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 613.0,
+    "Title": "Summer Interlude",
+    "Director": "Ingmar Bergman",
+    "Year": "1951",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 614.0,
+    "Title": "Summer with Monika",
+    "Director": "Ingmar Bergman",
+    "Year": "1953",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 615.0,
+    "Title": "The Gold Rush",
+    "Director": "Charles Chaplin",
+    "Year": "1942",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 616.0,
+    "Title": "Shallow Grave",
+    "Director": "Danny Boyle",
+    "Year": "1994",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 617.0,
+    "Title": "And Everything Is Going Fine",
+    "Director": "Steven Soderbergh",
+    "Year": "2010",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 618.0,
+    "Title": "Gray\u2019s Anatomy",
+    "Director": "Steven Soderbergh",
+    "Year": "1997",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 619.0,
+    "Title": "Le Havre",
+    "Director": "Aki Kaurism\u00e4ki",
+    "Year": "2011",
+    "Country": "Finland"
+  },
+  {
+    "Spine #": 620.0,
+    "Title": "La promesse",
+    "Director": "Luc Dardenne\u2026",
+    "Year": "1996",
+    "Country": "Belgium"
+  },
+  {
+    "Spine #": 621.0,
+    "Title": "Rosetta",
+    "Director": "Luc Dardenne\u2026",
+    "Year": "1999",
+    "Country": "Belgium"
+  },
+  {
+    "Spine #": 622.0,
+    "Title": "Weekend",
+    "Director": "Andrew Haigh",
+    "Year": "2011",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 623.0,
+    "Title": "Lonesome",
+    "Director": "Paul Fejos",
+    "Year": "1928",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 624.0,
+    "Title": "Quadrophenia",
+    "Director": "Franc Roddam",
+    "Year": "1979",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 625.0,
+    "Title": "Eating Raoul",
+    "Director": "Paul Bartel",
+    "Year": "1982",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 626.0,
+    "Title": "Les visiteurs du soir",
+    "Director": "Marcel Carn\u00e9",
+    "Year": "1942",
+    "Country": "France"
+  },
+  {
+    "Spine #": 627.0,
+    "Title": "The Game",
+    "Director": "David Fincher",
+    "Year": "1997",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 628.0,
+    "Title": "The Forgiveness of Blood",
+    "Director": "Joshua Marston",
+    "Year": "2011",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 629.0,
+    "Title": "Sunday Bloody Sunday",
+    "Director": "John Schlesinger",
+    "Year": "1971",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 630.0,
+    "Title": "Rosemary\u2019s Baby",
+    "Director": "Roman Polanski",
+    "Year": "1968",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 631.0,
+    "Title": "Trilogy of Life",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 632.0,
+    "Title": "The Decameron",
+    "Director": "Pier Paolo Pasolini",
+    "Year": "1971",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 633.0,
+    "Title": "The Canterbury Tales",
+    "Director": "Pier Paolo Pasolini",
+    "Year": "1972",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 634.0,
+    "Title": "Arabian Nights",
+    "Director": "Pier Paolo Pasolini",
+    "Year": "1974",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 635.0,
+    "Title": "Weekend",
+    "Director": "Jean-Luc Godard",
+    "Year": "1967",
+    "Country": "France"
+  },
+  {
+    "Spine #": 636.0,
+    "Title": "Heaven\u2019s Gate",
+    "Director": "Michael Cimino",
+    "Year": "1980",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 637.0,
+    "Title": "Purple Noon",
+    "Director": "Ren\u00e9 Cl\u00e9ment",
+    "Year": "1960",
+    "Country": "France"
+  },
+  {
+    "Spine #": 638.0,
+    "Title": "Following",
+    "Director": "Christopher Nolan",
+    "Year": "1999",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 639.0,
+    "Title": "The Qatsi Trilogy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 640.0,
+    "Title": "Koyaanisqatsi",
+    "Director": "Godfrey Reggio",
+    "Year": "1983",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 641.0,
+    "Title": "Powaqqatsi",
+    "Director": "Godfrey Reggio",
+    "Year": "1988",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 642.0,
+    "Title": "Naqoyqatsi",
+    "Director": "Godfrey Reggio",
+    "Year": "2002",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 643.0,
+    "Title": "The Man Who Knew Too Much",
+    "Director": "Alfred Hitchcock",
+    "Year": "1934",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 644.0,
+    "Title": "Pina",
+    "Director": "Wim Wenders",
+    "Year": "2011",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 645.0,
+    "Title": "The Ballad of Narayama",
+    "Director": "Keisuke Kinoshita",
+    "Year": "1958",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 646.0,
+    "Title": "The Kid with a Bike",
+    "Director": "Jean-Pierre Dardenne\u2026",
+    "Year": "2011",
+    "Country": "Belgium"
+  },
+  {
+    "Spine #": 647.0,
+    "Title": "On the Waterfront",
+    "Director": "Elia Kazan",
+    "Year": "1954",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 648.0,
+    "Title": "Chronicle of a Summer",
+    "Director": "Jean Rouch\u2026",
+    "Year": "1961",
+    "Country": "France"
+  },
+  {
+    "Spine #": 649.0,
+    "Title": "Ministry of Fear",
+    "Director": "Fritz Lang",
+    "Year": "1944",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 650.0,
+    "Title": "A Man Escaped",
+    "Director": "Robert Bresson",
+    "Year": "1956",
+    "Country": "France"
+  },
+  {
+    "Spine #": 651.0,
+    "Title": "Badlands",
+    "Director": "Terrence Malick",
+    "Year": "1973",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 652.0,
+    "Title": "Monsieur Verdoux",
+    "Director": "Charles Chaplin",
+    "Year": "1947",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 653.0,
+    "Title": "Gate of Hell",
+    "Director": "Teinosuke Kinugasa",
+    "Year": "1953",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 654.0,
+    "Title": "Repo Man",
+    "Director": "Alex Cox",
+    "Year": "1984",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 655.0,
+    "Title": "Pierre Etaix",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 656.0,
+    "Title": "Jubal",
+    "Director": "Delmer Daves",
+    "Year": "1956",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 657.0,
+    "Title": "3:10 to Yuma",
+    "Director": "Delmer Daves",
+    "Year": "1957",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 658.0,
+    "Title": "Medium Cool",
+    "Director": "Haskell Wexler",
+    "Year": "1969",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 659.0,
+    "Title": "Life Is Sweet",
+    "Director": "Mike Leigh",
+    "Year": "1990",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 660.0,
+    "Title": "Things to Come",
+    "Director": "William Cameron Menzies",
+    "Year": "1936",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 661.0,
+    "Title": "Marketa Lazarov\u00e1",
+    "Director": "Franti\u0161ek Vl\u00e1\u010dil",
+    "Year": "1967",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": 662.0,
+    "Title": "Safety Last!",
+    "Director": "Fred Newmeyer\u2026",
+    "Year": "1923",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 663.0,
+    "Title": "Shoah",
+    "Director": "Claude Lanzmann",
+    "Year": "1985",
+    "Country": "France"
+  },
+  {
+    "Spine #": 664.0,
+    "Title": "The Life of Oharu",
+    "Director": "Kenji Mizoguchi",
+    "Year": "1952",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 665.0,
+    "Title": "Babette\u2019s Feast",
+    "Director": "Gabriel Axel",
+    "Year": "1987",
+    "Country": "Denmark"
+  },
+  {
+    "Spine #": 666.0,
+    "Title": "The Devil\u2019s Backbone",
+    "Director": "Guillermo del Toro",
+    "Year": "2001",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": 667.0,
+    "Title": "Seconds",
+    "Director": "John Frankenheimer",
+    "Year": "1966",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 668.0,
+    "Title": "The Big City",
+    "Director": "Satyajit Ray",
+    "Year": "1963",
+    "Country": "India"
+  },
+  {
+    "Spine #": 669.0,
+    "Title": "Charulata",
+    "Director": "Satyajit Ray",
+    "Year": "1964",
+    "Country": "India"
+  },
+  {
+    "Spine #": 670.0,
+    "Title": "To Be or Not to Be",
+    "Director": "Ernst Lubitsch",
+    "Year": "1942",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 671.0,
+    "Title": "La Cage aux Folles",
+    "Director": "Edouard Molinaro",
+    "Year": "1978",
+    "Country": "France"
+  },
+  {
+    "Spine #": 672.0,
+    "Title": "3 Films by Roberto Rossellini Starring Ingrid Bergman",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 673.0,
+    "Title": "Stromboli",
+    "Director": "Roberto Rossellini",
+    "Year": "1950",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 674.0,
+    "Title": "Europe \u201951",
+    "Director": "Roberto Rossellini",
+    "Year": "1952",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 675.0,
+    "Title": "Journey to Italy",
+    "Director": "Roberto Rossellini",
+    "Year": "1954",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 676.0,
+    "Title": "I Married a Witch",
+    "Director": "Ren\u00e9 Clair",
+    "Year": "1942",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 677.0,
+    "Title": "The Uninvited",
+    "Director": "Lewis Allen",
+    "Year": "1944",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 678.0,
+    "Title": "La notte",
+    "Director": "Michelangelo Antonioni",
+    "Year": "1961",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 679.0,
+    "Title": "Zatoichi: The Blind Swordsman",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 680.0,
+    "Title": "City Lights",
+    "Director": "Charles Chaplin",
+    "Year": "1931",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 681.0,
+    "Title": "Frances Ha",
+    "Director": "Noah Baumbach",
+    "Year": "2013",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 682.0,
+    "Title": "Investigation of a Citizen Above Suspicion",
+    "Director": "Elio Petri",
+    "Year": "1970",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 683.0,
+    "Title": "Nashville",
+    "Director": "Robert Altman",
+    "Year": "1975",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 684.0,
+    "Title": "Martin Scorsese\u2019s World Cinema Project",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 685.0,
+    "Title": "Touki bouki",
+    "Director": "Djibril Diop Mamb\u00e9ty",
+    "Year": "1973",
+    "Country": null
+  },
+  {
+    "Spine #": 686.0,
+    "Title": "Redes",
+    "Director": "Emilio G\u00f3mez Muriel\u2026",
+    "Year": "1936",
+    "Country": null
+  },
+  {
+    "Spine #": 687.0,
+    "Title": "A River Called Titas",
+    "Director": "Ritwik Ghatak",
+    "Year": "1973",
+    "Country": null
+  },
+  {
+    "Spine #": 688.0,
+    "Title": "Dry Summer",
+    "Director": "Metin Erksan",
+    "Year": "1964",
+    "Country": null
+  },
+  {
+    "Spine #": 689.0,
+    "Title": "Trances",
+    "Director": "Ahmed El Ma\u00e2nouni",
+    "Year": "1981",
+    "Country": null
+  },
+  {
+    "Spine #": 690.0,
+    "Title": "The Housemaid",
+    "Director": "Kim Ki-young",
+    "Year": "1960",
+    "Country": null
+  },
+  {
+    "Spine #": 691.0,
+    "Title": "Thief",
+    "Director": "Michael Mann",
+    "Year": "1981",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 692.0,
+    "Title": "It\u2019s a Mad, Mad, Mad, Mad World",
+    "Director": "Stanley Kramer",
+    "Year": "1963",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 693.0,
+    "Title": "La vie de boh\u00e8me",
+    "Director": "Aki Kaurism\u00e4ki",
+    "Year": "1992",
+    "Country": "France"
+  },
+  {
+    "Spine #": 694.0,
+    "Title": "The Long Day Closes",
+    "Director": "Terence Davies",
+    "Year": "1992",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 695.0,
+    "Title": "Blue Is the Warmest Color",
+    "Director": "Abdellatif Kechiche",
+    "Year": "2013",
+    "Country": "France"
+  },
+  {
+    "Spine #": 696.0,
+    "Title": "Foreign Correspondent",
+    "Director": "Alfred Hitchcock",
+    "Year": "1940",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 697.0,
+    "Title": "Tess",
+    "Director": "Roman Polanski",
+    "Year": "1979",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 698.0,
+    "Title": "King of the Hill",
+    "Director": "Steven Soderbergh",
+    "Year": "1993",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 699.0,
+    "Title": "A Brief History of Time",
+    "Director": "Errol Morris",
+    "Year": "1991",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 700.0,
+    "Title": "Fantastic Mr. Fox",
+    "Director": "Wes Anderson",
+    "Year": "2009",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 701.0,
+    "Title": "Persona",
+    "Director": "Ingmar Bergman",
+    "Year": "1966",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 702.0,
+    "Title": "The Great Beauty",
+    "Director": "Paolo Sorrentino",
+    "Year": "2013",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 703.0,
+    "Title": "The Freshman",
+    "Director": "Sam Taylor\u2026",
+    "Year": "1925",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 704.0,
+    "Title": "Riot in Cell Block 11",
+    "Director": "Don Siegel",
+    "Year": "1954",
+    "Country": null
+  },
+  {
+    "Spine #": 705.0,
+    "Title": "Breaking the Waves",
+    "Director": "Lars von Trier",
+    "Year": "1996",
+    "Country": "Denmark"
+  },
+  {
+    "Spine #": 706.0,
+    "Title": "Master of the House",
+    "Director": "Carl Th. Dreyer",
+    "Year": "1925",
+    "Country": "Denmark"
+  },
+  {
+    "Spine #": 707.0,
+    "Title": "Il sorpasso",
+    "Director": "Dino Risi",
+    "Year": "1962",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 708.0,
+    "Title": "Like Someone in Love",
+    "Director": "Abbas Kiarostami",
+    "Year": "2012",
+    "Country": null
+  },
+  {
+    "Spine #": 709.0,
+    "Title": "Red River",
+    "Director": "Howard Hawks",
+    "Year": "1948",
+    "Country": null
+  },
+  {
+    "Spine #": 710.0,
+    "Title": "Judex",
+    "Director": "Georges Franju",
+    "Year": "1963",
+    "Country": "France"
+  },
+  {
+    "Spine #": 711.0,
+    "Title": "A Hard Day\u2019s Night",
+    "Director": "Richard Lester",
+    "Year": "1964",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 712.0,
+    "Title": "Scanners",
+    "Director": "David Cronenberg",
+    "Year": "1981",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": 713.0,
+    "Title": "The Essential Jacques Demy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 714.0,
+    "Title": "Lola",
+    "Director": "Jacques Demy",
+    "Year": "1961",
+    "Country": "France"
+  },
+  {
+    "Spine #": 715.0,
+    "Title": "Bay of Angels",
+    "Director": "Jacques Demy",
+    "Year": "1963",
+    "Country": "France"
+  },
+  {
+    "Spine #": 716.0,
+    "Title": "The Umbrellas of Cherbourg",
+    "Director": "Jacques Demy",
+    "Year": "1964",
+    "Country": "France"
+  },
+  {
+    "Spine #": 717.0,
+    "Title": "The Young Girls of Rochefort",
+    "Director": "Jacques Demy",
+    "Year": "1967",
+    "Country": "France"
+  },
+  {
+    "Spine #": 718.0,
+    "Title": "Donkey Skin",
+    "Director": "Jacques Demy",
+    "Year": "1970",
+    "Country": "France"
+  },
+  {
+    "Spine #": 719.0,
+    "Title": "Une chambre en ville",
+    "Director": "Jacques Demy",
+    "Year": "1982",
+    "Country": "France"
+  },
+  {
+    "Spine #": 720.0,
+    "Title": "The Big Chill",
+    "Director": "Lawrence Kasdan",
+    "Year": "1983",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 721.0,
+    "Title": "Love Streams",
+    "Director": "John Cassavetes",
+    "Year": "1984",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 722.0,
+    "Title": "Tie Me Up! Tie Me Down!",
+    "Director": "Pedro Almod\u00f3var",
+    "Year": "1990",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": 723.0,
+    "Title": "Y tu mam\u00e1 tambi\u00e9n",
+    "Director": "Alfonso Cuar\u00f3n",
+    "Year": "2001",
+    "Country": "Mexico"
+  },
+  {
+    "Spine #": 724.0,
+    "Title": "All That Jazz",
+    "Director": "Bob Fosse",
+    "Year": "1979",
+    "Country": null
+  },
+  {
+    "Spine #": 725.0,
+    "Title": "Eraserhead",
+    "Director": "David Lynch",
+    "Year": "1977",
+    "Country": null
+  },
+  {
+    "Spine #": 726.0,
+    "Title": "Macbeth",
+    "Director": "Roman Polanski",
+    "Year": "1971",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 727.0,
+    "Title": "The Innocents",
+    "Director": "Jack Clayton",
+    "Year": "1961",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 728.0,
+    "Title": "Sundays and Cyb\u00e8le",
+    "Director": "Serge Bourguignon",
+    "Year": "1962",
+    "Country": "France"
+  },
+  {
+    "Spine #": 729.0,
+    "Title": "The Complete Jacques Tati",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 730.0,
+    "Title": "Jour de f\u00eate",
+    "Director": "Jacques Tati",
+    "Year": "1949",
+    "Country": "France"
+  },
+  {
+    "Spine #": 731.0,
+    "Title": "Parade",
+    "Director": "Jacques Tati",
+    "Year": "1974",
+    "Country": "France"
+  },
+  {
+    "Spine #": 732.0,
+    "Title": "My Darling Clementine",
+    "Director": "John Ford",
+    "Year": "1946",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 733.0,
+    "Title": "La dolce vita",
+    "Director": "Federico Fellini",
+    "Year": "1960",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 734.0,
+    "Title": "The Shooting",
+    "Director": "Monte Hellman",
+    "Year": "1966",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 735.0,
+    "Title": "Ride in the Whirlwind",
+    "Director": "Monte Hellman",
+    "Year": "1966",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 736.0,
+    "Title": "It Happened One Night",
+    "Director": "Frank Capra",
+    "Year": "1934",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 737.0,
+    "Title": "Les Blank: Always for Pleasure",
+    "Director": "Les Blank",
+    "Year": "1968",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 738.0,
+    "Title": "Tootsie",
+    "Director": "Sydney Pollack",
+    "Year": "1982",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 739.0,
+    "Title": "Safe",
+    "Director": "Todd Haynes",
+    "Year": "1995",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 740.0,
+    "Title": "The Bitter Tears of Petra von Kant",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1972",
+    "Country": "West Germany"
+  },
+  {
+    "Spine #": 741.0,
+    "Title": "My Winnipeg",
+    "Director": "Guy Maddin",
+    "Year": "2007",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": 742.0,
+    "Title": "The Palm Beach Story",
+    "Director": "Preston Sturges",
+    "Year": "1942",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 743.0,
+    "Title": "La Ci\u00e9naga",
+    "Director": "Lucrecia Martel",
+    "Year": "2001",
+    "Country": "Argentina"
+  },
+  {
+    "Spine #": 744.0,
+    "Title": "Every Man for Himself",
+    "Director": "Jean-Luc Godard",
+    "Year": "1980",
+    "Country": "France"
+  },
+  {
+    "Spine #": 745.0,
+    "Title": "Don't Look Now",
+    "Director": "Nicolas Roeg",
+    "Year": "1973",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 746.0,
+    "Title": "A Day in the Country",
+    "Director": "Jean Renoir",
+    "Year": "1936",
+    "Country": "France"
+  },
+  {
+    "Spine #": 747.0,
+    "Title": "Fellini Satyricon",
+    "Director": "Federico Fellini",
+    "Year": "1969",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 748.0,
+    "Title": "Watership Down",
+    "Director": "Martin Rosen",
+    "Year": "1978",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 749.0,
+    "Title": "The Soft Skin",
+    "Director": "Fran\u00e7ois Truffaut",
+    "Year": "1964",
+    "Country": "France"
+  },
+  {
+    "Spine #": 750.0,
+    "Title": "Ride the Pink Horse",
+    "Director": "Robert Montgomery",
+    "Year": "1947",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 751.0,
+    "Title": "Gates of Heaven",
+    "Director": "Errol Morris",
+    "Year": "1978",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 752.0,
+    "Title": "Vernon, Florida",
+    "Director": "Errol Morris",
+    "Year": "1981",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 753.0,
+    "Title": "The Thin Blue Line",
+    "Director": "Errol Morris",
+    "Year": "1988",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 754.0,
+    "Title": "Odd Man Out",
+    "Director": "Carol Reed",
+    "Year": "1947",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 755.0,
+    "Title": "Le silence de la mer",
+    "Director": "Jean-Pierre Melville",
+    "Year": "1949",
+    "Country": "France"
+  },
+  {
+    "Spine #": 756.0,
+    "Title": "Limelight",
+    "Director": "Charles Chaplin",
+    "Year": "1952",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 757.0,
+    "Title": "The Rose",
+    "Director": "Mark Rydell",
+    "Year": "1979",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 758.0,
+    "Title": "The Merchant of Four Seasons",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1971",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 759.0,
+    "Title": "The Confession",
+    "Director": "Costa-Gavras",
+    "Year": "1970",
+    "Country": "France"
+  },
+  {
+    "Spine #": 760.0,
+    "Title": "State of Siege",
+    "Director": "Costa-Gavras",
+    "Year": "1972",
+    "Country": "France"
+  },
+  {
+    "Spine #": 761.0,
+    "Title": "Valerie and Her Week of Wonders",
+    "Director": "Jaromil Jire\u0161",
+    "Year": "1970",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": 762.0,
+    "Title": "A Master Builder",
+    "Director": "Jonathan Demme",
+    "Year": "2014",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 763.0,
+    "Title": "The Bridge",
+    "Director": "Bernhard Wicki",
+    "Year": "1959",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 764.0,
+    "Title": "The Fisher King",
+    "Director": "Terry Gilliam",
+    "Year": "1991",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 765.0,
+    "Title": "The Black Stallion",
+    "Director": "Carroll Ballard",
+    "Year": "1979",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 766.0,
+    "Title": "Here Is Your Life",
+    "Director": "Jan Troell",
+    "Year": "1966",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 767.0,
+    "Title": "My Beautiful Laundrette",
+    "Director": "Stephen Frears",
+    "Year": "1985",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 768.0,
+    "Title": "The French Lieutenant\u2019s Woman",
+    "Director": "Karel Reisz",
+    "Year": "1981",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 769.0,
+    "Title": "Day for Night",
+    "Director": "Fran\u00e7ois Truffaut",
+    "Year": "1973",
+    "Country": "France"
+  },
+  {
+    "Spine #": 770.0,
+    "Title": "Dressed to Kill",
+    "Director": "Brian De Palma",
+    "Year": "1980",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 771.0,
+    "Title": "Two Days, One Night",
+    "Director": "Jean-Pierre Dardenne\u2026",
+    "Year": "2014",
+    "Country": "Belgium"
+  },
+  {
+    "Spine #": 772.0,
+    "Title": "Blind Chance",
+    "Director": "Krzysztof Kie\u015blowski",
+    "Year": "1981",
+    "Country": "Poland"
+  },
+  {
+    "Spine #": 773.0,
+    "Title": "Breaker Morant",
+    "Director": "Bruce Beresford",
+    "Year": "1980",
+    "Country": "Australia"
+  },
+  {
+    "Spine #": 774.0,
+    "Title": "Mister Johnson",
+    "Director": "Bruce Beresford",
+    "Year": "1990",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 775.0,
+    "Title": "A Room with a View",
+    "Director": "James Ivory",
+    "Year": "1986",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 776.0,
+    "Title": "Moonrise Kingdom",
+    "Director": "Wes Anderson",
+    "Year": "2012",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 777.0,
+    "Title": "The Brood",
+    "Director": "David Cronenberg",
+    "Year": "1979",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": 778.0,
+    "Title": "A Special Day",
+    "Director": "Ettore Scola",
+    "Year": "1977",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 779.0,
+    "Title": "Mulholland Dr.",
+    "Director": "David Lynch",
+    "Year": "2001",
+    "Country": null
+  },
+  {
+    "Spine #": 780.0,
+    "Title": "Code Unknown",
+    "Director": "Michael Haneke",
+    "Year": "2000",
+    "Country": "France"
+  },
+  {
+    "Spine #": 781.0,
+    "Title": "In Cold Blood",
+    "Director": "Richard Brooks",
+    "Year": "1967",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 782.0,
+    "Title": "The Apu Trilogy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 783.0,
+    "Title": "Pather Panchali",
+    "Director": "Satyajit Ray",
+    "Year": "1955",
+    "Country": "India"
+  },
+  {
+    "Spine #": 784.0,
+    "Title": "Aparajito",
+    "Director": "Satyajit Ray",
+    "Year": "1956",
+    "Country": "India"
+  },
+  {
+    "Spine #": 785.0,
+    "Title": "Apur Sansar",
+    "Director": "Satyajit Ray",
+    "Year": "1959",
+    "Country": "India"
+  },
+  {
+    "Spine #": 786.0,
+    "Title": "Dont Look Back",
+    "Director": "D. A. Pennebaker",
+    "Year": "1967",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 787.0,
+    "Title": "Jellyfish Eyes",
+    "Director": "Takashi Murakami",
+    "Year": "2013",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 788.0,
+    "Title": "Speedy",
+    "Director": "Ted Wilde",
+    "Year": "1928",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 789.0,
+    "Title": "Burroughs: The Movie",
+    "Director": "Howard Brookner",
+    "Year": "1983",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 790.0,
+    "Title": "Lady Snowblood",
+    "Director": "Toshiya Fujita",
+    "Year": "1973",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 791.0,
+    "Title": "Lady Snowblood: Love Song of Vengeance",
+    "Director": "Toshiya Fujita",
+    "Year": "1974",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 792.0,
+    "Title": "Bitter Rice",
+    "Director": "Giuseppe De Santis",
+    "Year": "1949",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 793.0,
+    "Title": "The American Friend",
+    "Director": "Wim Wenders",
+    "Year": "1977",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 794.0,
+    "Title": "Inside Llewyn Davis",
+    "Director": "Joel Coen\u2026",
+    "Year": "2013",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 795.0,
+    "Title": "Gilda",
+    "Director": "Charles Vidor",
+    "Year": "1946",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 796.0,
+    "Title": "The Emigrants",
+    "Director": "Jan Troell",
+    "Year": "1971",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 797.0,
+    "Title": "The New Land",
+    "Director": "Jan Troell",
+    "Year": "1972",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": 798.0,
+    "Title": "Death by Hanging",
+    "Director": "Nagisa Oshima",
+    "Year": "1968",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 799.0,
+    "Title": "The Kid",
+    "Director": "Charlie Chaplin",
+    "Year": "1921",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 800.0,
+    "Title": "The Graduate",
+    "Director": "Mike Nichols",
+    "Year": "1967",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 801.0,
+    "Title": "I Knew Her Well",
+    "Director": "Antonio Pietrangeli",
+    "Year": "1965",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 802.0,
+    "Title": "Paris Belongs to Us",
+    "Director": "Jacques Rivette",
+    "Year": "1961",
+    "Country": "France"
+  },
+  {
+    "Spine #": 803.0,
+    "Title": "The Manchurian Candidate",
+    "Director": "John Frankenheimer",
+    "Year": "1962",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 804.0,
+    "Title": "A Brighter Summer Day",
+    "Director": "Edward Yang",
+    "Year": "1991",
+    "Country": "Taiwan"
+  },
+  {
+    "Spine #": 805.0,
+    "Title": "A Poem Is a Naked Person",
+    "Director": "Les Blank",
+    "Year": "1974",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 806.0,
+    "Title": "Only Angels Have Wings",
+    "Director": "Howard Hawks",
+    "Year": "1939",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 807.0,
+    "Title": "Barcelona",
+    "Director": "Whit Stillman",
+    "Year": "1994",
+    "Country": null
+  },
+  {
+    "Spine #": 808.0,
+    "Title": "The Kennedy Films of Robert Drew & Associates",
+    "Director": "Robert Drew",
+    "Year": "0",
+    "Country": null
+  },
+  {
+    "Spine #": 809.0,
+    "Title": "Phoenix",
+    "Director": "Christian Petzold",
+    "Year": "2014",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 810.0,
+    "Title": "In a Lonely Place",
+    "Director": "Nicholas Ray",
+    "Year": "1950",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 811.0,
+    "Title": "The Naked Island",
+    "Director": "Kaneto Shindo",
+    "Year": "1960",
+    "Country": null
+  },
+  {
+    "Spine #": 812.0,
+    "Title": "The Player",
+    "Director": "Robert Altman",
+    "Year": "1992",
+    "Country": null
+  },
+  {
+    "Spine #": 813.0,
+    "Title": "Wim Wenders: The Road Trilogy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 814.0,
+    "Title": "Alice in the Cities",
+    "Director": "Wim Wenders",
+    "Year": "1974",
+    "Country": null
+  },
+  {
+    "Spine #": 815.0,
+    "Title": "Wrong Move",
+    "Director": "Wim Wenders",
+    "Year": "1975",
+    "Country": null
+  },
+  {
+    "Spine #": 816.0,
+    "Title": "Kings of the Road",
+    "Director": "Wim Wenders",
+    "Year": "1976",
+    "Country": null
+  },
+  {
+    "Spine #": 817.0,
+    "Title": "Le amiche",
+    "Director": "Michelangelo Antonioni",
+    "Year": "1955",
+    "Country": null
+  },
+  {
+    "Spine #": 818.0,
+    "Title": "La chienne",
+    "Director": "Jean Renoir",
+    "Year": "1931",
+    "Country": "France"
+  },
+  {
+    "Spine #": 819.0,
+    "Title": "Here Comes Mr. Jordan",
+    "Director": "Alexander Hall",
+    "Year": "1941",
+    "Country": null
+  },
+  {
+    "Spine #": 820.0,
+    "Title": "Fantastic Planet",
+    "Director": "Ren\u00e9 Laloux",
+    "Year": "1973",
+    "Country": "France"
+  },
+  {
+    "Spine #": 821.0,
+    "Title": "Dr. Strangelove, or: How I Learned to Stop Worrying and Love the Bomb",
+    "Director": "Stanley Kubrick",
+    "Year": "1964",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 822.0,
+    "Title": "Clouds of Sils Maria",
+    "Director": "Olivier Assayas",
+    "Year": "2014",
+    "Country": null
+  },
+  {
+    "Spine #": 823.0,
+    "Title": "The In-Laws",
+    "Director": "Arthur Hiller",
+    "Year": "1979",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 824.0,
+    "Title": "Muriel, or The Time of Return",
+    "Director": "Alain Resnais",
+    "Year": "1963",
+    "Country": "France"
+  },
+  {
+    "Spine #": 825.0,
+    "Title": "A Touch of Zen",
+    "Director": "King Hu",
+    "Year": "1971",
+    "Country": "Taiwan"
+  },
+  {
+    "Spine #": 826.0,
+    "Title": "The New World",
+    "Director": "Terrence Malick",
+    "Year": "2005",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 827.0,
+    "Title": "McCabe & Mrs. Miller",
+    "Director": "Robert Altman",
+    "Year": "1971",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 828.0,
+    "Title": "Ingrid Bergman: In Her Own Words",
+    "Director": "Stig Bj\u00f6rkman",
+    "Year": "2015",
+    "Country": null
+  },
+  {
+    "Spine #": 829.0,
+    "Title": "A Taste of Honey",
+    "Director": "Tony Richardson",
+    "Year": "1961",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 830.0,
+    "Title": "Chimes at Midnight",
+    "Director": "Orson Welles",
+    "Year": "1966",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": 831.0,
+    "Title": "The Immortal Story",
+    "Director": "Orson Welles",
+    "Year": "1968",
+    "Country": "France"
+  },
+  {
+    "Spine #": 832.0,
+    "Title": "The Story of the Last Chrysanthemum",
+    "Director": "Kenji Mizoguchi",
+    "Year": "1939",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 833.0,
+    "Title": "Cat People",
+    "Director": "Jacques Tourneur",
+    "Year": "1942",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 834.0,
+    "Title": "Blood Simple",
+    "Director": "Joel Coen",
+    "Year": "1984",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 835.0,
+    "Title": "Valley of the Dolls",
+    "Director": "Mark Robson",
+    "Year": "1967",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 836.0,
+    "Title": "Beyond the Valley of the Dolls",
+    "Director": "Russ Meyer",
+    "Year": "1970",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 837.0,
+    "Title": "Dekalog",
+    "Director": "Krzysztof Kie\u015blowski",
+    "Year": "1988",
+    "Country": "Poland"
+  },
+  {
+    "Spine #": 838.0,
+    "Title": "Pan\u2019s Labyrinth",
+    "Director": "Guillermo del Toro",
+    "Year": "2006",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": 839.0,
+    "Title": "Boyhood",
+    "Director": "Richard Linklater",
+    "Year": "2014",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 840.0,
+    "Title": "The Executioner",
+    "Director": "Luis Garc\u00eda Berlanga",
+    "Year": "1963",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": 841.0,
+    "Title": "Lone Wolf and Cub",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 842.0,
+    "Title": "Akira Kurosawa\u2019s Dreams",
+    "Director": "Akira Kurosawa",
+    "Year": "1990",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 843.0,
+    "Title": "Punch-Drunk Love",
+    "Director": "Paul Thomas Anderson",
+    "Year": "2002",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 844.0,
+    "Title": "One-Eyed Jacks",
+    "Director": "Marlon Brando",
+    "Year": "1961",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 845.0,
+    "Title": "The Squid and the Whale",
+    "Director": "Noah Baumbach",
+    "Year": "2005",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 846.0,
+    "Title": "Heart of a Dog",
+    "Director": "Laurie Anderson",
+    "Year": "2015",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 847.0,
+    "Title": "The Asphalt Jungle",
+    "Director": "John Huston",
+    "Year": "1950",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 848.0,
+    "Title": "Roma",
+    "Director": "Federico Fellini",
+    "Year": "1972",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 849.0,
+    "Title": "His Girl Friday",
+    "Director": "Howard Hawks",
+    "Year": "1940",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 850.0,
+    "Title": "Something Wild",
+    "Director": "Jack Garfein",
+    "Year": "1961",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 851.0,
+    "Title": "Fox and His Friends",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1975",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": 852.0,
+    "Title": "Black Girl",
+    "Director": "Ousmane Semb\u00e8ne",
+    "Year": "1966",
+    "Country": "Senegal"
+  },
+  {
+    "Spine #": 853.0,
+    "Title": "Cameraperson",
+    "Director": "Kirsten Johnson",
+    "Year": "2016",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 854.0,
+    "Title": "The Tree of Wooden Clogs",
+    "Director": "Ermanno Olmi",
+    "Year": "1978",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": 855.0,
+    "Title": "Women on the Verge of a Nervous Breakdown",
+    "Director": "Pedro Almod\u00f3var",
+    "Year": "1988",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": 856.0,
+    "Title": "The Before Trilogy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 857.0,
+    "Title": "Before Sunrise",
+    "Director": "Richard Linklater",
+    "Year": "1995",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 858.0,
+    "Title": "Before Sunset",
+    "Director": "Richard Linklater",
+    "Year": "2004",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 859.0,
+    "Title": "Before Midnight",
+    "Director": "Richard Linklater",
+    "Year": "2013",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 860.0,
+    "Title": "Mildred Pierce",
+    "Director": "Michael Curtiz",
+    "Year": "1945",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 861.0,
+    "Title": "45 Years",
+    "Director": "Andrew Haigh",
+    "Year": "2015",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 862.0,
+    "Title": "Canoa: A Shameful Memory",
+    "Director": "Felipe Cazals",
+    "Year": "1976",
+    "Country": "Mexico"
+  },
+  {
+    "Spine #": 863.0,
+    "Title": "Multiple Maniacs",
+    "Director": "John Waters",
+    "Year": "1970",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 864.0,
+    "Title": "Being There",
+    "Director": "Hal Ashby",
+    "Year": "1979",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 865.0,
+    "Title": "Blow-Up",
+    "Director": "Michelangelo Antonioni",
+    "Year": "1966",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 866.0,
+    "Title": "Buena Vista Social Club",
+    "Director": "Wim Wenders",
+    "Year": "1999",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 867.0,
+    "Title": "Woman of the Year",
+    "Director": "George Stevens",
+    "Year": "1942",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 868.0,
+    "Title": "Tampopo",
+    "Director": "Juzo Itami",
+    "Year": "1985",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": 869.0,
+    "Title": "Rumble Fish",
+    "Director": "Francis Ford Coppola",
+    "Year": "1983",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 870.0,
+    "Title": "Othello",
+    "Director": "Orson Welles",
+    "Year": "1952",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 871.0,
+    "Title": "Dheepan",
+    "Director": "Jacques Audiard",
+    "Year": "2015",
+    "Country": "France"
+  },
+  {
+    "Spine #": 872.0,
+    "Title": "Ghost World",
+    "Director": "Terry Zwigoff",
+    "Year": "2001",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 873.0,
+    "Title": "Martin Scorsese\u2019s World Cinema Project No. 2",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 874.0,
+    "Title": "Insiang",
+    "Director": "Lino Brocka",
+    "Year": "1976",
+    "Country": "Philippines"
+  },
+  {
+    "Spine #": 875.0,
+    "Title": "Mysterious Object at Noon",
+    "Director": "Apichatpong Weerasethakul",
+    "Year": "2000",
+    "Country": "Thailand"
+  },
+  {
+    "Spine #": 876.0,
+    "Title": "Revenge",
+    "Director": "Ermek Shinarbaev",
+    "Year": "1989",
+    "Country": "Kazakhstan"
+  },
+  {
+    "Spine #": 877.0,
+    "Title": "Limite",
+    "Director": "M\u00e1rio Peixoto",
+    "Year": "1931",
+    "Country": "Brazil"
+  },
+  {
+    "Spine #": 878.0,
+    "Title": "Law of the Border",
+    "Director": "L\u00fctfi \u00d6. Akad",
+    "Year": "1966",
+    "Country": "Turkey"
+  },
+  {
+    "Spine #": 879.0,
+    "Title": "Taipei Story",
+    "Director": "Edward Yang",
+    "Year": "1985",
+    "Country": "Taiwan"
+  },
+  {
+    "Spine #": 880.0,
+    "Title": "They Live by Night",
+    "Director": "Nicholas Ray",
+    "Year": "1948",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 881.0,
+    "Title": "The Marseille Trilogy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 882.0,
+    "Title": "Marius",
+    "Director": "Alexander Korda",
+    "Year": "1931",
+    "Country": "France"
+  },
+  {
+    "Spine #": 883.0,
+    "Title": "Fanny",
+    "Director": "Marc All\u00e9gret",
+    "Year": "1932",
+    "Country": "France"
+  },
+  {
+    "Spine #": 884.0,
+    "Title": "C\u00e9sar",
+    "Director": "Marcel Pagnol",
+    "Year": "1936",
+    "Country": "France"
+  },
+  {
+    "Spine #": 885.0,
+    "Title": "The Lodger: A Story of the London Fog",
+    "Director": "Alfred Hitchcock",
+    "Year": "1927",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 886.0,
+    "Title": "L\u2019argent",
+    "Director": "Robert Bresson",
+    "Year": "1983",
+    "Country": "France"
+  },
+  {
+    "Spine #": 887.0,
+    "Title": "Lost in America",
+    "Director": "Albert Brooks",
+    "Year": "1985",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 888.0,
+    "Title": "Stalker",
+    "Director": "Andrei Tarkovsky",
+    "Year": "1979",
+    "Country": "Russia"
+  },
+  {
+    "Spine #": 889.0,
+    "Title": "The Breaking Point",
+    "Director": "Michael Curtiz",
+    "Year": "1950",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 890.0,
+    "Title": "Meantime",
+    "Director": "Mike Leigh",
+    "Year": "1984",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 891.0,
+    "Title": "La poison",
+    "Director": "Sacha Guitry",
+    "Year": "1951",
+    "Country": "France"
+  },
+  {
+    "Spine #": 892.0,
+    "Title": "Festival",
+    "Director": "Murray Lerner",
+    "Year": "1967",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 893.0,
+    "Title": "Certain Women",
+    "Director": "Kelly Reichardt",
+    "Year": "2016",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 894.0,
+    "Title": "The Piano Teacher",
+    "Director": "Michael Haneke",
+    "Year": "2001",
+    "Country": null
+  },
+  {
+    "Spine #": 895.0,
+    "Title": "David Lynch: The Art Life",
+    "Director": "Olivia Neergaard-Holm\u2026",
+    "Year": "2016",
+    "Country": null
+  },
+  {
+    "Spine #": 896.0,
+    "Title": "The Lure",
+    "Director": "Agnieszka Smoczy\u0144ska",
+    "Year": "2015",
+    "Country": "Poland"
+  },
+  {
+    "Spine #": 897.0,
+    "Title": "Barry Lyndon",
+    "Director": "Stanley Kubrick",
+    "Year": "1975",
+    "Country": null
+  },
+  {
+    "Spine #": 898.0,
+    "Title": "Twin Peaks: Fire Walk with Me",
+    "Director": "David Lynch",
+    "Year": "1992",
+    "Country": null
+  },
+  {
+    "Spine #": 899.0,
+    "Title": "Personal Shopper",
+    "Director": "Olivier Assayas",
+    "Year": "2016",
+    "Country": null
+  },
+  {
+    "Spine #": 900.0,
+    "Title": "100 Years of Olympic Films: 1912\u20132012",
+    "Director": null,
+    "Year": null,
+    "Country": null
+  },
+  {
+    "Spine #": 901.0,
+    "Title": "The Philadelphia Story",
+    "Director": "George Cukor",
+    "Year": "1940",
+    "Country": null
+  },
+  {
+    "Spine #": 902.0,
+    "Title": "Desert Hearts",
+    "Director": "Donna Deitch",
+    "Year": "1985",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 903.0,
+    "Title": "Jabberwocky",
+    "Director": "Terry Gilliam",
+    "Year": "1977",
+    "Country": null
+  },
+  {
+    "Spine #": 904.0,
+    "Title": "Election",
+    "Director": "Alexander Payne",
+    "Year": "1999",
+    "Country": null
+  },
+  {
+    "Spine #": 905.0,
+    "Title": "The Breakfast Club",
+    "Director": "John Hughes",
+    "Year": "1985",
+    "Country": null
+  },
+  {
+    "Spine #": 906.0,
+    "Title": "I, Daniel Blake",
+    "Director": "Ken Loach",
+    "Year": "2016",
+    "Country": null
+  },
+  {
+    "Spine #": 907.0,
+    "Title": "Westfront 1918",
+    "Director": "G. W. Pabst",
+    "Year": "1930",
+    "Country": null
+  },
+  {
+    "Spine #": 908.0,
+    "Title": "Kameradschaft",
+    "Director": "G. W. Pabst",
+    "Year": "1931",
+    "Country": null
+  },
+  {
+    "Spine #": 909.0,
+    "Title": "Night of the Living Dead",
+    "Director": "George A. Romero",
+    "Year": "1968",
+    "Country": null
+  },
+  {
+    "Spine #": 910.0,
+    "Title": "Tom Jones",
+    "Director": "Tony Richardson",
+    "Year": "1963",
+    "Country": null
+  },
+  {
+    "Spine #": 911.0,
+    "Title": "The Hero",
+    "Director": "Satyajit Ray",
+    "Year": "1966",
+    "Country": null
+  },
+  {
+    "Spine #": 912.0,
+    "Title": "An Actor\u2019s Revenge",
+    "Director": "Kon Ichikawa",
+    "Year": "1963",
+    "Country": null
+  },
+  {
+    "Spine #": 913.0,
+    "Title": "The Age of Innocence",
+    "Director": "Martin Scorsese",
+    "Year": "1993",
+    "Country": null
+  },
+  {
+    "Spine #": 914.0,
+    "Title": "Baal",
+    "Director": "Volker Schl\u00f6ndorff",
+    "Year": "1970",
+    "Country": "West Germany"
+  },
+  {
+    "Spine #": 915.0,
+    "Title": "King of Jazz",
+    "Director": "John Murray Anderson",
+    "Year": "1930",
+    "Country": null
+  },
+  {
+    "Spine #": 916.0,
+    "Title": "Women in Love",
+    "Director": "Ken Russell",
+    "Year": "1969",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": 917.0,
+    "Title": "The Awful Truth",
+    "Director": "Leo McCarey",
+    "Year": "1937",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 918.0,
+    "Title": "The Color of Pomegranates",
+    "Director": "Sergei Parajanov",
+    "Year": "1969",
+    "Country": null
+  },
+  {
+    "Spine #": 919.0,
+    "Title": "Dead Man",
+    "Director": "Jim Jarmusch",
+    "Year": "1995",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 920.0,
+    "Title": "The Virgin Suicides",
+    "Director": "Sofia Coppola",
+    "Year": "1999",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 921.0,
+    "Title": "Moonrise",
+    "Director": "Frank Borzage",
+    "Year": "1948",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 922.0,
+    "Title": "The Other Side of Hope",
+    "Director": "Aki Kaurism\u00e4ki",
+    "Year": "2017",
+    "Country": null
+  },
+  {
+    "Spine #": 923.0,
+    "Title": "Beyond the Hills",
+    "Director": "Cristian Mungiu",
+    "Year": "2012",
+    "Country": "Romania"
+  },
+  {
+    "Spine #": 924.0,
+    "Title": "Graduation",
+    "Director": "Cristian Mungiu",
+    "Year": "2016",
+    "Country": "Romania"
+  },
+  {
+    "Spine #": 925.0,
+    "Title": "Midnight Cowboy",
+    "Director": "John Schlesinger",
+    "Year": "1969",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 926.0,
+    "Title": "Manila in the Claws of Light",
+    "Director": "Lino Brocka",
+    "Year": "1975",
+    "Country": "Philippines"
+  },
+  {
+    "Spine #": 927.0,
+    "Title": "El Sur",
+    "Director": "V\u00edctor Erice",
+    "Year": "1983",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": 928.0,
+    "Title": "Bowling for Columbine",
+    "Director": "Michael Moore",
+    "Year": "2002",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 929.0,
+    "Title": "Female Trouble",
+    "Director": "John Waters",
+    "Year": "1974",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 930.0,
+    "Title": "Dietrich & von Sternberg in Hollywood",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": 931.0,
+    "Title": "Morocco",
+    "Director": "Josef von Sternberg",
+    "Year": "1930",
+    "Country": null
+  },
+  {
+    "Spine #": 932.0,
+    "Title": "Dishonored",
+    "Director": "Josef von Sternberg",
+    "Year": "1931",
+    "Country": null
+  },
+  {
+    "Spine #": 933.0,
+    "Title": "Shanghai Express",
+    "Director": "Josef von Sternberg",
+    "Year": "1932",
+    "Country": null
+  },
+  {
+    "Spine #": 934.0,
+    "Title": "Blonde Venus",
+    "Director": "Josef von Sternberg",
+    "Year": "1932",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 935.0,
+    "Title": "The Devil Is a Woman",
+    "Director": "Josef von Sternberg",
+    "Year": "1935",
+    "Country": "United States"
+  },
+  {
+    "Spine #": 936.0,
+    "Title": "Bull Durham",
+    "Director": "Ron Shelton",
+    "Year": "1988",
+    "Country": null
+  },
+  {
+    "Spine #": 937.0,
+    "Title": "Dragon Inn",
+    "Director": "King Hu",
+    "Year": "1967",
+    "Country": null
+  },
+  {
+    "Spine #": 938.0,
+    "Title": "sex, lies, and videotape",
+    "Director": "Steven Soderbergh",
+    "Year": "1989",
+    "Country": null
+  },
+  {
+    "Spine #": 939.0,
+    "Title": "A Matter of Life and Death",
+    "Director": "Michael Powell and Emeric Pressburger",
+    "Year": "1946",
+    "Country": null
+  },
+  {
+    "Spine #": 940.0,
+    "Title": "The Ballad of Gregorio Cortez",
+    "Director": "Robert M. Young",
+    "Year": "1982",
+    "Country": null
+  },
+  {
+    "Spine #": 941.0,
+    "Title": "Smithereens",
+    "Director": "\u200bSusan Seidelman",
+    "Year": "1982",
+    "Country": null
+  },
+  {
+    "Spine #": 942.0,
+    "Title": "The Tree of Life",
+    "Director": "Terrence Malick",
+    "Year": "2011",
+    "Country": null
+  },
+  {
+    "Spine #": 943.0,
+    "Title": "Memories of Underdevelopment",
+    "Director": "Tom\u00e1s Guti\u00e9rrez Alea",
+    "Year": "1968",
+    "Country": null
+  },
+  {
+    "Spine #": null,
+    "Title": "Borderline",
+    "Director": "Kenneth Macpherson",
+    "Year": "1930",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Ivan the Terrible, Part I",
+    "Director": "Sergei Eisenstein",
+    "Year": "1944",
+    "Country": "Soviet Union"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Killers",
+    "Director": "Robert Siodmak",
+    "Year": "1946",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Killers",
+    "Director": "Don Siegel",
+    "Year": "1964",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Lower Depths",
+    "Director": "Jean Renoir",
+    "Year": "1936",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Lower Depths",
+    "Director": "Akira Kurosawa",
+    "Year": "1957",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Paul Robeson: Tribute to an Artist",
+    "Director": "Saul J. Turell",
+    "Year": "1979",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Suitor",
+    "Director": "Pierre Etaix",
+    "Year": "1963",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Yoyo",
+    "Director": "Pierre Etaix",
+    "Year": "1965",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "As Long as You\u2019ve Got Your Health",
+    "Director": "Pierre Etaix",
+    "Year": "1966",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Le grand amour",
+    "Director": "Pierre Etaix",
+    "Year": "1969",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Land of Milk and Honey",
+    "Director": "Pierre Etaix",
+    "Year": "1971",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "\u00c0 propos de Nice",
+    "Director": "Jean Vigo\u2026",
+    "Year": "1930",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Z\u00e9ro de conduite",
+    "Director": "Jean Vigo",
+    "Year": "1933",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "L\u2019Atalante",
+    "Director": "Jean Vigo",
+    "Year": "1934",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Lone Wolf and Cub: Sword of Vengeance",
+    "Director": "Kenji Misumi",
+    "Year": "1972",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Lone Wolf and Cub: Baby Cart at the River Styx",
+    "Director": "Kenji Misumi",
+    "Year": "1972",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Lone Wolf and Cub: Baby Cart to Hades",
+    "Director": "Kenji Misumi",
+    "Year": "1972",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Lone Wolf and Cub: Baby Cart in Peril",
+    "Director": "Buichi Saito",
+    "Year": "1972",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Lone Wolf and Cub: Baby Cart in the Land of Demons",
+    "Director": "Kenji Misumi",
+    "Year": "1973",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Lone Wolf and Cub: White Heaven in Hell",
+    "Director": "Yoshiyuki Kuroda",
+    "Year": "1974",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Three Children\u2019s Classics from Janus Films",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Red Balloon",
+    "Director": "Albert Lamorisse",
+    "Year": "1956",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "White Mane",
+    "Director": "Albert Lamorisse",
+    "Year": "1952",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Paddle to the Sea",
+    "Director": "William Mason",
+    "Year": "1966",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Ballad of the Sad Cafe",
+    "Director": "Simon Callow",
+    "Year": "1991",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Bombay Talkie",
+    "Director": "James Ivory",
+    "Year": "1970",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Bostonians",
+    "Director": "James Ivory",
+    "Year": "1984",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Courtesans of Bombay",
+    "Director": "Ismail Merchant",
+    "Year": "1983",
+    "Country": "India"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Deceivers",
+    "Director": "Nicholas Meyer",
+    "Year": "1988",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Europeans",
+    "Director": "James Ivory",
+    "Year": "1979",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Heat and Dust",
+    "Director": "James Ivory",
+    "Year": "1983",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Householder",
+    "Director": "James Ivory",
+    "Year": "1963",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Hullabaloo Over Georgie and Bonnie's Pictures",
+    "Director": "James Ivory",
+    "Year": "1978",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "In Custody",
+    "Director": "Ismail Merchant",
+    "Year": "1993",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Jane Austen in Manhattan",
+    "Director": "James Ivory",
+    "Year": "1980",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Maurice",
+    "Director": "James Ivory",
+    "Year": "1987",
+    "Country": null
+  },
+  {
+    "Spine #": null,
+    "Title": "The Perfect Murder",
+    "Director": "Zafar Hai",
+    "Year": "1988",
+    "Country": "India"
+  },
+  {
+    "Spine #": null,
+    "Title": "Quartet",
+    "Director": "James Ivory",
+    "Year": "1981",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Roseland",
+    "Director": "James Ivory",
+    "Year": "1977",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Savages",
+    "Director": "James Ivory",
+    "Year": "1972",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Shakespeare Wallah",
+    "Director": "James Ivory",
+    "Year": "1965",
+    "Country": "India"
+  },
+  {
+    "Spine #": null,
+    "Title": "New Tale of Zatoichi",
+    "Director": "Tokuzo Tanaka",
+    "Year": "1963",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi at Large",
+    "Director": "Kazuo Mori",
+    "Year": "1972",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi\u2019s Conspiracy",
+    "Director": "Kimiyoshi Yasuda",
+    "Year": "1973",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Essential Art House, Volume I",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Essential Art House, Volume II",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Essential Art House, Volume III",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Essential Art House, Volume IV",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Essential Art House, Volume V",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Le jour se l\u00e8ve",
+    "Director": "Marcel Carn\u00e9",
+    "Year": "1939",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "AK 100: 25 Films by Akira Kurosawa",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Madadayo",
+    "Director": "Akira Kurosawa",
+    "Year": "1993",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Essential Art House: 50 Years of Janus Films",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Three Documentaries",
+    "Director": "Saul J. Turell",
+    "Year": "1962",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Samurai Trilogy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Great Adaptations",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Olivier\u2019s Shakespeare",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Ingmar Bergman: Four Masterworks",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Yojimbo/Sanjuro Box Set",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Grey Gardens The Beales of Grey Gardens Box Set",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "America Lost and Found: The BBS Story",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Andr\u00e9 Gregory & Wallace Shawn: 3 Films",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "A Whit Stillman Trilogy: Metropolitan, Barcelona, The Last Days of Disco",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Shooting/Ride in the Whirlwind",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Complete Lady Snowblood",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Emigrants/The New Land",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Gates of Heaven/Vernon, Florida",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Trilog\u00eda de Guillermo del Toro",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Rock Box",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Classic Hitchcock",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 1: Early Bergman",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Torment",
+    "Director": "Alf Sj\u00f6berg",
+    "Year": "1944",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": null,
+    "Title": "Crisis",
+    "Director": "Ingmar Bergman",
+    "Year": "1946",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": null,
+    "Title": "Port of Call",
+    "Director": "Ingmar Bergman",
+    "Year": "1948",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": null,
+    "Title": "Thirst",
+    "Director": "Ingmar Bergman",
+    "Year": "1949",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": null,
+    "Title": "To Joy",
+    "Director": "Ingmar Bergman",
+    "Year": "1949",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 2: The Documentaries of Louis Malle",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Vive le Tour",
+    "Director": "Louis Malle",
+    "Year": "1962",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Humain, trop humain",
+    "Director": "Louis Malle",
+    "Year": "1973",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Place de la R\u00e9publique",
+    "Director": "Louis Malle",
+    "Year": "1974",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Phantom India",
+    "Director": "Louis Malle",
+    "Year": "1969",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Calcutta",
+    "Director": "Louis Malle",
+    "Year": "1969",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "God\u2019s Country",
+    "Director": "Louis Malle",
+    "Year": "1985",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": ". . . And the Pursuit of Happiness",
+    "Director": "Louis Malle",
+    "Year": "1986",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 3: Late Ozu",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Early Spring",
+    "Director": "Yasujiro Ozu",
+    "Year": "1956",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Tokyo Twilight",
+    "Director": "Yasujiro Ozu",
+    "Year": "1957",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Equinox Flower",
+    "Director": "Yasujiro Ozu",
+    "Year": "1958",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Late Autumn",
+    "Director": "Yasujiro Ozu",
+    "Year": "1960",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "The End of Summer",
+    "Director": "Yasujiro Ozu",
+    "Year": "1961",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 4: Raymond Bernard",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Wooden Crosses",
+    "Director": "Raymond Bernard",
+    "Year": "1932",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Les mis\u00e9rables",
+    "Director": "Raymond Bernard",
+    "Year": "1934",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 5: The First Films of Samuel Fuller",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "I Shot Jesse James",
+    "Director": "Samuel Fuller",
+    "Year": "1949",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Baron of Arizona",
+    "Director": "Samuel Fuller",
+    "Year": "1950",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Steel Helmet",
+    "Director": "Samuel Fuller",
+    "Year": "1951",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 6: Carlos Saura\u2019s Flamenco Trilogy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Blood Wedding",
+    "Director": "Carlos Saura",
+    "Year": "1981",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": null,
+    "Title": "Carmen",
+    "Director": "Carlos Saura",
+    "Year": "1983",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": null,
+    "Title": "El amor brujo",
+    "Director": "Carlos Saura",
+    "Year": "1986",
+    "Country": "Spain"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 7: Postwar Kurosawa",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "No Regrets for Our Youth",
+    "Director": "Akira Kurosawa",
+    "Year": "1946",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "One Wonderful Sunday",
+    "Director": "Akira Kurosawa",
+    "Year": "1947",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Scandal",
+    "Director": "Akira Kurosawa",
+    "Year": "1950",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Idiot",
+    "Director": "Akira Kurosawa",
+    "Year": "1951",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "I Live in Fear",
+    "Director": "Akira Kurosawa",
+    "Year": "1955",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 8: Lubitsch Musicals",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Love Parade",
+    "Director": "Ernst Lubitsch",
+    "Year": "1929",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Monte Carlo",
+    "Director": "Ernst Lubitsch",
+    "Year": "1930",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Smiling Lieutenant",
+    "Director": "Ernst Lubitsch",
+    "Year": "1931",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "One Hour with You",
+    "Director": "Ernst Lubitsch",
+    "Year": "1932",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 9: The Delirious Fictions of William Klein",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Who Are You, Polly Maggoo?",
+    "Director": "William Klein",
+    "Year": "1966",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Mr. Freedom",
+    "Director": "William Klein",
+    "Year": "1969",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Model Couple",
+    "Director": "William Klein",
+    "Year": "1977",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 10: Silent Ozu\u2014Three Family Comedies",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Tokyo Chorus",
+    "Director": "Yasujiro Ozu",
+    "Year": "1931",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "I Was Born, But . . .",
+    "Director": "Yasujiro Ozu",
+    "Year": "1932",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Passing Fancy",
+    "Director": "Yasujiro Ozu",
+    "Year": "1933",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 11: Larisa Shepitko",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Wings",
+    "Director": "Larisa Shepitko",
+    "Year": "1966",
+    "Country": "Soviet Union"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Ascent",
+    "Director": "Larisa Shepitko",
+    "Year": "1976",
+    "Country": "Soviet Union"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 12: Aki Kaurism\u00e4ki\u2019s Proletariat Trilogy",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Shadows in Paradise",
+    "Director": "Aki Kaurism\u00e4ki",
+    "Year": "1986",
+    "Country": "Finland"
+  },
+  {
+    "Spine #": null,
+    "Title": "Ariel",
+    "Director": "Aki Kaurism\u00e4ki",
+    "Year": "1988",
+    "Country": "Finland"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Match Factory Girl",
+    "Director": "Aki Kaurism\u00e4ki",
+    "Year": "1990",
+    "Country": "Finland"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 13: Kenji Mizoguchi\u2019s Fallen Women",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Osaka Elegy",
+    "Director": "Kenji Mizoguchi",
+    "Year": "1936",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Sisters of the Gion",
+    "Director": "Kenji Mizoguchi",
+    "Year": "1936",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Women of the Night",
+    "Director": "Kenji Mizoguchi",
+    "Year": "1948",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Street of Shame",
+    "Director": "Kenji Mizoguchi",
+    "Year": "1956",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 14: Rossellini\u2019s History Films\u2014Renaissance and Enlightenment",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Age of the Medici",
+    "Director": "Roberto Rossellini",
+    "Year": "1973",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": null,
+    "Title": "Cartesius",
+    "Director": "Roberto Rossellini",
+    "Year": "1974",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": null,
+    "Title": "Blaise Pascal",
+    "Director": "Roberto Rossellini",
+    "Year": "1972",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 15: Travels with Hiroshi Shimizu",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Japanese Girls at the Harbor",
+    "Director": "Hiroshi Shimizu",
+    "Year": "1933",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Mr. Thank You",
+    "Director": "Hiroshi Shimizu",
+    "Year": "1936",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Masseurs and a Woman",
+    "Director": "Hiroshi Shimizu",
+    "Year": "1938",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Ornamental Hairpin",
+    "Director": "Hiroshi Shimizu",
+    "Year": "1941",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 16: Alexander Korda\u2019s Private Lives",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Private Life of Henry VIII",
+    "Director": "Alexander Korda",
+    "Year": "1933",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Rise of Catherine the Great",
+    "Director": "Paul Czinner",
+    "Year": "1934",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Private Life of Don Juan",
+    "Director": "Alexander Korda",
+    "Year": "1934",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Rembrandt",
+    "Director": "Alexander Korda",
+    "Year": "1936",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 17: Nikkatsu Noir",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "I Am Waiting",
+    "Director": "Koreyoshi Kurahara",
+    "Year": "1957",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Rusty Knife",
+    "Director": "Toshio Masuda",
+    "Year": "1958",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Take Aim at the Police Van",
+    "Director": "Seijun Suzuki",
+    "Year": "1960",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Cruel Gun Story",
+    "Director": "Takumi Furukawa",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "A Colt Is My Passport",
+    "Director": "Takashi Nomura",
+    "Year": "1967",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 18: Du\u0161an Makavejev\u2014Free Radical",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Man Is Not a Bird",
+    "Director": "Du\u0161an Makavejev",
+    "Year": "1965",
+    "Country": "Yugoslavia"
+  },
+  {
+    "Spine #": null,
+    "Title": "Love Affair, or the Case of the Missing Switchboard Operator",
+    "Director": "Du\u0161an Makavejev",
+    "Year": "1967",
+    "Country": "Yugoslavia"
+  },
+  {
+    "Spine #": null,
+    "Title": "Innocence Unprotected",
+    "Director": "Du\u0161an Makavejev",
+    "Year": "1968",
+    "Country": "Yugoslavia"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 19: Chantal Akerman in the Seventies",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "La chambre",
+    "Director": "Chantal Akerman",
+    "Year": "1972",
+    "Country": "Belgium"
+  },
+  {
+    "Spine #": null,
+    "Title": "Hotel Monterey",
+    "Director": "Chantal Akerman",
+    "Year": "1972",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "News from Home",
+    "Director": "Chantal Akerman",
+    "Year": "1976",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Je tu il elle",
+    "Director": "Chantal Akerman",
+    "Year": "1975",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Les rendez-vous d\u2019Anna",
+    "Director": "Chantal Akerman",
+    "Year": "1978",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 20: George Bernard Shaw on Film",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Major Barbara",
+    "Director": "Gabriel Pascal",
+    "Year": "1941",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Caesar and Cleopatra",
+    "Director": "Gabriel Pascal",
+    "Year": "1945",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Androcles and the Lion",
+    "Director": "Chester Erskine",
+    "Year": "1952",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 21: Oshima\u2019s Outlaw Sixties",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Pleasures of the Flesh",
+    "Director": "Nagisa Oshima",
+    "Year": "1965",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Violence at Noon",
+    "Director": "Nagisa Oshima",
+    "Year": "1966",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Sing a Song of Sex",
+    "Director": "Nagisa Oshima",
+    "Year": "1967",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Japanese Summer: Double Suicide",
+    "Director": "Nagisa Oshima",
+    "Year": "1967",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Three Resurrected Drunkards",
+    "Director": "Nagisa Oshima",
+    "Year": "1968",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 22: Presenting Sacha Guitry",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Story of a Cheat",
+    "Director": "Sacha Guitry",
+    "Year": "1936",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Pearls of the Crown",
+    "Director": "Sacha Guitry",
+    "Year": "1937",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "D\u00e9sir\u00e9",
+    "Director": "Sacha Guitry",
+    "Year": "1937",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Quadrille",
+    "Director": "Sacha Guitry",
+    "Year": "1938",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 23: The First Films of Akira Kurosawa",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Sanshiro Sugata",
+    "Director": "Akira Kurosawa",
+    "Year": "1943",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Most Beautiful",
+    "Director": "Akira Kurosawa",
+    "Year": "1944",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Sanshiro Sugata, Part Two",
+    "Director": "Akira Kurosawa",
+    "Year": "1945",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Men Who Tread on the Tiger\u2019s Tail",
+    "Director": "Akira Kurosawa",
+    "Year": "1945",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 24: The Actuality Dramas of Allan King",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Warrendale",
+    "Director": "Allan King",
+    "Year": "1967",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": null,
+    "Title": "A Married Couple",
+    "Director": "Allan King",
+    "Year": "1969",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": null,
+    "Title": "Come On Children",
+    "Director": "Allan King",
+    "Year": "1972",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": null,
+    "Title": "Dying at Grace",
+    "Director": "Allan King",
+    "Year": "2003",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": null,
+    "Title": "Memory for Max, Claire, Ida and Company",
+    "Director": "Allan King",
+    "Year": "2005",
+    "Country": "Canada"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 25: Basil Dearden\u2019s London Underground",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Sapphire",
+    "Director": "Basil Dearden",
+    "Year": "1959",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "The League of Gentlemen",
+    "Director": "Basil Dearden",
+    "Year": "1960",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Victim",
+    "Director": "Basil Dearden",
+    "Year": "1961",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "All Night Long",
+    "Director": "Basil Dearden",
+    "Year": "1962",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 26: Silent Naruse",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Flunky, Work Hard",
+    "Director": "Mikio Naruse",
+    "Year": "1931",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "No Blood Relation",
+    "Director": "Mikio Naruse",
+    "Year": "1932",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Apart from You",
+    "Director": "Mikio Naruse",
+    "Year": "1933",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Every-Night Dreams",
+    "Director": "Mikio Naruse",
+    "Year": "1933",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Street Without End",
+    "Director": "Mikio Naruse",
+    "Year": "1934",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 27: Raffaello Matarazzo\u2019s Runaway Melodramas",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Chains",
+    "Director": "Raffaello Matarazzo",
+    "Year": "1949",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": null,
+    "Title": "Tormento",
+    "Director": "Raffaello Matarazzo",
+    "Year": "1950",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": null,
+    "Title": "Nobody\u2019s Children",
+    "Director": "Raffaello Matarazzo",
+    "Year": "1952",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": null,
+    "Title": "The White Angel",
+    "Director": "Raffaello Matarazzo",
+    "Year": "1955",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 28: The Warped World of Koreyoshi Kurahara",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Intimidation",
+    "Director": "Koreyoshi Kurahara",
+    "Year": "1960",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Warped Ones",
+    "Director": "Koreyoshi Kurahara",
+    "Year": "1960",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "I Hate But Love",
+    "Director": "Koreyoshi Kurahara",
+    "Year": "1962",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Black Sun",
+    "Director": "Koreyoshi Kurahara",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Thirst for Love",
+    "Director": "Koreyoshi Kurahara",
+    "Year": "1967",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 29: Aki Kaurism\u00e4ki\u2019s Leningrad Cowboys",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Leningrad Cowboys Go America",
+    "Director": "Aki Kaurism\u00e4ki",
+    "Year": "1989",
+    "Country": "Finland"
+  },
+  {
+    "Spine #": null,
+    "Title": "Leningrad Cowboys Meet Moses",
+    "Director": "Aki Kaurism\u00e4ki",
+    "Year": "1994",
+    "Country": "Finland"
+  },
+  {
+    "Spine #": null,
+    "Title": "Total Balalaika Show",
+    "Director": "Aki Kaurism\u00e4ki",
+    "Year": "1994",
+    "Country": "Finland"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 30: Sabu!",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Elephant Boy",
+    "Director": "Robert Flaherty\u2026",
+    "Year": "1937",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Drum",
+    "Director": "Zolt\u00e1n Korda",
+    "Year": "1938",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Jungle Book",
+    "Director": "Zolt\u00e1n Korda",
+    "Year": "1942",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 31: Three Popular Films by Jean-Pierre Gorin",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Poto and Cabengo",
+    "Director": "Jean-Pierre Gorin",
+    "Year": "1980",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Routine Pleasures",
+    "Director": "Jean-Pierre Gorin",
+    "Year": "1986",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "My Crasy Life",
+    "Director": "Jean-Pierre Gorin",
+    "Year": "1992",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 32: Pearls of the Czech New Wave",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Pearls of the Deep",
+    "Director": "Ji\u0159\u00ed Menzel\u2026",
+    "Year": "1966",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": null,
+    "Title": "Daisies",
+    "Director": "V\u011bra Chytilov\u00e1",
+    "Year": "1966",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": null,
+    "Title": "A Report on the Party and Guests",
+    "Director": "Jan N\u011bmec",
+    "Year": "1966",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": null,
+    "Title": "Return of the Prodigal Son",
+    "Director": "Evald Schorm",
+    "Year": "1967",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": null,
+    "Title": "Capricious Summer",
+    "Director": "Ji\u0159\u00ed Menzel",
+    "Year": "1968",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Joke",
+    "Director": "Jaromil Jire\u0161",
+    "Year": "1969",
+    "Country": "Czechoslovakia"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 33: Up All Night with Robert Downey Sr.",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Babo 73",
+    "Director": "Robert Downey Sr.",
+    "Year": "1964",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Chafed Elbows",
+    "Director": "Robert Downey Sr.",
+    "Year": "1966",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "No More Excuses",
+    "Director": "Robert Downey Sr.\u2026",
+    "Year": "1968",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Putney Swope",
+    "Director": "Robert Downey Sr.",
+    "Year": "1969",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Two Tons of Turquoise to Taos Tonight",
+    "Director": "Robert Downey Sr.",
+    "Year": "1975",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 34: Jean Gr\u00e9millon During the Occupation",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Remorques",
+    "Director": "Jean Gr\u00e9millon",
+    "Year": "1941",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Lumi\u00e8re d\u2019\u00e9t\u00e9",
+    "Director": "Jean Gr\u00e9millon",
+    "Year": "1943",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Le ciel est \u00e0 vous",
+    "Director": "Jean Gr\u00e9millon",
+    "Year": "1944",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 35: Maidstone and Other Films by Norman Mailer",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Maidstone",
+    "Director": "Norman Mailer",
+    "Year": "1970",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Wild 90",
+    "Director": "Norman Mailer",
+    "Year": "1968",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Beyond the Law",
+    "Director": "Norman Mailer",
+    "Year": "1968",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 36: Three Wicked Melodramas from Gainsborough Pictures",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Man in Grey",
+    "Director": "Leslie Arliss",
+    "Year": "1943",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Madonna of the Seven Moons",
+    "Director": "Arthur Crabtree",
+    "Year": "1945",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Wicked Lady",
+    "Director": "Leslie Arliss",
+    "Year": "1945",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 37: When Horror Came to Shochiku",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The X from Outer Space",
+    "Director": "Kazui Nihonmatsu",
+    "Year": "1967",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Goke, Body Snatcher From Hell",
+    "Director": "Hajime Sato",
+    "Year": "1968",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Living Skeleton",
+    "Director": "Hiroshi Matsuno",
+    "Year": "1968",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Genocide",
+    "Director": "Kazui Nihonmatsu",
+    "Year": "1968",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 38: Masaki Kobayashi Against the System",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Thick-Walled Room",
+    "Director": "Masaki Kobayashi",
+    "Year": "1956",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "I Will Buy You",
+    "Director": "Masaki Kobayashi",
+    "Year": "1956",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Black River",
+    "Director": "Masaki Kobayashi",
+    "Year": "1956",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Inheritance",
+    "Director": "Masaki Kobayashi",
+    "Year": "1962",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 39: Early Fassbinder",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Love Is Colder Than Death",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1969",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": null,
+    "Title": "Katzelmacher",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1969",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": null,
+    "Title": "Gods of the Plague",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1969",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": null,
+    "Title": "The American Soldier",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1970",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": null,
+    "Title": "Beware of a Holy Whore",
+    "Director": "Rainer Werner Fassbinder",
+    "Year": "1970",
+    "Country": "Germany"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 40: Late Ray",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Home and the World",
+    "Director": "Satyajit Ray",
+    "Year": "1984",
+    "Country": "India"
+  },
+  {
+    "Spine #": null,
+    "Title": "An Enemy of the People",
+    "Director": "Satyajit Ray",
+    "Year": "1989",
+    "Country": "India"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Stranger",
+    "Director": "Satyajit Ray",
+    "Year": "1991",
+    "Country": "India"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 41: Kinoshita and World War II",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Port of Flowers",
+    "Director": "Keisuke Kinoshita",
+    "Year": "1943",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Living Magoroku",
+    "Director": "Keisuke Kinoshita",
+    "Year": "1943",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Jubilation Street",
+    "Director": "Keisuke Kinoshita",
+    "Year": "1944",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Army",
+    "Director": "Keisuke Kinoshita",
+    "Year": "1944",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Morning for the Osone Family",
+    "Director": "Keisuke Kinoshita",
+    "Year": "1946",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 42: Silent Ozu\u2014Three Crime Dramas",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Walk Cheerfully",
+    "Director": "Yasujiro Ozu",
+    "Year": "1930",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "That Night's Wife",
+    "Director": "Yasujiro Ozu",
+    "Year": "1930",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Dragnet Girl",
+    "Director": "Yasujiro Ozu",
+    "Year": "1933",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 43: Agn\u00e8s Varda in California",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Uncle Yanco",
+    "Director": "Agn\u00e8s Varda",
+    "Year": "1967",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Black Panthers",
+    "Director": "Agn\u00e8s Varda",
+    "Year": "1968",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Lions Love (. . . and Lies)",
+    "Director": "Agn\u00e8s Varda",
+    "Year": "1969",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Mur Murs",
+    "Director": "Agn\u00e8s Varda",
+    "Year": "1980",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Documenteur",
+    "Director": "Agn\u00e8s Varda",
+    "Year": "1981",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 44: Julien Duvivier in the Thirties",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "David Golder",
+    "Director": "Julien Duvivier",
+    "Year": "1930",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Poil de carotte",
+    "Director": "Julien Duvivier",
+    "Year": "1932",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "La t\u00eate d\u2019un homme",
+    "Director": "Julien Duvivier",
+    "Year": "1933",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Un carnet de bal",
+    "Director": "Julien Duvivier",
+    "Year": "1937",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 45: Claude Autant-Lara\u2014Four Romantic Escapes from Occupied France",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Le mariage de Chiffon",
+    "Director": "Claude Autant-Lara",
+    "Year": "1942",
+    "Country": null
+  },
+  {
+    "Spine #": null,
+    "Title": "Lettres d\u2019amour",
+    "Director": "Claude Autant-Lara",
+    "Year": "1942",
+    "Country": null
+  },
+  {
+    "Spine #": null,
+    "Title": "Douce",
+    "Director": "Claude Autant-Lara",
+    "Year": "1943",
+    "Country": null
+  },
+  {
+    "Spine #": null,
+    "Title": "Sylvie et le fant\u00f4me",
+    "Director": "Claude Autant-Lara",
+    "Year": "1946",
+    "Country": null
+  },
+  {
+    "Spine #": null,
+    "Title": "Eclipse Series 46: Ingrid Bergman\u2019s Swedish Years",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Count of the Old Town",
+    "Director": "Sigurd Wall\u00e9n\u2026",
+    "Year": "1935",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": null,
+    "Title": "Walpurgis Night",
+    "Director": "Gustaf Edgren",
+    "Year": "1935",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": null,
+    "Title": "Intermezzo",
+    "Director": "Gustaf Molander",
+    "Year": "1936",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": null,
+    "Title": "Dollar",
+    "Director": "Gustaf Molander",
+    "Year": "1938",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": null,
+    "Title": "A Woman\u2019s Face",
+    "Director": "Gustaf Molander",
+    "Year": "1938",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": null,
+    "Title": "June Night",
+    "Director": "Per Lindberg",
+    "Year": "1940",
+    "Country": "Sweden"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi Challenged",
+    "Director": "Kenji Misumi",
+    "Year": "1967",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi on the Road",
+    "Director": "Kimiyoshi Yasuda",
+    "Year": "1963",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Rebel Samurai: Sixties Swordplay Classics",
+    "Director": "-",
+    "Year": "-",
+    "Country": "-"
+  },
+  {
+    "Spine #": null,
+    "Title": "Jericho",
+    "Director": "Thornton Freeland",
+    "Year": "1937",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi's Vengeance",
+    "Director": "Tokuzo Tanaka",
+    "Year": "1966",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "A Story of Floating Weeds",
+    "Director": "Yasujiro Ozu",
+    "Year": "1934",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Sans Soleil",
+    "Director": "Chris Marker",
+    "Year": "1983",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Samaritan Zatoichi",
+    "Director": "Kenji Misumi",
+    "Year": "1968",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Murderous Maids",
+    "Director": "Jean-Pierre Denis",
+    "Year": "2000",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Adventures of Zatoichi",
+    "Director": "Kimiyoshi Yasuda",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi's Cane Sword",
+    "Director": "Kimiyoshi Yasuda",
+    "Year": "1967",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi's Revenge",
+    "Director": "Akira Inoue",
+    "Year": "1965",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi in Desperation",
+    "Director": "Shintaro Katsu",
+    "Year": "1972",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Tale of Zatoichi",
+    "Director": "Kenji Misumi",
+    "Year": "1962",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Fight, Zatoichi, Fight",
+    "Director": "Kenji Misumi",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "The Tale of Zatoichi Continues",
+    "Director": "Kazuo Mori",
+    "Year": "1962",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi's Flashing Sword",
+    "Director": "Kazuo Ikehiro",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi Meets the One-Armed Swordsman",
+    "Director": "Kimiyoshi Yasuda",
+    "Year": "1971",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi Goes to the Fire Festival",
+    "Director": "Kenji Misumi",
+    "Year": "1970",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Native Land",
+    "Director": "Leo Hurwitz\u2026",
+    "Year": "1942",
+    "Country": "United States"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi and the Fugitives",
+    "Director": "Kimiyoshi Yasuda",
+    "Year": "1968",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi and the Chess Expert",
+    "Director": "Kenji Misumi",
+    "Year": "1965",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi the Fugitive",
+    "Director": "Tokuzo Tanaka",
+    "Year": "1963",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Mayerling",
+    "Director": "Anatole Litvak",
+    "Year": "1936",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Gervaise",
+    "Director": "Ren\u00e9 Cl\u00e9ment",
+    "Year": "1956",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi's Pilgrimage",
+    "Director": "Kazuo Ikehiro",
+    "Year": "1966",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi and the Doomed Man",
+    "Director": "Kazuo Mori",
+    "Year": "1965",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Last Holiday",
+    "Director": "Henry Cass",
+    "Year": "1950",
+    "Country": "United Kingdom"
+  },
+  {
+    "Spine #": null,
+    "Title": "Kap\u00f2",
+    "Director": "Gillo Pontecorvo",
+    "Year": "1959",
+    "Country": "Italy"
+  },
+  {
+    "Spine #": null,
+    "Title": "La Jet\u00e9e",
+    "Director": "Chris Marker",
+    "Year": "1963",
+    "Country": "France"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi and the Chest of Gold",
+    "Director": "Kazuo Ikehiro",
+    "Year": "1964",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi the Outlaw",
+    "Director": "Satsuo Yamamoto",
+    "Year": "1967",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Floating Weeds",
+    "Director": "Yasujiro Ozu",
+    "Year": "1959",
+    "Country": "Japan"
+  },
+  {
+    "Spine #": null,
+    "Title": "Zatoichi Meets Yojimbo",
+    "Director": "Kihachi Okamoto",
+    "Year": "1970",
+    "Country": "Japan"
+  }
+]

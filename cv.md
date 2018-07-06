@@ -1,9 +1,9 @@
 ---
-title: Resume
+title: Résumé
 layout: cv
 permalink: /cv/
 actions:
   - label: "Download as PDF"
 #    icon: pdf
-    url: "#pdf-asset"
+    url: "https://drive.google.com/file/d/1V2KL5vjbBWJ5V3BiM3qheILJduaHHYMl/view?usp=sharing"
 ---

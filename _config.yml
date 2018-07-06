@@ -4,7 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   WEBSITE
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.joshuadavidthomas.com" # the base hostname & protocol for your site, e.g. http://example.com
-permalink: /:title/
+date_format: "%b %-d, %Y"
 
 # social
 twitter_username: jimmyjosh
@@ -22,6 +22,7 @@ theme: minima
 encoding: utf-8
 plugins:
   - jekyll-feed
+  - jemoji
 exclude:
  - Gemfile
  - Gemfile.lock

@@ -1,0 +1,21 @@
+.intro-title {
+  text-align: center;
+}
+
+.entry-header {
+  border-top: 5px solid $grey-color-dark;
+  border-bottom: 1px solid $grey-color-light;
+}
+
+.entry-title {
+  margin: 0;
+  padding: 5px;
+}
+
+.entry-content {
+	padding: 10px 5px;
+
+	.email a, .phone a, .website a, .item a {
+		align-self: flex-end;
+	}
+}
