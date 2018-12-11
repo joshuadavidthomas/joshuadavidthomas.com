@@ -15,28 +15,25 @@ build:
   script: 
   - bundle install
   - bundle exec jekyll build -d build
-  - mv _site test
   artifacts:
     expire_in: 1 month
     paths:
-      - test
+      - build
 
 test:
   stage: test
   image: linkchecker:latest
   script:
   - webfsd -p 4000 -f index.html
-  - linkchecker http://localhost:4000/test/
+  - linkchecker http://localhost:4000/build/
   artifacts:
     paths:
-    - test
+    - build
 
 pages:
   stage: deploy
-  dependencies:
-    - test
   script:
-  - mv test public
+  - mv build public
   artifacts:
     paths:
     - public
