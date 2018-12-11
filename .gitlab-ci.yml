@@ -22,7 +22,7 @@ build:
 
 test:
   stage: test
-  image: linkchecker:latest
+  image: registry.gitlab.com/elderlydoofus/joshuadavidthomas/linkchecker:latest
   script:
   - webfsd -p 4000 -f index.html
   - linkchecker http://localhost:4000/build/
