@@ -37,6 +37,8 @@ test:
 
 pages:
   stage: deploy
+  dependencies:
+    - test
   script:
   - mv test public
   artifacts:
