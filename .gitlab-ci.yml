@@ -20,8 +20,6 @@ build:
     expire_in: 1 month
     paths:
       - test
-  except:
-  - master
 
 test:
   stage: test
@@ -32,8 +30,6 @@ test:
   artifacts:
     paths:
     - test
-  except:
-  - master
 
 pages:
   stage: deploy
