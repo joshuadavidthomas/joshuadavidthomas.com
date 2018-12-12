@@ -24,8 +24,7 @@ test:
   stage: test
   image: registry.gitlab.com/elderlydoofus/joshuadavidthomas/linkchecker:latest
   script:
-  - webfsd -p 4000 -f index.html
-  - linkchecker http://localhost:4000/build/
+  - linkchecker build
   artifacts:
     paths:
     - build
