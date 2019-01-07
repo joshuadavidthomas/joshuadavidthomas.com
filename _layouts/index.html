@@ -1,8 +1,18 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  <div class="index-content">
-    {{ content }}
-  </div>
+  {%- include head.html -%}
 
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="index-content" aria-label="Content">
+      <div class="parent">
+          {{ content }}
+      </div>
+    </main>
+
+  </body>
+
+</html>
