@@ -1,6 +1,6 @@
 .index-content {
     font-family: "IBM Plex Mono", monospace;
-    background: orange;
+    background: white;
     padding: 30px 0;
     display: flex;
     flex: 1 0 auto;
@@ -15,6 +15,26 @@
 .blurb {
     background: black;
     color: white;
-    max-width: 50%;
+    max-width: 30%;
     padding: 20px;
-  }
+    padding-top: 20px;
+    border-radius: 25px;
+    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
+/*    box-shadow: 0 4px 4px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 10px rgba(0, 0, 0, 0.19) */
+}
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
