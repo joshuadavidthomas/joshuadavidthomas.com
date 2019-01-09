@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    <main class="index-content" aria-label="Content">
+
+      <div class="window">
+
+        <div class="dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+
+        <div class="blurb">
+
+          {{ content }}
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </body>
+
+</html>
