@@ -4,3 +4,4 @@ _site
 .jekyll-metadata
 CNAME
 Gemfile.lock
+launch.bat
