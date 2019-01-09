@@ -16,11 +16,16 @@
     background: black;
     color: white;
     padding: $spacing-unit;
-    border-radius: $radius-unit;
+    border-radius: $radius-unit / 2;
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
 
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+}
+.blurb {
+    background: grey;
+    border-radius: $radius-unit / 2;
+    padding: $spacing-unit / 2;
 }
 .dot {
     height: 15px;
