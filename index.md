@@ -1,6 +1,5 @@
 ---
 layout: index
-title: Home
 ---
 
 Josh Thomas is a Junior System Administrator living in Tuscaloosa, AL.
