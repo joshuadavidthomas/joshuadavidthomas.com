@@ -23,6 +23,7 @@ plugins:
   - jemoji
   - jekyll-seo-tag
   - jekyll-typogrify
+  - jekyll-toc
 exclude:
  - Gemfile
  - Gemfile.lock
