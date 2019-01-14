@@ -8,3 +8,4 @@ Inspiration taken from these open source Jekyll themes:
   * Main structure of the website
 * [Treat](https://github.com/CloudCannon/treat-jekyll-template)
   * Recipe layouts
+* [Made Mistakes](https://github.com/mmistakes/made-mistakes-jekyll)
