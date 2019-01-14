@@ -21,6 +21,8 @@ encoding: utf-8
 plugins:
   - jekyll-feed
   - jemoji
+  - jekyll-seo-tag
+  - jekyll-typogrify
 exclude:
  - Gemfile
  - Gemfile.lock
