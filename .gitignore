@@ -5,3 +5,4 @@ _site
 CNAME
 Gemfile.lock
 launch.bat
+node_modules
