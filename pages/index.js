@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Layout title="Joshua David Thomas">
-        <div className="container mx-auto sm:py-20">
+        <div className="container pb-10 mx-auto sm:py-20">
             <div className="flex items-center py-10">
               <img src="/me.png" className="mx-auto rounded-full shadow-md" />
             </div>
