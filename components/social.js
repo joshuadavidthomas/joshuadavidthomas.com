@@ -5,7 +5,7 @@ export default function Social() {
         <li>
           <a href="https://github.com/joshuadavidthomas">
             <svg
-              className="w-6 h-6 hover:text-blue-600"
+              className="w-6 h-6 hover:text-[#050]"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -21,7 +21,7 @@ export default function Social() {
         <li>
           <a href="https://www.linkedin.com/in/joshua-thomas-b1745a16/">
             <svg
-              className="w-6 h-6 hover:text-blue-600"
+              className="w-6 h-6 hover:text-[#050]"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
