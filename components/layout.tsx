@@ -1,9 +1,13 @@
 import Head from "next/head";
 
-import Content from "../components/content";
-import Social from "../components/social";
+import Social from "./social";
 
-export default function Layout({ title, children }) {
+type Props = {
+  title: string
+  children: React.ReactNode
+}
+
+export default function Layout({ title, children }: Props) {
   return (
     <>
       <Head>
@@ -29,7 +33,7 @@ export default function Layout({ title, children }) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Content children={children} />
+      <main>{children}</main>;
       <Social />
     </>
   );
