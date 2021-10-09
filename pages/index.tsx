@@ -1,7 +1,7 @@
+import type { NextPage } from 'next'
 import Layout from "../components/layout";
-import Content from "../components/content";
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <>
       <Layout title="Joshua David Thomas">
@@ -28,3 +28,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home

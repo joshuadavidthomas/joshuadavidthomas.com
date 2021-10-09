@@ -1,9 +1,14 @@
 import Head from "next/head";
 
-import Content from "../components/content";
-import Social from "../components/social";
+import Content from "./content";
+import Social from "./social";
 
-export default function Layout({ title, children }) {
+type Props = {
+  title: string
+  children: React.ReactNode
+}
+
+export default function Layout({ title, children }: Props) {
   return (
     <>
       <Head>
