@@ -1,6 +1,5 @@
 import Head from "next/head";
 
-import Content from "./content";
 import Social from "./social";
 
 type Props = {
@@ -34,7 +33,7 @@ export default function Layout({ title, children }: Props) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Content children={children} />
+      <main>{children}</main>;
       <Social />
     </>
   );
