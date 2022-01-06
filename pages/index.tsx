@@ -12,14 +12,7 @@ const Home: NextPage = () => {
             </div>
           <div className="prose lg:prose-xl">
             <p className="lead">
-              👋 Hi, my name is Josh. I am the web developer at{" "}
-              <a
-                className="hover:text-[#050]"
-                href="https://www.westervelt.com"
-              >
-                The Westervelt Company
-              </a>{" "}
-              in Tuscaloosa, AL.
+              👋 Hi, my name is Josh. I am the web developer in Tuscaloosa, AL.
             </p>
             <p>I use Python and Django to make things on the web.</p>
             <p>If you want, you can say <a className="hover:text-[#050]" href="mailto:hello@joshuadavidthomas.com">hello</a>.</p>

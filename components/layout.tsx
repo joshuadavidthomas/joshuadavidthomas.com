@@ -33,7 +33,7 @@ export default function Layout({ title, children }: Props) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <main>{children}</main>;
+      <main>{children}</main>
       <Social />
     </>
   );
