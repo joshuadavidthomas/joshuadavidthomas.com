@@ -16,10 +16,10 @@ const Header: FunctionComponent<HeaderProps> = () => {
           <Link href="/">joshthomas.dev</Link>
         </h1>
         <div className="flex items-center space-x-4 last:ml-8">
-          <a href="https://github.com/joshuadavidthomas">
+          <a href="https://github.com/joshuadavidthomas" target="_blank">
             <GitHubIcon />
           </a>
-          <a href="https://www.linkedin.com/in/joshua-thomas-b1745a16/" className="pr-3">
+          <a href="https://www.linkedin.com/in/joshua-thomas-b1745a16/" className="pr-3" target="_blank">
             <LinkedInIcon />
           </a>
           <Toggle />

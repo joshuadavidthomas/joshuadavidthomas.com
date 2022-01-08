@@ -35,7 +35,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ title, children }) => {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Header />
-      <main>{children}</main>;
+      <main>{children}</main>
     </>
   );
 };
