@@ -1,13 +1,17 @@
+import clsx from "clsx";
 import { FunctionComponent } from "react";
 
 interface GithubProps {
-  className?: string;
+  size?: string;
 }
 
-const Github: FunctionComponent<GithubProps> = ({ className }) => {
+const Github: FunctionComponent<GithubProps> = ({ size }) => {
   return (
     <svg
-      className={className ? className : "h-6 w-6 text-[#6e5494] hover:text-gray-800 dark:hover:text-gray-300"}
+      className={clsx(
+        size ? size : "h-6 w-6",
+        "text-[#6e5494] hover:text-gray-800 dark:hover:text-gray-300"
+      )}
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
