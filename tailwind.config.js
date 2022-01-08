@@ -1,12 +1,18 @@
+const colors = require('tailwindcss/colors');
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  mode: "jit",
-  purge: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./src/pages/**/*.{ts,tsx}", "./src/components/**/*.{ts,tsx}"],
+  darkMode: "class",
   theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
+    fontFamily: {
+      mono: ["Fira Code", ...defaultTheme.fontFamily.mono],
+    },
+    extend: {
+      colors: {
+        gray: colors.zinc,
+      },
+    },
   },
   plugins: [
     require("@tailwindcss/aspect-ratio"),

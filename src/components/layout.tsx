@@ -1,13 +1,14 @@
+import { FunctionComponent } from "react";
 import Head from "next/head";
 
-import Social from "./social";
+import Header from "./header";
 
-type Props = {
-  title: string
-  children: React.ReactNode
+interface LayoutProps {
+  title: string;
+  children: React.ReactNode;
 }
 
-export default function Layout({ title, children }: Props) {
+const Layout: FunctionComponent<LayoutProps> = ({ title, children }) => {
   return (
     <>
       <Head>
@@ -33,8 +34,10 @@ export default function Layout({ title, children }: Props) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
+      <Header />
       <main>{children}</main>;
-      <Social />
     </>
   );
-}
+};
+
+export default Layout;
