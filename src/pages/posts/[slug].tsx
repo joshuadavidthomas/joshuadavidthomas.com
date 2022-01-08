@@ -1,61 +1,33 @@
-import { FunctionComponent } from "react";
-import { GetStaticProps, GetStaticPaths } from "next";
-import ErrorPage from "next/error";
+import fs from "fs";
+import matter from "gray-matter";
+import { serialize } from "next-mdx-remote/serialize";
 import Head from "next/head";
-import { useRouter } from "next/router";
-
-import config from "config";
+import path from "path";
+import Layout from "@/components/layout";
+import { postFilePaths, POSTS_PATH } from "@/utils/mdxUtils";
+import PostTitle from "@/components/post/title";
 import Container from "@/components/container";
 import PostBody from "@/components/post/body";
 import Header from "@/components/post/header";
-import PostTitle from "@/components/post/title";
-import Layout from "@/components/layout";
-import { getPostBySlug, getAllPosts } from "@/lib/posts";
-import markdownToHtml from "@/lib/markdownToHtml";
-import PostType from "@/types/post";
+import { useRouter } from "next/router";
+import config from "config";
+import prism from "remark-prism";
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const post = getPostBySlug(context.params.slug, ["title", "date", "slug", "content"]);
-  const content = await markdownToHtml(post.content || "");
 
-  return {
-    props: {
-      post: {
-        ...post,
-        content,
-      },
-    },
-  };
-}
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = getAllPosts(["slug"]);
+// Custom components/renderers to pass to MDX.
+// Since the MDX files aren't loaded by webpack, they have no knowledge of how
+// to handle import statements. Instead, you must include components in scope
+// here.
+const components = {
+  Head,
+};
 
-  return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.slug,
-        },
-      };
-    }),
-    fallback: false,
-  };
-}
-
-interface PostProps {
-  post: PostType;
-  morePosts: PostType[];
-  preview?: boolean;
-}
- 
-const Post: FunctionComponent<PostProps> = ({ post, morePosts, preview }) => {
+export default function PostPage({ source, frontMatter }) {
   const router = useRouter();
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
-  }
+  
   return (
-  <Layout preview={preview}>
+    <Layout title={frontMatter.title}>
     <Container>
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
@@ -64,11 +36,11 @@ const Post: FunctionComponent<PostProps> = ({ post, morePosts, preview }) => {
           <article className="mb-32">
             <Head>
               <title>
-                {post.title} | {config.title}
+                {frontMatter.title} | {config.title}
               </title>
             </Head>
-            <Header title={post.title} date={post.date} />
-            <PostBody content={post.content} />
+            <Header title={frontMatter.title} date={frontMatter.date} />
+            <PostBody content={source} components={components} />
           </article>
         </>
       )}
@@ -76,5 +48,36 @@ const Post: FunctionComponent<PostProps> = ({ post, morePosts, preview }) => {
   </Layout>
   );
 }
- 
-export default Post;
+
+export const getStaticProps = async ({ params }) => {
+  const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`);
+  const source = fs.readFileSync(postFilePath);
+
+  const { content, data } = matter(source);
+
+  const mdxSource = await serialize(content, {
+    mdxOptions: {
+      remarkPlugins: [prism],
+      rehypePlugins: [],
+    },
+    scope: data,
+  });
+
+  return {
+    props: {
+      source: mdxSource,
+      frontMatter: data,
+    },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const paths = postFilePaths
+    .map((path) => path.replace(/\.mdx?$/, ""))
+    .map((slug) => ({ params: { slug } }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};

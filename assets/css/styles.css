@@ -1,4 +1,6 @@
 @import "./fonts.css";
+@import "./syntax-highlights/light.css";
+@import "./syntax-highlights/dark.css";
 
 @tailwind base;
 @tailwind components;
