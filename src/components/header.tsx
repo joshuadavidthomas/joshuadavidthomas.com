@@ -81,6 +81,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
               <Disclosure.Panel className="flex flex-col items-center space-y-2">
                 {navigation.map((item, index) => (
                   <Transition.Child
+                    key={item.label}
                     enter="transition ease-out"
                     enterFrom="transform -translate-y-4 opacity-0"
                     enterTo="transform translate-y-0 opacity-100"

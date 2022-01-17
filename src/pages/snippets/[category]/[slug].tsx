@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
@@ -25,7 +25,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       source: mdxSource,
       frontMatter: data,
-      siteTitle: config.title,
     },
   };
 };
@@ -51,32 +50,30 @@ export const getStaticPaths: GetStaticPaths = async () => {
 interface SnippetProps {
   source: MDXRemoteSerializeResult;
   frontMatter: any;
-  siteTitle: string;
 }
 
-const Snippet: FunctionComponent<SnippetProps> = ({
-  source,
-  frontMatter,
-  siteTitle,
-}) => {
+const Snippet: FunctionComponent<SnippetProps> = ({ source, frontMatter }) => {
+  if (!frontMatter || !source) {
+    return null;
+  }
+  const { title, description, date, updated } = frontMatter;
+
   return (
-    <Layout title={frontMatter.title} description={frontMatter.description}>
+    <Layout title={title} description={description}>
       <Head>
-        <title>
-          {frontMatter.title} | {config.title}
-        </title>
-        <meta name="description" content={frontMatter.description} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
       </Head>
       <div className="mx-auto prose dark:prose-invert">
-        <h1>{frontMatter.title}</h1>
+        <h1>{title}</h1>
         <p>
           Published:
-          <time className="pl-2">{frontMatter.date}</time>
+          <time className="pl-2">{date}</time>
         </p>
-        {frontMatter.updated && (
+        {updated && (
           <p>
             Updated:
-            <time className="pl-2">{frontMatter.updated}</time>
+            <time className="pl-2">{updated}</time>
           </p>
         )}
         <MDXRemote {...source} />

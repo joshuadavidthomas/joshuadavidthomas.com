@@ -24,19 +24,16 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       allSnippets: allSnippetsByCategory,
-      latestSnippet: allSnippets.reverse()[0],
     },
   };
 };
 
 interface SnippetsProps {
   allSnippets: any;
-  latestSnippet: any;
 }
 
 const Snippets: FunctionComponent<SnippetsProps> = ({
   allSnippets,
-  latestSnippet,
 }) => {
   return (
     <Layout title="Snippets" description="Some useful code snippets">
