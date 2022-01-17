@@ -9,18 +9,14 @@ interface GitProps {
 const Git: FunctionComponent<GitProps> = ({ size, className }) => {
   return (
     <svg
-      className={clsx(
-        size ? size : "h-6 w-6",
-        "text-[#F05133]",
-        className
-      )}
+      className={clsx(size ? size : "h-6 w-6", "text-[#F05133]", className)}
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
       viewBox="0 0 97 97"
-      enable-background="new 0 0 97 97"
+      enableBackground="new 0 0 97 97"
       xmlSpace="preserve"
     >
       <g>
