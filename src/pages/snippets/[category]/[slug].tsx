@@ -61,7 +61,7 @@ const Snippet: FunctionComponent<SnippetProps> = ({ source, frontMatter }) => {
   return (
     <Layout title={title} description={description}>
       <Head>
-        <title>{title}</title>
+        <title>{title} | {config.title}</title>
         <meta name="description" content={description} />
       </Head>
       <div className="mx-auto prose dark:prose-invert">
