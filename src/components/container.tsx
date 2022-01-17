@@ -5,7 +5,7 @@ interface ContainerProps {
 }
 
 const Container: FunctionComponent<ContainerProps> = ({ children }) => {
-  return <div className="container px-5 mx-auto">{children}</div>;
+  return <div className="container px-2 mx-auto">{children}</div>;
 };
 
 export default Container;

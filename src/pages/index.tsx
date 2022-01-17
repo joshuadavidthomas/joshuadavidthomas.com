@@ -2,22 +2,10 @@ import { FunctionComponent } from "react";
 import Image from "next/image";
 
 import Layout from "@/components/layout";
-import PostPreview from "@/components/post/preview";
-import { getAllPosts } from "@/lib/posts";
-import Post from "@/types/post";
 
-interface IndexProps {
-  allPosts: Post[];
-}
+interface IndexProps {}
 
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts(["title", "date", "slug", "excerpt"]);
-  return {
-    props: { allPosts },
-  };
-};
-
-const Index: FunctionComponent<IndexProps> = ({ allPosts }) => {
+const Index: FunctionComponent<IndexProps> = () => {
   return (
     <>
       <Layout title="Joshua David Thomas">
@@ -32,13 +20,13 @@ const Index: FunctionComponent<IndexProps> = ({ allPosts }) => {
                 className="rounded-full shadow-md"
               />
             </div>
-            <h1 className="text-5xl leading-relaxed">
+            <h1 className="text-3xl md:text-5xl leading-tighter">
               👋
               <span className="pl-2 font-bold tracking-wide">
                 Hi, my name is Josh.
               </span>
             </h1>
-            <p className="text-2xl font-medium leading-9">
+            <p className="pt-2 text-lg font-medium md:pt-4 md:text-2xl">
               I am a web developer in Tuscaloosa, AL.
             </p>
             <div className="pt-4 space-y-1">
@@ -46,29 +34,14 @@ const Index: FunctionComponent<IndexProps> = ({ allPosts }) => {
               <p>
                 If you want, you can say{" "}
                 <a
-                  className="hover:text-[#050]"
+                  className="hover:text-[#050] hover:underline"
                   href="mailto:hello@joshuadavidthomas.com"
                 >
+                  ✉
                   hello
                 </a>
                 .
               </p>
-            </div>
-          </section>
-          <section>
-            <h2 className="mb-8 text-2xl font-bold leading-tight tracking-tight">
-              Latest Posts
-            </h2>
-            <div className="space-y-12">
-              {allPosts.map((post) => (
-                <PostPreview
-                  key={post.slug}
-                  title={post.title}
-                  date={post.date}
-                  slug={post.slug}
-                  excerpt={post.excerpt}
-                />
-              ))}
             </div>
           </section>
         </div>
