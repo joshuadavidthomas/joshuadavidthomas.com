@@ -28,15 +28,15 @@ const Index: FunctionComponent<IndexProps> = () => {
           <p className="pt-2 text-lg font-medium md:pt-4 md:text-2xl">
             I am a web developer in Tuscaloosa, AL.
           </p>
-          <div className="pt-4 space-y-1">
+          <div className="pt-4 space-y-1 md:text-lg">
             <p>I use Python and Django to make things on the web.</p>
             <p>
-              If you want, you can say{" "}
+              If you want, you can say ✉{" "}
               <a
-                className="hover:text-[#050] hover:underline"
+                className="hover:text-[#050] font-semibold underline"
                 href="mailto:hello@joshuadavidthomas.com"
               >
-                ✉ hello
+                hello
               </a>
               .
             </p>
