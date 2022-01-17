@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect } from "react";
+import { FunctionComponent } from "react";
 import { GetStaticProps } from "next";
 
 import Layout from "@/components/layout";
@@ -37,13 +37,8 @@ const Snippets: FunctionComponent<SnippetsProps> = ({
   allSnippets,
   latestSnippet,
 }) => {
-  useEffect(() => {
-    console.log("Snippets");
-    console.log(allSnippets);
-  }, [allSnippets]);
-
   return (
-    <Layout title="Snippets">
+    <Layout title="Snippets" description="Some useful code snippets">
       <h1 className="text-3xl font-bold">Code Snippets</h1>
       <p className="pt-2 text-lg">
         Here are some code snippets I've found useful.
@@ -52,7 +47,9 @@ const Snippets: FunctionComponent<SnippetsProps> = ({
         {allSnippets.map((category) => (
           <section key={category.category}>
             <h3 className="flex items-center text-lg font-medium capitalize">
-              {category.category === "django" ? <DjangoIcon className="mr-2" /> : null}
+              {category.category === "django" ? (
+                <DjangoIcon className="mr-2" />
+              ) : null}
               {category.category}
             </h3>
             <ul>

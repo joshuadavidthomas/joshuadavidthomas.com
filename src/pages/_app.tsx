@@ -7,7 +7,11 @@ import Head from "next/head";
 
 const components = {
   pre: (props) => (
-    <pre className={`lg:container-breakout text-sm lg:text-base ` + props.className}>
+    <pre
+      className={
+        `lg:container-breakout text-sm lg:text-base ` + props.className
+      }
+    >
       {props.children}
     </pre>
   ),
