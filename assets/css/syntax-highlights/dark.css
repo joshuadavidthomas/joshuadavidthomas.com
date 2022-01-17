@@ -9,8 +9,7 @@ html.dark pre[class*="language-"] {
   /* background: #263238; */
   background: transparent;
   font-family: Roboto Mono, monospace;
-  font-size: 1em;
-  line-height: 1.5em;
+   line-height: 1.5em;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;

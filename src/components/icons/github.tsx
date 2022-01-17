@@ -3,14 +3,16 @@ import { FunctionComponent } from "react";
 
 interface GithubProps {
   size?: string;
+  className?: string;
 }
 
-const Github: FunctionComponent<GithubProps> = ({ size }) => {
+const Github: FunctionComponent<GithubProps> = ({ size, className }) => {
   return (
     <svg
       className={clsx(
         size ? size : "h-6 w-6",
-        "text-[#6e5494] hover:text-gray-800 dark:hover:text-gray-300"
+        "text-[#6e5494]",
+        className
       )}
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"

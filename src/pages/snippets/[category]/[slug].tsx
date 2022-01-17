@@ -68,6 +68,17 @@ const Snippet: FunctionComponent<SnippetProps> = ({
         <meta name="description" content={frontMatter.description} />
       </Head>
       <div className="mx-auto prose dark:prose-invert">
+        <h1>{frontMatter.title}</h1>
+        <p>
+          Published:
+          <time className="pl-2">{frontMatter.date}</time>
+        </p>
+        {frontMatter.updated && (
+          <p>
+            Updated:
+            <time className="pl-2">{frontMatter.updated}</time>
+          </p>
+        )}
         <MDXRemote {...source} />
       </div>
     </Layout>

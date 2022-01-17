@@ -11,7 +11,7 @@ const Django: FunctionComponent<DjangoProps> = ({ size, className }) => {
     <svg
       className={clsx(
         size ? size : "h-6 w-6",
-        "text-[#092E20] dark:text-gray-100 hover:text-gray-800 dark:hover:text-gray-300",
+        "text-[#092E20] dark:text-gray-100",
         className
       )}
       fill="currentColor"

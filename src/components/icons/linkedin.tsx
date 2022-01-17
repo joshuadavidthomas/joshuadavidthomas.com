@@ -3,14 +3,16 @@ import { FunctionComponent } from "react";
 
 interface LinkedInProps {
   size?: string;
+  className?: string;
 }
 
-const LinkedIn: FunctionComponent<LinkedInProps> = ({ size }) => {
+const LinkedIn: FunctionComponent<LinkedInProps> = ({ size, className }) => {
   return (
     <svg
       className={clsx(
         size ? size : "h-6 w-6",
-        "text-[#0077b5] hover:text-gray-800 dark:hover:text-gray-300"
+        "text-[#0077b5]",
+        className
       )}
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
