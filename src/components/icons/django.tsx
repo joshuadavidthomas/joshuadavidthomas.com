@@ -14,6 +14,8 @@ const Django: FunctionComponent<DjangoProps> = ({ size, className }) => {
         "text-[#092E20] dark:text-gray-100",
         className
       )}
+      height="1.5rem"
+      width="1.5rem"
       fill="currentColor"
       viewBox="0 0 256 256"
       xmlns="http://www.w3.org/2000/svg"
