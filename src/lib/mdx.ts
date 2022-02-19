@@ -3,7 +3,6 @@ import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import prism from "remark-prism";
-import codeMeta from 'remark-mdx-code-meta';
 
 export const CONTENT_PATH = path.join(process.cwd(), "content");
 
@@ -26,7 +25,7 @@ export const processRawFile = (filePath: string) => {
 export const mdxToHTML = async (content, data) => {
   return await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [prism, codeMeta],
+      remarkPlugins: [prism],
       rehypePlugins: [],
     },
     scope: data,
