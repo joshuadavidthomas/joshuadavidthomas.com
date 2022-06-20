@@ -562,10 +562,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mdx-js/loader@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-2.0.0.tgz#4ff3278d341e7a15ecf87c4623a8ecd533cb3dbc"
-  integrity sha512-gPuzQQ19K9OUkgRVMUMRu8lYXgJPwSQaHcc6olvRxbdUMms4mtn6so3v4v8J+f58bAk0R98IzBbkvBenAOZu7g==
+"@mdx-js/loader@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-2.1.2.tgz#fe7631bbef1e6546f4289f7adaef60083c22063a"
+  integrity sha512-P7CWhrqE5rZ3ewBngZ9t/zQPbSq42iuty78K3zJ8Bl518qnOX1d106c+n7I/zHODPAmw9JfYMQdbv9WrrHa0DA==
   dependencies:
     "@mdx-js/mdx" "^2.0.0"
     source-map "^0.7.0"
