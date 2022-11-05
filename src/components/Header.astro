@@ -1,0 +1,59 @@
+---
+import MobileMenu from "./MenuMobile";
+import DarkModeToggle from "./DarkModeToggle";
+import GitHubIcon from "./icons/GitHub";
+import LinkedInIcon from "./icons/LinkedIn";
+import MastodonIcon from "./icons/Mastodon";
+
+const navigation = [
+  {
+    label: "home",
+    href: "/",
+  },
+  {
+    label: "snippets",
+    href: "/snippets",
+  },
+];
+---
+
+<header
+  class="flex items-center justify-between px-4 pt-6 text-lg font-semibold"
+>
+  <nav>
+    <div class="items-center hidden space-x-4 text-sm sm:flex">
+      {
+        navigation.map(({ label, href }) => (
+          <a href={href} class="uppercase hover:underline">
+            {label}
+          </a>
+        ))
+      }
+    </div>
+    <MobileMenu client:visible />
+  </nav>
+  <div class="flex items-center space-x-10">
+    <div class="items-center hidden space-x-4 sm:flex">
+      <a rel="me" href="https://social.joshthomas.dev/@josh">
+        <MastodonIcon
+          size="h-6 w-6 hover:text-gray-800 dark:hover:text-gray-300"
+        />
+      </a>
+      <a href="https://github.com/joshuadavidthomas" class="hover:underline">
+        <GitHubIcon size="h-6 w-6 hover:text-gray-800 dark:hover:text-gray-300"
+        />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/joshua-thomas-b1745a16/"
+        class="hover:underline"
+      >
+        <LinkedInIcon
+          size="h-6 w-6 hover:text-gray-800 dark:hover:text-gray-300"
+        />
+      </a>
+    </div>
+    <div class="flex items-center">
+      <DarkModeToggle client:visible />
+    </div>
+  </div>
+</header>

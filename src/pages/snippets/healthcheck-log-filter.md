@@ -1,7 +1,10 @@
 ---
-title: 'Filtering Healthcheck Requests in Logs'
+layout: ../../layouts/Snippet.astro
+title: "Filtering Healthcheck Requests in Logs"
 description: "This example shows how to filter healthcheck requests in logs."
-date: '2022-01-17'
+date: "2022-01-17"
+category: "django"
+tags: ["django", "logging", "healthcheck"]
 ---
 
 ```py

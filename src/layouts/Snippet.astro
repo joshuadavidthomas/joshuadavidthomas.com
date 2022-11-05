@@ -1,0 +1,14 @@
+---
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <div class="py-8">
+    <h1 class="text-2xl font-semibold">{frontmatter.title}</h1>
+    <div class="mt-4 space-y-2">
+      <slot />
+    </div>
+  </div>
+</Layout>

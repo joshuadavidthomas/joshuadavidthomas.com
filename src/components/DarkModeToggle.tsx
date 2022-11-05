@@ -1,36 +1,53 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import { Switch } from "@headlessui/react";
-import { useTheme } from "next-themes";
 import clsx from "clsx";
-import { MoonIcon, SunIcon } from "@heroicons/react/solid";
+import { MoonIcon, SunIcon } from "@heroicons/react/solid/index.js";
+
+const themes = [
+  { name: "Light", value: "light" },
+  { name: "Dark", value: "dark" },
+  { name: "System", value: "system" },
+];
 
 interface ToggleProps {
   className?: string;
 }
 
 const Toggle: FunctionComponent<ToggleProps> = ({ className }) => {
-  const { theme, setTheme } = useTheme();
-  const [enabled, setEnabled] = useState(theme === "dark");
-  const [mounted, setMounted] = useState(false);
+  let [selectedTheme, setSelectedTheme] = useState("");
 
-  const handleToggle = () => {
-    setEnabled(!enabled);
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  function getThemeFromDocument() {
+    const theme = document.documentElement.getAttribute("data-theme");
+    if (theme) {
+      return theme;
+    }
+    return "light";
+  }
 
   useEffect(() => {
-    setMounted(true);
-
-    console.log("theme", theme);
-    console.log("enabled", enabled);
-  }, [theme, enabled]);
-
-  if (!mounted) return <div className="h-6 w-11"></div>;
+    if (selectedTheme.length !== 0) {
+      document.documentElement.setAttribute("data-theme", selectedTheme);
+    } else {
+      setSelectedTheme(
+        // @ts-ignore
+        themes.find(
+          (theme) =>
+            theme.value === document.documentElement.getAttribute("data-theme")
+        ).value
+      );
+    }
+  }, [selectedTheme]);
+  
+  const enabled = selectedTheme === "dark";
 
   return (
     <Switch
       checked={enabled}
-      onChange={handleToggle}
+      onChange={() => {
+        const newTheme = enabled ? themes[0] : themes[1];
+        setSelectedTheme(newTheme.value);
+        localStorage.setItem("theme", newTheme.value);
+      }}
       className={clsx(
         !enabled ? "bg-gray-200" : "bg-gray-700",
         "relative inline-flex shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500",
