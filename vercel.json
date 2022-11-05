@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/@josh",
+      "destination": "https://social.joshthomas.dev/@josh"
+    }
+  ]
+}
