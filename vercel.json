@@ -1,5 +1,5 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/@josh",
       "destination": "https://social.joshthomas.dev/@josh"
