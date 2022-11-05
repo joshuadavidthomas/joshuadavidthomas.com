@@ -12,7 +12,7 @@
   "devDependencies": {
     "@astrojs/prefetch": "^0.0.7",
     "@astrojs/react": "^1.0.0",
-    "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.1",
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
     "@tailwindcss/aspect-ratio": "^0.4.2",
