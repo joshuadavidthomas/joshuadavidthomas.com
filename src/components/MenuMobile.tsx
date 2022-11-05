@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 import { Popover } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MenuIcon, XIcon } from "@heroicons/react/solid";
+import { MenuIcon, XIcon } from "@heroicons/react/solid/index.js";
 import clsx from "clsx";
 
 const MenuMobile: FC = () => {
