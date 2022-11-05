@@ -2,7 +2,23 @@
   "redirects": [
     {
       "source": "/@josh",
-      "destination": "https://social.joshthomas.dev/@josh"
+      "destination": "https://social.joshthomas.dev/@josh",
+      "permanent": false
+    },
+    {
+      "source": "/.well-known/host-meta",
+      "destination": "https://social.joshthomas.dev/.well-known/host-meta",
+      "permanent": false
+    },
+    {
+      "source": "/.well-known/nodeinfo",
+      "destination": "https://social.joshthomas.dev/.well-known/nodeinfo",
+      "permanent": false
+    },
+    {
+      "source": "/.well-known/webfinger",
+      "destination": "https://social.joshthomas.dev/.well-known/webfinger",
+      "permanent": false
     }
   ]
 }
