@@ -1,19 +1,15 @@
 import clsx from "clsx";
-import { FunctionComponent } from "react";
+import type { FC } from "react";
 
 interface GithubProps {
   size?: string;
   className?: string;
 }
 
-const Github: FunctionComponent<GithubProps> = ({ size, className }) => {
+const Github: FC<GithubProps> = ({ size, className }) => {
   return (
     <svg
-      className={clsx(
-        size ? size : "h-6 w-6",
-        "text-[#6e5494]",
-        className
-      )}
+      className={clsx(size ? size : "h-6 w-6", "text-[#6e5494]", className)}
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"

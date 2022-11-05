@@ -1,19 +1,15 @@
 import clsx from "clsx";
-import { FunctionComponent } from "react";
+import type { FC } from "react";
 
 interface LinkedInProps {
   size?: string;
   className?: string;
 }
 
-const LinkedIn: FunctionComponent<LinkedInProps> = ({ size, className }) => {
+const LinkedIn: FC<LinkedInProps> = ({ size, className }) => {
   return (
     <svg
-      className={clsx(
-        size ? size : "h-6 w-6",
-        "text-[#0077b5]",
-        className
-      )}
+      className={clsx(size ? size : "h-6 w-6", "text-[#0077b5]", className)}
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
