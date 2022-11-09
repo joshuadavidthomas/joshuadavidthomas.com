@@ -1,0 +1,69 @@
+---
+import fs from "fs";
+import Layout from "../../layouts/PageLayout.astro";
+import TilListItem from "../../components/TilListItem.astro";
+
+export async function getStaticPaths() {
+  const categories = fs.readdirSync("src/pages/til").filter((category) => {
+    return fs.lstatSync(`src/pages/til/${category}`).isDirectory();
+  });
+
+  return categories.map((category) => ({
+    params: {
+      category,
+    },
+  }));
+}
+
+const getCategoryTitle = (category: any) => {
+  if (typeof category !== "string") {
+    return "TIL";
+  }
+  return category.charAt(0).toUpperCase() + category.slice(1) + " TILs";
+};
+
+const { category } = Astro.params;
+
+const categoryPosts = await Astro.glob(`../**/*.md`).then((posts) => {
+  if (typeof category !== "string") {
+    return;
+  }
+  return (
+    posts
+      // Filter out posts that don't match the category
+      .filter((post) => post.file.split("/").slice(-2)[0] === category)
+      .map((post) => {
+        const { published } = post.frontmatter;
+        const slug = post.file.split("/").pop()?.replace(".md", "");
+        const category = post.file.split("/").slice(-2)[0];
+
+        return {
+          ...post,
+          date: new Date(published),
+          slug,
+          category,
+        };
+      })
+      // sort by Date
+      .sort((a, b) => b.date.getTime() - a.date.getTime())
+  );
+});
+---
+
+<Layout title={getCategoryTitle(category)}>
+  <ul class="mt-8">
+    {
+      categoryPosts &&
+      categoryPosts.map((post) => (
+        <TilListItem
+          url={`/til/${post.category}/${post.slug}`}
+          title={post.frontmatter.title}
+          category={post.category}
+          description={post.frontmatter.description}
+          date={post.date}
+          className="mt-4"
+        />
+      ))
+    }
+  </ul>
+</Layout>

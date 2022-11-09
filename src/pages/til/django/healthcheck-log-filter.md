@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/Snippet.astro
+layout: "../../../layouts/MarkdownLayout.astro"
 title: "Filtering Healthcheck Requests in Logs"
 description: "This example shows how to filter healthcheck requests in logs."
-date: "2022-01-17"
-category: "django"
+published: "2022-01-17"
 tags: ["django", "logging", "healthcheck"]
 ---
 

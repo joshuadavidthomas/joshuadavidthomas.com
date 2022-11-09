@@ -5,16 +5,7 @@ import GitHubIcon from "./icons/GitHub";
 import LinkedInIcon from "./icons/LinkedIn";
 import MastodonIcon from "./icons/Mastodon";
 
-const navigation = [
-  {
-    label: "home",
-    href: "/",
-  },
-  {
-    label: "snippets",
-    href: "/snippets",
-  },
-];
+import config from "../config.json";
 ---
 
 <header
@@ -23,18 +14,26 @@ const navigation = [
   <nav>
     <div class="items-center hidden space-x-4 text-sm sm:flex">
       {
-        navigation.map(({ label, href }) => (
-          <a href={href} class="uppercase hover:underline">
-            {label}
-          </a>
+        config.navigation.map(({ title, url }) => (
+          <div class="relative">
+            <a
+              href={url}
+              class="uppercase hover:bg-zinc-900 hover:text-zinc-100 dark:hover:bg-zinc-100 dark:hover:text-zinc-900"
+            >
+              {title}
+            </a>
+            {Astro.url.pathname.split("/")[1] === url.split("/")[1] && (
+              <div class="absolute left-0 w-full h-0.5 bg-blue-500 rounded-b-full -bottom-1" />
+            )}
+          </div>
         ))
       }
     </div>
-    <MobileMenu client:visible />
+    <MobileMenu client:visible navigation={config.navigation} />
   </nav>
   <div class="flex items-center space-x-10">
     <div class="items-center hidden space-x-4 sm:flex">
-      <a rel="me" href="https://social.joshthomas.dev/@josh">
+      <a rel="me" href="https://joshthomas.dev/@josh">
         <MastodonIcon
           size="h-6 w-6 hover:text-gray-800 dark:hover:text-gray-300"
         />
