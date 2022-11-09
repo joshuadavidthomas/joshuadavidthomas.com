@@ -5,7 +5,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MenuIcon, XIcon } from "@heroicons/react/solid/index.js";
 import clsx from "clsx";
 
-const MenuMobile: FC = () => {
+interface MenuMobileProps {
+  navigation: {
+    title: string;
+    url: string;
+  }[];
+}
+
+const MenuMobile: FC<MenuMobileProps> = ({ navigation }) => {
   return (
     <Popover>
       {({ open, close }) => (
@@ -54,8 +61,11 @@ const MenuMobile: FC = () => {
                   className="absolute inset-x-0 top-0 z-40 px-4 pb-6 text-gray-900 origin-top bg-white shadow-2xl pt-28 dark:bg-gray-700 shadow-gray-900/20 dark:text-gray-50"
                 >
                   <ul className="space-y-4">
-                    <li>test</li>
-                    <li>test</li>
+                    {navigation.map((item) => (
+                      <li key={`${item.title}-${item.url}`}>
+                        <a href={item.url}>{item.title}</a>
+                      </li>
+                    ))}
                   </ul>
                   <Popover.Button className="flex items-center justify-center w-full py-2 mt-12 text-gray-700 bg-gray-100 border border-gray-300">
                     <span className="text-sm font-medium uppercase">Close</span>
