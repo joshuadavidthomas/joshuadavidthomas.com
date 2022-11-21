@@ -1,7 +1,11 @@
 ---
 layout: "../../../layouts/MarkdownLayout.astro"
-title: "New/Changed Fields in Migrations"
-description: "How I safely deal with new or changed fields and any associated data in Django migrations."
+title: "Migrating from `StatusModel` to `FSMField`"
+description: |
+  How I recently dropped the `StatusModel` provided by the `django-model-utils` 
+  package in favor of the `FSMField` in `django-fsm`. Also includes how I
+  handled migrating the data from the old field to the new by using Django's
+  `RunPython` migration operation.
 published: "2022-11-21"
 tags: ["django", "migrations"]
 ---
