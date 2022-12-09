@@ -9,8 +9,15 @@ export interface Props {
   showLayoutHeader?: boolean;
 }
 
-const { title, description, showLayoutHeader = true } =
-  Astro.props.frontmatter || (Astro.props as Props);
+const {
+  title,
+  description,
+  showLayoutHeader = true,
+} = Astro.props.frontmatter || (Astro.props as Props);
+
+function replaceBackTicks(str: string) {
+  return str.replace(/`([^`]+)`/g, "<code>$1</code>");
+}
 ---
 
 <!DOCTYPE html>
@@ -24,13 +31,15 @@ const { title, description, showLayoutHeader = true } =
       {
         showLayoutHeader && (
           <section class="max-w-xl mx-auto">
-            <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              {title}
-            </h1>
+            <h1
+              class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
+              set:html={replaceBackTicks(title)}
+            />
             {description && (
-              <p class="mt-2 text-xl text-zinc-600 dark:text-zinc-400">
-                {description}
-              </p>
+              <p
+                class="mt-2 text-xl text-zinc-600 dark:text-zinc-400"
+                set:html={replaceBackTicks(description)}
+              />
             )}
           </section>
         )
