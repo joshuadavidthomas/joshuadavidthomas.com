@@ -21,7 +21,7 @@
     "@types/react": "^18.0.25",
     "astro": "^1.6.15",
     "clsx": "^1.2.1",
-    "framer-motion": "^7.6.6",
+    "framer-motion": "^7.9.1",
     "octokit": "^2.0.10",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.7.0",
