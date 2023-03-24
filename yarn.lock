@@ -20,6 +20,7 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.2.2.tgz#79a0e5085c1e8f4b3d794ba6a20a1823d8554133"
   integrity sha512-S5UfaoYPgdKjxXjHq9jwHfNJJYZq77WRGgT6bQRmccGI/3dC/TakDW2nITNhju6kvRK1I8GI7ZHFJnVfA9cyhg==
 
+
 "@astrojs/language-server@^0.28.3":
   version "0.28.3"
   resolved "https://registry.yarnpkg.com/@astrojs/language-server/-/language-server-0.28.3.tgz#968472b0e8876bb7583230c745b0f0646a09d510"
@@ -1609,6 +1610,13 @@ estree-walker@^3.0.1:
   dependencies:
     "@types/estree" "^1.0.0"
 
+estree-walker@^3.0.1:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-3.0.3.tgz#67c3e549ec402a487b4fc193d1953a524752340d"
+  integrity sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==
+  dependencies:
+    "@types/estree" "^1.0.0"
+
 events@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/events/-/events-3.3.0.tgz#31a95ad0a924e2d2c419a813aeb2c4e878ea7400"
@@ -1785,6 +1793,11 @@ github-slugger@^1.4.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-1.5.0.tgz#17891bbc73232051474d68bd867a34625c955f7d"
   integrity sha512-wIh+gKBI9Nshz2o46B0B3f5k/W+WI9ZAv6y5Dn5WJ5SK1t0TnDimB4WE5rmTD05ZAIn8HALCZVmCsvj0w0v0lw==
+
+github-slugger@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-2.0.0.tgz#52cf2f9279a21eb6c59dd385b410f0c0adda8f1a"
+  integrity sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==
 
 github-slugger@^2.0.0:
   version "2.0.0"
