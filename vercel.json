@@ -19,6 +19,21 @@
       "source": "/.well-known/webfinger",
       "destination": "https://social.joshthomas.dev/.well-known/webfinger",
       "permanent": false
+    },
+    {
+      "source": "/til",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/til/django",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/til/django/healthcheck-log-filter",
+      "destination": "/blog/filtering-healthcheck-requests-in-logs",
+      "permanent": true
     }
   ]
 }
