@@ -1,58 +1,35 @@
 ---
-import MobileMenu from "./MenuMobile";
-import DarkModeToggle from "./DarkModeToggle";
-import GitHubIcon from "./icons/GitHub";
-import LinkedInIcon from "./icons/LinkedIn";
-import MastodonIcon from "./icons/Mastodon";
-
-import config from "../config.json";
+import clsx from "clsx";
+import config from "../config";
+import ThemeToggle from "./ThemeToggle";
 ---
 
 <header
-  class="flex items-center justify-between px-4 pt-6 text-lg font-semibold"
+  class="px-4 pt-4 text-lg font-semibold"
 >
-  <nav>
-    <div class="items-center hidden space-x-4 text-sm sm:flex">
-      {
-        config.navigation.map(({ title, url }) => (
-          <div class="relative">
-            <a
-              href={url}
-              class="uppercase hover:bg-zinc-900 hover:text-zinc-100 dark:hover:bg-zinc-100 dark:hover:text-zinc-900"
-            >
-              {title}
-            </a>
-            {Astro.url.pathname.split("/")[1] === url.split("/")[1] && (
-              <div class="absolute left-0 w-full h-0.5 bg-blue-500 rounded-b-full -bottom-1" />
-            )}
-          </div>
-        ))
-      }
-    </div>
-    <MobileMenu client:visible navigation={config.navigation} />
-  </nav>
-  <div class="flex items-center space-x-10">
-    <div class="items-center hidden space-x-4 sm:flex">
-      <a rel="me" href="https://joshthomas.dev/@josh">
-        <MastodonIcon
-          size="h-6 w-6 hover:text-gray-800 dark:hover:text-gray-300"
-        />
-      </a>
-      <a href="https://github.com/joshuadavidthomas" class="hover:underline">
-        <GitHubIcon size="h-6 w-6 hover:text-gray-800 dark:hover:text-gray-300"
-        />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/joshua-thomas-b1745a16/"
-        class="hover:underline"
-      >
-        <LinkedInIcon
-          size="h-6 w-6 hover:text-gray-800 dark:hover:text-gray-300"
-        />
-      </a>
-    </div>
-    <div class="flex items-center">
-      <DarkModeToggle client:visible />
-    </div>
+  <div class="flex items-center justify-between">
+    <h1 class="text-xl">
+      <a href="/" rel="prefetch" class="link link-no-underline">Josh Thomas</a>
+    </h1>
+    <ThemeToggle client:load />
   </div>
+  <nav class="flex items-center mt-1 text-xs">
+    {
+      config.navigation.map(({ title, url }) => (
+        <div class="relative mr-4">
+          <a href={url} rel="prefetch" class="uppercase link link-no-underline">
+            {title}
+          </a>
+          <div
+            class={clsx(
+              "absolute mx-auto w-1/2 inset-x-0 h-0.5 rounded-b-full -bottom-1",
+              Astro.url.pathname.split("/")[1] === url.split("/")[1]
+                ? "bg-blue-500"
+                : "bg-zinc-400"
+            )}
+          />
+        </div>
+      ))
+    }
+  </nav>
 </header>
