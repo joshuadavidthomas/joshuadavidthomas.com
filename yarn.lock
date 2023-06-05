@@ -609,10 +609,10 @@
     lodash.merge "^4.6.2"
     postcss-selector-parser "6.0.10"
 
-"@tryghost/content-api@^1.11.7":
-  version "1.11.7"
-  resolved "https://registry.yarnpkg.com/@tryghost/content-api/-/content-api-1.11.7.tgz#5b779a319f4af16f9687c49459e475c9ca607b2f"
-  integrity sha512-G6Ovb0LSnlvx/nVzNDYd5kMyMmsTjwdiOANRbh/NPgaNUHS5RdUbbhPpYFvD1Cdi8xoliowCaGorv5wxI3Wb2Q==
+"@tryghost/content-api@^1.11.11":
+  version "1.11.11"
+  resolved "https://registry.yarnpkg.com/@tryghost/content-api/-/content-api-1.11.11.tgz#c485fd5289135c37b48ab81314099a327f8bcf77"
+  integrity sha512-lAFUrqqeDYmh/1d4EAeBWDTbrlKDrXnh3b/szqzoqa62VRUTYZa4qzBVjRvj5OtLOP250/NoIVDFAI8dsoZA7Q==
   dependencies:
     axios "^0.27.0"
 
