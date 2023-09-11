@@ -1,0 +1,68 @@
+{% load static %}
+{% load django_htmx %}
+{% load tailwind_cli %}
+{% load heroicons %}
+{% load ui %}
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-50 dark:bg-gray-900">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{% block title %}Project{% endblock title %}</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="view-transition" content="same-origin" />
+    {% block css %}{% endblock css %}
+    <link rel="stylesheet" href="{% static 'monokai.css' %}">
+    <style>
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation-duration: 5s;
+      }
+    </style>
+    {% tailwind_css %}
+    <script src="{% static 'vendor/js/htmx.min.js' %}"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/preload.js"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/head-support.js"></script>
+    {% django_htmx_script %}
+    <script>
+    document.addEventListener("htmx:afterSettle", (event) => {
+      if ("djdt" in window) {
+        window.djdt.init();
+      }
+      if ("Alpine" in window) {
+        Alpine.start()
+      }
+    });
+    </script>
+    <script src="{% static 'vendor/js/alpinejs.min.js' %}" defer></script>
+    <script data-goatcounter="https://joshthomasdev.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+    {% block javascript_head %}{% endblock javascript_head %}
+  </head>
+
+  <body class="flex flex-col min-h-full h-full max-w-2xl mx-auto{% if debug %} debug-screens{% endif %}" hx-boost="true" hx-ext="head-support">
+    <header class="px-4 pt-4 text-lg font-semibold">
+      <div class="flex items-start justify-between">
+        <h1 class="text-xl">
+          <a href="/">Josh Thomas</a>
+        </h1>
+        <div class="flex items-center justify-center space-x-3 sm:space-x-4 mt-1">
+          <a title="Say hello!" href="mailto:hello@joshthomas.dev">
+            <span class="sr-only">Email</span>
+            {% heroicon_outline "envelope" class="h-6 w-6 hover:fill-blue-500 hover:stroke-blue-300 hover:drop-shadow dark:hover:text-gray-200" %}
+          </a>
+          {% social %}
+        </div>
+      </div>
+      {% navigation %}
+    </header>
+    <main class="flex-1 px-4 pb-6">
+      {% block content %}{% endblock content %}
+    </main>
+    {% block extra_body %}{% endblock extra_body %}
+    {% block javascript_foot %}{% endblock javascript_foot %}
+  </body>
+
+</html>
