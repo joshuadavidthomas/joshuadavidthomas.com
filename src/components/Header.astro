@@ -13,23 +13,4 @@ import ThemeToggle from "./ThemeToggle";
     </h1>
     <ThemeToggle client:load />
   </div>
-  <nav class="flex items-center mt-1 text-xs">
-    {
-      config.navigation.map(({ title, url }) => (
-        <div class="relative mr-4">
-          <a href={url} rel="prefetch" class="uppercase link link-no-underline">
-            {title}
-          </a>
-          <div
-            class={clsx(
-              "absolute mx-auto w-1/2 inset-x-0 h-0.5 rounded-b-full -bottom-1",
-              Astro.url.pathname.split("/")[1] === url.split("/")[1]
-                ? "bg-blue-500"
-                : "bg-zinc-400"
-            )}
-          />
-        </div>
-      ))
-    }
-  </nav>
 </header>
