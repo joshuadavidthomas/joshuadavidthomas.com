@@ -43,4 +43,5 @@ pytest-reverse
 pytest-xdist
 ruff
 sentry-sdk
+types-pygments
 whitenoise

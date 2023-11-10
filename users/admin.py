@@ -12,7 +12,7 @@ from .models import User
 class UserAdmin(BaseUserAdmin):
     add_form = UserCreationForm
     form = UserChangeForm
-    model = User
+    model = User  # type: ignore[assignment]
     list_display = (
         "username",
         "email",

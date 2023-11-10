@@ -218,6 +218,10 @@ createdb CONTAINER_NAME="jtdev_postgres" VERSION="15.3":
 lint:
     pre-commit run --all-files
 
+# type check using mypy
+types:
+    python -m mypy .
+
 envsync:
     #!/usr/bin/env python
     from pathlib import Path

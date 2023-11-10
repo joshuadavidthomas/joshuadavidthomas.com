@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from collections.abc import Sequence
+
 from attrs import define
 from django.http import HttpRequest
 from django.urls import reverse
@@ -8,7 +10,7 @@ from django.urls.exceptions import NoReverseMatch
 
 @define
 class Navigation:
-    items: list[NavGroup | NavItem]
+    items: Sequence[NavGroup | NavItem]
     request: HttpRequest
 
     def __attrs_post_init__(self) -> None:
