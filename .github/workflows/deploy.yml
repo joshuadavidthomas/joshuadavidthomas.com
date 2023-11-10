@@ -16,7 +16,7 @@ jobs:
     outputs:
       current_version: ${{ steps.bumpver.outputs.current_version }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v4
         with:
@@ -48,7 +48,7 @@ jobs:
     needs: bumpver
     environment: production
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: 1password/load-secrets-action@v1
         with:
@@ -66,7 +66,7 @@ jobs:
     needs: bumpver
     environment: production
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
