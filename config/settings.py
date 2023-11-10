@@ -13,6 +13,7 @@ from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
 
 from core.navigation import NavItem
+from core.redirects import Redirects
 from core.sentry import sentry_traces_sampler
 from core.social import SocialItem
 
@@ -160,6 +161,7 @@ LOGGING = {
 # https://docs.djangoproject.com/en/dev/ref/middleware/#middleware-ordering
 MIDDLEWARE = [
     # should be first
+    "core.redirects.middleware.redirect_middleware",
     "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -333,6 +335,8 @@ if not DEBUG or env.bool("ENABLE_SENTRY", default=False):
     )
 
 # 4. Project Settings
+
+REDIRECTS = Redirects.from_json(BASE_DIR / "redirects.json")
 
 NAVIGATION = [
     NavItem(title="Home", url="/"),

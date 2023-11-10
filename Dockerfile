@@ -21,7 +21,7 @@ RUN python -m pip install --upgrade pip \
 
 
 FROM base as app
-COPY litefs.yml manage.py /app/
+COPY litefs.yml manage.py redirects.json /app/
 COPY blog /app/blog
 COPY config /app/config
 COPY core /app/core
