@@ -29,4 +29,5 @@ def tag(request: HttpRequest, slug: str) -> HttpResponse:
         .filter(is_draft=False)
         .order_by("-created_at")
     )
-    return render(request, "blog/tag.html", {"tag": tag, "entries": entries})
+    page_obj = entries.paginated(page_number=request.GET.get("page"), per_page=10)
+    return render(request, "blog/tag.html", {"tag": tag, "page_obj": page_obj})

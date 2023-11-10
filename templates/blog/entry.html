@@ -3,13 +3,17 @@
 {% load heroicons %}
 {% load ui %}
 
+{% block title %}
+  {{ entry.title }} | {{ site.title }}
+{% endblock title %}
+
 {% block content %}
   <article>
     <header class="flex flex-col">
       <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl dark:text-gray-100">
         {{ entry.title }}
       </h2>
-      <time datetime="{{ entry.created_at }}" class="mt-4 text-base text-gray-400 dark:text-gray-500">
+      <time datetime="{{ entry.created_at }}" class="mt-4 text-sm text-gray-500 dark:text-gray-400">
         {{ entry.created_at }}
       </time>
     </header>

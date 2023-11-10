@@ -246,6 +246,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "core.context_processors.metadata",
             ],
             "debug": DEBUG,
             "loaders": [
