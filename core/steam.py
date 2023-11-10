@@ -18,6 +18,10 @@ def get_recently_played_games(cache_time: int = 60 * 60 * 24):
             },
         ).json()
         cache.set(CACHE_KEY, games, cache_time)
+
+    if games["response"]["total_count"] == 0:
+        return None
+
     games["response"]["games"] = sorted(
         games["response"]["games"], key=lambda x: x["playtime_2weeks"], reverse=True
     )

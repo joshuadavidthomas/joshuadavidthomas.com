@@ -21,23 +21,19 @@ update:
     @just pip-compile --upgrade
     @just install
 
-venv PY_VERSION="3.11.4":
+venv:
     #!/usr/bin/env python
     from __future__ import annotations
 
+    import os
     import subprocess
     from pathlib import Path
 
-    PY_VERSION = "{{ PY_VERSION }}"
-    name = f"jt.dev-{PY_VERSION}"
-
     home = Path.home()
-
-    pyenv_version_dir = home / ".pyenv" / "versions" / PY_VERSION
+    pyenv_version = home / ".pyenv" / "version"
+    PY_VERSION = pyenv_version.read_text().rstrip('\n')
+    name = f"jt.dev-{PY_VERSION}"
     pyenv_virtualenv_dir = home / ".pyenv" / "versions" / name
-
-    if not pyenv_version_dir.exists():
-        subprocess.run(["pyenv", "install", PY_VERSION], check=True)
 
     if not pyenv_virtualenv_dir.exists():
         subprocess.run(["pyenv", "virtualenv", PY_VERSION, name], check=True)
@@ -211,8 +207,16 @@ createdb CONTAINER_NAME="jtdev_postgres" VERSION="15.3":
     raise SystemExit(main())
 
 ##################
-#    ENV SYNC    #
+#     UTILS      #
 ##################
+
+# format justfile
+@_fmt:
+    just --fmt --unstable
+
+# run pre-commit on all files
+lint:
+    pre-commit run --all-files
 
 envsync:
     #!/usr/bin/env python

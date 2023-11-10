@@ -4,68 +4,68 @@
 {% load ui %}
 
 {% block content %}
-<div class="mx-auto mt-6 grid grid-cols-1 gap-x-8 gap-y-16 lg:mx-0" preload=“mouseover”>
-  {% for entry in page_obj %}
-  <article class="group relative">
-    <h3 class="text-lg font-semibold leading-6 text-gray-900 group-hover:text-blue-500 group-hover:underline">
-      <a href="{{ entry.get_absolute_url }}">
-        <span class="absolute inset-0"></span>
-        {{ entry.title }}
-      </a>
-    </h3>
-    <time datetime="{{ entry.created_at }}" class="text-gray-500 text-xs mt-2">
-      {{ entry.created_at|date:"F j, Y" }}
-    </time>
-    {% if entry.is_draft %}
-    <span class="mt-1 ml-2 inline-flex items-center rounded-md bg-red-100 px-2 py-1 text-xs font-medium text-red-700">
-      Draft
-    </span>
-    {% endif %}
-    <div class="mt-1 flex items-center gap-x-4">
-      {% if entry.tags %}
-      {% for tag in entry.tags.all %}
-      <a href="{{ tag.get_absolute_url }}" class="inline-flex items-center rounded-md bg-gray-100 px-1.5 py-0.5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-600/10">
-        {{ tag.name }}
-      </a>
-      {% endfor %}
-      {% endif %}
-    </div>
-    <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-      {{ entry.summary_rendered }}
-    </p>
-  </article>
-  {% endfor %}
-  <nav>
-    <p class="text-sm text-gray-800">
-      Page
-      <span class="font-medium">{{ page_obj.number }}</span>
-      of
-      <span class="font-medium">{{ page_obj.paginator.num_pages }}</span>
-    </p>
-    <div class="flex text-sm mt-1">
-      {% if page_obj.has_previous %}
-      <span class="flex items-center space-x-2">
-        <a href="?page=1" class="flex items-center hover:underline">
-          {% heroicon_solid "arrow-small-left" class='w-4 h-4 mr-1' %}
-          first
-        </a>
-        <a href="?page={{ page_obj.previous_page_number }}" class="hover:underline">
-          previous
-        </a>
-      </span>
-      {% endif %}
-      {% if page_obj.has_next %}
-      <span class="ml-auto flex items-center space-x-2">
-        <a href="?page={{ page_obj.next_page_number }}" class="hover:underline">
-          next
-        </a>
-        <a href="?page={{ page_obj.paginator.num_pages }}" class="flex items-center hover:underline">
-          last
-          {% heroicon_solid "arrow-small-right" class='w-4 h-4 ml-1' %}
-        </a>
-      </span>
-      {% endif %}
-    </div>
-  </nav>
-</div>
+  <div class="grid grid-cols-1 gap-x-8 gap-y-16 mx-auto mt-6 lg:mx-0" preload=“mouseover”>
+    {% for entry in page_obj %}
+      <article class="relative group">
+        <h3 class="text-lg font-semibold leading-6 text-gray-900 group-hover:text-blue-500 group-hover:underline">
+          <a href="{{ entry.get_absolute_url }}">
+            <span class="absolute inset-0"></span>
+            {{ entry.title }}
+          </a>
+        </h3>
+        <time datetime="{{ entry.created_at }}" class="mt-2 text-xs text-gray-500">
+          {{ entry.created_at|date:"F j, Y" }}
+        </time>
+        {% if entry.is_draft %}
+          <span class="inline-flex items-center py-1 px-2 mt-1 ml-2 text-xs font-medium text-red-700 bg-red-100 rounded-md">
+            Draft
+          </span>
+        {% endif %}
+        <div class="flex gap-x-4 items-center mt-1">
+          {% if entry.tags %}
+            {% for tag in entry.tags.all %}
+              <a href="{{ tag.get_absolute_url }}" class="inline-flex items-center py-0.5 px-1.5 text-xs font-medium text-gray-600 bg-gray-100 rounded-md ring-1 ring-inset ring-gray-600/10">
+                {{ tag.name }}
+              </a>
+            {% endfor %}
+          {% endif %}
+        </div>
+        <p class="mt-5 text-sm leading-6 text-gray-600 line-clamp-3">
+          {{ entry.summary_rendered }}
+        </p>
+      </article>
+    {% endfor %}
+    <nav>
+      <p class="text-sm text-gray-800">
+        Page
+        <span class="font-medium">{{ page_obj.number }}</span>
+        of
+        <span class="font-medium">{{ page_obj.paginator.num_pages }}</span>
+      </p>
+      <div class="flex mt-1 text-sm">
+        {% if page_obj.has_previous %}
+          <span class="flex items-center space-x-2">
+            <a href="?page=1" class="flex items-center hover:underline">
+              {% heroicon_solid "arrow-small-left" class='mr-1 w-4 h-4' %}
+              first
+            </a>
+            <a href="?page={{ page_obj.previous_page_number }}" class="hover:underline">
+              previous
+            </a>
+          </span>
+        {% endif %}
+        {% if page_obj.has_next %}
+          <span class="flex items-center ml-auto space-x-2">
+            <a href="?page={{ page_obj.next_page_number }}" class="hover:underline">
+              next
+            </a>
+            <a href="?page={{ page_obj.paginator.num_pages }}" class="flex items-center hover:underline">
+              last
+              {% heroicon_solid "arrow-small-right" class='ml-1 w-4 h-4' %}
+            </a>
+          </span>
+        {% endif %}
+      </div>
+    </nav>
+  </div>
 {% endblock content %}

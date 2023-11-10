@@ -11,7 +11,7 @@ def get_recently_starred_posts(cache_time: int = 60 * 60):
         posts = cache.get(CACHE_KEY)
     else:
         posts = httpx.get(
-            f"{settings.MINIFLUX['URL']}/v1/entries",
+            f"{settings.MINIFLUX['URL'].rstrip('/')}/v1/entries",
             headers={
                 "X-Auth-Token": settings.MINIFLUX["API_KEY"],
             },

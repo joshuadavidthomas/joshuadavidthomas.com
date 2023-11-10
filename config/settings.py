@@ -8,7 +8,6 @@ from pathlib import Path
 import django_stubs_ext
 import sentry_sdk
 from django.template import base
-from django_flyio.db import get_db_config
 from environs import Env
 from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
@@ -50,14 +49,24 @@ ASGI_APPLICATION = "assets.asgi.application"
 
 CACHES = {
     "default": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "unique-snowflake",
+    }
+    if DEBUG
+    else {
         "BACKEND": "django.core.cache.backends.db.DatabaseCache",
         "LOCATION": "cache",
     }
 }
 
-DATABASES = get_db_config()
-
-DATABASE_ROUTERS = ["django_flyio.routers.FlyDBReplicaRouter"]
+DATABASES = {
+    "default": env.dj_db_url(
+        "DATABASE_URL",
+        default="sqlite:///db.sqlite3",
+        conn_max_age=600,  # 10 minutes
+        conn_health_checks=True,
+    )
+}
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 

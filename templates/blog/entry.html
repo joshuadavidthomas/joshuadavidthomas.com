@@ -4,17 +4,17 @@
 {% load ui %}
 
 {% block content %}
-<article>
-  <header class="flex flex-col">
-    <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-100 sm:text-4xl">
-      {{ entry.title }}
-    </h2>
-    <time datetime="{{ entry.created_at }}" class="mt-4 text-base text-gray-400 dark:text-gray-500">
-      {{ entry.created_at }}
-    </time>
-  </header>
-  <div class="mt-8 prose prose-sm sm:prose-base max-w-none hover:prose-a:text-blue-500">
-    {{ entry.body_rendered }}
-  </div>
-</article>
+  <article>
+    <header class="flex flex-col">
+      <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl dark:text-gray-100">
+        {{ entry.title }}
+      </h2>
+      <time datetime="{{ entry.created_at }}" class="mt-4 text-base text-gray-400 dark:text-gray-500">
+        {{ entry.created_at }}
+      </time>
+    </header>
+    <div class="mt-8 max-w-none prose prose-sm sm:prose-base hover:prose-a:text-blue-500">
+      {{ entry.body_rendered }}
+    </div>
+  </article>
 {% endblock content %}

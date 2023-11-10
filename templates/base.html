@@ -27,31 +27,31 @@
     <script src="https://unpkg.com/htmx.org/dist/ext/head-support.js"></script>
     {% django_htmx_script %}
     <script>
-    document.addEventListener("htmx:afterSettle", (event) => {
-      if ("djdt" in window) {
-        window.djdt.init();
-      }
-      if ("Alpine" in window) {
-        Alpine.start()
-      }
-    });
+      document.addEventListener("htmx:afterSettle", (event) => {
+        if ("djdt" in window) {
+          window.djdt.init();
+        }
+        if ("Alpine" in window) {
+          Alpine.start()
+        }
+      });
     </script>
     <script src="{% static 'vendor/js/alpinejs.min.js' %}" defer></script>
     <script data-goatcounter="https://joshthomasdev.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+            async src="//gc.zgo.at/count.js"></script>
     {% block javascript_head %}{% endblock javascript_head %}
   </head>
 
   <body class="flex flex-col min-h-full h-full max-w-2xl mx-auto{% if debug %} debug-screens{% endif %}" hx-boost="true" hx-ext="head-support">
     <header class="px-4 pt-4 text-lg font-semibold">
-      <div class="flex items-start justify-between">
+      <div class="flex justify-between items-start">
         <h1 class="text-xl">
           <a href="/">Josh Thomas</a>
         </h1>
-        <div class="flex items-center justify-center space-x-3 sm:space-x-4 mt-1">
+        <div class="flex justify-center items-center mt-1 space-x-3 sm:space-x-4">
           <a title="Say hello!" href="mailto:hello@joshthomas.dev">
             <span class="sr-only">Email</span>
-            {% heroicon_outline "envelope" class="h-6 w-6 hover:fill-blue-500 hover:stroke-blue-300 hover:drop-shadow dark:hover:text-gray-200" %}
+            {% heroicon_outline "envelope" class="w-6 h-6 dark:hover:text-gray-200 hover:fill-blue-500 hover:stroke-blue-300 hover:drop-shadow" %}
           </a>
           {% social %}
         </div>
