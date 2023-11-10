@@ -10,7 +10,7 @@ if TYPE_CHECKING:
     from .models import User
 
 
-class OTPDataManager(models.Manager):
+class OTPDataManager(models.Manager["OTPData"]):
     def for_user(self, user: User) -> OTPData | None:
         try:
             return self.get(user=user)

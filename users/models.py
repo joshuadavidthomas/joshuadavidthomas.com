@@ -46,7 +46,10 @@ class OTPData(TimeStamped, models.Model):
         )
         return qr_code_image.to_string().decode("utf-8")
 
-    def validate_otp(self, otp: str) -> bool:
+    def validate_otp(self, otp: str | None) -> bool:
+        if otp is None:
+            return False
+
         totp = pyotp.TOTP(self.secret)
 
         return totp.verify(otp)

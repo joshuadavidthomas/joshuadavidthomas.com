@@ -7,6 +7,7 @@ from django.views.generic import FormView
 from django.views.generic import TemplateView
 
 from users.models import OTPData
+from users.models import User
 
 
 class AdminSetupTwoFactorAuthView(TemplateView):
@@ -32,6 +33,8 @@ class AdminConfirmTwoFactorAuthView(FormView):
     success_url = reverse_lazy("admin:index")
 
     class Form(forms.Form):
+        user: User
+
         otp = forms.CharField(
             required=True,
             label="2FA Code",
@@ -39,6 +42,8 @@ class AdminConfirmTwoFactorAuthView(FormView):
         )
 
         def clean_otp(self):
+            # assert self.user is not None
+
             self.two_factor_auth_data = OTPData.objects.for_user(self.user)
 
             if self.two_factor_auth_data is None:
