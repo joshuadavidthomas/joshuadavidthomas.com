@@ -6,13 +6,7 @@ from django.urls import include
 from django.urls import path
 from health_check.views import MainView
 
-from config import __version__
 from core import views as core_views
-
-admin_header = f"joshthomas.dev v{__version__}"
-admin.site.enable_nav_sidebar = False
-admin.site.site_header = admin_header
-admin.site.site_title = admin_header
 
 urlpatterns = [
     path(".well-known/security.txt", core_views.security_txt),

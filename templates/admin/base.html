@@ -1,0 +1,20 @@
+{% extends "admin/base.html" %}
+{% load tailwind_cli %}
+
+{% block extrahead %}
+  {% tailwind_css %}
+{% endblock extrahead %}
+
+{% block bodyclass %}
+  {% if debug %}
+    debug-screens
+  {% endif %}
+{% endblock %}
+
+{% block userlinks %}
+  {% if user.is_active and user.is_staff and not user.otp_data %}
+    <a href="{% url "admin:setup-2fa" %}">Setup 2FA</a> /
+  {% endif %}
+
+  {{ block.super }}
+{% endblock %}

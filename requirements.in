@@ -35,12 +35,14 @@ pre-commit
 psycopg
 psycopg-binary
 pygments
+pyotp
 pytest
 pytest-django
 pytest-is-running
 pytest-randomly
 pytest-reverse
 pytest-xdist
+qrcode[pil]
 ruff
 sentry-sdk
 types-pygments
