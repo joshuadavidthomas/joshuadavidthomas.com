@@ -10,6 +10,9 @@ version_pattern = "YYYY.MM.INC1"
 "config/__init__.py" = [
   '__version__ = "{version}"'
 ]
+"tests/test_version.py" = [
+  'assert __version__ == "{version}"'
+]
 
 [tool.coverage.report]
 exclude_lines = [
@@ -62,6 +65,7 @@ module = [
   "gunicorn.*",
   "health_check.*",
   "neapolitan.*",
+  "qrcode.*",
   "simple_history.*"
 ]
 

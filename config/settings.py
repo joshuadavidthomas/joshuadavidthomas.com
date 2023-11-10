@@ -77,6 +77,8 @@ INSTALLED_APPS = [
     # First Party
     "blog",
     "core",
+    "core.admin",
+    "core.admin.default",
     "users",
     # Third Party
     "anymail",
@@ -96,7 +98,6 @@ INSTALLED_APPS = [
     "neapolitan",
     "simple_history",
     # Django
-    "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
