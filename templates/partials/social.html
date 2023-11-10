@@ -1,0 +1,12 @@
+{% load heroicons %}
+
+{% for item in items %}
+  <a href={{ item.url }}{% if item.title == "Mastodon"%} rel="me"{% endif %}>
+    <span class="sr-only">{{ item.title }}</span>
+    {% if item.icon_template %}
+      {% include item.icon_template %}
+    {% else %}
+      {% heroicon_outline item.icon class="w-4 h-4 sm:w-6 sm:h-6 hover:text-gray-800 dark:hover:text-gray-300 hover:drop-shadow" %}
+    {% endif %}
+  </a>
+{% endfor %}
