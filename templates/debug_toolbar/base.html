@@ -1,0 +1,11 @@
+{% extends 'debug_toolbar/base.html' %}
+
+{% block css %}
+{{ block.super }}
+<style>
+  #djDebug #djDebugToolbar,
+  #djDebug #djDebugToolbarHandle {
+    right: 16px;
+  }
+</style>
+{% endblock %}
