@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from django.contrib import admin
 from django.contrib.auth import REDIRECT_FIELD_NAME
+from django.conf import settings
 from django.urls import path
 from django.urls import reverse
 
@@ -37,7 +38,7 @@ class AdminSite(admin.AdminSite):
         return extra_urlpatterns + base_urlpatterns
 
     def login(self, request, *args, **kwargs):
-        if request.method != "POST":
+        if request.method != "POST" or not settings.ENABLE_ADMIN_2FA:
             return super().login(request, *args, **kwargs)
 
         username = request.POST.get("username")

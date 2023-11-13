@@ -18,28 +18,28 @@
       👋 Hi, my name is Josh.
     </h1>
     <p class="mt-4 text-xl md:text-2xl">
-      I'm a web developer in Tuscaloosa, AL.
+      I'm a web developer living in Alabama.
     </p>
   </div>
   <div class="mt-20">
     <div class="flex justify-between items-center">
-      <h2 class="text-lg font-semibold tracking-tight text-gray-900 sm:text-xl">
+      <h2 class="text-lg font-semibold tracking-tight sm:text-xl">
         📝 Recent Posts
       </h2>
-      <a href="{% url 'blog:index' %}" class="text-xs font-medium tracking-tighter text-gray-600 sm:text-sm hover:text-blue-500 hover:underline">
+      <a href="{% url 'blog:index' %}" class="text-xs font-medium tracking-tighter text-gray-600 dark:text-gray-200 sm:text-sm hover:text-blue-500 hover:underline">
         View all 📚
       </a>
     </div>
     <div class="mt-4 space-y-8">
       {% for entry in entries %}
         <article class="relative group">
-          <h3 class="text-lg font-semibold leading-6 text-gray-800 group-hover:text-blue-500 group-hover:underline">
+          <h3 class="text-xl sm:text-2xl font-semibold leading-6 text-gray-800 dark:text-gray-200 group-hover:text-blue-500 group-hover:underline">
             <a href="{{ entry.get_absolute_url }}">
               <span class="absolute inset-0"></span>
               {{ entry.title }}
             </a>
           </h3>
-          <time datetime="{{ entry.created_at }}" class="mt-2 text-xs text-gray-500">
+          <time datetime="{{ entry.created_at }}" class="mt-2 text-xs text-gray-600 dark:text-gray-300">
             {{ entry.created_at|date:"F j, Y" }}
           </time>
           {% if entry.is_draft %}
@@ -56,7 +56,7 @@
               {% endfor %}
             {% endif %}
           </div>
-          <div class="mt-5 text-sm leading-6 text-gray-600 dark:text-gray-300">
+          <div class="mt-5 text-sm leading-6 sm:text-base sm:leading-7 text-gray-600 dark:text-gray-200">
             {{ entry.summary_rendered }}
           </div>
         </article>
@@ -65,7 +65,7 @@
   </div>
   <div class="grid grid-cols-1 gap-12 mt-20 sm:grid-cols-2">
     <div class="">
-      <h2 class="flex text-lg font-semibold leading-6 text-gray-900 sm:justify-end">
+      <h2 class="flex text-lg font-semibold leading-6 sm:justify-end">
         🎮 What I'm playing
       </h2>
       {% if games %}
@@ -82,14 +82,14 @@
           {% endfor %}
         </ul>
       {% else %}
-        <p class="flex flex-col mt-2 space-y-2 text-sm tracking-tighter leading-5 text-left text-gray-700 sm:text-right">
+        <p class="flex flex-col mt-2 space-y-2 text-sm tracking-tighter leading-5 text-left text-gray-800 dark:text-gray-200 sm:text-right">
           <span>I'm not playing anything right now.</span>
           <span class="text-lg">☀ ✌ 😎</span>
         </p>
       {% endif %}
     </div>
     <div>
-      <h2 class="flex text-lg font-semibold leading-6 text-gray-900">
+      <h2 class="flex text-lg font-semibold leading-6">
         What I'm reading
         <span class="order-first mr-1 sm:order-last sm:mr-0 sm:ml-1">📖</span>
       </h2>
@@ -97,13 +97,13 @@
         {% for post in posts.entries %}
           <li>
             <a href="{{ post.url }}" class="flex flex-col space-y-0.5 group" target="_blank" rel="noopener noreferrer">
-              <span class="font-medium tracking-tighter leading-5 text-gray-700 group-hover:text-blue-500 group-hover:underline">
+              <span class="font-medium tracking-tighter leading-5 text-gray-700 dark:text-gray-200 group-hover:text-blue-500 group-hover:underline">
                 {{ post.title }}
               </span>
               <span class="pt-1 text-xs">
                 {{ post.author }}
               </span>
-              <span class="flex items-center text-xs text-gray-500 group-hover:text-gray-700">
+              <span class="flex items-center text-xs text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300">
                 {% heroicon_mini "arrow-top-right-on-square" class="mr-1 w-3 h-3" %}
                 {{ post.url|domain }}
                 {% if post.url|domain != post.feed.site_url|domain %}

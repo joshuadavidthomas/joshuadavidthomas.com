@@ -13,11 +13,11 @@
       <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl dark:text-gray-100">
         {{ entry.title }}
       </h2>
-      <time datetime="{{ entry.created_at }}" class="mt-4 text-sm text-gray-500 dark:text-gray-400">
-        {{ entry.created_at }}
+      <time datetime="{{ entry.created_at }}" class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+        {{ entry.created_at|date:"F j, Y" }}
       </time>
     </header>
-    <div class="mt-8 max-w-none prose prose-sm sm:prose-base hover:prose-a:text-blue-500">
+    <div class="mt-8 max-w-none prose dark:prose-invert prose-sm sm:prose-base hover:prose-a:text-blue-500">
       {{ entry.body_rendered }}
     </div>
   </article>

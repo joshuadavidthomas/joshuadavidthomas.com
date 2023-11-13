@@ -12,13 +12,13 @@
     {% block pre_content %}{% endblock pre_content %}
     {% for entry in page_obj %}
       <article class="relative group">
-        <h3 class="text-lg font-semibold leading-6 text-gray-900 group-hover:text-blue-500 group-hover:underline">
+        <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 dark:text-gray-200 group-hover:text-blue-500 group-hover:underline">
           <a href="{{ entry.get_absolute_url }}">
             <span class="absolute inset-0"></span>
             {{ entry.title }}
           </a>
         </h3>
-        <time datetime="{{ entry.created_at }}" class="mt-2 text-xs text-gray-500">
+        <time datetime="{{ entry.created_at }}" class="mt-2 text-sm text-gray-600 dark:text-gray-300">
           {{ entry.created_at|date:"F j, Y" }}
         </time>
         {% if entry.is_draft %}
@@ -35,14 +35,14 @@
             {% endfor %}
           {% endif %}
         </div>
-        <div class="mt-5 text-sm leading-6 text-gray-600 dark:text-gray-300">
+        <div class="mt-5 text-sm leading-6 sm:leading-7 sm:text-base text-gray-600 dark:text-gray-200">
           {{ entry.summary_rendered }}
         </div>
       </article>
     {% endfor %}
     {% if page_obj.paginator.num_pages > 1 %}
       <nav>
-        <p class="text-sm text-gray-800">
+        <p class="text-sm text-gray-800 dark:text-gray-200">
           Page
           <span class="font-medium">{{ page_obj.number }}</span>
           of

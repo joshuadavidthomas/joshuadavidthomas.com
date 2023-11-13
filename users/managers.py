@@ -20,5 +20,5 @@ class OTPDataManager(models.Manager["OTPData"]):
     def for_username(self, username: str) -> OTPData | None:
         try:
             return self.get(user__username=username)
-        except OTPData.DoesNotExist:
+        except ObjectDoesNotExist:
             return None
