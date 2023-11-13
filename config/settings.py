@@ -339,7 +339,6 @@ if not DEBUG or env.bool("ENABLE_SENTRY", default=False):
 # 4. Project Settings
 
 ENABLE_ADMIN_2FA = not DEBUG or env.bool("ENABLE_ADMIN_2FA", default=False)
-print(f"ENABLE_ADMIN_2FA: {ENABLE_ADMIN_2FA}")
 
 REDIRECTS = Redirects.from_json(BASE_DIR / "redirects.json")
 
