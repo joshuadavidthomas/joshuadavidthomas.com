@@ -23,8 +23,8 @@
     </style>
     {% tailwind_css %}
     <script src="{% static 'vendor/js/htmx.min.js' %}"></script>
-    <script src="https://unpkg.com/htmx.org/dist/ext/preload.js"></script>
     <script src="https://unpkg.com/htmx.org/dist/ext/head-support.js"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/preload.js"></script>
     {% django_htmx_script %}
     <script>
       document.addEventListener("htmx:afterSettle", (event) => {
@@ -42,11 +42,11 @@
     {% block javascript_head %}{% endblock javascript_head %}
   </head>
 
-  <body class="text-gray-900 dark:text-gray-100 flex flex-col min-h-full h-full max-w-2xl mx-auto{% if debug %} debug-screens{% endif %}" hx-boost="true" hx-ext="head-support">
+  <body class="text-gray-900 dark:text-gray-100 flex flex-col min-h-full h-full max-w-2xl mx-auto{% if debug %} debug-screens{% endif %}" hx-boost="true" hx-ext="head-support, preload">
     <header class="px-4 pt-4 text-lg font-semibold">
       <div class="flex justify-between items-start">
         <h1 class="text-xl">
-          <a href="/">Josh Thomas</a>
+          <a href="{% url 'index' %}" preload="mouseover">Josh Thomas</a>
         </h1>
         <div class="flex justify-center items-center mt-1 space-x-3 sm:space-x-4">
           <a title="Say hello!" href="mailto:hello@joshthomas.dev">
