@@ -9,7 +9,7 @@ from django.utils.text import slugify
 from core.markdown import md
 from core.models import TimeStamped
 
-from .managers import EntryQuerySet
+from .managers import EntryManager
 
 
 class Entry(TimeStamped, models.Model):
@@ -26,7 +26,7 @@ class Entry(TimeStamped, models.Model):
         help_text="Draft entries do not show in index pages but can be visited directly if you know the URL",
     )
 
-    objects = EntryQuerySet.as_manager()
+    objects = EntryManager()
 
     class Meta:
         verbose_name_plural = "entries"
