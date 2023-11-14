@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from markdown_it import MarkdownIt
+from mdit_py_plugins.admon import admon_plugin
 from mdit_py_plugins.anchors import anchors_plugin
 from mdit_py_plugins.footnote import footnote_plugin
 from mdit_py_plugins.front_matter import front_matter_plugin
@@ -31,8 +32,9 @@ def highlight_code(code, name, attrs):
 
 md = (
     MarkdownIt("commonmark", {"html": True, "highlight": highlight_code})
-    .use(front_matter_plugin)
+    .use(admon_plugin)
     .use(anchors_plugin)
     .use(footnote_plugin)
+    .use(front_matter_plugin)
     .enable(["table"])
 )

@@ -67,5 +67,55 @@ export default {
       addVariant("htmx-swapping", ["&.htmx-swapping", ".htmx-swapping &"]);
       addVariant("htmx-added", ["&.htmx-added", ".htmx-added &"]);
     }),
+    plugin(function({ addComponents, theme }) {
+      addComponents({
+        ".prose .admonition": {
+          borderRadius: theme("borderRadius.md"),
+          borderWidth: theme("borderWidth.2"),
+          padding: theme("spacing.4"),
+          fontSize: theme("fontSize.sm"),
+          marginLeft: theme("spacing.2"),
+          marginRight: theme("spacing.2"),
+          marginBottom: theme("spacing.4"),
+        },
+        ".prose .admonition > *": {
+          marginLeft: theme("spacing.4"),
+        },
+        ".prose .admonition-title": {
+          fontWeight: theme("fontWeight.bold"),
+          textTransform: "uppercase",
+        },
+        ".prose .admonition.note": {
+          backgroundColor: theme("colors.blue.50"),
+          borderColor: theme("colors.blue.200"),
+          color: theme("colors.blue.900"),
+        },
+        ".prose .admonition.tip": {
+          backgroundColor: theme("colors.green.50"),
+          borderColor: theme("colors.green.200"),
+          color: theme("colors.green.900"),
+        },
+        ".prose .admonition.info": {
+          backgroundColor: theme("colors.gray.50"),
+          borderColor: theme("colors.gray.200"),
+          color: theme("colors.gray.900"),
+        },
+        ".prose .admonition.caution": {
+          backgroundColor: theme("colors.orange.50"),
+          borderColor: theme("colors.orange.200"),
+          color: theme("colors.orange.900"),
+        },
+        ".prose .admonition.danger": {
+          backgroundColor: theme("colors.red.50"),
+          borderColor: theme("colors.red.200"),
+          color: theme("colors.red.900"),
+        },
+        ".prose .admonition.warning": {
+          backgroundColor: theme("colors.yellow.50"),
+          borderColor: theme("colors.yellow.200"),
+          color: theme("colors.yellow.900"),
+        },
+      });
+    }),
   ],
 };
