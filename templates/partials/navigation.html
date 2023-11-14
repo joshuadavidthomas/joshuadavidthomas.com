@@ -1,7 +1,7 @@
 <nav class="flex items-center mt-1.5 space-x-4 text-xs" preload=“mouseover”>
   {% for item in items %}
-    <a href="{{ item.url }}" class="uppercase hover:text-blue-500 hover:underline underline-offset-4 decoration-1">
-      {{ item.title }}
-    </a>
+  <a href="{{ item.get_url }}" class="uppercase hover:text-blue-500 hover:underline underline-offset-4 decoration-1">
+    {{ item.title }}
+  </a>
   {% endfor %}
 </nav>

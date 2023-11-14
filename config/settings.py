@@ -8,7 +8,6 @@ from pathlib import Path
 import django_stubs_ext
 import sentry_sdk
 from django.template import base
-from django.urls import reverse_lazy
 from environs import Env
 from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
@@ -324,6 +323,7 @@ DEBUG_TOOLBAR_CONFIG = {
 # django-tailwind-cli
 TAILWIND_CLI_CONFIG_FILE = "tailwind.config.cjs"
 
+
 # sentry
 if not DEBUG or env.bool("ENABLE_SENTRY", default=False):
     sentry_sdk.init(
@@ -344,8 +344,8 @@ ENABLE_ADMIN_2FA = not DEBUG or env.bool("ENABLE_ADMIN_2FA", default=False)
 REDIRECTS = Redirects.from_json(BASE_DIR / "redirects.json")
 
 NAVIGATION = [
-    NavItem(title="Home", url=reverse_lazy("index")),
-    NavItem(title="Blog", url=reverse_lazy("blog:index")),
+    NavItem(title="Home", url="index"),
+    NavItem(title="Blog", url="blog:index"),
 ]
 
 SOCIALS = [
@@ -366,7 +366,7 @@ SOCIALS = [
     ),
     SocialItem(
         title="RSS",
-        url=reverse_lazy("blog:feed"),
+        url="blog:feed",
         icon_template="partials/rss.svg",
     ),
 ]
