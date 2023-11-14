@@ -8,6 +8,7 @@ from pathlib import Path
 import django_stubs_ext
 import sentry_sdk
 from django.template import base
+from django.urls import reverse_lazy
 from environs import Env
 from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
@@ -343,8 +344,8 @@ ENABLE_ADMIN_2FA = not DEBUG or env.bool("ENABLE_ADMIN_2FA", default=False)
 REDIRECTS = Redirects.from_json(BASE_DIR / "redirects.json")
 
 NAVIGATION = [
-    NavItem(title="Home", url="/"),
-    NavItem(title="Blog", url="/blog/"),
+    NavItem(title="Home", url=reverse_lazy("index")),
+    NavItem(title="Blog", url=reverse_lazy("blog:index")),
 ]
 
 SOCIALS = [
@@ -362,6 +363,11 @@ SOCIALS = [
         title="LinkedIn",
         url="https://www.linkedin.com/in/joshua-thomas-b1745a16/",
         icon_template="partials/linkedin.svg",
+    ),
+    SocialItem(
+        title="RSS",
+        url=reverse_lazy("blog:feed"),
+        icon_template="partials/rss.svg",
     ),
 ]
 

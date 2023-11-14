@@ -31,8 +31,14 @@ class EntryQuerySet(models.QuerySet["Entry"]):
     def drafts(self):
         return self.filter(is_draft=True)
 
+    def chronological(self):
+        return self.order_by("created_at")
+
+    def reverse_chronological(self):
+        return self.order_by("-created_at")
+
     def recent_entries(self, count: int = 10):
-        return self.published().order_by("-created_at")[:count]
+        return self.published().reverse_chronological()[:count]
 
     def paginated(
         self, page_number: int | str | None = 1, per_page: int = 10

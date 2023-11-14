@@ -19,6 +19,4 @@ def navigation(context):
 
 @register.inclusion_tag("partials/social.html")
 def social():
-    for setting in settings.SOCIALS:
-        print("setting", setting)
     return {"items": settings.SOCIALS}
