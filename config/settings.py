@@ -323,6 +323,7 @@ DEBUG_TOOLBAR_CONFIG = {
 # django-tailwind-cli
 TAILWIND_CLI_CONFIG_FILE = "tailwind.config.cjs"
 
+TAILWIND_CLI_SRC_CSS = "static/public/tailwind.css"
 
 # sentry
 if not DEBUG or env.bool("ENABLE_SENTRY", default=False):

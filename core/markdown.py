@@ -33,7 +33,12 @@ def highlight_code(code, name, attrs):
 md = (
     MarkdownIt("commonmark", {"html": True, "highlight": highlight_code})
     .use(admon_plugin)
-    .use(anchors_plugin)
+    .use(
+        anchors_plugin,
+        max_level=4,
+        permalink=True,
+        permalinkSymbol="#",
+    )
     .use(footnote_plugin)
     .use(front_matter_plugin)
     .enable(["table"])
