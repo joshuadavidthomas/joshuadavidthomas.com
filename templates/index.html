@@ -62,6 +62,46 @@
         </article>
       {% endfor %}
     </div>
+    {% if drafts %}
+  <div class="mt-20">
+    <div class="flex justify-between items-center">
+      <h2 class="text-lg font-semibold tracking-tight sm:text-xl">
+        📝 All Drafts
+      </h2>
+    </div>
+    <div class="mt-4 space-y-8">
+      {% for entry in drafts %}
+        <article class="relative group">
+          <h3 class="text-xl sm:text-2xl font-semibold leading-6 text-gray-800 dark:text-gray-200 group-hover:text-blue-500 group-hover:underline">
+            <a href="{{ entry.get_absolute_url }}">
+              <span class="absolute inset-0"></span>
+              {{ entry.title }}
+            </a>
+          </h3>
+          <time datetime="{{ entry.created_at }}" class="mt-2 text-xs text-gray-600 dark:text-gray-300">
+            {{ entry.created_at|date:"F j, Y" }}
+          </time>
+          {% if entry.is_draft %}
+            <span class="inline-flex items-center py-1 px-2 mt-1 ml-2 text-xs font-medium text-red-700 bg-red-100 rounded-md">
+              Draft
+            </span>
+          {% endif %}
+          <div class="flex gap-x-4 items-center mt-1">
+            {% if entry.tags %}
+              {% for tag in entry.tags.all %}
+                <a href="{{ tag.get_absolute_url }}" class="inline-flex items-center py-0.5 px-1.5 text-xs font-medium text-gray-600 bg-gray-100 rounded-md ring-1 ring-inset ring-gray-600/10">
+                  {{ tag.name }}
+                </a>
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div class="mt-5 text-sm leading-6 sm:text-base sm:leading-7 text-gray-600 dark:text-gray-200">
+            {{ entry.summary_rendered }}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+      {% endif %}
   </div>
   <div class="grid grid-cols-1 gap-12 mt-20 sm:grid-cols-2">
     <div class="">

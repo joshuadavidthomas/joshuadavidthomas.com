@@ -41,10 +41,16 @@ def security_txt(request):
 @require_GET
 def index(request):
     entries = Entry.objects.recent_entries(5)
+    drafts = Entry.objects.drafts() if request.user.is_staff else Entry.objects.none()
     games = get_recently_played_games()
     posts = get_recently_starred_posts()
     return render(
         request,
         "index.html",
-        context={"entries": entries, "games": games, "posts": posts},
+        context={
+            "entries": entries,
+            "drafts": drafts,
+            "games": games,
+            "posts": posts,
+        },
     )
