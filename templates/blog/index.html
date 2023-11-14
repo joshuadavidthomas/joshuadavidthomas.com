@@ -12,20 +12,20 @@
     {% block pre_content %}{% endblock pre_content %}
     {% for entry in page_obj %}
       <article class="relative group">
-        <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 dark:text-gray-200 group-hover:text-blue-500 group-hover:underline">
-          <a href="{{ entry.get_absolute_url }}">
+        <h3 class=" flex items-start sm:items-center flex-col sm:flex-row justify-between text-xl sm:text-2xl font-semibold text-gray-800 dark:text-gray-200">
+          <a href="{{ entry.get_absolute_url }}" class="group-hover:text-blue-500 group-hover:underline">
             <span class="absolute inset-0"></span>
             {{ entry.title }}
           </a>
+          {% if entry.is_draft %}
+            <span class="inline-flex items-center py-1 mt-1 px-2 sm:ml-2 text-sm font-medium text-red-700 bg-red-100 rounded-md">
+              Draft
+            </span>
+          {% endif %}
         </h3>
         <time datetime="{{ entry.created_at }}" class="mt-2 text-sm text-gray-600 dark:text-gray-300">
           {{ entry.created_at|date:"F j, Y" }}
         </time>
-        {% if entry.is_draft %}
-          <span class="inline-flex items-center py-1 px-2 mt-1 ml-2 text-xs font-medium text-red-700 bg-red-100 rounded-md">
-            Draft
-          </span>
-        {% endif %}
         <div class="flex gap-x-4 items-center mt-1">
           {% if entry.tags %}
             {% for tag in entry.tags.all %}
