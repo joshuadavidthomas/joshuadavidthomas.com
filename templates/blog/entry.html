@@ -22,3 +22,14 @@
     </div>
   </article>
 {% endblock content %}
+
+{% block extra_body %}
+  {% if request.user.is_superuser %}
+    <div class="fixed z-50 bottom-0 right-0 mx-12 my-6 group flex items-center justify-center">
+      <a href="{% url 'admin:blog_entry_change' entry.pk %}" class="p-4 rounded-full bg-gray-50 dark:bg-gray-950 border border-transparent group-hover:border-gray-300 dark:group-hover:border-gray-500 group-hover:bg-gray-300 dark:group-hover:bg-gray-700" hx-boost="false">
+        <span class="sr-only">Edit</span>
+        {% heroicon_outline "pencil-square" class="h-6 w-6 text-gray-400 dark:text-gray-500 group-hover:text-gray-900 dark:group-hover:text-gray-200" %}
+      </a>
+    </div>
+  {% endif %}
+{% endblock extra_body %}
