@@ -47,6 +47,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        gray: defaultColors.neutral,
         primary: defaultColors.indigo,
         secondary: defaultColors.gray,
         tertiary: defaultColors.green,
