@@ -382,3 +382,8 @@ MINIFLUX = {
     "URL": env("MINIFLUX_URL", default=""),
     "API_KEY": env("MINIFLUX_API_KEY", default=""),
 }
+
+MASTODON = {
+    "URL": env("MASTODON_URL", default=""),
+    "API_KEY": env("MASTODON_API_KEY", default=""),
+}
