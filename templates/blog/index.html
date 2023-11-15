@@ -8,7 +8,7 @@
 {% endblock title %}
 
 {% block content %}
-  <div class="grid grid-cols-1 gap-x-8 gap-y-16 mx-auto mt-10 lg:mx-0" preload="mouseover">
+  <div class="grid grid-cols-1 gap-x-8 gap-y-16 mx-auto mt-10 sm:mt-16 lg:mx-0" preload="mouseover">
     {% block pre_content %}{% endblock pre_content %}
     {% for entry in page_obj %}
       <article class="relative group">
@@ -35,7 +35,7 @@
             {% endfor %}
           {% endif %}
         </div>
-        <div class="mt-5 text-sm leading-6 sm:leading-7 sm:text-base text-gray-600 dark:text-gray-200">
+        <div class="mt-5 prose max-w-none text-gray-600 dark:text-gray-200">
           {{ entry.summary_rendered }}
         </div>
       </article>
