@@ -4,10 +4,6 @@
 #
 #    pip-compile --generate-hashes --strip-extras requirements.in
 #
---trusted-host pypi.python.org
---trusted-host pypi.org
---trusted-host files.pythonhosted.org
-
 anyio==4.0.0 \
     --hash=sha256:cfdb2b588b9fc25ede96d8db56ed50848b0b649dca3dd1df0b11f683bb9e0b5f \
     --hash=sha256:f7ed51751b2c2add651e5747c891b47e26d2a21be5d32d9311dfe9692f3e5d7a
@@ -933,9 +929,9 @@ types-docutils==0.20.0.3 \
     --hash=sha256:4928e790f42b99d5833990f99c8dd9fa9f16825f6ed30380ca981846d36870cd \
     --hash=sha256:a930150d8e01a9170f9bca489f46808ddebccdd8bc1e47c07968a77e49fb9321
     # via types-pygments
-types-pygments==2.16.0.1 \
-    --hash=sha256:26af0cc70fcc7b605d9af7c6c8dcbb5320bc4288e3dd1a3d590c8927e08299b6 \
-    --hash=sha256:33bc6574d4291e139ac2cc3627f6433aaa9c268e9543b5e1c42b5aa3060ba8d5
+types-pygments==2.17.0.0 \
+    --hash=sha256:4241c5f1b7448e559cd820143a564cf10de626a95ab10e2daa463449d16864e7 \
+    --hash=sha256:83c33c89037f433fd5315b1abf80f5cb8b589b2d0549444d7f63824c628142c7
     # via -r requirements.in
 types-pytz==2023.3.1.1 \
     --hash=sha256:1999a123a3dc0e39a2ef6d19f3f8584211de9e6a77fe7a0259f04a524e90a5cf \
