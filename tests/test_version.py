@@ -4,4 +4,4 @@ from config import __version__
 
 
 def test_version():
-    assert __version__ == "2023.11.21"
+    assert __version__ == "2024.1.1"
