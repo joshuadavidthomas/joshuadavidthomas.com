@@ -73,7 +73,7 @@ FROM node as node-final
 COPY --from=tailwind /usr/local /usr/local
 COPY --from=app /app /app
 COPY static /app/static
-COPY postcss.config.js tailwind.config.js /app/
+COPY postcss.config.cjs tailwind.config.cjs /app/
 RUN python manage.py tailwind --skip-checks build
 
 
