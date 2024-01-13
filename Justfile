@@ -3,55 +3,44 @@ set dotenv-load := true
 @_default:
     just --list
 
-##################
-#  DEPENDENCIES  #
-##################
+@fmt:
+    just --fmt --unstable
 
-pip-compile *ARGS:
-    pip-compile --resolver=backtracking {{ ARGS }} --strip-extras --generate-hashes requirements.in
+# ----------------------------------------------------------------------
+# DEPENDENCIES
+# ----------------------------------------------------------------------
 
-install:
-    python -m pip install --upgrade -r requirements.txt
+_pip-compile *ARGS:
+    python -m piptools compile --resolver=backtracking --strip-extras {{ ARGS }}
+
+@pip-compile *ARGS:
+    just _pip-compile {{ ARGS }} --generate-hashes requirements.in
+    just _pip-compile {{ ARGS }} requirements.nohash.in
+
+_install *ARGS:
+    python -m pip install --upgrade {{ ARGS }}
+
+@install:
+    just _install -r requirements.txt
+    just _install -r requirements.nohash.txt
+
+@upgrade:
+    just pip-compile --upgrade
 
 pup:
     python -m pip install --upgrade pip pip-tools
 
 update:
     @just pup
-    @just pip-compile --upgrade
+    @just upgrade
     @just install
 
-venv:
-    #!/usr/bin/env python
-    from __future__ import annotations
+# ----------------------------------------------------------------------
+# DJANGO
+# ----------------------------------------------------------------------
 
-    import os
-    import subprocess
-    from pathlib import Path
-
-    home = Path.home()
-    pyenv_version = home / ".pyenv" / "version"
-    PY_VERSION = pyenv_version.read_text().rstrip('\n')
-    name = f"jt.dev-{PY_VERSION}"
-    pyenv_virtualenv_dir = home / ".pyenv" / "versions" / name
-
-    if not pyenv_virtualenv_dir.exists():
-        subprocess.run(["pyenv", "virtualenv", PY_VERSION, name], check=True)
-
-    (python_version_file := Path(".python-version")).write_text(name)
-
-##################
-#     DJANGO     #
-##################
-
-manage *COMMAND:
-    python -m manage {{ COMMAND }}
-
-dev DJANGO_PORT="8000":
-    honcho start -f Procfile.dev
-
-prod:
-    python -m gunicorn config.wsgi:application --config python:config.gunicorn
+@manage *COMMAND:
+    just command python -m manage {{ COMMAND }}
 
 alias mm := makemigrations
 
@@ -61,166 +50,45 @@ makemigrations *APPS:
 migrate *ARGS:
     @just manage migrate {{ ARGS }}
 
-shell:
+shell-plus:
     @just manage shell_plus
 
 createsuperuser USERNAME="admin" EMAIL="" PASSWORD="admin":
-    echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('{{ USERNAME }}', '{{ EMAIL }}', '{{ PASSWORD }}') if not User.objects.filter(username='{{ USERNAME }}').exists() else None" | python manage.py shell
+    docker compose run --rm --no-deps app /bin/bash -c 'echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('"'"'{{ USERNAME }}'"'"', '"'"'{{ EMAIL }}'"'"', '"'"'{{ PASSWORD }}'"'"') if not User.objects.filter(username='"'"'{{ USERNAME }}'"'"').exists() else None" | python manage.py shell'
 
-##################
-#     DOCKER     #
-##################
+# ----------------------------------------------------------------------
+# DOCS
+# ----------------------------------------------------------------------
 
-enter CONTAINER="jt.dev[-_]devcontainer[-_]app" SHELL="zsh" WORKDIR="/workspace" USER="vscode":
+@docs-pip-compile *ARGS:
+    just _pip-compile {{ ARGS }} --output-file --generate-hashes docs/requirements.txt docs/requirements.in
+
+@docs-upgrade:
+    just docs-pip-compile --upgrade
+
+@docs-install:
+    python -m pip install -r docs/requirements.txt
+
+@docs-serve:
     #!/usr/bin/env sh
+    # just _cog
     if [ -f "/.dockerenv" ]; then
-        echo "command cannot be run from within a Docker container"
+        sphinx-autobuild docs docs/_build/html --host "0.0.0.0"
     else
-        case {{ SHELL }} in
-            "zsh" )
-                shell_path="/usr/bin/zsh" ;;
-            "bash" )
-                shell_path="/bin/bash" ;;
-            "sh" )
-                shell_path="/bin/sh" ;;
-            * )
-                shell_path="/usr/bin/zsh" ;;
-        esac
-
-        container=$(docker ps --filter "name={{ CONTAINER }}" --format "{{{{.Names}}")
-
-        docker exec -it -u {{ USER }} -w {{ WORKDIR }} $container $shell_path
+        sphinx-autobuild docs docs/_build/html --host "localhost"
     fi
 
-testbuild:
-    docker build -t jt.dev:latest .
+@docs-build LOCATION="docs/_build/html":
+    # just _cog
+    sphinx-build docs {{ LOCATION }}
 
-testrun:
-    docker run -it --rm -p 8000:8000 jt.dev:latest
+# DOCS UTILS
+# @_cog:
+#     cog -r docs/misc/utilities/just.md
 
-createdb CONTAINER_NAME="jtdev_postgres" VERSION="15.3":
-    #!/usr/bin/env python
-    from __future__ import annotations
-
-    import os
-    import re
-    import shutil
-    import socket
-    import subprocess
-    import time
-    from pathlib import Path
-
-    CONTAINER_NAME = "{{ CONTAINER_NAME }}"
-    VERSION = "{{ VERSION }}"
-
-
-    def is_port_open(port: int) -> bool:
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            return s.connect_ex(("127.0.0.1", port)) != 0
-
-
-    def main():
-        if not shutil.which("docker"):
-            print("Docker is not installed")
-            return
-
-        if subprocess.getoutput(f"docker ps -q -f name={CONTAINER_NAME}"):
-            print(f"Postgres container {CONTAINER_NAME} is already running")
-        else:
-            if subprocess.getoutput(
-                f"docker ps -aq -f status=exited -f name={CONTAINER_NAME}"
-            ):
-                print(f"Starting postgres container {CONTAINER_NAME}")
-                subprocess.run(["docker", "start", CONTAINER_NAME], check=True)
-            else:
-                print(f"Creating postgres container {CONTAINER_NAME}")
-                port = 5432
-                while not is_port_open(port):
-                    print(f"Port {port} is already in use")
-                    print("Incrementing port number by 1")
-                    port += 1
-                subprocess.run(
-                    [
-                        "docker",
-                        "run",
-                        "--name",
-                        CONTAINER_NAME,
-                        "-e",
-                        "POSTGRES_USER=postgres",
-                        "-e",
-                        "POSTGRES_PASSWORD=postgres",
-                        "-e",
-                        "POSTGRES_DB=postgres",
-                        "-p",
-                        f"{port}:5432",
-                        "-d",
-                        f"postgres:{VERSION}",
-                    ],
-                    check=True,
-                )
-
-        port_output = subprocess.getoutput(f"docker port {CONTAINER_NAME} 5432")
-        port = port_output.split(":")[1]
-        DATABASE_URL = f"postgres://postgres:postgres@localhost:{port}/postgres"
-        os.environ["DATABASE_URL"] = DATABASE_URL
-
-        env_file = Path(".env")
-        if env_file.exists():
-            print("Updating DATABASE_URL in .env file")
-            content = env_file.read_text()
-            content = re.sub(r"DATABASE_URL=.*", f"DATABASE_URL={DATABASE_URL}", content)
-
-            if "DATABASE_URL=" not in content:
-                content += f"\nDATABASE_URL={DATABASE_URL}\n"
-
-            env_file.write_text(content)
-            print("env_file", env_file.read_text())
-        else:
-            print("Creating .env file")
-            env_file.write_text(f"DATABASE_URL={DATABASE_URL}\n")
-
-        while True:
-            ready = (
-                subprocess.run(
-                    [
-                        "docker",
-                        "exec",
-                        "-it",
-                        CONTAINER_NAME,
-                        "pg_isready",
-                        "-U",
-                        "postgres",
-                        "-q",
-                    ]
-                ).returncode
-                == 0
-            )
-            if ready:
-                break
-            print("Waiting for postgres to start")
-            time.sleep(1)
-
-        subprocess.run(["just", "manage", "migrate"], check=True)
-        subprocess.run(["just", "createsuperuser"], check=True)
-
-
-    raise SystemExit(main())
-
-##################
-#     UTILS      #
-##################
-
-# format justfile
-@_fmt:
-    just --fmt --unstable
-
-# run pre-commit on all files
-lint:
-    pre-commit run --all-files
-
-# type check using mypy
-types:
-    python -m mypy .
+# ----------------------------------------------------------------------
+# UTILS
+# ----------------------------------------------------------------------
 
 envsync:
     #!/usr/bin/env python
@@ -238,3 +106,70 @@ envsync:
 
         lines.sort()
         envfile_example.write_text(''.join(lines))
+
+lint:
+    pre-commit run --all-files
+
+# ----------------------------------------------------------------------
+# DOCKER
+# ----------------------------------------------------------------------
+
+# Build services using docker-compose
+@build:
+    docker compose build
+
+# Stop and remove all containers, networks, images, and volumes
+@clean:
+    just down --volumes --rmi local
+
+# Run a command within the 'app' container
+@command *ARGS:
+    docker compose run --rm --no-deps app /bin/bash -c "{{ ARGS }}"
+
+# Open an interactive shell within the 'app' container opens a console
+@console:
+    docker compose run --rm --no-deps app /bin/bash
+
+# Stop and remove all containers defined in docker-compose
+@down *ARGS:
+    docker compose down {{ ARGS }}
+
+# Display the logs for containers, optionally using provided arguments (e.g., --follow)
+@logs *ARGS:
+    docker compose logs {{ ARGS }}
+
+# Display the running containers and their statuses
+@ps:
+    docker compose ps
+
+# Pull the latest versions of all images defined in docker-compose
+@pull:
+    docker compose pull
+
+# Restart services, optionally targeting specific ones
+@restart *ARGS:
+    docker compose restart {{ ARGS }}
+
+# Open an interactive shell within a specified container (default: 'app')
+@shell *ARGS="app":
+    docker compose run --rm --no-deps {{ ARGS }} /bin/bash
+
+# Start services using docker-compose, defaulting to detached mode
+@start *ARGS="--detach":
+    just up {{ ARGS }}
+
+# Stop services by calling the 'down' command
+@stop:
+    just down
+
+# Continuously display the latest logs by using the --follow option, optionally targeting specific containers
+@tail *ARGS:
+    just logs '--follow {{ ARGS }}'
+
+# Run tests using pytest within the 'app' container, with optional arguments
+@test *ARGS:
+    docker compose run --rm --no-deps app pytest {{ ARGS }}
+
+# Start services using docker-compose, with optional arguments
+@up *ARGS:
+    docker compose up {{ ARGS }}

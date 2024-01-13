@@ -73,6 +73,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
+FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
+
 INSTALLED_APPS = [
     # First Party
     "blog",
@@ -88,7 +90,6 @@ INSTALLED_APPS = [
     "django_extensions",
     "django_htmx",
     "django_tailwind_cli",
-    # "django_watchfiles",
     "health_check",
     "health_check.db",
     "health_check.cache",
@@ -104,6 +105,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sites",
+    "django.forms",
 ]
 if DEBUG:
     INSTALLED_APPS = [
@@ -323,7 +325,13 @@ DEBUG_TOOLBAR_CONFIG = {
 # django-tailwind-cli
 TAILWIND_CLI_CONFIG_FILE = "tailwind.config.cjs"
 
+TAILWIND_CLI_DIST_CSS = "css/tailwind.css"
+
+TAILWIND_CLI_PATH = env("TAILWIND_CLI_PATH", default="/usr/local/bin/")
+
 TAILWIND_CLI_SRC_CSS = "static/public/tailwind.css"
+
+TAILWIND_CLI_VERSION = "3.4.0"
 
 # sentry
 if not DEBUG or env.bool("ENABLE_SENTRY", default=False):
