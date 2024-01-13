@@ -20,7 +20,7 @@ repos:
     rev: v0.1.2
     hooks:
       - id: ruff
-        args: [ --fix ]
+        args: [--fix]
       - id: ruff-format
 
   - repo: https://github.com/adamchainz/blacken-docs
@@ -44,18 +44,17 @@ repos:
         # ignore any minified code
         files: '^(?!.*\.min\..*)(?P<name>[\w-]+(\.[\w-]+)*\.(js|jsx|ts|tsx|yml|yaml|css))$'
 
-  - repo: https://github.com/rtts/djhtml
-    rev: 3.0.6
+  - repo: https://github.com/djlint/djLint
+    rev: v1.34.1
     hooks:
-      - id: djhtml
-        entry: djhtml --tabwidth 2
-        alias: autoformat
+      - id: djlint-reformat-django
+      - id: djlint-django
 
   - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
     rev: v2.11.0
     hooks:
-    - id: pretty-format-toml
-      args: [--autofix]
+      - id: pretty-format-toml
+        args: [--autofix]
 
   - repo: https://github.com/abravalheri/validate-pyproject
     rev: v0.15

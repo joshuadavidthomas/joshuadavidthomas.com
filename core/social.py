@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 from attrs import define
-from django.urls import reverse, NoReverseMatch
+from django.urls import NoReverseMatch
+from django.urls import reverse
 
 
 @define

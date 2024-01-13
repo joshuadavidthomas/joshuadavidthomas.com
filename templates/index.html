@@ -4,43 +4,36 @@
 {% load ui %}
 {% load time %}
 {% load urlparse %}
-
 {% block content %}
   <div class="space-y-28">
     <div class="mt-10 text-center sm:mt-16">
-      <img
-        src="{% static 'me.png' %}"
-        width="250"
-        height="250"
-        alt="A picture of Josh"
-        class="mx-auto w-56 h-56 rounded-full sm:w-72 sm:h-72 drop-shadow-md"
-      />
-      <h1 class="mt-6 text-2xl font-bold tracking-tight sm:text-5xl leading-tighter">
-        👋 Hi, my name is Josh.
-      </h1>
-      <p class="mt-2 sm:mt-4 text-base sm:text-2xl">
-        I'm a web developer living in Alabama.
-      </p>
+      <img src="{% static 'me.png' %}"
+           width="250"
+           height="250"
+           alt="A picture of Josh"
+           class="mx-auto w-56 h-56 rounded-full sm:w-72 sm:h-72 drop-shadow-md" />
+      <h1 class="mt-6 text-2xl font-bold tracking-tight sm:text-5xl leading-tighter">👋 Hi, my name is Josh.</h1>
+      <p class="mt-2 text-base sm:mt-4 sm:text-2xl">I'm a web developer living in Alabama.</p>
     </div>
     <div preload="mouseover">
       <div class="flex justify-between items-center">
-        <h2 class="text-lg font-semibold tracking-tight sm:text-xl">
-          📝 Recent Posts
-        </h2>
-        <a href="{% url 'blog:index' %}" class="text-xs font-medium tracking-tighter text-gray-600 dark:text-gray-200 sm:text-sm hover:text-blue-500 hover:underline">
+        <h2 class="text-lg font-semibold tracking-tight sm:text-xl">📝 Recent Posts</h2>
+        <a href="{% url 'blog:index' %}"
+           class="text-xs font-medium tracking-tighter text-gray-600 sm:text-sm dark:text-gray-200 hover:text-blue-500 hover:underline">
           View all 📚
         </a>
       </div>
       <div class="mt-4 space-y-8">
         {% for entry in entries %}
           <article class="relative group">
-            <h3 class="text-xl sm:text-2xl font-semibold leading-6 text-gray-800 dark:text-gray-200 group-hover:text-blue-500 group-hover:underline">
+            <h3 class="text-xl font-semibold leading-6 text-gray-800 sm:text-2xl dark:text-gray-200 group-hover:text-blue-500 group-hover:underline">
               <a href="{{ entry.get_absolute_url }}">
                 <span class="absolute inset-0"></span>
                 {{ entry.title }}
               </a>
             </h3>
-            <time datetime="{{ entry.created_at }}" class="mt-2 text-xs text-gray-600 dark:text-gray-300">
+            <time datetime="{{ entry.created_at }}"
+                  class="mt-2 text-xs text-gray-600 dark:text-gray-300">
               {{ entry.created_at|date:"F j, Y" }}
             </time>
             {% if entry.is_draft %}
@@ -51,15 +44,14 @@
             <div class="flex gap-x-4 items-center mt-1">
               {% if entry.tags %}
                 {% for tag in entry.tags.all %}
-                  <a href="{{ tag.get_absolute_url }}" class="inline-flex items-center py-0.5 px-1.5 text-xs font-medium text-gray-600 bg-gray-100 rounded-md ring-1 ring-inset ring-gray-600/10">
+                  <a href="{{ tag.get_absolute_url }}"
+                     class="inline-flex items-center py-0.5 px-1.5 text-xs font-medium text-gray-600 bg-gray-100 rounded-md ring-1 ring-inset ring-gray-600/10">
                     {{ tag.name }}
                   </a>
                 {% endfor %}
               {% endif %}
             </div>
-            <div class="mt-5 prose max-w-none text-gray-600 dark:text-gray-200">
-              {{ entry.summary_rendered }}
-            </div>
+            <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose">{{ entry.summary_rendered }}</div>
           </article>
         {% endfor %}
       </div>
@@ -67,37 +59,38 @@
     {% if drafts %}
       <div preload="mouseover">
         <div class="flex justify-between items-center">
-          <h2 class="text-lg font-semibold tracking-tight sm:text-xl">
-            📝 All Drafts
-          </h2>
+          <h2 class="text-lg font-semibold tracking-tight sm:text-xl">📝 All Drafts</h2>
         </div>
         <div class="mt-4 space-y-8">
           {% for entry in drafts %}
             <article class="relative group">
-              <h3 class="flex items-start sm:items-center flex-col sm:flex-row justify-between text-xl sm:text-2xl font-semibold leading-6 text-gray-800 dark:text-gray-200">
-                <a href="{{ entry.get_absolute_url }}" class="group-hover:text-blue-500 group-hover:underline">
+              <h3 class="flex flex-col justify-between items-start text-xl font-semibold leading-6 text-gray-800 sm:flex-row sm:items-center sm:text-2xl dark:text-gray-200">
+                <a href="{{ entry.get_absolute_url }}"
+                   class="group-hover:text-blue-500 group-hover:underline">
                   <span class="absolute inset-0"></span>
                   {{ entry.title }}
                 </a>
                 {% if entry.is_draft %}
-                  <span class="inline-flex items-center py-1 mt-1 px-2 sm:ml-2 text-sm font-medium text-red-700 bg-red-100 rounded-md">
+                  <span class="inline-flex items-center py-1 px-2 mt-1 text-sm font-medium text-red-700 bg-red-100 rounded-md sm:ml-2">
                     Draft
                   </span>
                 {% endif %}
               </h3>
-              <time datetime="{{ entry.created_at }}" class="mt-2 text-xs text-gray-600 dark:text-gray-300">
+              <time datetime="{{ entry.created_at }}"
+                    class="mt-2 text-xs text-gray-600 dark:text-gray-300">
                 {{ entry.created_at|date:"F j, Y" }}
               </time>
               <div class="flex gap-x-4 items-center mt-1">
                 {% if entry.tags %}
                   {% for tag in entry.tags.all %}
-                    <a href="{{ tag.get_absolute_url }}" class="inline-flex items-center py-0.5 px-1.5 text-xs font-medium text-gray-600 bg-gray-100 rounded-md ring-1 ring-inset ring-gray-600/10">
+                    <a href="{{ tag.get_absolute_url }}"
+                       class="inline-flex items-center py-0.5 px-1.5 text-xs font-medium text-gray-600 bg-gray-100 rounded-md ring-1 ring-inset ring-gray-600/10">
                       {{ tag.name }}
                     </a>
                   {% endfor %}
                 {% endif %}
               </div>
-              <div class="mt-5 text-sm leading-6 sm:text-base sm:leading-7 text-gray-600 dark:text-gray-200">
+              <div class="mt-5 text-sm leading-6 text-gray-600 sm:text-base sm:leading-7 dark:text-gray-200">
                 {{ entry.summary_rendered }}
               </div>
             </article>
@@ -106,25 +99,30 @@
       </div>
     {% endif %}
     <div class="grid grid-cols-1 gap-12 sm:grid-cols-2">
-      <div class="">
-        <h2 class="flex text-lg font-semibold leading-6 sm:justify-end">
-          🎮 What I'm playing
-        </h2>
+      <div>
+        <h2 class="flex text-lg font-semibold leading-6 sm:justify-end">🎮 What I'm playing</h2>
         {% if games %}
           <ul class="mt-2 space-y-2.5">
             {% for game in games.games %}
               <li>
-                <a href="https://store.steampowered.com/app/{{ game.appid }}" class="flex gap-2 items-start sm:justify-end group" target="_blank" rel="noopener noreferrer">
+                <a href="https://store.steampowered.com/app/{{ game.appid }}"
+                   class="flex gap-2 items-start sm:justify-end group"
+                   target="_blank"
+                   rel="noopener noreferrer">
                   <span class="text-sm font-medium tracking-tighter leading-none text-gray-600 group-hover:text-blue-500 group-hover:underline">
                     {{ game.name }}
                   </span>
-                  <img src="http://media.steampowered.com/steamcommunity/public/images/apps/{{ game.appid }}/{{ game.img_icon_url }}.jpg" class="order-first sm:order-last" />
+                  <img src="https://media.steampowered.com/steamcommunity/public/images/apps/{{ game.appid }}/{{ game.img_icon_url }}.jpg"
+                       alt="{{ game.name }}"
+                       height="32"
+                       width="32"
+                       class="order-first sm:order-last" />
                 </a>
               </li>
             {% endfor %}
           </ul>
         {% else %}
-          <p class="flex flex-col mt-2 space-y-2 text-sm tracking-tighter leading-5 text-left text-gray-800 dark:text-gray-200 sm:text-right">
+          <p class="flex flex-col mt-2 space-y-2 text-sm tracking-tighter leading-5 text-left text-gray-800 sm:text-right dark:text-gray-200">
             <span>I'm not playing anything right now.</span>
             <span class="text-lg">☀ ✌ 😎</span>
           </p>
@@ -138,19 +136,18 @@
         <ul class="mt-2 space-y-4">
           {% for post in posts.entries %}
             <li>
-              <a href="{{ post.url }}" class="flex flex-col space-y-0.5 group" target="_blank" rel="noopener noreferrer">
+              <a href="{{ post.url }}"
+                 class="flex flex-col space-y-0.5 group"
+                 target="_blank"
+                 rel="noopener noreferrer">
                 <span class="font-medium tracking-tighter leading-5 text-gray-700 dark:text-gray-200 group-hover:text-blue-500 group-hover:underline">
                   {{ post.title }}
                 </span>
-                <span class="pt-1 text-xs">
-                  {{ post.author }}
-                </span>
+                <span class="pt-1 text-xs">{{ post.author }}</span>
                 <span class="flex items-center text-xs text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300">
                   {% heroicon_mini "arrow-top-right-on-square" class="mr-1 w-3 h-3" %}
                   {{ post.url|domain }}
-                  {% if post.url|domain != post.feed.site_url|domain %}
-                    (via {{ post.feed.site_url|domain }})
-                  {% endif %}
+                  {% if post.url|domain != post.feed.site_url|domain %}(via {{ post.feed.site_url|domain }}){% endif %}
                 </span>
               </a>
             </li>

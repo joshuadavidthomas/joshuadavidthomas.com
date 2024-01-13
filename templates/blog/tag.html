@@ -2,13 +2,9 @@
 {% load static %}
 {% load heroicons %}
 {% load ui %}
-
 {% block title %}
   {{ tag.name }} | {{ site.title }}
 {% endblock title %}
-
 {% block pre_content %}
-  <h2 class="-mb-12 text-2xl font-bold tracking-tight sm:text-3xl text-zinc-800 dark:text-zinc-100">
-    {{ tag.name }}
-  </h2>
+  <h2 class="-mb-12 text-2xl font-bold tracking-tight sm:text-3xl text-zinc-800 dark:text-zinc-100">{{ tag.name }}</h2>
 {% endblock pre_content %}

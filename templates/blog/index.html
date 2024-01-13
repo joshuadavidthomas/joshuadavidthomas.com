@@ -2,42 +2,43 @@
 {% load static %}
 {% load heroicons %}
 {% load ui %}
-
 {% block title %}
   Blog | {{ site.title }}
 {% endblock title %}
-
 {% block content %}
-  <div class="grid grid-cols-1 gap-x-8 gap-y-16 mx-auto mt-10 sm:mt-16 lg:mx-0" preload="mouseover">
-    {% block pre_content %}{% endblock pre_content %}
+  <div class="grid grid-cols-1 gap-x-8 gap-y-16 mx-auto mt-8 lg:mx-0"
+       preload="mouseover">
+    {% block pre_content %}
+    {% endblock pre_content %}
     {% for entry in page_obj %}
       <article class="relative group">
-        <h3 class="flex items-start sm:items-center flex-col sm:flex-row justify-between text-xl sm:text-2xl font-semibold text-gray-800 dark:text-gray-200">
-          <a href="{{ entry.get_absolute_url }}" class="group-hover:text-blue-500 group-hover:underline">
+        <h3 class="flex flex-col justify-between items-start text-xl font-semibold text-gray-800 sm:flex-row sm:items-center sm:text-2xl dark:text-gray-200">
+          <a href="{{ entry.get_absolute_url }}"
+             class="group-hover:text-blue-500 group-hover:underline">
             <span class="absolute inset-0"></span>
             {{ entry.title }}
           </a>
           {% if entry.is_draft %}
-            <span class="inline-flex items-center py-1 mt-1 px-2 sm:ml-2 text-sm font-medium text-red-700 bg-red-100 rounded-md">
+            <span class="inline-flex items-center py-1 px-2 mt-1 text-sm font-medium text-red-700 bg-red-100 rounded-md sm:ml-2">
               Draft
             </span>
           {% endif %}
         </h3>
-        <time datetime="{{ entry.created_at }}" class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+        <time datetime="{{ entry.created_at }}"
+              class="mt-2 text-sm text-gray-600 dark:text-gray-300">
           {{ entry.created_at|date:"F j, Y" }}
         </time>
         <div class="flex gap-x-4 items-center mt-1">
           {% if entry.tags %}
             {% for tag in entry.tags.all %}
-              <a href="{{ tag.get_absolute_url }}" class="inline-flex items-center py-0.5 px-1.5 text-xs font-medium text-gray-600 bg-gray-100 rounded-md ring-1 ring-inset ring-gray-600/10">
+              <a href="{{ tag.get_absolute_url }}"
+                 class="inline-flex items-center py-0.5 px-1.5 text-xs font-medium text-gray-600 bg-gray-100 rounded-md ring-1 ring-inset ring-gray-600/10">
                 {{ tag.name }}
               </a>
             {% endfor %}
           {% endif %}
         </div>
-        <div class="mt-5 prose max-w-none text-gray-600 dark:text-gray-200">
-          {{ entry.summary_rendered }}
-        </div>
+        <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose">{{ entry.summary_rendered }}</div>
       </article>
     {% endfor %}
     {% if page_obj.paginator.num_pages > 1 %}
@@ -55,17 +56,15 @@
                 {% heroicon_solid "arrow-small-left" class='mr-1 w-4 h-4' %}
                 first
               </a>
-              <a href="?page={{ page_obj.previous_page_number }}" class="hover:underline">
-                previous
-              </a>
+              <a href="?page={{ page_obj.previous_page_number }}"
+                 class="hover:underline">previous</a>
             </span>
           {% endif %}
           {% if page_obj.has_next %}
             <span class="flex items-center ml-auto space-x-2">
-              <a href="?page={{ page_obj.next_page_number }}" class="hover:underline">
-                next
-              </a>
-              <a href="?page={{ page_obj.paginator.num_pages }}" class="flex items-center hover:underline">
+              <a href="?page={{ page_obj.next_page_number }}" class="hover:underline">next</a>
+              <a href="?page={{ page_obj.paginator.num_pages }}"
+                 class="flex items-center hover:underline">
                 last
                 {% heroicon_solid "arrow-small-right" class='ml-1 w-4 h-4' %}
               </a>

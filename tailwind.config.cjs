@@ -149,5 +149,12 @@ export default {
         },
       });
     }),
+    plugin(function({ addComponents }) {
+      addComponents({
+        ".scrollbar-stable": {
+          scrollbarGutter: "stable both-edges",
+        },
+      });
+    }),
   ],
 };

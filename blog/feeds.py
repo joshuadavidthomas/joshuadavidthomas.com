@@ -1,6 +1,9 @@
-from .models import Entry
+from __future__ import annotations
+
 from django.contrib.syndication.views import Feed
 from django.urls import reverse
+
+from .models import Entry
 
 
 class EntriesFeed(Feed):

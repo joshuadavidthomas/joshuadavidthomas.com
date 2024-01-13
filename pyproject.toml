@@ -33,6 +33,9 @@ source = ["blog", "config", "core", "flyio", "users"]
 [tool.django-stubs]
 django_settings_module = "config.settings"
 
+[tool.djlint]
+indent = 2
+
 [tool.mypy]
 check_untyped_defs = true
 files = [
