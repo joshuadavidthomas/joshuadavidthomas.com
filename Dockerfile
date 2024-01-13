@@ -90,9 +90,7 @@ COPY --from=py /usr/local /usr/local
 COPY --from=app /app /app
 COPY --from=static /app/staticfiles /app/staticfiles
 COPY --from=flyio/litefs:0.5 /usr/local/bin/litefs /usr/local/bin/litefs
-RUN mkdir -p /var/run/tailscale /var/cache/tailscale /var/lib/tailscale \
-	&& chmod +x /release.sh /tailscale.sh /web.sh /worker.sh \
-	&& chown -R django:django /app \
+RUN chown -R django:django /app \
 	&& DEBIAN_FRONTEND=noninteractive apt-get remove -y --purge \
 	build-essential \
 	curl \
