@@ -1,0 +1,9 @@
+<div class="text-lg">
+    <textarea id="{{widget.attrs.id}}_textarea" name="{{ widget.name }}">{{ widget.value }}</textarea>
+</div>
+<script>
+    (function() {
+      const textarea = document.getElementById("{{widget.attrs.id}}_textarea");
+      const easyMDE = new EasyMDE({element: textarea, toolbar: false,});
+    })();
+</script>

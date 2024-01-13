@@ -2,7 +2,10 @@ from __future__ import annotations
 
 from django.contrib import admin
 from django.contrib import messages
+from django.db import models
 from django.utils.translation import ngettext
+
+from core.admin.widgets import EasyMDEWidget
 
 from .models import Entry
 from .models import Tag
@@ -11,6 +14,9 @@ from .models import Tag
 @admin.register(Entry)
 class EntryAdmin(admin.ModelAdmin):
     actions = ["duplicate_entry"]
+    formfield_overrides = {
+        models.TextField: {"widget": EasyMDEWidget(width="100%", height="500px")}
+    }
     list_display = ["title", "created_at", "updated_at", "is_draft"]
     readonly_fields = ["slug", "created_at", "updated_at"]
 
