@@ -17,7 +17,7 @@ class EntryAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.TextField: {"widget": EasyMDEWidget(width="100%", height="500px")}
     }
-    list_display = ["title", "created_at", "updated_at", "is_draft"]
+    list_display = ["title", "created_at", "updated_at", "published_at"]
     readonly_fields = ["slug", "created_at", "updated_at"]
 
     @admin.display(description="Duplicate entry")

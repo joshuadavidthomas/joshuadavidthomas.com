@@ -1,9 +1,9 @@
-<div class="text-lg">
-  <textarea id="{{widget.attrs.id}}_textarea" name="{{ widget.name }}">{{ widget.value }}</textarea>
+<div class="text-lg w-full">
+  <textarea id="{{widget.attrs.id}}_textarea" name="{{ widget.name }}">{% if widget.value %}{{ widget.value }}{% endif %}</textarea>
 </div>
 <script>
-    (function() {
-      const textarea = document.getElementById("{{widget.attrs.id}}_textarea");
-      const easyMDE = new EasyMDE({element: textarea, toolbar: false,});
-    })();
+  (function () {
+    const textarea = document.getElementById("{{widget.attrs.id}}_textarea");
+    const easyMDE = new EasyMDE({ element: textarea, toolbar: false });
+  })();
 </script>

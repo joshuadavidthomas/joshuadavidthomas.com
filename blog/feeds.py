@@ -7,8 +7,8 @@ from .models import Entry
 
 
 class EntriesFeed(Feed):
-    title = "Blog Entries"
-    description = "Latest entries posted to my blog."
+    title = "Josh Thomas"
+    description = "Latest entries posted to Josh Thomas's blog."
 
     def link(self):
         return reverse("blog:index")
@@ -20,13 +20,10 @@ class EntriesFeed(Feed):
         return item.title
 
     def item_description(self, item):
-        return item.summary
-
-    def item_link(self, item):
-        return item.get_absolute_url()
+        return item.render_body()
 
     def item_pubdate(self, item):
-        return item.created_at
+        return item.published_at
 
     def item_updateddate(self, item):
         return item.updated_at
