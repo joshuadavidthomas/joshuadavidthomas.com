@@ -3,7 +3,6 @@ from __future__ import annotations
 from django.contrib import admin
 from django.contrib import messages
 from django.db import models
-from django.utils.translation import ngettext
 
 from core.admin.widgets import EasyMDEWidget
 
@@ -25,10 +24,7 @@ class EntryAdmin(admin.ModelAdmin):
         if queryset.count() != 1:
             self.message_user(
                 request,
-                ngettext(
-                    "%d entries selected, only one entry can be duplicated at a time.",
-                    queryset.count(),
-                ),
+                f"{queryset.count()} entries selected, only one entry can be duplicated at a time.",
                 messages.ERROR,
             )
             return
