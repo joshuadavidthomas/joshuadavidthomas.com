@@ -38,7 +38,7 @@
             {% endfor %}
           {% endif %}
         </div>
-        <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose">{{ entry.summary_rendered }}</div>
+        <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose">{{ entry.render_summary }}</div>
       </article>
     {% endfor %}
     {% if page_obj.paginator.num_pages > 1 %}

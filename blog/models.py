@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from django.db import models
 from django.utils import timezone
-from django.utils.html import strip_tags
 from django.utils.safestring import mark_safe
 from django.utils.text import slugify
 
@@ -21,8 +20,19 @@ class Entry(TimeStamped, models.Model):
         blank=True, null=True, help_text="URL to image for social media cards"
     )
     tags = models.ManyToManyField("blog.Tag", blank=True)
-    is_draft = models.BooleanField(
-        default=False,
+    published_at = models.DateTimeField(
+        blank=True, null=True, help_text="Date and time to publish the entry"
+    )
+    is_draft = models.GeneratedField(  # type: ignore[attr-defined]
+        expression=models.Case(
+            models.When(
+                published_at__isnull=False,
+                then=False,
+            ),
+            default=True,
+        ),
+        output_field=models.BooleanField(),
+        db_persist=False,
         help_text="Draft entries do not show in index pages but can be visited directly if you know the URL",
     )
 
@@ -47,17 +57,13 @@ class Entry(TimeStamped, models.Model):
         if Entry.objects.filter(slug=self.slug).exists():
             self.slug += f"-{timezone.now().strftime('%Y%m%d%H%M%S')}"
 
-    @property
-    def summary_rendered(self):
-        return mark_safe(md.render(self.summary))
+    @mark_safe
+    def render_summary(self):
+        return md.render(self.summary)
 
-    @property
-    def summary_text(self):
-        return strip_tags(md.render(self.summary))
-
-    @property
-    def body_rendered(self):
-        return mark_safe(md.render(self.body))
+    @mark_safe
+    def render_body(self):
+        return md.render(self.body)
 
 
 class Tag(TimeStamped, models.Model):

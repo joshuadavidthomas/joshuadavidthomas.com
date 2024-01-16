@@ -5,6 +5,7 @@ from typing import TYPE_CHECKING
 from django.core.paginator import Page
 from django.core.paginator import Paginator
 from django.db import models
+from django.utils import timezone
 
 if TYPE_CHECKING:
     from .models import Entry
@@ -26,7 +27,7 @@ class _EntryManager(models.Manager["Entry"]):
 
 class EntryQuerySet(models.QuerySet["Entry"]):
     def published(self):
-        return self.filter(is_draft=False)
+        return self.filter(is_draft=False, published_at__lte=timezone.now())
 
     def drafts(self):
         return self.filter(is_draft=True)

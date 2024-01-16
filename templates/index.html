@@ -51,7 +51,7 @@
                 {% endfor %}
               {% endif %}
             </div>
-            <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose">{{ entry.summary_rendered }}</div>
+            <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose">{{ entry.render_summary }}</div>
           </article>
         {% endfor %}
       </div>
@@ -91,7 +91,7 @@
                 {% endif %}
               </div>
               <div class="mt-5 text-sm leading-6 text-gray-600 sm:text-base sm:leading-7 dark:text-gray-200">
-                {{ entry.summary_rendered }}
+                {{ entry.render_summary }}
               </div>
             </article>
           {% endfor %}

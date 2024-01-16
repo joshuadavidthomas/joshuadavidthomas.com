@@ -15,14 +15,12 @@ _pip-compile *ARGS:
 
 @pip-compile *ARGS:
     just _pip-compile {{ ARGS }} --generate-hashes requirements.in
-    just _pip-compile {{ ARGS }} requirements.nohash.in
 
 _install *ARGS:
     python -m pip install --upgrade {{ ARGS }}
 
 @install:
     just _install -r requirements.txt
-    just _install -r requirements.nohash.txt
 
 @upgrade:
     just pip-compile --upgrade

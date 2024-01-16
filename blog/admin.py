@@ -3,7 +3,6 @@ from __future__ import annotations
 from django.contrib import admin
 from django.contrib import messages
 from django.db import models
-from django.utils.translation import ngettext
 
 from core.admin.widgets import EasyMDEWidget
 
@@ -17,18 +16,15 @@ class EntryAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.TextField: {"widget": EasyMDEWidget(width="100%", height="500px")}
     }
-    list_display = ["title", "created_at", "updated_at", "is_draft"]
+    list_display = ["title", "created_at", "updated_at", "published_at"]
     readonly_fields = ["slug", "created_at", "updated_at"]
 
-    @admin.display(description="Duplicate entry")
+    @admin.action(description="Duplicate entry")
     def duplicate_entry(self, request, queryset):
         if queryset.count() != 1:
             self.message_user(
                 request,
-                ngettext(
-                    "%d entries selected, only one entry can be duplicated at a time.",
-                    queryset.count(),
-                ),
+                "%d entries selected, only one entry can be duplicated at a time." % queryset.count(),
                 messages.ERROR,
             )
             return

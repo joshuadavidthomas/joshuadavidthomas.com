@@ -21,7 +21,7 @@
         {{ entry.created_at|date:"F j, Y" }}
       </time>
     </header>
-    <div class="mt-8 max-w-none prose dark:prose-invert hover:prose-a:text-blue-500">{{ entry.body_rendered }}</div>
+    <div class="mt-8 max-w-none prose dark:prose-invert hover:prose-a:text-blue-500">{{ entry.render_body }}</div>
   </article>
 {% endblock content %}
 {% block extra_body %}
