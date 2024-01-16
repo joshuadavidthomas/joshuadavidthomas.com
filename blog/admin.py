@@ -24,7 +24,7 @@ class EntryAdmin(admin.ModelAdmin):
         if queryset.count() != 1:
             self.message_user(
                 request,
-                f"{queryset.count()} entries selected, only one entry can be duplicated at a time.",
+                "%d entries selected, only one entry can be duplicated at a time." % queryset.count(),
                 messages.ERROR,
             )
             return
