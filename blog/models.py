@@ -47,17 +47,13 @@ class Entry(TimeStamped, models.Model):
         if Entry.objects.filter(slug=self.slug).exists():
             self.slug += f"-{timezone.now().strftime('%Y%m%d%H%M%S')}"
 
-    @property
-    def summary_rendered(self):
-        return mark_safe(md.render(self.summary))
+    @mark_safe
+    def render_summary(self):
+        return md.render(self.summary)
 
-    @property
-    def summary_text(self):
-        return strip_tags(md.render(self.summary))
-
-    @property
-    def body_rendered(self):
-        return mark_safe(md.render(self.body))
+    @mark_safe
+    def render_body(self):
+        return md.render(self.body)
 
 
 class Tag(TimeStamped, models.Model):
