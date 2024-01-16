@@ -23,7 +23,7 @@ class Entry(TimeStamped, models.Model):
     published_at = models.DateTimeField(
         blank=True, null=True, help_text="Date and time to publish the entry"
     )
-    is_draft = models.GeneratedField(
+    is_draft = models.GeneratedField(  # type: ignore[attr-defined]
         expression=models.Case(
             models.When(
                 published_at__isnull=False,

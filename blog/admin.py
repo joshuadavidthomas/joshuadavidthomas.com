@@ -19,7 +19,7 @@ class EntryAdmin(admin.ModelAdmin):
     list_display = ["title", "created_at", "updated_at", "published_at"]
     readonly_fields = ["slug", "created_at", "updated_at"]
 
-    @admin.display(description="Duplicate entry")
+    @admin.action(description="Duplicate entry")
     def duplicate_entry(self, request, queryset):
         if queryset.count() != 1:
             self.message_user(
