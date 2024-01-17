@@ -7,12 +7,24 @@ from django.db import models
 from core.admin.widgets import EasyMDEWidget
 
 from .models import Entry
+from .models import Link
 from .models import Tag
 
 
 @admin.register(Entry)
 class EntryAdmin(admin.ModelAdmin):
     actions = ["duplicate_entry"]
+    fields = [
+        "title",
+        "slug",
+        "summary",
+        "body",
+        "tags",
+        "card_image",
+        "created_at",
+        "updated_at",
+        "published_at",
+    ]
     formfield_overrides = {
         models.TextField: {"widget": EasyMDEWidget(width="100%", height="500px")}
     }
@@ -24,7 +36,8 @@ class EntryAdmin(admin.ModelAdmin):
         if queryset.count() != 1:
             self.message_user(
                 request,
-                "%d entries selected, only one entry can be duplicated at a time." % queryset.count(),
+                "%d entries selected, only one entry can be duplicated at a time."
+                % queryset.count(),
                 messages.ERROR,
             )
             return
@@ -32,7 +45,24 @@ class EntryAdmin(admin.ModelAdmin):
         Entry.objects.create_duplicate(entry)
 
 
+@admin.register(Link)
+class LinkAdmin(admin.ModelAdmin):
+    fields = [
+        "title",
+        "slug",
+        "url",
+        "via_title",
+        "via_url",
+        "comments",
+        "tags",
+        "created_at",
+        "updated_at",
+        "published_at",
+    ]
+    list_display = ["title", "created_at", "updated_at", "published_at"]
+    readonly_fields = ["slug", "created_at", "updated_at"]
+
+
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
     list_display = ["name", "slug"]
-    readonly_fields = ["slug", "created_at", "updated_at"]
