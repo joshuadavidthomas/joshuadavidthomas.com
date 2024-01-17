@@ -22,13 +22,14 @@ def index(request: HttpRequest) -> HttpResponse:
     )
 
     links = (
-        Link.objects.filter(created_at__gte=date_range[-1])
+        Link.objects.filter(published_at__gte=date_range[-1])
         .prefetch_related("tags")
         .order_by("-created_at")
     )
 
     days = []
     for date in date_range:
+        print("date", date)
         day_links = []
         for link in links:
             if (link.published_at and link.published_at.date() == date) or (
@@ -37,6 +38,9 @@ def index(request: HttpRequest) -> HttpResponse:
                 day_links.append((link, "link"))
         day_entries = []
         for page in page_obj:
+            print("page.created_at", page.created_at.date())
+            if page.published_at:
+                print("page.published_at", page.published_at.date())
             if (page.published_at and page.published_at.date() == date) or (
                 not page.published_at and page.created_at.date() == date
             ):
