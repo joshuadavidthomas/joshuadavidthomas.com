@@ -16,9 +16,9 @@
           </span>
         {% endif %}
       </h2>
-      <time datetime="{{ entry.created_at }}"
+      <time datetime="{{ entry.published_at }}"
             class="mt-4 text-sm font-medium text-gray-700 dark:text-gray-200">
-        {{ entry.created_at|date:"F j, Y" }}
+        {{ entry.published_at|date:"F j, Y" }}
       </time>
     </header>
     <div class="mt-8 max-w-none prose dark:prose-invert hover:prose-a:text-blue-500">{{ entry.render_body }}</div>
