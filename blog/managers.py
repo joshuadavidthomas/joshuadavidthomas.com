@@ -9,6 +9,8 @@ from django.db import models
 from django.utils import timezone
 
 if TYPE_CHECKING:
+    from django.contrib.auth.models import AnonymousUser
+
     from users.models import User
 
     from .models import Entry
@@ -29,7 +31,7 @@ class _EntryManager(models.Manager["Entry"]):
 
 
 class EntryQuerySet(models.QuerySet["Entry"]):
-    def for_user(self, user: User):
+    def for_user(self, user: User | AnonymousUser):
         if not user.is_staff or not user.is_superuser:
             return self.published()
         return self

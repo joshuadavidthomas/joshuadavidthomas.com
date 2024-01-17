@@ -28,7 +28,7 @@ class Post(TimeStamped, models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)
-            if self._meta.model.objects.filter(slug=self.slug).exists():
+            if self._meta.model.objects.filter(slug=self.slug).exists():  # type: ignore[attr-defined]
                 self.slug += f"-{timezone.now().strftime('%Y%m%d%H%M%S')}"
         super().save(*args, **kwargs)
 
