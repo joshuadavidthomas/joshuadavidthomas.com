@@ -11,17 +11,33 @@ from core.models import TimeStamped
 from .managers import EntryManager
 
 
-class Entry(TimeStamped, models.Model):
+class Post(TimeStamped, models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=75, blank=True)
+    tags = models.ManyToManyField("blog.Tag", blank=True)
+    published_at = models.DateTimeField(
+        blank=True, null=True, help_text="Date and time to publish the entry"
+    )
+
+    class Meta:
+        abstract = True
+
+    def __str__(self):
+        return self.title
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+            if self._meta.model.objects.filter(slug=self.slug).exists():
+                self.slug += f"-{timezone.now().strftime('%Y%m%d%H%M%S')}"
+        super().save(*args, **kwargs)
+
+
+class Entry(Post):
     summary = models.TextField()
     body = models.TextField()
     card_image = models.URLField(
         blank=True, null=True, help_text="URL to image for social media cards"
-    )
-    tags = models.ManyToManyField("blog.Tag", blank=True)
-    published_at = models.DateTimeField(
-        blank=True, null=True, help_text="Date and time to publish the entry"
     )
     is_draft = models.GeneratedField(  # type: ignore[attr-defined]
         expression=models.Case(
@@ -41,21 +57,8 @@ class Entry(TimeStamped, models.Model):
     class Meta:
         verbose_name_plural = "entries"
 
-    def __str__(self):
-        return self.title
-
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self._set_slug()
-        super().save(*args, **kwargs)
-
     def get_absolute_url(self):
         return f"/blog/{self.created_at.year}/{self.slug}/"
-
-    def _set_slug(self) -> None:
-        self.slug = slugify(self.title)
-        if Entry.objects.filter(slug=self.slug).exists():
-            self.slug += f"-{timezone.now().strftime('%Y%m%d%H%M%S')}"
 
     @mark_safe
     def render_summary(self):
@@ -66,16 +69,28 @@ class Entry(TimeStamped, models.Model):
         return md.render(self.body)
 
 
+class Link(Post):
+    url = models.URLField()
+    via_title = models.CharField(max_length=255, blank=True)
+    via_url = models.URLField(blank=True)
+    comments = models.TextField(blank=True)
+
+    def save(self, *args, **kwargs):
+        if not self.published_at:
+            self.published_at = timezone.now()
+        super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return self.url
+
+    @mark_safe
+    def render_comments(self):
+        return md.render(self.comments)
+
+
 class Tag(TimeStamped, models.Model):
     name = models.CharField(max_length=50)
     slug = models.SlugField(blank=True)
 
     def __str__(self):
         return self.name
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
-        super().save(*args, **kwargs)
-
-    def get_absolute_url(self):
-        return f"/blog/tag/{self.slug}/"

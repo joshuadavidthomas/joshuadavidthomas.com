@@ -102,14 +102,14 @@
       <div>
         <h2 class="flex text-lg font-semibold leading-6 sm:justify-end">🎮 What I'm playing</h2>
         {% if games %}
-          <ul class="mt-2 space-y-2.5">
+          <ul class="mt-3 space-y-2.5">
             {% for game in games.games %}
               <li>
                 <a href="https://store.steampowered.com/app/{{ game.appid }}"
                    class="flex gap-2 items-start sm:justify-end group"
                    target="_blank"
                    rel="noopener noreferrer">
-                  <span class="text-sm font-medium tracking-tighter leading-none text-gray-600 group-hover:text-blue-500 group-hover:underline">
+                  <span class="text-sm font-medium tracking-tighter leading-none text-gray-600 dark:text-gray-300 group-hover:text-blue-500 group-hover:underline">
                     {{ game.name }}
                   </span>
                   <img src="https://media.steampowered.com/steamcommunity/public/images/apps/{{ game.appid }}/{{ game.img_icon_url }}.jpg"
@@ -140,10 +140,10 @@
                  class="flex flex-col space-y-0.5 group"
                  target="_blank"
                  rel="noopener noreferrer">
-                <span class="font-medium tracking-tighter leading-5 text-gray-700 dark:text-gray-200 group-hover:text-blue-500 group-hover:underline">
+                <span class="font-medium tracking-tighter leading-5 text-gray-600 dark:text-gray-300 group-hover:text-blue-500 group-hover:underline">
                   {{ post.title }}
                 </span>
-                <span class="pt-1 text-xs">{{ post.author }}</span>
+                <span class="pt-1 text-gray-700 dark:text-gray-200 text-xs">{{ post.author }}</span>
                 <span class="flex items-center text-xs text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300">
                   {% heroicon_mini "arrow-top-right-on-square" class="mr-1 w-3 h-3" %}
                   {{ post.url|domain }}

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import datetime
 from typing import TYPE_CHECKING
 
 from django.core.paginator import Page
@@ -8,6 +9,8 @@ from django.db import models
 from django.utils import timezone
 
 if TYPE_CHECKING:
+    from users.models import User
+
     from .models import Entry
 
 
@@ -26,6 +29,11 @@ class _EntryManager(models.Manager["Entry"]):
 
 
 class EntryQuerySet(models.QuerySet["Entry"]):
+    def for_user(self, user: User):
+        if not user.is_staff or not user.is_superuser:
+            return self.published()
+        return self
+
     def published(self):
         return self.filter(is_draft=False, published_at__lte=timezone.now())
 
@@ -43,13 +51,29 @@ class EntryQuerySet(models.QuerySet["Entry"]):
 
     def paginated(
         self, page_number: int | str | None = 1, per_page: int = 10
-    ) -> Page["Entry"]:
-        if isinstance(page_number, str):
-            page_number = int(page_number)
-        elif page_number is None:
-            page_number = 1
+    ) -> tuple[Page["Entry"], list[datetime.date]]:
         paginator = Paginator(self, per_page)
-        return paginator.get_page(page_number)
+
+        page_number = page_number or 1
+        page_obj = paginator.get_page(int(page_number))
+
+        dates = [entry.created_at.date() for entry in list(page_obj)]
+        dates.append(timezone.now().date())
+
+        dates = list(set(dates))
+        dates.sort(reverse=True)
+
+        oldest_date, newest_date = dates[-1], dates[0]
+
+        date_range = [
+            date
+            for date in (
+                newest_date - datetime.timedelta(n)
+                for n in range((newest_date - oldest_date).days + 1)
+            )
+        ]
+
+        return page_obj, date_range
 
 
 EntryManager = _EntryManager.from_queryset(EntryQuerySet)
