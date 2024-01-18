@@ -34,13 +34,17 @@ def get_range_between_dates(
 
 
 def is_same_date_in_timezone(
-    date1: datetime.datetime,
-    date2: datetime.datetime,
+    source_datetime: datetime.datetime,
+    target_datetime: datetime.datetime,
     timezone: str | ZoneInfo | None = None,
 ) -> bool:
-    """Given two dates, return True if they are the same date in the given timezone."""
+    """Given a datetime object, convert to the given timezone and compare to the target datetime's date.
+
+    By default, we use the timezone defined in settings.TIME_ZONE, but you can pass in a
+    timezone string or a ZoneInfo object to override the default.
+    """
     if timezone is None:
         timezone = ZoneInfo(settings.TIME_ZONE)
     if isinstance(timezone, str):
         timezone = ZoneInfo(timezone)
-    return date1.astimezone(timezone).date() == date2.astimezone(timezone).date()
+    return source_datetime.astimezone(timezone).date() == target_datetime.date()

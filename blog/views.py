@@ -27,7 +27,7 @@ def index(request: HttpRequest) -> HttpResponse:
     min_date, max_date = get_min_max_of_field(page_obj.object_list, "created_at")
     if page_obj.number == 1:
         # if we are on the first page, make sure we include the current day even if there are no entries for today
-        max_date = timezone.now()
+        max_date = timezone.localtime()
     date_range = get_range_between_dates(min_date, max_date, reverse=True)
 
     links = list(
@@ -45,6 +45,11 @@ def index(request: HttpRequest) -> HttpResponse:
         for entry in page_obj:
             print("entry", entry)
             print("entry.published_at", entry.published_at)
+            if entry.published_at:
+                print(
+                    "is_same_date_in_timezone(entry.published_at, date)",
+                    is_same_date_in_timezone(entry.published_at, date),
+                )
             if entry.published_at and is_same_date_in_timezone(
                 entry.published_at, date
             ):
@@ -56,6 +61,11 @@ def index(request: HttpRequest) -> HttpResponse:
         for link in links:
             print("link", link)
             print("link.published_at", link.published_at)
+            if link.published_at:
+                print(
+                    "is_same_date_in_timezone(link.published_at, date)",
+                    is_same_date_in_timezone(link.published_at, date),
+                )
             if link.published_at and is_same_date_in_timezone(link.published_at, date):
                 day_links.append(link)
                 continue
