@@ -40,8 +40,11 @@ def index(request: HttpRequest) -> HttpResponse:
 
     days = []
     for date in date_range:
+        print("date", date)
         day_entries = []
         for entry in page_obj:
+            print("entry", entry)
+            print("entry.published_at", entry.published_at)
             if entry.published_at and is_same_date_in_timezone(
                 entry.published_at, date
             ):
@@ -62,7 +65,7 @@ def index(request: HttpRequest) -> HttpResponse:
         ]
         items.sort(key=lambda item: item[0].created_at, reverse=True)
 
-        days.append({"date": date.date(), "items": items})
+        days.append({"date": date, "items": items})
 
     return render(request, "blog/index.html", {"days": days, "page_obj": page_obj})
 
