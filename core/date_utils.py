@@ -2,20 +2,16 @@ from __future__ import annotations
 
 import datetime
 
-from django.utils import timezone
-
 
 def get_range_between_dates(
     min_date: datetime.datetime,
-    max_date: datetime.datetime | None = None,
+    max_date: datetime.datetime,
     reverse: bool = False,
 ) -> list[datetime.datetime]:
     """Given a min and max date, returns a list of dates between them.
 
     We return a list of datetime objects to preserve timezone information.
     """
-
-    max_date = max_date or timezone.now()
 
     if max_date < min_date:
         raise ValueError("max_date must be greater than min_date")

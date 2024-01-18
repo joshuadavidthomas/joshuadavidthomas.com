@@ -4,6 +4,7 @@ from django.http import HttpRequest
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
+from django.utils import timezone
 
 from core.date_utils import get_range_between_dates
 from core.models import get_min_max_of_field
@@ -23,15 +24,19 @@ def index(request: HttpRequest) -> HttpResponse:
     page_obj = entries.paginated(page_number=request.GET.get("page"), per_page=10)
 
     min_date, max_date = get_min_max_of_field(page_obj.object_list, "created_at")
-    if min_date.date() == max_date.date():
-        max_date = None
+    if page_obj.number == 1:
+        # if we are on the first page, make sure we include the current day even if there are no entries for today
+        max_date = timezone.now()
     date_range = get_range_between_dates(min_date, max_date, reverse=True)
 
     links = list(
-        Link.objects.filter(published_at__date__range=[date_range[-1], date_range[0]])
+        Link.objects.filter(published_at__date__range=[date_range[-1].date(), date_range[0].date()])
         .prefetch_related("tags")
         .order_by("-created_at")
     )
+    print("min_date", date_range[-1].date())
+    print("max_date", date_range[0].date())
+    print("links", links)
 
     days = []
     for date in date_range:
