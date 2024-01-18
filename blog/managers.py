@@ -59,20 +59,17 @@ class EntryQuerySet(models.QuerySet["Entry"]):
         page_number = page_number or 1
         page_obj = paginator.get_page(int(page_number))
 
-        dates = [entry.created_at.date() for entry in list(page_obj)]
-        dates.append(timezone.now().date())
+        datetimes = [entry.created_at for entry in list(page_obj)]
+        datetimes.append(timezone.now())
 
-        dates = list(set(dates))
-        dates.sort(reverse=True)
+        datetimes = list(set(datetimes))
+        datetimes.sort(reverse=True)
 
-        oldest_date, newest_date = dates[-1], dates[0]
+        oldest_datetime, newest_datetime = datetimes[-1], datetimes[0]
 
         date_range = [
-            date
-            for date in (
-                newest_date - datetime.timedelta(n)
-                for n in range((newest_date - oldest_date).days + 1)
-            )
+            (newest_datetime - datetime.timedelta(days=n)).date()
+            for n in range((newest_datetime.date() - oldest_datetime.date()).days + 1)
         ]
 
         return page_obj, date_range
