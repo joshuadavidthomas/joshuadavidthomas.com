@@ -54,6 +54,8 @@ def index(request: HttpRequest) -> HttpResponse:
                 day_entries.append(entry)
         day_links = []
         for link in links:
+            print("link", link)
+            print("link.published_at", link.published_at)
             if link.published_at and is_same_date_in_timezone(link.published_at, date):
                 day_links.append(link)
                 continue
