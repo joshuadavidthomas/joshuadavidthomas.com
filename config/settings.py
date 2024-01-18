@@ -355,6 +355,7 @@ REDIRECTS = Redirects.from_json(BASE_DIR / "redirects.json")
 NAVIGATION = [
     NavItem(title="Home", url="index"),
     NavItem(title="Blog", url="blog:index"),
+    NavItem(title="Admin", url="admin:index", is_staff=True, boost=False),
 ]
 
 SOCIALS = [

@@ -2,6 +2,7 @@
      preload="mouseover">
   {% for item in items %}
     <a href="{{ item.get_url }}"
-       class="uppercase hover:text-blue-500 hover:underline underline-offset-4 decoration-1">{{ item.title }}</a>
+       class="uppercase hover:text-blue-500 hover:underline underline-offset-4 decoration-1"
+       {% if not item.boost %}hx-boost="false"{% endif %}>{{ item.title }}</a>
   {% endfor %}
 </nav>
