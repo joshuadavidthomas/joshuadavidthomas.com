@@ -29,11 +29,17 @@ def index(request: HttpRequest) -> HttpResponse:
     min_date, max_date = get_min_max_of_field(page_obj.object_list, "created_at")
     date_range = get_range_between_dates(min_date, max_date, reverse=True)
     print("min_date", min_date)
+    print("min_date tz", min_date.tzinfo)
     print("max_date", max_date)
+    print("max_date tz", max_date.tzinfo)
     print("date_range", date_range)
 
     days = []
     for date in date_range:
+        print("date", date)
+        print("date tz", date.tzinfo)
+        print("timezone.now()", timezone.now())
+        print("timezone.now() tz", timezone.now().tzinfo)
         start_of_day = timezone.make_aware(
             datetime.datetime.combine(date, datetime.time.min)
         )
