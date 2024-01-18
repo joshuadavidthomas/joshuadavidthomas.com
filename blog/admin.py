@@ -66,3 +66,4 @@ class LinkAdmin(admin.ModelAdmin):
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
     list_display = ["name", "slug"]
+    readonly_fields = ["slug", "created_at", "updated_at"]
