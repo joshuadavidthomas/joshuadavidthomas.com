@@ -5,7 +5,6 @@ from django.http import HttpRequest
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
-from django.utils import timezone
 
 from core.date_utils import get_range_between_dates
 from core.models import get_min_max_of_field
@@ -26,20 +25,15 @@ def index(request: HttpRequest) -> HttpResponse:
 
     min_date, max_date = get_min_max_of_field(page_obj.object_list, "created_at")
     date_range = get_range_between_dates(min_date, max_date, reverse=True)
-    print("min_date", min_date)
-    print("min_date tz", min_date.tzinfo)
-    print("max_date", max_date)
-    print("max_date tz", max_date.tzinfo)
-    print("date_range", date_range)
 
     days = []
     for date in date_range:
-        print("date", date)
-        print("date tz", date.tzinfo)
-        print("timezone.now()", timezone.now())
-        print("timezone.now() tz", timezone.now().tzinfo)
-
-        day_entries = [page for page in page_obj if page.created_at.date() == date]
+        day_entries = []
+        for entry in page_obj:
+            if entry.published_at and entry.published_at.date() == date.date():
+                day_entries.append(entry)
+            if entry.created_at.date() == date.date():
+                day_entries.append(entry)
         day_links = (
             Link.objects.filter(
                 Q(published_at__date=date)
@@ -51,9 +45,6 @@ def index(request: HttpRequest) -> HttpResponse:
             .prefetch_related("tags")
             .order_by("-created_at")
         )
-
-        print("day_entries", day_entries)
-        print("day_links", day_links)
 
         items = [(link, "link") for link in day_links] + [
             (page, "entry") for page in day_entries
