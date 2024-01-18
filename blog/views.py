@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import datetime
-
 from django.db.models import Q
 from django.http import HttpRequest
 from django.http import HttpResponse
@@ -40,26 +38,22 @@ def index(request: HttpRequest) -> HttpResponse:
         print("date tz", date.tzinfo)
         print("timezone.now()", timezone.now())
         print("timezone.now() tz", timezone.now().tzinfo)
-        start_of_day = timezone.make_aware(
-            datetime.datetime.combine(date, datetime.time.min)
-        )
-        end_of_day = timezone.make_aware(
-            datetime.datetime.combine(date, datetime.time.max)
-        )
 
+        day_entries = [page for page in page_obj if page.created_at.date() == date]
         day_links = (
             Link.objects.filter(
-                Q(published_at__range=(start_of_day, end_of_day))
+                Q(published_at__date=date)
                 | Q(
                     published_at__isnull=True,
-                    created_at__range=(start_of_day, end_of_day),
+                    created_at__date=date,
                 )
             )
             .prefetch_related("tags")
             .order_by("-created_at")
         )
 
-        day_entries = [page for page in page_obj if page.created_at.date() == date]
+        print("day_entries", day_entries)
+        print("day_links", day_links)
 
         items = [(link, "link") for link in day_links] + [
             (page, "entry") for page in day_entries
