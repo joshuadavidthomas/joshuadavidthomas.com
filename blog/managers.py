@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import datetime
 from typing import TYPE_CHECKING
 
 from django.core.paginator import Page
@@ -53,26 +52,13 @@ class EntryQuerySet(models.QuerySet["Entry"]):
 
     def paginated(
         self, page_number: int | str | None = 1, per_page: int = 10
-    ) -> tuple[Page["Entry"], list[datetime.date]]:
+    ) -> Page["Entry"]:
         paginator = Paginator(self, per_page)
 
         page_number = page_number or 1
         page_obj = paginator.get_page(int(page_number))
 
-        datetimes = [entry.created_at for entry in list(page_obj)]
-        datetimes.append(timezone.now())
-
-        datetimes = list(set(datetimes))
-        datetimes.sort(reverse=True)
-
-        oldest_datetime, newest_datetime = datetimes[-1], datetimes[0]
-
-        date_range = [
-            (newest_datetime - datetime.timedelta(days=n)).date()
-            for n in range((newest_datetime.date() - oldest_datetime.date()).days + 1)
-        ]
-
-        return page_obj, date_range
+        return page_obj
 
 
 EntryManager = _EntryManager.from_queryset(EntryQuerySet)

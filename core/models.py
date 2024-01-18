@@ -1,6 +1,11 @@
 from __future__ import annotations
 
+from typing import TYPE_CHECKING
+
 from django.db import models
+
+if TYPE_CHECKING:
+    from typing import Any
 
 
 class TimeStamped(models.Model):
@@ -30,3 +35,15 @@ class TimeStamped(models.Model):
     @property
     def is_edited(self):
         return self.created_at != self.updated_at
+
+
+def get_min_max_of_field(queryset: models.QuerySet, field: str) -> tuple[Any, Any]:
+    aggregation = queryset.aggregate(
+        field_min=models.Min(field),
+        field_max=models.Max(field),
+    )
+
+    field_min = aggregation.get("field_min")
+    field_max = aggregation.get("field_max")
+
+    return field_min, field_max
