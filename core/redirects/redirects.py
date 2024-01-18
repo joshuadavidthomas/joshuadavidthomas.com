@@ -7,7 +7,7 @@ from pathlib import Path
 from attrs import define
 from django.http import HttpRequest
 from django.urls import NoReverseMatch
-from django.urls import reverse_lazy
+from django.urls import reverse
 
 
 @define(frozen=True)
@@ -50,7 +50,7 @@ class Redirect:
 
     def get_destination_url(self) -> str:
         try:
-            return reverse_lazy(self.destination)
+            return reverse(self.destination)
         except NoReverseMatch:
             return self.destination
 
