@@ -9,8 +9,8 @@ def redirect_middleware(get_response):
         redirect = settings.REDIRECTS.get_redirect(request)
 
         if redirect:
-            response = HttpResponse(status=redirect.status)
-            response["Location"] = redirect.destination_url
+            response = HttpResponse(status=redirect.get_status())
+            response["Location"] = redirect.get_destination_url()
         else:
             response = get_response(request)
 

@@ -48,15 +48,13 @@ class Redirect:
     destination: str
     permanent: bool = False
 
-    @property
-    def destination_url(self) -> str:
+    def get_destination_url(self) -> str:
         try:
             return reverse_lazy(self.destination)
         except NoReverseMatch:
             return self.destination
 
-    @property
-    def status(self) -> HTTPStatus:
+    def get_status(self) -> HTTPStatus:
         match self.permanent:
             case True:
                 return HTTPStatus.MOVED_PERMANENTLY
