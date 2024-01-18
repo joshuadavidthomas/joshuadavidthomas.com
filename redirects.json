@@ -21,17 +21,17 @@
   },
   {
     "source": "/til",
-    "destination": "blog",
+    "destination": "blog:index",
     "permanent": true
   },
   {
     "source": "/til/django",
-    "destination": "blog",
+    "destination": "blog:index",
     "permanent": true
   },
   {
     "source": "/til/django/healthcheck-log-filter",
-    "destination": "blog",
+    "destination": "blog:index",
     "permanent": true
   }
 ]
