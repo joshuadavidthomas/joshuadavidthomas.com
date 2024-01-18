@@ -12,11 +12,13 @@ def get_range_between_dates(
 ) -> list[datetime.date]:
     """Given a min and max date, returns a list of dates between them."""
 
-    if not max_date:
-        max_date = timezone.now()
+    max_date = max_date or timezone.now()
 
-    if max_date <= min_date:
+    if max_date < min_date:
         raise ValueError("max_date must be greater than min_date")
+
+    if max_date.date() == min_date.date():
+        return [min_date.date()]
 
     date_range = [
         min_date.date() + datetime.timedelta(days=n)

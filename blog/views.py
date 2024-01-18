@@ -27,7 +27,6 @@ def index(request: HttpRequest) -> HttpResponse:
     page_obj = entries.paginated(page_number=request.GET.get("page"), per_page=10)
 
     min_date, max_date = get_min_max_of_field(page_obj.object_list, "created_at")
-    print(min_date, max_date)
     date_range = get_range_between_dates(min_date, max_date, reverse=True)
 
     days = []
