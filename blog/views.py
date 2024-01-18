@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from django.db.models import Q
 from django.http import HttpRequest
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
@@ -26,28 +25,31 @@ def index(request: HttpRequest) -> HttpResponse:
     min_date, max_date = get_min_max_of_field(page_obj.object_list, "created_at")
     date_range = get_range_between_dates(min_date, max_date, reverse=True)
 
+    links = list(
+        Link.objects.filter(published_at__date__range=[min_date, max_date])
+        .prefetch_related("tags")
+        .order_by("-created_at")
+    )
+
     days = []
     for date in date_range:
         day_entries = []
         for entry in page_obj:
             if entry.published_at and entry.published_at.date() == date.date():
                 day_entries.append(entry)
+                continue
             if entry.created_at.date() == date.date():
                 day_entries.append(entry)
-        day_links = (
-            Link.objects.filter(
-                Q(published_at__date=date)
-                | Q(
-                    published_at__isnull=True,
-                    created_at__date=date,
-                )
-            )
-            .prefetch_related("tags")
-            .order_by("-created_at")
-        )
+        day_links = []
+        for link in links:
+            if link.published_at and link.published_at.date() == date.date():
+                day_links.append(link)
+                continue
+            if link.created_at.date() == date.date():
+                day_links.append(link)
 
-        items = [(link, "link") for link in day_links] + [
-            (page, "entry") for page in day_entries
+        items = [(page, "entry") for page in day_entries] + [
+            (link, "link") for link in day_links
         ]
         items.sort(key=lambda item: item[0].created_at, reverse=True)
 
