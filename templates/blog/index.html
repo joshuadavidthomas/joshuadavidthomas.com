@@ -12,7 +12,7 @@
     {% endblock pre_content %}
     {% for day in days %}
       {% if day.items %}
-        <li class="my-24 first-of-type:mt-8">
+        <li class="my-24 first-of-type:mt-8 last-of-type:mb-8">
           <div class="relative">
             <div class="absolute inset-0 flex items-center" aria-hidden="true">
               <div class="w-full border-t border-gray-300"></div>
@@ -25,7 +25,7 @@
             </div>
           </div>
           {% for entry, type in day.items %}
-            <article class="group {% if type == 'entry' %}my-16{% else %}my-8{% endif %}">
+            <article class="group {% if type == 'entry' %}my-16 first-of-type:mt-8{% else %}my-8{% endif %}">
               <div class="flex flex-col justify-between items-start sm:flex-row sm:items-center">
                 <h3 class="{% if type == 'entry' %}text-xl sm:text-2xl{% else %}text-base sm:text-lg{% endif %} font-semibold text-gray-800 dark:text-gray-200">
                   <a href="{{ entry.get_absolute_url }}" class="group-hover:text-blue-500">
