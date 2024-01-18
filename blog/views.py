@@ -28,7 +28,7 @@ def index(request: HttpRequest) -> HttpResponse:
     date_range = get_range_between_dates(min_date, max_date, reverse=True)
 
     links = list(
-        Link.objects.filter(published_at__date__range=[min_date, max_date])
+        Link.objects.filter(published_at__date__range=[date_range[-1], date_range[0]])
         .prefetch_related("tags")
         .order_by("-created_at")
     )
