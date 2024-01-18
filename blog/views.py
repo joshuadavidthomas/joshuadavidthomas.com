@@ -30,7 +30,9 @@ def index(request: HttpRequest) -> HttpResponse:
     date_range = get_range_between_dates(min_date, max_date, reverse=True)
 
     links = list(
-        Link.objects.filter(published_at__date__range=[date_range[-1].date(), date_range[0].date()])
+        Link.objects.filter(
+            published_at__date__range=[date_range[-1].date(), date_range[0].date()]
+        )
         .prefetch_related("tags")
         .order_by("-created_at")
     )
@@ -49,6 +51,10 @@ def index(request: HttpRequest) -> HttpResponse:
                 day_entries.append(entry)
         day_links = []
         for link in links:
+            print("link", link)
+            print("link.published_at", link.published_at)
+            print("link.published_at.date()", link.published_at.date())
+            print("date.date()", date.date())
             if link.published_at and link.published_at.date() == date.date():
                 day_links.append(link)
                 continue
