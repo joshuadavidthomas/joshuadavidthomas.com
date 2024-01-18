@@ -28,6 +28,9 @@ def index(request: HttpRequest) -> HttpResponse:
 
     min_date, max_date = get_min_max_of_field(page_obj.object_list, "created_at")
     date_range = get_range_between_dates(min_date, max_date, reverse=True)
+    print("min_date", min_date)
+    print("max_date", max_date)
+    print("date_range", date_range)
 
     days = []
     for date in date_range:
