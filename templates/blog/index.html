@@ -30,7 +30,7 @@
                 <h3 class="{% if type == 'entry' %}text-xl sm:text-2xl{% else %}text-base sm:text-lg{% endif %} font-semibold text-gray-800 dark:text-gray-200">
                   <a href="{{ entry.get_absolute_url }}" class="group-hover:text-blue-500">
                     {% if type == 'link' %}
-                      {% heroicon_mini "link" class='w-4 inline-block h-4 mr-0.5' %}
+                      {% heroicon_mini "link" class='w-4 inline-block h-4 mb-0.5 mr-0.5' %}
                     {% endif %}
                     <span class="{% if type == 'entry' %}group-hover:underline{% elif type == 'link' %}underline{% endif %}">{{ entry.title }}</span>
                   </a>
