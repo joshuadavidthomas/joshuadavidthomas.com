@@ -42,6 +42,7 @@ def index(request: HttpRequest) -> HttpResponse:
 
     days = []
     for date in date_range:
+        print("date.date()", date.date())
         day_entries = []
         for entry in page_obj:
             if entry.published_at and entry.published_at.date() == date.date():
@@ -54,7 +55,6 @@ def index(request: HttpRequest) -> HttpResponse:
             print("link", link)
             print("link.published_at", link.published_at)
             print("link.published_at.date()", link.published_at.date())
-            print("date.date()", date.date())
             print("link.published_at.date() == date.date()", link.published_at.date() == date.date())
             if link.published_at and link.published_at.date() == date.date():
                 day_links.append(link)
@@ -67,7 +67,9 @@ def index(request: HttpRequest) -> HttpResponse:
         ]
         items.sort(key=lambda item: item[0].created_at, reverse=True)
 
-        days.append({"date": date, "items": items})
+        days.append({"date": date.date(), "items": items})
+        print("days.date", date.date())
+        print("days.items", items)
 
     return render(request, "blog/index.html", {"days": days, "page_obj": page_obj})
 
