@@ -32,7 +32,7 @@
                      class="group-hover:text-blue-500"
                      {% if type == 'entry' %}preload="mouseover"{% endif %}>
                     {% if type == 'link' %}
-                      {% heroicon_mini "link" class='w-4 inline-block h-4 mb-0.5 mr-0.5' %}
+                      <span>🔗</span>
                     {% endif %}
                     <span class="{% if type == 'entry' %}group-hover:underline{% elif type == 'link' %}underline{% endif %}">{{ entry.title }}</span>
                   </a>
