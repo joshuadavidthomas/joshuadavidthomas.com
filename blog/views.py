@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.utils import timezone
 
 from core.date_utils import get_range_between_dates
+from core.date_utils import is_same_date_in_timezone
 from core.models import get_min_max_of_field
 
 from .models import Entry
@@ -36,30 +37,24 @@ def index(request: HttpRequest) -> HttpResponse:
         .prefetch_related("tags")
         .order_by("-created_at")
     )
-    print("min_date", date_range[-1].date())
-    print("max_date", date_range[0].date())
-    print("links", links)
 
     days = []
     for date in date_range:
-        print("date.date()", date.date())
         day_entries = []
         for entry in page_obj:
-            if entry.published_at and entry.published_at.date() == date.date():
+            if entry.published_at and is_same_date_in_timezone(
+                entry.published_at, date
+            ):
                 day_entries.append(entry)
                 continue
-            if entry.created_at.date() == date.date():
+            if is_same_date_in_timezone(entry.created_at, date):
                 day_entries.append(entry)
         day_links = []
         for link in links:
-            print("link", link)
-            print("link.published_at", link.published_at)
-            print("link.published_at.date()", link.published_at.date())
-            print("link.published_at.date() == date.date()", link.published_at.date() == date.date())
-            if link.published_at and link.published_at.date() == date.date():
+            if link.published_at and is_same_date_in_timezone(link.published_at, date):
                 day_links.append(link)
                 continue
-            if link.created_at.date() == date.date():
+            if is_same_date_in_timezone(link.created_at, date):
                 day_links.append(link)
 
         items = [(page, "entry") for page in day_entries] + [
@@ -68,8 +63,6 @@ def index(request: HttpRequest) -> HttpResponse:
         items.sort(key=lambda item: item[0].created_at, reverse=True)
 
         days.append({"date": date.date(), "items": items})
-        print("days.date", date.date())
-        print("days.items", items)
 
     return render(request, "blog/index.html", {"days": days, "page_obj": page_obj})
 
