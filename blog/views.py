@@ -55,6 +55,7 @@ def index(request: HttpRequest) -> HttpResponse:
             print("link.published_at", link.published_at)
             print("link.published_at.date()", link.published_at.date())
             print("date.date()", date.date())
+            print("link.published_at.date() == date.date()", link.published_at.date() == date.date())
             if link.published_at and link.published_at.date() == date.date():
                 day_links.append(link)
                 continue
