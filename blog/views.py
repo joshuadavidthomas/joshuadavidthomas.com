@@ -4,6 +4,7 @@ from django.http import HttpRequest
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
+from django.utils import timezone
 
 from core.date_utils import get_range_between_dates
 
@@ -20,6 +21,11 @@ def index(request: HttpRequest) -> HttpResponse:
     )
 
     page_obj = entries.paginated(page_number=request.GET.get("page"))
+
+    start_date = page_obj.start_date
+    end_date = page_obj.end_date
+    if start_date == end_date:
+        start_date = timezone.now()
 
     date_range = get_range_between_dates(page_obj.start_date, page_obj.end_date)
 
