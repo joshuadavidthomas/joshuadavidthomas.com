@@ -25,9 +25,10 @@ def index(request: HttpRequest) -> HttpResponse:
     start_date = page_obj.start_date
     end_date = page_obj.end_date
     if start_date == end_date:
+        # this can probably be removed once I have more than one blog post lol
         start_date = timezone.now()
 
-    date_range = get_range_between_dates(page_obj.start_date, page_obj.end_date)
+    date_range = get_range_between_dates(start_date, end_date)
 
     links = list(
         Link.objects.filter(
