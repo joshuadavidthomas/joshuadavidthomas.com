@@ -7,28 +7,26 @@ from django.conf import settings
 
 
 def get_range_between_dates(
-    min_date: datetime.datetime,
-    max_date: datetime.datetime,
-    reverse: bool = False,
+    start_date: datetime.datetime,
+    end_date: datetime.datetime,
 ) -> list[datetime.datetime]:
-    """Given a min and max date, returns a list of dates between them.
+    """Given a start and end date, get a list of datetime objects between the two dates.
 
-    We return a list of datetime objects to preserve timezone information.
+    Return a list of datetime objects to preserve timezone information.
     """
+    if end_date.date() == start_date.date():
+        return [start_date]
 
-    if max_date < min_date:
-        raise ValueError("max_date must be greater than min_date")
-
-    if max_date.date() == min_date.date():
-        return [min_date]
-
-    date_range = [
-        min_date + datetime.timedelta(days=n)
-        for n in range((max_date - min_date).days + 1)
-    ]
-
-    if reverse:
-        date_range.reverse()
+    if end_date < start_date:
+        date_range = [
+            start_date - datetime.timedelta(days=n)
+            for n in range((start_date - end_date).days + 1)
+        ]
+    else:
+        date_range = [
+            start_date + datetime.timedelta(days=n)
+            for n in range((end_date - start_date).days + 1)
+        ]
 
     return date_range
 

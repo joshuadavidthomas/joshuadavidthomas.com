@@ -10,42 +10,45 @@
   <ol class="mx-auto lg:mx-0">
     {% block pre_content %}
     {% endblock pre_content %}
-    {% for day in days %}
-      {% if day.items %}
+    {% for group in dated_items %}
+      {% if group.items %}
         <li class="my-24 first-of-type:mt-8 last-of-type:mb-8">
           <div class="relative">
-            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="flex absolute inset-0 items-center" aria-hidden="true">
               <div class="w-full border-t border-gray-300"></div>
             </div>
-            <div class="relative flex justify-end mr-2 sm:mr-4">
-              <time datetime="{{ day.date }}"
-                    class="bg-gray-50 px-3 text-xs sm:text-sm font-semibold leading-6 text-gray-800">
-                {{ day.date|date:"F j, Y" }}
+            <div class="flex relative justify-end mr-2 sm:mr-4">
+              <time datetime="{{ group.date|date:"Y-m-d" }}"
+                    class="px-3 text-xs font-semibold leading-6 text-gray-800 bg-gray-50 sm:text-sm">
+                {{ group.date|date:"F j, Y" }}
               </time>
             </div>
           </div>
-          {% for entry, type in day.items %}
-            <article class="group {% if type == 'entry' %}my-16 first-of-type:mt-8{% else %}my-8{% endif %}">
+          {% for item in group.items %}
+            <article class="group {% if item.type == 'entry' %}my-16 first-of-type:mt-8{% else %}my-8{% endif %}">
               <div class="flex flex-col justify-between items-start sm:flex-row sm:items-center">
-                <h3 class="{% if type == 'entry' %}text-xl sm:text-2xl{% else %}text-base sm:text-lg{% endif %} font-semibold text-gray-800 dark:text-gray-200">
-                  <a href="{{ entry.get_absolute_url }}"
-                     class="group-hover:text-blue-500"
-                     {% if type == 'entry' %}preload="mouseover"{% endif %}>
-                    {% if type == 'link' %}
-                      <span>🔗</span>
+                <h3 class="{% if item.type == 'entry' %}text-xl sm:text-2xl{% else %}text-base sm:text-lg{% endif %} font-semibold text-gray-800 dark:text-gray-200">
+                  <a href="{{ item.entry.get_absolute_url }}"
+                     class="flex items-center group-hover:text-blue-500"
+                     {% if item.type == 'entry' %}preload="mouseover"{% endif %}>
+                    {% if item.type == 'link' %}
+                      <span class="mr-1">🔗</span>
+                      <img src="https://s2.googleusercontent.com/s2/favicons?domain_url={{ item.entry.get_absolute_url }}"
+                           alt="{{ item.entry.title }} icon"
+                           class="inline-block mr-0.5">
                     {% endif %}
-                    <span class="{% if type == 'entry' %}group-hover:underline{% elif type == 'link' %}underline{% endif %}">{{ entry.title }}</span>
+                    <span class="{% if item.type == 'entry' %}group-hover:underline{% elif item.type == 'link' %}underline{% endif %}">{{ item.entry.title }}</span>
                   </a>
                 </h3>
-                {% if entry.is_draft %}
+                {% if item.entry.is_draft %}
                   <span class="inline-flex items-center py-1 px-2 mt-1 text-sm font-medium text-red-700 bg-red-100 rounded-md sm:ml-2">
                     Draft
                   </span>
                 {% endif %}
               </div>
-              {% if entry.tags %}
+              {% if item.entry.tags %}
                 <div class="flex gap-x-4 items-center my-1">
-                  {% for tag in entry.tags.all %}
+                  {% for tag in item.entry.tags.all %}
                     <a href="{{ tag.get_absolute_url }}"
                        class="inline-flex items-center py-0.5 px-1.5 text-xs font-medium text-gray-600 bg-gray-100 rounded-md ring-1 ring-inset ring-gray-600/10">
                       {{ tag.name }}
@@ -53,11 +56,11 @@
                   {% endfor %}
                 </div>
               {% endif %}
-              {% if type == 'entry' %}
-                <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose">{{ entry.render_summary }}</div>
+              {% if item.type == 'entry' %}
+                <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose">{{ item.entry.render_summary }}</div>
               {% endif %}
-              {% if type == 'link' and entry.comments %}
-                <div class="mt-0 max-w-none text-gray-600 dark:text-gray-200 prose prose-sm">{{ entry.render_comments }}</div>
+              {% if item.type == 'link' and item.entry.comments %}
+                <div class="mt-0 max-w-none text-gray-600 dark:text-gray-200 prose prose-sm">{{ item.entry.render_comments }}</div>
               {% endif %}
             </article>
           {% endfor %}
@@ -65,7 +68,7 @@
       {% endif %}
     {% endfor %}
     {% if page_obj.paginator.num_pages > 1 %}
-      <nav class="flex items-center justify-between mt-8">
+      <nav class="flex justify-between items-center mt-8">
         <p class="text-sm text-gray-800 dark:text-gray-200">
           Page
           <span class="font-medium">{{ page_obj.number }}</span>
@@ -96,5 +99,5 @@
         </div>
       </nav>
     {% endif %}
-  </div>
+  </ol>
 {% endblock content %}

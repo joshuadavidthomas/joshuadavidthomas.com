@@ -13,7 +13,7 @@ from .managers import EntryManager
 
 class Post(TimeStamped, models.Model):
     title = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=75, blank=True)
+    slug = models.SlugField(max_length=75, blank=True, unique=True)
     tags = models.ManyToManyField("blog.Tag", blank=True)
     published_at = models.DateTimeField(
         blank=True, null=True, help_text="Date and time to publish the entry"
