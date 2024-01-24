@@ -323,7 +323,7 @@ DEBUG_TOOLBAR_CONFIG = {
 }
 
 # django-tailwind-cli
-TAILWIND_CLI_AUTOMATIC_DOWNLOAD = False
+# TAILWIND_CLI_AUTOMATIC_DOWNLOAD = False
 
 TAILWIND_CLI_CONFIG_FILE = "tailwind.config.cjs"
 
