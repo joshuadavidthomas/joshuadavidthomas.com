@@ -64,6 +64,7 @@ module = [
   "crispy_forms.*",
   "crispy_tailwind.*",
   "debug_toolbar.*",
+  "django_twc_toolbox.*", # TODO: remove when I add `py.typed` to this package
   "djclick.*",
   "gunicorn.*",
   "health_check.*",

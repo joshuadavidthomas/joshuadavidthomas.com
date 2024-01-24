@@ -35,10 +35,10 @@ def index(request: HttpRequest) -> HttpResponse:
     for date in date_range:
         items = []
         for link in links:
-            if link.published_at.date() == date.date():
+            if link.published_at and link.published_at.date() == date.date():
                 items.append({"type": "link", "entry": link})
         for entry in page_obj.object_list:
-            if entry.published_at.date() == date.date():
+            if entry.published_at and entry.published_at.date() == date.date():
                 items.append({"type": "entry", "entry": entry})
         dated_items.append({"date": date, "items": items})
 
