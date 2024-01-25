@@ -9,13 +9,19 @@ from django.conf import settings
 def get_range_between_dates(
     start_date: datetime.datetime,
     end_date: datetime.datetime,
+    reset_to_midnight: bool = True,
 ) -> list[datetime.datetime]:
     """Given a start and end date, get a list of datetime objects between the two dates.
 
-    Return a list of datetime objects to preserve timezone information.
+    Return a list of datetime objects to preserve timezone information, optionally resetting
+    the time to midnight.
     """
     if end_date.date() == start_date.date():
-        return [start_date]
+        return [
+            start_date.replace(hour=0, minute=0, second=0, microsecond=0)
+            if reset_to_midnight
+            else start_date
+        ]
 
     if end_date < start_date:
         date_range = [
@@ -26,6 +32,12 @@ def get_range_between_dates(
         date_range = [
             start_date + datetime.timedelta(days=n)
             for n in range((end_date - start_date).days + 1)
+        ]
+
+    if reset_to_midnight:
+        date_range = [
+            date.replace(hour=0, minute=0, second=0, microsecond=0)
+            for date in date_range
         ]
 
     return date_range
