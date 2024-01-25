@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import TYPE_CHECKING
+
 from django.http import HttpRequest
 from django.utils import timezone
 
@@ -8,12 +10,13 @@ from core.date_utils import get_range_between_dates
 from .models import Entry
 from .models import Link
 
+if TYPE_CHECKING:
+    from typing import Any
+
 
 class PostService:
     @classmethod
-    def get_posts(
-        cls, request: HttpRequest
-    ) -> tuple[list[dict[str, Entry | Link]], object]:
+    def get_posts(cls, request: HttpRequest) -> tuple[list[dict[str, Any]], Any]:
         page_number = request.GET.get("page")
 
         entries = (
