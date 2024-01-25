@@ -24,8 +24,16 @@ class PostService:
             .prefetch_related("tags")
             .reverse_chronological()
         )
+        print("entries", entries)
 
         page_obj = entries.paginated(page_number=page_number)
+
+        print("page_obj", page_obj)
+        print("page_obj.object_list", page_obj.object_list)
+        print("page_obj.start_date", page_obj.start_date)
+        print("page_obj.end_date", page_obj.end_date)
+        print("page_obj.object_list[-1].published_at", page_obj.object_list.last().published_at)
+        print("page_obj.object_list[-1].published_at.date()", page_obj.object_list.last().published_at.date())
 
         start_date = page_obj.start_date
         end_date = page_obj.end_date
