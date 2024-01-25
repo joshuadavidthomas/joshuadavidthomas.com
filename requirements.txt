@@ -442,9 +442,9 @@ django-template-partials==23.4 \
     --hash=sha256:d83d9c2d2836be769919e9aaf394d5feb1ac86e1187083030398308070122fca \
     --hash=sha256:f762b0b7b2222462df0845f0556792640b769eb832eae218a0e7dadd4e5606cc
     # via -r requirements.in
-django-twc-toolbox==0.2.0 \
-    --hash=sha256:01c171d81ecb678705000c6b27a518d804af0d7cdda5cf606cdccfcd7a6ef8be \
-    --hash=sha256:3d889b05beab6b0b0220b4498e5acbdacbbd606a7d5bb034a51e5ab5534b4c5b
+django-twc-toolbox==0.2.1 \
+    --hash=sha256:0963019aa9094b0c3288ee5d69e94f6ab94c5e49d1f1280792dddb0badfe9747 \
+    --hash=sha256:d8e77d2aa8cea8ead263f20e1ba9c87605f73020de08213754a130a9ec704efc
     # via -r requirements.in
 environs==10.3.0 \
     --hash=sha256:cc421ddb143fa30183568164755aa113a160e555cd19e97e664c478662032c24 \

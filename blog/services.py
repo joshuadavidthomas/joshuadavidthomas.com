@@ -33,16 +33,21 @@ class PostService:
         print("page_obj.date_segments", page_obj.paginator.date_segments)
         print("page_obj.start_date", page_obj.start_date)
         print("page_obj.end_date", page_obj.end_date)
+        print("page_obj.min_date", page_obj.min_date)
+        print("page_obj.max_date", page_obj.max_date)
         print("page_obj.object_list[-1].published_at", page_obj.object_list.last().published_at)
         print("page_obj.object_list[-1].published_at.date()", page_obj.object_list.last().published_at.date())
 
-        start_date = page_obj.start_date
-        end_date = page_obj.end_date
+        start_date = page_obj.max_date
+        end_date = page_obj.min_date
         # if there's only one page, we want to show all posts
         # once there's more than one page, we can just change this to
         # check if page_number == "1" only
         if start_date == end_date or page_number == "1":
             start_date = timezone.now()
+
+        print("start_date", start_date)
+        print("end_date", end_date)
 
         date_range = get_range_between_dates(start_date, end_date)
         print("date_range", date_range)
