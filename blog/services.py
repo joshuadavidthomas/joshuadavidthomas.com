@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 class PostService:
     @classmethod
     def get_posts(cls, request: HttpRequest) -> tuple[list[dict[str, Any]], Any]:
-        page_number = request.GET.get("page")
+        page_number = request.GET.get("page", "1")
 
         entries = (
             Entry.objects.for_user(request.user)
