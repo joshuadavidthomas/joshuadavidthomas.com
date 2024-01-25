@@ -7,11 +7,11 @@ from django.shortcuts import render
 
 from .models import Entry
 from .models import Tag
-from .services import PostFeedService
+from .services import PostService
 
 
 def index(request: HttpRequest) -> HttpResponse:
-    dated_items, page_obj = PostFeedService.get_posts(request)
+    dated_items, page_obj = PostService.get_posts(request)
 
     return render(
         request,

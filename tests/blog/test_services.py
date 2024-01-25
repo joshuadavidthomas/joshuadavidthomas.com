@@ -8,7 +8,7 @@ from django.http import HttpRequest
 from django.utils import timezone
 from model_bakery import baker
 
-from blog.services import PostFeedService
+from blog.services import PostService
 
 pytestmark = pytest.mark.django_db
 
@@ -35,7 +35,7 @@ class TestPostFeedService:
         request = HttpRequest()
         request.user = baker.make("users.User")
 
-        dated_items, page_obj = PostFeedService.get_posts(request)
+        dated_items, page_obj = PostService.get_posts(request)
 
         assert len(dated_items) == NUM_ENTRIES
         assert len(dated_items[0]["items"]) == 2

@@ -9,7 +9,7 @@ from .models import Entry
 from .models import Link
 
 
-class PostFeedService:
+class PostService:
     @classmethod
     def get_posts(
         cls, request: HttpRequest
