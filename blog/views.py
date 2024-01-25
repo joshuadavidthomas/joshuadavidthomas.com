@@ -4,50 +4,14 @@ from django.http import HttpRequest
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
-from django.utils import timezone
-
-from core.date_utils import get_range_between_dates
 
 from .models import Entry
-from .models import Link
 from .models import Tag
+from .services import PostService
 
 
 def index(request: HttpRequest) -> HttpResponse:
-    entries = (
-        Entry.objects.for_user(request.user)
-        .prefetch_related("tags")
-        .reverse_chronological()
-    )
-
-    page_obj = entries.paginated(page_number=request.GET.get("page"))
-
-    start_date = page_obj.start_date
-    end_date = page_obj.end_date
-    if start_date == end_date:
-        # this can probably be removed once I have more than one blog post lol
-        start_date = timezone.now()
-
-    date_range = get_range_between_dates(start_date, end_date)
-
-    links = list(
-        Link.objects.filter(
-            published_at__date__range=[date_range[-1].date(), date_range[0].date()]
-        )
-        .prefetch_related("tags")
-        .order_by("-created_at")
-    )
-
-    dated_items = []
-    for date in date_range:
-        items = []
-        for link in links:
-            if link.published_at and link.published_at.date() == date.date():
-                items.append({"type": "link", "entry": link})
-        for entry in page_obj.object_list:
-            if entry.published_at and entry.published_at.date() == date.date():
-                items.append({"type": "entry", "entry": entry})
-        dated_items.append({"date": date, "items": items})
+    dated_items, page_obj = PostService.get_posts(request)
 
     return render(
         request,
