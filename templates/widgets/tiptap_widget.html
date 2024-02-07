@@ -1,0 +1,46 @@
+{#
+<style>
+  .tiptap-editor * {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: medium;
+    text-align: left;
+    background: none;
+    color: black; /* Or any color you prefer */
+  }
+</style>
+<div id="{{ widget.attrs.id }}_element"
+     class="tiptap-editor w-full text-lg border p-2 *:focus:ring-0"></div>
+<script type="module">
+  import { Editor } from 'https://esm.sh/@tiptap/core@2.1.14'
+  import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.1.14'
+
+  const editor = new Editor({
+    element: document.getElementById('{{ widget.attrs.id }}_element'),
+    extensions: [
+      StarterKit.configure({
+        heading: {
+          HTMLAttributes: {
+            class: 'my-custom-heading',
+          },
+        },
+      }),
+    ],
+    editorProps: {
+      attributes: {
+        class: 'prose dark:prose-invert prose-sm sm:prose-base lg:prose-lg xl:prose-2xl m-5 focus:outline-none',
+      },
+    },
+    content: '<p>Hello, World!</p>',
+  });
+</script>
+#}
+{#
+<tiptap-editor class="w-full p-2 border">
+{% if widget.value %}{{ widget.value }}{% endif %}
+</tiptap-editor>
+#}
+<div id="{{ widget.attrs.id }}_element"
+     data-component="TipTapEditor"
+     class="tiptap-editor w-full text-lg border p-2 *:focus:ring-0"></div>

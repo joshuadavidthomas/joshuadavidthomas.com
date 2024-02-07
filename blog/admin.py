@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.contrib import messages
 from django.db import models
 
-from core.admin.widgets import EasyMDEWidget
+from core.admin.widgets import TipTapWidget
 
 from .models import Entry
 from .models import Link
@@ -26,7 +26,7 @@ class EntryAdmin(admin.ModelAdmin):
         "published_at",
     ]
     formfield_overrides = {
-        models.TextField: {"widget": EasyMDEWidget(width="100%", height="500px")}
+        models.TextField: {"widget": TipTapWidget()},
     }
     list_display = ["title", "created_at", "updated_at", "published_at"]
     readonly_fields = ["slug", "created_at", "updated_at"]

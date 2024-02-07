@@ -325,7 +325,7 @@ DEBUG_TOOLBAR_CONFIG = {
 # django-tailwind-cli
 # TAILWIND_CLI_AUTOMATIC_DOWNLOAD = False
 
-TAILWIND_CLI_CONFIG_FILE = "tailwind.config.cjs"
+TAILWIND_CLI_CONFIG_FILE = "tailwind.config.js"
 
 TAILWIND_CLI_DIST_CSS = "css/tailwind.css"
 
@@ -334,6 +334,15 @@ TAILWIND_CLI_PATH = env("TAILWIND_CLI_PATH", default="/usr/local/bin/")
 TAILWIND_CLI_SRC_CSS = "static/public/tailwind.css"
 
 TAILWIND_CLI_VERSION = "3.4.0"
+
+# django-vite
+DJANGO_VITE_ASSETS_PATH = BASE_DIR / "static" / "dist"
+
+DJANGO_VITE_MANIFEST_PATH = STATIC_ROOT / ".vite" / "manifest.json"
+
+DJANGO_VITE_DEV_MODE = DEBUG and env.bool("DJANGO_VITE_DEV_MODE", default=True)
+
+DJANGO_VITE_DEV_SERVER_PORT = 5173
 
 # sentry
 if not DEBUG or env.bool("ENABLE_SENTRY", default=False):

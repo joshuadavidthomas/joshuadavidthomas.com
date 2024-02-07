@@ -1,7 +1,8 @@
 {% load static %}
-{% load django_htmx %}
-{% load tailwind_cli %}
 {% load heroicons %}
+{% load django_htmx %}
+{% load django_vite %}
+{% load tailwind_cli %}
 {% load ui %}
 <!DOCTYPE html>
 <html lang="en"
@@ -29,6 +30,7 @@
       }
     </style>
     {% tailwind_css %}
+    {% vite_hmr_client %}
     <script src="{% static 'vendor/js/htmx.min.js' %}"></script>
     <script src="https://unpkg.com/htmx.org/dist/ext/head-support.js"></script>
     <script src="https://unpkg.com/htmx.org/dist/ext/preload.js"></script>

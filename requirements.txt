@@ -365,6 +365,7 @@ django==5.0.1 \
     #   django-tailwind-cli
     #   django-template-partials
     #   django-twc-toolbox
+    #   django-vite
     #   model-bakery
     #   neapolitan
 django-allauth==0.60.1 \
@@ -445,6 +446,10 @@ django-template-partials==23.4 \
 django-twc-toolbox==0.2.1 \
     --hash=sha256:0963019aa9094b0c3288ee5d69e94f6ab94c5e49d1f1280792dddb0badfe9747 \
     --hash=sha256:d8e77d2aa8cea8ead263f20e1ba9c87605f73020de08213754a130a9ec704efc
+    # via -r requirements.in
+django-vite==3.0.3 \
+    --hash=sha256:0738e6fe49ed097ab8e9e22ac78776584735948e118d3875817f78a87acaac82 \
+    --hash=sha256:3efe96d93cd77dfca4d8274c49db9dd43c545c95daab3c6b1e3dabf2236df943
     # via -r requirements.in
 environs==10.3.0 \
     --hash=sha256:cc421ddb143fa30183568164755aa113a160e555cd19e97e664c478662032c24 \

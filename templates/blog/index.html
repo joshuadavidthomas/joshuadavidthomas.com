@@ -18,10 +18,12 @@
               <div class="w-full border-t border-gray-300"></div>
             </div>
             <div class="flex relative justify-end mr-2 sm:mr-4">
-              <time datetime="{{ group.date|date:"Y-m-d" }}"
-                    class="px-3 text-xs font-semibold leading-6 text-gray-800 bg-gray-50 sm:text-sm">
-                {{ group.date|date:"F j, Y" }}
-              </time>
+              <a href="{% url 'blog:index' %}?date={{ group.date|date:"Y-m-d" }}" class="group">
+                <time datetime="{{ group.date|date:"Y-m-d" }}"
+                      class="px-3 text-xs font-semibold leading-6 text-gray-800 bg-gray-50 sm:text-sm group-hover:underline group-hover:text-blue-500">
+                  {{ group.date|date:"F j, Y" }}
+                </time>
+              </a>
             </div>
           </div>
           {% for item in group.items %}
