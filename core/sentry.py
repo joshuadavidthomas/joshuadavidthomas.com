@@ -8,7 +8,7 @@ def sentry_traces_sampler(sampling_context):
     Disregards any health check requests.
     """
     DISGARDED_METHODS = ["GET", "HEAD"]
-    DISGARDED_PATHS = ["/up/"]
+    DISGARDED_PATHS = ["/health/"]
 
     if (
         sampling_context.get("wsgi_environ", None)
@@ -17,4 +17,4 @@ def sentry_traces_sampler(sampling_context):
     ):
         return 0
 
-    return 0.5
+    return 0.25
