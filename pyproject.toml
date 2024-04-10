@@ -7,12 +7,8 @@ tag = true
 version_pattern = "YYYY.MM.INC1"
 
 [tool.bumpver.file_patterns]
-"config/__init__.py" = [
-  '__version__ = "{version}"'
-]
-"tests/test_version.py" = [
-  'assert __version__ == "{version}"'
-]
+"config/__init__.py" = ['__version__ = "{version}"']
+"tests/test_version.py" = ['assert __version__ == "{version}"']
 
 [tool.coverage.report]
 exclude_lines = [
@@ -21,13 +17,11 @@ exclude_lines = [
   "if not DEBUG:",
   "if settings.DEBUG:",
   "if TYPE_CHECKING:",
-  'def __str__\(self\)\s?\-?\>?\s?\w*\:'
+  'def __str__\(self\)\s?\-?\>?\s?\w*\:',
 ]
 
 [tool.coverage.run]
-omit = [
-  "*/migrations/*"
-]
+omit = ["*/migrations/*"]
 source = ["blog", "config", "core", "flyio", "users"]
 
 [tool.django-stubs]
@@ -38,13 +32,7 @@ indent = 2
 
 [tool.mypy]
 check_untyped_defs = true
-files = [
-  "blog",
-  "config",
-  "core",
-  "flyio",
-  "users"
-]
+files = ["blog", "config", "core", "flyio", "users"]
 no_implicit_optional = true
 plugins = ["mypy_django_plugin.main"]
 warn_redundant_casts = true
@@ -53,9 +41,7 @@ warn_unused_ignores = true
 
 [[tool.mypy.overrides]]
 ignore_errors = true
-module = [
-  "*.migrations.*"
-]
+module = ["*.migrations.*"]
 
 [[tool.mypy.overrides]]
 ignore_missing_imports = true
@@ -70,7 +56,7 @@ module = [
   "health_check.*",
   "neapolitan.*",
   "qrcode.*",
-  "simple_history.*"
+  "simple_history.*",
 ]
 
 [tool.mypy_django_plugin]
@@ -83,8 +69,6 @@ norecursedirs = ".* bin build dist *.egg htmlcov logs node_modules templates ven
 python_files = "tests.py test_*.py *_tests.py"
 
 [tool.ruff]
-# Allow unused variables when underscore-prefixed.
-dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 # Exclude a variety of commonly ignored directories.
 exclude = [
   ".bzr",
@@ -106,24 +90,14 @@ exclude = [
   "migrations",
   "node_modules",
   "static",
-  "venv"
+  "venv",
 ]
-# Allow autofix for all enabled rules (when `--fix`) is provided.
-fixable = ["A", "B", "C", "D", "E", "F", "I"]
-ignore = ["E501", "E741"]  # temporary
 indent-width = 4
 # Same as Black.
 line-length = 88
 per-file-ignores = {}
-select = [
-  "B",  # flake8-bugbear
-  "E",  # Pycodestyle
-  "F",  # Pyflakes
-  "I"  # isort
-]
 # Assume Python 3.12
 target-version = "py312"
-unfixable = []
 
 [tool.ruff.format]
 # Like Black, indent with spaces, rather than tabs.
@@ -133,7 +107,30 @@ line-ending = "auto"
 # Like Black, use double quotes for strings.
 quote-style = "double"
 
-[tool.ruff.isort]
+[tool.ruff.lint]
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["A", "B", "C", "D", "E", "F", "I"]
+ignore = ["E501", "E741"] # temporary
+select = [
+  "B",  # flake8-bugbear
+  "E",  # Pycodestyle
+  "F",  # Pyflakes
+  "I",  # isort
+  "UP", # pyupgrade
+]
+unfixable = []
+
+[tool.ruff.lint.isort]
 force-single-line = true
 known-first-party = ["blog", "config", "core", "flyio", "users"]
 required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests can use magic values, assertions, and relative imports
+"tests/**/*" = ["PLR2004", "S101", "TID252"]
+
+[tool.ruff.lint.pyupgrade]
+# Preserve types, even if a file imports `from __future__ import annotations`.
+keep-runtime-typing = true

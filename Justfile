@@ -10,79 +10,73 @@ set dotenv-load := true
 # DEPENDENCIES
 # ----------------------------------------------------------------------
 
-_pip-compile *ARGS:
-    python -m piptools compile --resolver=backtracking --strip-extras {{ ARGS }}
+# Generate requirements file
+lock *ARGS:
+    python -m uv pip compile {{ ARGS }} --generate-hashes requirements.in --output-file requirements.txt
 
-@pip-compile *ARGS:
-    just _pip-compile {{ ARGS }} --generate-hashes requirements.in
+# Install dependencies
+install *ARGS:
+    python -m uv pip install --upgrade -r requirements.txt
 
-_install *ARGS:
-    python -m pip install --upgrade {{ ARGS }}
-
-@install:
-    just _install -r requirements.txt
-
-@upgrade:
-    just pip-compile --upgrade
-
+# Generate and upgrade dependencies
+upgrade:
+    @just lock --upgrade
+# Install and update dependency tools
 pup:
-    python -m pip install --upgrade pip pip-tools
+    python -m pip install --upgrade pip uv
 
+# Update local development environment
 update:
     @just pup
     @just upgrade
     @just install
 
 # ----------------------------------------------------------------------
+# TESTING/TYPES
+# ----------------------------------------------------------------------
+
+coverage:
+    rm -rf htmlcov
+    @just command "python -m coverage run -m pytest && python -m coverage html --skip-covered --skip-empty"
+
+# Run tests using pytest within the 'app' container, with optional arguments
+test *ARGS:
+    @just command pytest {{ ARGS }}
+
+# Run mypy on project
+types:
+    @just command python -m mypy .
+
+# ----------------------------------------------------------------------
 # DJANGO
 # ----------------------------------------------------------------------
 
-@manage *COMMAND:
-    just command python -m manage {{ COMMAND }}
+# Run a Django management command
+manage *COMMAND:
+    @just command python -m manage {{ COMMAND }}
 
+# Alias for makemigrations
 alias mm := makemigrations
 
+# Generate Django migrations
 makemigrations *APPS:
     @just manage makemigrations {{ APPS }}
 
+# Run Django migrations
 migrate *ARGS:
     @just manage migrate {{ ARGS }}
 
+# Open a Django shell using django-extensions shell_plus command
 shell-plus:
     @just manage shell_plus
 
+# Quickly create a superuser with the provided credentials
 createsuperuser USERNAME="admin" EMAIL="" PASSWORD="admin":
     docker compose run --rm --no-deps app /bin/bash -c 'echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('"'"'{{ USERNAME }}'"'"', '"'"'{{ EMAIL }}'"'"', '"'"'{{ PASSWORD }}'"'"') if not User.objects.filter(username='"'"'{{ USERNAME }}'"'"').exists() else None" | python manage.py shell'
 
-# ----------------------------------------------------------------------
-# DOCS
-# ----------------------------------------------------------------------
-
-@docs-pip-compile *ARGS:
-    just _pip-compile {{ ARGS }} --output-file --generate-hashes docs/requirements.txt docs/requirements.in
-
-@docs-upgrade:
-    just docs-pip-compile --upgrade
-
-@docs-install:
-    python -m pip install -r docs/requirements.txt
-
-@docs-serve:
-    #!/usr/bin/env sh
-    # just _cog
-    if [ -f "/.dockerenv" ]; then
-        sphinx-autobuild docs docs/_build/html --host "0.0.0.0"
-    else
-        sphinx-autobuild docs docs/_build/html --host "localhost"
-    fi
-
-@docs-build LOCATION="docs/_build/html":
-    # just _cog
-    sphinx-build docs {{ LOCATION }}
-
-# DOCS UTILS
-# @_cog:
-#     cog -r docs/misc/utilities/just.md
+# Reset a user's password
+resetuserpassword USERNAME="admin" PASSWORD="admin":
+    docker compose run --rm --no-deps app /bin/bash -c 'echo "from django.contrib.auth import get_user_model; User = get_user_model(); user = User.objects.get(username='"'"'{{ USERNAME }}'"'"'); user.set_password('"'"'{{ PASSWORD }}'"'"'); user.save()" | python manage.py shell'
 
 # ----------------------------------------------------------------------
 # UTILS
@@ -112,62 +106,58 @@ lint:
 # DOCKER
 # ----------------------------------------------------------------------
 
-# Build services using docker-compose
-@build:
-    docker compose build
+# Build services using docker compose
+build *ARGS:
+    docker compose build {{ ARGS }}
 
 # Stop and remove all containers, networks, images, and volumes
-@clean:
-    just down --volumes --rmi local
+clean:
+    @just down --volumes --rmi local
 
 # Run a command within the 'app' container
-@command *ARGS:
+command *ARGS:
     docker compose run --rm --no-deps app /bin/bash -c "{{ ARGS }}"
 
 # Open an interactive shell within the 'app' container opens a console
-@console:
+console:
     docker compose run --rm --no-deps app /bin/bash
 
-# Stop and remove all containers defined in docker-compose
-@down *ARGS:
+# Stop and remove all containers defined in docker compose
+down *ARGS:
     docker compose down {{ ARGS }}
 
 # Display the logs for containers, optionally using provided arguments (e.g., --follow)
-@logs *ARGS:
+logs *ARGS:
     docker compose logs {{ ARGS }}
 
 # Display the running containers and their statuses
-@ps:
+ps:
     docker compose ps
 
-# Pull the latest versions of all images defined in docker-compose
-@pull:
+# Pull the latest versions of all images defined in docker compose
+pull:
     docker compose pull
 
 # Restart services, optionally targeting specific ones
-@restart *ARGS:
+restart *ARGS:
     docker compose restart {{ ARGS }}
 
 # Open an interactive shell within a specified container (default: 'app')
-@shell *ARGS="app":
+shell *ARGS="app":
     docker compose run --rm --no-deps {{ ARGS }} /bin/bash
 
-# Start services using docker-compose, defaulting to detached mode
-@start *ARGS="--detach":
-    just up {{ ARGS }}
+# Start services using docker compose, defaulting to detached mode
+start *ARGS="--detach":
+    @just up {{ ARGS }}
 
 # Stop services by calling the 'down' command
-@stop:
-    just down
+stop:
+    @just down
 
 # Continuously display the latest logs by using the --follow option, optionally targeting specific containers
-@tail *ARGS:
-    just logs '--follow {{ ARGS }}'
+tail *ARGS:
+    @just logs --follow {{ ARGS }}
 
-# Run tests using pytest within the 'app' container, with optional arguments
-@test *ARGS:
-    docker compose run --rm --no-deps app pytest {{ ARGS }}
-
-# Start services using docker-compose, with optional arguments
-@up *ARGS:
+# Start services using docker compose, with optional arguments
+up *ARGS:
     docker compose up {{ ARGS }}
