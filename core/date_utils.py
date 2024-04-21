@@ -16,6 +16,9 @@ def get_range_between_dates(
     Return a list of datetime objects to preserve timezone information, optionally resetting
     the time to midnight.
     """
+    print("get_range_between_dates")
+    print("start_date", start_date)
+    print("end_date", end_date)
     if end_date.date() == start_date.date():
         return [
             start_date.replace(hour=0, minute=0, second=0, microsecond=0)

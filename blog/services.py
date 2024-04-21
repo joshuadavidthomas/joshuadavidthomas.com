@@ -24,11 +24,19 @@ class PostService:
             .prefetch_related("tags")
             .reverse_chronological()
         )
+        print("entries", entries)
+        for entry in entries:
+            print("entry.published_at", entry.published_at)
+        print("entries.count()", entries.count())
 
         page_obj = entries.paginated(page_number=page_number)
 
         start_date = page_obj.max_date
         end_date = page_obj.min_date
+        print("page_obj.max_date", page_obj.max_date)
+        print("page_obj.min_date", page_obj.min_date)
+        print("page_obj.date_range", page_obj.date_range)
+        print(page_obj.object_list.last().published_at)
         # if there's only one page, we want to show all posts
         # once there's more than one page, we can just change this to
         # check if page_number == "1" only
@@ -36,6 +44,7 @@ class PostService:
             start_date = timezone.now()
 
         date_range = get_range_between_dates(start_date, end_date)
+        print("date_range", date_range)
 
         links = list(
             Link.objects.filter(
@@ -44,6 +53,8 @@ class PostService:
             .prefetch_related("tags")
             .order_by("-created_at")
         )
+        for link in links:
+            print("link.published_at", link.published_at)
 
         dated_items = []
         for date in date_range:
@@ -55,5 +66,7 @@ class PostService:
                 if entry.published_at and entry.published_at.date() == date.date():
                     items.append({"type": "entry", "entry": entry})
             dated_items.append({"date": date, "items": items})
+
+        print("dated_items", dated_items)
 
         return dated_items, page_obj
