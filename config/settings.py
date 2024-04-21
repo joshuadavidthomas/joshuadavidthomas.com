@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 import socket
 import sys
@@ -323,17 +324,20 @@ DEBUG_TOOLBAR_CONFIG = {
 }
 
 # django-tailwind-cli
-# TAILWIND_CLI_AUTOMATIC_DOWNLOAD = False
-
-TAILWIND_CLI_CONFIG_FILE = "tailwind.config.cjs"
+TAILWIND_CLI_CONFIG_FILE = "tailwind.config.mjs"
 
 TAILWIND_CLI_DIST_CSS = "css/tailwind.css"
 
 TAILWIND_CLI_PATH = env("TAILWIND_CLI_PATH", default="/usr/local/bin/")
 
-TAILWIND_CLI_SRC_CSS = "static/public/tailwind.css"
+TAILWIND_CLI_SRC_CSS = "static/src/tailwind.css"
 
-TAILWIND_CLI_VERSION = "3.4.0"
+with open(BASE_DIR / "package.json") as f:
+    package_json = json.load(f)
+
+TAILWIND_CLI_VERSION = (
+    package_json.get("devDependencies", {}).get("tailwindcss", "3.4.2").lstrip("^~>=")
+)
 
 # sentry
 if not DEBUG or env.bool("ENABLE_SENTRY", default=False):
