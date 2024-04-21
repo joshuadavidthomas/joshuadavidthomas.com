@@ -35,7 +35,7 @@ class TestPostFeedService:
         request = HttpRequest()
         request.user = baker.make("users.User")
 
-        dated_items, page_obj = PostService.get_posts(request)
+        dated_items, _ = PostService.get_posts(request)
 
         assert len(dated_items) == NUM_ENTRIES
         assert len(dated_items[0]["items"]) == 2

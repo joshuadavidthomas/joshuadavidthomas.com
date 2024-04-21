@@ -411,7 +411,7 @@ django-tailwind-cli==2.10.0 \
 django-template-partials==24.2 \
     --hash=sha256:b859072e6b3cd780743399bf5e9cee8be1c56c88844425a4e669a65c136205b2 \
     --hash=sha256:e594063faec6d012df3a4170edf3c5dcc07c82b1c311aa42a1a5838493fd3a72
-django-twc-toolbox==0.3.1 \
+django-twc-toolbox @ /home/josh/projects/django-twc-toolbox/ \
     --hash=sha256:3c1b3b6041053b992f44d37a826aaa26fea02ddfa05dd9655471fb237902be5f \
     --hash=sha256:7b6d1a8c5a681c81a9863fbb43702771f91ecd50956e55b043d6666868308fd7
 django-typer==1.1.0 \

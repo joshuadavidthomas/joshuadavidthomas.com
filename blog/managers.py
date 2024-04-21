@@ -55,6 +55,7 @@ class EntryQuerySet(models.QuerySet["Entry"]):
         date_field: str = "published_at",
         date_range: datetime.timedelta = datetime.timedelta(days=30),
     ) -> Page["Entry"]:
+        print("paginated date_range", date_range)
         paginator = DatePaginator(self, date_field, date_range)
 
         page_number = page_number or 1

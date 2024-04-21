@@ -20,7 +20,8 @@ django-simple-history
 django-stubs
 django-tailwind-cli
 django-template-partials
-django-twc-toolbox
+# django-twc-toolbox
+django-twc-toolbox @ /home/josh/projects/django-twc-toolbox/
 environs[django]
 gunicorn
 heroicons
