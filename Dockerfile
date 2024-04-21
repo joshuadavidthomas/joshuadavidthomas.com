@@ -78,7 +78,7 @@ RUN case ${BUILDARCH} in \
 
 FROM base as app
 COPY --from=py --link /usr/local /usr/local
-COPY --link litefs.yml manage.py redirects.json /app/
+COPY --link litefs.yml manage.py package.json redirects.json /app/
 COPY --link blog /app/blog
 COPY --link config /app/config
 COPY --link core /app/core
