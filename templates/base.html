@@ -79,10 +79,23 @@
 
       </main>
     </div>
-    {% if request.user.is_authenticated %}<div class="w-64 sticky h-screen inset-y-0">hello</div>{% endif %}
+    {% if request.user.is_authenticated %}
+      <div id="adminBar" class="w-64 sticky h-screen inset-y-0">
+        <div id="pageStats" class="flex items-center justify-center my-4"></div>
+      </div>
+    {% endif %}
 
     {% block extra_body %}
     {% endblock extra_body %}
+
+    <script>
+    var t = setInterval(function() {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+            clearInterval(t)
+            window.goatcounter.visit_count({ append: '#pageStats' })
+        }
+    }, 100)
+    </script>
 
     {% block javascript_foot %}
     {% endblock javascript_foot %}

@@ -1,15 +1,19 @@
 {% extends "base.html" %}
+
 {% load static %}
 {% load heroicons %}
-{% load ui %}
+
 {% block title %}
   Blog | {{ site.title }}
 {% endblock title %}
+
 {% block content %}
   <h2 class="sr-only">Blog</h2>
   <ol class="mx-auto lg:mx-0">
+
     {% block pre_content %}
     {% endblock pre_content %}
+
     {% for group in dated_items %}
       {% if group.items %}
         <li class="my-24 first-of-type:mt-8 last-of-type:mb-8">

@@ -1,10 +1,12 @@
 {% extends "base.html" %}
+
 {% load static %}
 {% load heroicons %}
-{% load ui %}
+
 {% block title %}
   {{ entry.title }} | {{ site.title }}
 {% endblock title %}
+
 {% block content %}
   <article class="mt-8">
     <header class="flex flex-col">
@@ -24,6 +26,7 @@
     <div class="mt-8 max-w-none prose dark:prose-invert hover:prose-a:text-blue-500">{{ entry.render_body }}</div>
   </article>
 {% endblock content %}
+
 {% block extra_body %}
   {% if request.user.is_staff %}
     <div class="flex fixed right-0 bottom-0 z-50 justify-center items-center my-6 mx-6 sm:mx-12 group">
