@@ -1,8 +1,8 @@
-{% load static %}
 {% load django_htmx %}
-{% load tailwind_cli %}
+{% load django_simple_nav %}
 {% load heroicons %}
-{% load ui %}
+{% load tailwind_cli %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en"
@@ -67,14 +67,10 @@
             <a href="{% url 'index' %}" preload="mouseover">Josh Thomas</a>
           </h1>
           <div class="flex justify-center items-center mt-1 space-x-2.5 sm:space-x-4">
-            <a title="Say hello!" href="mailto:hello@joshthomas.dev">
-              <span class="sr-only">Email</span>
-              {% heroicon_outline "envelope" class="w-4 h-4 sm:w-6 sm:h-6 dark:hover:text-gray-200 hover:fill-blue-500 hover:stroke-blue-300 hover:drop-shadow" %}
-            </a>
-            {% social %}
+            {% django_simple_nav "config.navigation.SocialNav" %}
           </div>
         </div>
-        {% navigation %}
+        {% django_simple_nav "config.navigation.MainNav" %}
       </header>
       <main class="flex-1 px-4 pb-6">
 
@@ -83,7 +79,7 @@
 
       </main>
     </div>
-    <div class="w-64 sticky h-screen inset-y-0">hello</div>
+    {% if request.user.is_authenticated %}<div class="w-64 sticky h-screen inset-y-0">hello</div>{% endif %}
 
     {% block extra_body %}
     {% endblock extra_body %}
