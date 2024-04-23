@@ -13,10 +13,8 @@ from environs import Env
 from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
 
-from core.navigation import NavItem
 from core.redirects import Redirects
 from core.sentry import sentry_traces_sampler
-from core.social import SocialItem
 
 # 0. Setup
 
@@ -88,6 +86,7 @@ INSTALLED_APPS = [
     "django_browser_reload",
     "django_extensions",
     "django_htmx",
+    "django_simple_nav",
     "django_tailwind_cli",
     "health_check",
     "health_check.db",
@@ -350,35 +349,6 @@ if not DEBUG or env.bool("ENABLE_SENTRY", default=False):
 ENABLE_ADMIN_2FA = not DEBUG or env.bool("ENABLE_ADMIN_2FA", default=False)
 
 REDIRECTS = Redirects.from_json(BASE_DIR / "redirects.json")
-
-NAVIGATION = [
-    NavItem(title="Home", url="index"),
-    NavItem(title="Blog", url="blog:index"),
-    NavItem(title="Admin", url="admin:index", is_staff=True, boost=False),
-]
-
-SOCIALS = [
-    SocialItem(
-        title="Mastodon",
-        url="https://joshthomas.dev/@josh",
-        icon_template="partials/mastodon.svg",
-    ),
-    SocialItem(
-        title="GitHub",
-        url="https://github.com/joshuadavidthomas",
-        icon_template="partials/github.svg",
-    ),
-    SocialItem(
-        title="LinkedIn",
-        url="https://www.linkedin.com/in/joshua-thomas-b1745a16/",
-        icon_template="partials/linkedin.svg",
-    ),
-    SocialItem(
-        title="RSS",
-        url="blog:feed",
-        icon_template="partials/rss.svg",
-    ),
-]
 
 STEAM = {
     "API_KEY": env("STEAM_API_KEY", default=""),
