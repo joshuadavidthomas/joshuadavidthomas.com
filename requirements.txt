@@ -268,9 +268,6 @@ coverage==7.4.4 \
     --hash=sha256:fdfafb32984684eb03c2d83e1e51f64f0906b11e64482df3c5db936ce3839d48 \
     --hash=sha256:ff7687ca3d7028d8a5f0ebae95a6e4827c5616b31a4ee1192bdfde697db110d4
     # via django-coverage-plugin
-crispy-tailwind==1.0.3 \
-    --hash=sha256:2bc9f616d406e4b003f25d46fcb0079f1c2522719d97adb107667271d849459a \
-    --hash=sha256:31427f66b1c4fd0d6fb040f4197cfb97d104cdbe7641ea2dea940c0057c4db4b
 croniter==2.0.5 \
     --hash=sha256:f1f8ca0af64212fbe99b1bee125ee5a1b53a9c1b433968d8bca8817b79d237f3 \
     --hash=sha256:fdbb44920944045cc323db54599b321325141d82d14fa7453bc0699826bbe9ed
@@ -334,12 +331,10 @@ django==5.0.4 \
     --hash=sha256:4bd01a8c830bb77a8a3b0e7d8b25b887e536ad17a81ba2dce5476135c73312bd \
     --hash=sha256:916423499d75d62da7aa038d19aef23d23498d8df229775eb0a6309ee1013775
     # via
-    #   crispy-tailwind
     #   dj-database-url
     #   django-allauth
     #   django-anymail
     #   django-browser-reload
-    #   django-crispy-forms
     #   django-debug-toolbar
     #   django-extensions
     #   django-filter
@@ -372,10 +367,6 @@ django-click==2.3.0 \
 django-coverage-plugin==3.1.0 \
     --hash=sha256:223d34bf92bebadcb8b7b89932480e41c7bd98b44a8156934488fbe7f4a71f99 \
     --hash=sha256:eb0ea8ffdb0db11a02994fc99be6500550efb496c350d709f418ff3d8e553a67
-django-crispy-forms==2.1 \
-    --hash=sha256:4d7ec431933ad4d4b5c5a6de4a584d24613c347db9ac168723c9aaf63af4bb96 \
-    --hash=sha256:d592044771412ae1bd539cc377203aa61d4eebe77fcbc07fbc8f12d3746d4f6b
-    # via crispy-tailwind
 django-debug-toolbar==4.3.0 \
     --hash=sha256:0b0dddee5ea29b9cb678593bc0d7a6d76b21d7799cb68e091a2148341a80f3c4 \
     --hash=sha256:e09b7dcb8417b743234dfc57c95a7c1d1d87a88844abd13b4c5387f807b31bf6

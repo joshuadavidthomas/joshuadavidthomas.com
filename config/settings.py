@@ -85,8 +85,6 @@ INSTALLED_APPS = [
     "users",
     # Third Party
     "anymail",
-    "crispy_forms",
-    "crispy_tailwind",
     "django_browser_reload",
     "django_extensions",
     "django_htmx",
@@ -312,11 +310,6 @@ ANYMAIL = {
     "MAILGUN_API_KEY": env("MAILGUN_API_KEY", default=""),
     "MAILGUN_SENDER_DOMAIN": env("MAILGUN_SENDER_DOMAIN", default=""),
 }
-
-# django-cripsy-forms
-CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
-
-CRISPY_TEMPLATE_PACK = "tailwind"
 
 # django-debug-toolbar
 DEBUG_TOOLBAR_CONFIG = {

@@ -52,8 +52,6 @@ module = ["*.migrations.*"]
 ignore_missing_imports = true
 module = [
   "allauth.*",
-  "crispy_forms.*",
-  "crispy_tailwind.*",
   "debug_toolbar.*",
   "django_twc_toolbox.*", # TODO: remove when I add `py.typed` to this package
   "djclick.*",

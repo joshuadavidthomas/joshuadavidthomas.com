@@ -1,7 +1,6 @@
 attrs
 black
 coverage[toml]
-crispy-tailwind
 croniter
 django
 django-allauth
@@ -9,7 +8,6 @@ django-anymail[mailgun]
 django-browser-reload
 django-click
 django-coverage-plugin
-django-crispy-forms
 django-debug-toolbar
 django-extensions
 django-filter
