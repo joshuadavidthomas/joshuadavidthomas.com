@@ -341,6 +341,7 @@ django==5.0.4 \
     #   django-flyio
     #   django-health-check
     #   django-htmx
+    #   django-simple-nav
     #   django-stubs
     #   django-stubs-ext
     #   django-tailwind-cli
@@ -389,6 +390,9 @@ django-htmx==1.17.3 \
 django-simple-history==3.5.0 \
     --hash=sha256:0030b3bb5ed219d6453320213e75cfa00dab7a381946124df9411729101c8874 \
     --hash=sha256:eef2943d7c846270f11c8136f38a3ba00de2bebd7b1b89037de5d9b148ed677a
+django-simple-nav==0.5.1 \
+    --hash=sha256:a8aa959eb59256a8a6454dcf300682bcbce2fe087cecd09404b74255da2aa49a \
+    --hash=sha256:bb57a6472acb0225f58cb48698943e6f17cd08c315e800698e601052265784d7
 django-stubs==4.2.7 \
     --hash=sha256:4cf4de258fa71adc6f2799e983091b9d46cfc67c6eebc68fe111218c9a62b3b8 \
     --hash=sha256:8ccd2ff4ee5adf22b9e3b7b1a516d2e1c2191e9d94e672c35cc2bc3dd61e0f6b

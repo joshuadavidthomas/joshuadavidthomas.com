@@ -15,6 +15,7 @@ django-flyio
 django-health-check
 django-htmx
 django-simple-history
+django-simple-nav
 django-stubs
 django-tailwind-cli
 django-template-partials
