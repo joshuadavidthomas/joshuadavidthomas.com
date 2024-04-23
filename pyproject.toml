@@ -7,12 +7,8 @@ tag = true
 version_pattern = "YYYY.MM.INC1"
 
 [tool.bumpver.file_patterns]
-"config/__init__.py" = [
-  '__version__ = "{version}"'
-]
-"tests/test_version.py" = [
-  'assert __version__ == "{version}"'
-]
+"config/__init__.py" = ['__version__ = "{version}"']
+"tests/test_version.py" = ['assert __version__ == "{version}"']
 
 [tool.coverage.report]
 exclude_lines = [
@@ -21,30 +17,27 @@ exclude_lines = [
   "if not DEBUG:",
   "if settings.DEBUG:",
   "if TYPE_CHECKING:",
-  'def __str__\(self\)\s?\-?\>?\s?\w*\:'
+  'def __str__\(self\)\s?\-?\>?\s?\w*\:',
 ]
 
 [tool.coverage.run]
-omit = [
-  "*/migrations/*"
-]
+omit = ["*/migrations/*"]
 source = ["blog", "config", "core", "flyio", "users"]
 
 [tool.django-stubs]
 django_settings_module = "config.settings"
 
 [tool.djlint]
+blank_line_after_tag = "load,extends,endblock,endpartialdef"
+blank_line_before_tag = "block,partialdef"
+custom_blocks = "partialdef"
+ignore = "H031"                                              # Don't require `meta` tag keywords
 indent = 2
+profile = "django"
 
 [tool.mypy]
 check_untyped_defs = true
-files = [
-  "blog",
-  "config",
-  "core",
-  "flyio",
-  "users"
-]
+files = ["blog", "config", "core", "flyio", "users"]
 no_implicit_optional = true
 plugins = ["mypy_django_plugin.main"]
 warn_redundant_casts = true
@@ -53,9 +46,7 @@ warn_unused_ignores = true
 
 [[tool.mypy.overrides]]
 ignore_errors = true
-module = [
-  "*.migrations.*"
-]
+module = ["*.migrations.*"]
 
 [[tool.mypy.overrides]]
 ignore_missing_imports = true
@@ -70,7 +61,7 @@ module = [
   "health_check.*",
   "neapolitan.*",
   "qrcode.*",
-  "simple_history.*"
+  "simple_history.*",
 ]
 
 [tool.mypy_django_plugin]
@@ -106,20 +97,20 @@ exclude = [
   "migrations",
   "node_modules",
   "static",
-  "venv"
+  "venv",
 ]
 # Allow autofix for all enabled rules (when `--fix`) is provided.
 fixable = ["A", "B", "C", "D", "E", "F", "I"]
-ignore = ["E501", "E741"]  # temporary
+ignore = ["E501", "E741"]                     # temporary
 indent-width = 4
 # Same as Black.
 line-length = 88
 per-file-ignores = {}
 select = [
-  "B",  # flake8-bugbear
-  "E",  # Pycodestyle
-  "F",  # Pyflakes
-  "I"  # isort
+  "B", # flake8-bugbear
+  "E", # Pycodestyle
+  "F", # Pyflakes
+  "I", # isort
 ]
 # Assume Python 3.12
 target-version = "py312"

@@ -3,24 +3,29 @@
 {% load tailwind_cli %}
 {% load heroicons %}
 {% load ui %}
+
 <!DOCTYPE html>
 <html lang="en"
-      class="overflow-y-auto h-full bg-gray-50 dark:bg-gray-900 scrollbar-stable">
+      class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 scrollbar-stable">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>
+
       {% block title %}
         {{ site.title }}
       {% endblock title %}
+
     </title>
     <meta name="description" content="The personal website of Josh Thomas.">
     <meta name="author" content="Josh Thomas">
     <meta name="keywords"
           content="Josh Thomas,Josh,Thomas,Joshua Thomas,Joshua,Personal,Website">
     <meta name="view-transition" content="same-origin" />
+
     {% block css %}
     {% endblock css %}
+
     <link rel="stylesheet" href="{% static 'monokai.css' %}">
     <style>
       ::view-transition-old(root),
@@ -47,34 +52,44 @@
     <script data-goatcounter="https://joshthomasdev.goatcounter.com/count"
             async
             src="//gc.zgo.at/count.js"></script>
+
     {% block javascript_head %}
     {% endblock javascript_head %}
+
   </head>
-  <body class="text-gray-900 dark:text-gray-100 flex flex-col min-h-full h-full max-w-2xl mx-auto{% if debug %} debug-screens{% endif %}"
+  <body class="flex{% if debug %} debug-screens{% endif %}"
         hx-boost="true"
         hx-ext="head-support, preload">
-    <header class="px-4 pt-4 text-lg font-semibold">
-      <div class="flex justify-between items-center">
-        <h1 class="text-2xl">
-          <a href="{% url 'index' %}" preload="mouseover">Josh Thomas</a>
-        </h1>
-        <div class="flex justify-center items-center mt-1 space-x-2.5 sm:space-x-4">
-          <a title="Say hello!" href="mailto:hello@joshthomas.dev">
-            <span class="sr-only">Email</span>
-            {% heroicon_outline "envelope" class="w-4 h-4 sm:w-6 sm:h-6 dark:hover:text-gray-200 hover:fill-blue-500 hover:stroke-blue-300 hover:drop-shadow" %}
-          </a>
-          {% social %}
+    <div class="flex-1 max-w-2xl mx-auto min-h-full">
+      <header class="px-4 pt-4 text-lg font-semibold">
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl">
+            <a href="{% url 'index' %}" preload="mouseover">Josh Thomas</a>
+          </h1>
+          <div class="flex justify-center items-center mt-1 space-x-2.5 sm:space-x-4">
+            <a title="Say hello!" href="mailto:hello@joshthomas.dev">
+              <span class="sr-only">Email</span>
+              {% heroicon_outline "envelope" class="w-4 h-4 sm:w-6 sm:h-6 dark:hover:text-gray-200 hover:fill-blue-500 hover:stroke-blue-300 hover:drop-shadow" %}
+            </a>
+            {% social %}
+          </div>
         </div>
-      </div>
-      {% navigation %}
-    </header>
-    <main class="flex-1 px-4 pb-6">
-      {% block content %}
-      {% endblock content %}
-    </main>
+        {% navigation %}
+      </header>
+      <main class="flex-1 px-4 pb-6">
+
+        {% block content %}
+        {% endblock content %}
+
+      </main>
+    </div>
+    <div class="w-64 sticky h-screen inset-y-0">hello</div>
+
     {% block extra_body %}
     {% endblock extra_body %}
+
     {% block javascript_foot %}
     {% endblock javascript_foot %}
+
   </body>
 </html>
