@@ -1,6 +1,7 @@
 {% load heroicons %}
+
 {% for item in items %}
-  <a href={{ item.get_url }}{% if item.title == "Mastodon" %} rel="me"{% endif %} hx-boost="false">
+  <a href={{ item.url }}{% if item.title == "Mastodon" %} rel="me"{% endif %} hx-boost="false">
     <span class="sr-only">{{ item.title }}</span>
     {% if item.icon_template %}
       {% include item.icon_template %}
