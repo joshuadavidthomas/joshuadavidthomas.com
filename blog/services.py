@@ -27,8 +27,8 @@ class PostService:
 
         page_obj = entries.paginated(page_number=page_number)
 
-        start_date = page_obj.max_date
-        end_date = page_obj.min_date
+        start_date = page_obj[0].published_at
+        end_date = page_obj[-1].published_at
         # if there's only one page, we want to show all posts
         # once there's more than one page, we can just change this to
         # check if page_number == "1" only
