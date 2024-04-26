@@ -1,12 +1,11 @@
 from __future__ import annotations
 
-import datetime
 from typing import TYPE_CHECKING
 
 from django.core.paginator import Page
+from django.core.paginator import Paginator
 from django.db import models
 from django.utils import timezone
-from django_twc_toolbox.paginator import DatePaginator
 
 if TYPE_CHECKING:
     from django.contrib.auth.models import AnonymousUser
@@ -50,12 +49,9 @@ class EntryQuerySet(models.QuerySet["Entry"]):
         return self.published().reverse_chronological()[:count]
 
     def paginated(
-        self,
-        page_number: int | str | None = 1,
-        date_field: str = "published_at",
-        date_range: datetime.timedelta = datetime.timedelta(days=30),
+        self, page_number: int | str | None = 1, per_page: int = 10
     ) -> Page["Entry"]:
-        paginator = DatePaginator(self, date_field, date_range)
+        paginator = Paginator(self, per_page)
 
         page_number = page_number or 1
         page_obj = paginator.get_page(int(page_number))
