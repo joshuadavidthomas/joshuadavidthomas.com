@@ -72,7 +72,7 @@
         </div>
         {% django_simple_nav "config.navigation.MainNav" %}
       </header>
-      <main class="flex-1 px-4 pb-6">
+      <main class="@container/main flex-1 px-4 pb-6">
 
         {% block content %}
         {% endblock content %}
@@ -80,7 +80,8 @@
       </main>
     </div>
     {% if request.user.is_authenticated %}
-      <div id="adminBar" class="w-64 sticky h-screen inset-y-0">
+      <div id="adminBar"
+           class="w-64 sticky h-screen inset-y-0 shadow-inner bg-white border-l">
         <div id="pageStats" class="flex items-center justify-center my-4"></div>
       </div>
     {% endif %}

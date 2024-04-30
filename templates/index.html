@@ -7,20 +7,20 @@
 
 {% block content %}
   <div class="space-y-28">
-    <div class="mt-10 text-center sm:mt-16">
+    <div class="mt-10 text-center @sm/main:mt-16">
       <img src="{% static 'me.png' %}"
            width="250"
            height="250"
            alt="A picture of Josh"
-           class="mx-auto w-56 h-56 rounded-full sm:w-72 sm:h-72 drop-shadow-md" />
-      <h1 class="mt-6 text-2xl font-bold tracking-tight sm:text-5xl leading-tighter">👋 Hi, my name is Josh.</h1>
-      <p class="mt-2 text-base sm:mt-4 sm:text-2xl">I'm a web developer living in Alabama.</p>
+           class="mx-auto w-56 h-56 rounded-full @sm/main:w-72 @sm/main:h-72 drop-shadow-md" />
+      <h1 class="mt-6 text-2xl font-bold tracking-tight @sm/main:text-5xl leading-tighter">👋 Hi, my name is Josh.</h1>
+      <p class="mt-2 text-base @sm/main:mt-4 @sm/main:text-2xl">I'm a web developer living in Alabama.</p>
     </div>
     <div preload="mouseover">
       <div class="flex justify-between items-center">
-        <h2 class="text-lg font-semibold tracking-tight sm:text-xl">📝 Recent Posts</h2>
+        <h2 class="text-lg font-semibold tracking-tight @sm/main:text-xl">📝 Recent Posts</h2>
         <a href="{% url 'blog:index' %}"
-           class="text-xs font-medium tracking-tighter text-gray-600 sm:text-sm dark:text-gray-200 hover:text-blue-500 hover:underline">
+           class="text-xs font-medium tracking-tighter text-gray-600 @sm/main:text-sm dark:text-gray-200 hover:text-blue-500 hover:underline">
           View all 📚
         </a>
       </div>
