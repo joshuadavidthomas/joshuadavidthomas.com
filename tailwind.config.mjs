@@ -24,16 +24,13 @@ const getTemplateFiles = () => {
 
   if (result.status !== 0) {
     console.log(result.stdout.toString(), result.stderr.toString());
-    throw new Error(
-      `Django management command exited with code ${result.status}`,
-    );
   }
 
   return result.stdout
     .toString()
     .split("\n")
     .map((file) => file.trim())
-    .filter(function(e) {
+    .filter(function (e) {
       return e;
     });
 };
@@ -62,25 +59,23 @@ export default {
     require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
     require("tailwindcss-debug-screens"),
-    plugin(function({ addVariant }) {
+    plugin(function ({ addVariant }) {
       addVariant("htmx-settling", ["&.htmx-settling", ".htmx-settling &"]);
       addVariant("htmx-request", ["&.htmx-request", ".htmx-request &"]);
       addVariant("htmx-swapping", ["&.htmx-swapping", ".htmx-swapping &"]);
       addVariant("htmx-added", ["&.htmx-added", ".htmx-added &"]);
     }),
-    plugin(function({ addComponents, theme }) {
+    plugin(function ({ addComponents, theme }) {
       addComponents({
         ".prose .admonition": {
           borderRadius: theme("borderRadius.md"),
           borderWidth: theme("borderWidth.2"),
-          paddingLeft: theme("spacing.4"),
-          paddingRight: theme("spacing.4"),
-          paddingTop: theme("spacing.2"),
-          paddingBottom: theme("spacing.2"),
+          padding: theme("spacing.4"),
           fontSize: theme("fontSize.sm"),
-          marginLeft: theme("spacing.2"),
+          marginTop: theme("spacing.5"),
           marginRight: theme("spacing.2"),
-          marginBottom: theme("spacing.4"),
+          marginBottom: theme("spacing.5"),
+          marginLeft: theme("spacing.2"),
           backgroundColor: theme("colors.blue.50"),
           borderColor: theme("colors.blue.200"),
           color: theme("colors.blue.900"),
@@ -91,7 +86,17 @@ export default {
           },
         },
         ".prose .admonition > *": {
-          marginLeft: theme("spacing.4"),
+          marginTop: theme("spacing.5"),
+          marginRight: "0",
+          marginBottom: theme("spacing.5"),
+          marginLeft: "0",
+          width: "auto",
+          "&:first-child": {
+            marginTop: "0",
+          },
+          "&:last-child": {
+            marginBottom: "0",
+          },
         },
         ".prose .admonition-title": {
           fontWeight: theme("fontWeight.bold"),
@@ -149,10 +154,77 @@ export default {
         },
       });
     }),
-    plugin(function({ addComponents }) {
-      addComponents({
-        ".scrollbar-stable": {
-          scrollbarGutter: "stable both-edges",
+    plugin(function ({ addUtilities, theme }) {
+      const widths = theme("maxWidth");
+      const gridUtilities = {};
+      Object.keys(widths).forEach((scale) => {
+        gridUtilities[`.hg-grid-${scale}`] = {
+          display: "grid",
+          gridTemplateColumns: `1fr min(${widths[scale]}, 100%) 1fr`,
+        };
+        gridUtilities[`.hg-grid-${scale} > *`] = {
+          gridColumn: "2",
+        };
+      });
+
+      const newUtilities = {
+        ".hg-grid": {
+          display: "grid",
+          gridTemplateColumns: "1fr min(65ch, 100%) 1fr",
+        },
+        ".hg-grid > *": {
+          gridColumn: "2",
+        },
+        ...gridUtilities,
+      };
+
+      Object.keys(widths).forEach((size) => {
+        newUtilities[`.stretch-to-${size}`] = {
+          width: "100%",
+          gridColumn: "1 / 4",
+          maxWidth: widths[size],
+          marginLeft: "auto",
+          marginRight: "auto",
+        };
+      });
+
+      addUtilities(newUtilities, ["responsive"]);
+    }),
+    plugin(function ({ addComponents, theme }) {
+      const colors = theme("colors");
+      return addComponents({
+        ".prose .not-prose": {
+          marginTop: theme("spacing.5"),
+          marginBottom: theme("spacing.5"),
+          "> pre": {
+            backgroundColor: colors.gray[800],
+            borderRadius: theme("borderRadius.md"),
+            color: colors.gray[200],
+            fontSize: theme("fontSize.sm"),
+            fontWeight: theme("fontWeight.normal"),
+            lineHeight: theme("lineHeight.6"),
+            overflowX: "auto",
+            paddingTop: theme("spacing.5"),
+            paddingRight: theme("spacing.5"),
+            paddingLeft: theme("spacing.5"),
+            "@media (prefers-color-scheme: dark)": {
+              backgroundColor: colors.gray[700],
+            },
+            code: {
+              color: "inherit",
+              backgroundColor: "initial",
+              borderRadius: "0",
+              borderWidth: "0",
+              lineHeight: "inherit",
+              padding: "0",
+              "&::before": {
+                content: "none",
+              },
+              "&::after": {
+                content: "none",
+              },
+            },
+          },
         },
       });
     }),
