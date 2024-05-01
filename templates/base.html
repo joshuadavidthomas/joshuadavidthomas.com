@@ -6,7 +6,7 @@
 
 <!DOCTYPE html>
 <html lang="en"
-      class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 scrollbar-stable">
+      class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -60,8 +60,8 @@
   <body class="flex{% if debug %} debug-screens{% endif %}"
         hx-boost="true"
         hx-ext="head-support, preload">
-    <div class="flex-1 max-w-2xl mx-auto min-h-full">
-      <header class="px-4 pt-4 text-lg font-semibold">
+    <div class="flex-1 min-h-full px-2.5 lg:px-0">
+      <header class="pt-4 text-lg max-w-2xl mx-auto font-semibold">
         <div class="flex justify-between items-center">
           <h1 class="text-2xl">
             <a href="{% url 'index' %}" preload="mouseover">Josh Thomas</a>
@@ -72,7 +72,9 @@
         </div>
         {% django_simple_nav "config.navigation.MainNav" %}
       </header>
-      <main class="@container/main flex-1 px-4 pb-6">
+      <main class="@container/main hg-grid-2xl pb-6
+        {% block main_classes %}{% endblock main_classes %}
+         ">
 
         {% block content %}
         {% endblock content %}
@@ -81,7 +83,7 @@
     </div>
     {% if request.user.is_authenticated %}
       <div id="adminBar"
-           class="w-64 sticky h-screen inset-y-0 shadow-inner bg-white border-l">
+           class="w-64 hidden sticky h-screen inset-y-0 shadow-inner bg-white border-l">
         <div id="pageStats" class="flex items-center justify-center my-4"></div>
       </div>
     {% endif %}
