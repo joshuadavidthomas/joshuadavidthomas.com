@@ -12,7 +12,7 @@ from .models import Tag
 
 
 @admin.register(PublishedEntry)
-class EntryAdmin(admin.ModelAdmin):
+class PublishedEntryAdmin(admin.ModelAdmin):
     actions = ["duplicate_entry"]
     fields = [
         "title",
