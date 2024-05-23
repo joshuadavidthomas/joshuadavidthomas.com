@@ -3,7 +3,7 @@ from __future__ import annotations
 from django.contrib.syndication.views import Feed
 from django.urls import reverse
 
-from .models import Entry
+from .models import PublishedEntry
 
 
 class EntriesFeed(Feed):
@@ -14,7 +14,7 @@ class EntriesFeed(Feed):
         return reverse("blog:index")
 
     def items(self):
-        return Entry.objects.published().reverse_chronological()
+        return PublishedEntry.objects.published().reverse_chronological()
 
     def item_title(self, item):
         return item.title
