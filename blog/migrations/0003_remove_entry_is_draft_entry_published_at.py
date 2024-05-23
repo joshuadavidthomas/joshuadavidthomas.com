@@ -10,11 +10,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RemoveField(
-            model_name="entry",
+            model_name="publishedentry",
             name="is_draft",
         ),
         migrations.AddField(
-            model_name="entry",
+            model_name="publishedentry",
             name="published_at",
             field=models.DateTimeField(
                 blank=True, help_text="Date and time to publish the entry", null=True

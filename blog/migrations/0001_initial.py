@@ -40,7 +40,7 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name="Entry",
+            name="PublishedEntry",
             fields=[
                 (
                     "id",
@@ -75,7 +75,7 @@ class Migration(migrations.Migration):
                 ("tags", models.ManyToManyField(blank=True, to="blog.tag")),
             ],
             options={
-                "verbose_name_plural": "entries",
+                "verbose_name_plural": "published entries",
             },
         ),
     ]

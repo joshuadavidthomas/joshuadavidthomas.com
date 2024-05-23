@@ -6,11 +6,11 @@ from django.db import models
 
 
 def forwards_func(apps, schema_editor):
-    Entry = apps.get_model("blog", "Entry")
+    PublishedEntry = apps.get_model("blog", "PublishedEntry")
     Link = apps.get_model("blog", "Link")
 
-    for entry in Entry.objects.all():
-        if entry.slug and Entry.objects.filter(slug=entry.slug).count() > 1:
+    for entry in PublishedEntry.objects.all():
+        if entry.slug and PublishedEntry.objects.filter(slug=entry.slug).count() > 1:
             entry.slug = f"{entry.slug}-{entry.id}"
             entry.save()
     for link in Link.objects.all():
@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RunPython(forwards_func, migrations.RunPython.noop),
         migrations.AlterField(
-            model_name="entry",
+            model_name="publishedentry",
             name="slug",
             field=models.SlugField(blank=True, max_length=75, unique=True),
         ),
