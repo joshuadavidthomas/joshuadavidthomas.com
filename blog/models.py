@@ -55,7 +55,7 @@ class PublishedEntry(Post):
     objects = PublishedEntryManager()
 
     class Meta:
-        verbose_name_plural = "entries"
+        verbose_name_plural = "published entries"
 
     def get_absolute_url(self):
         return f"/blog/{self.created_at.year}/{self.slug}/"

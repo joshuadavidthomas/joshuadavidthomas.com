@@ -17,7 +17,8 @@ def get_recently_played_games(cache_time: int = 60 * 60 * 24):
                     "key": settings.STEAM["API_KEY"],
                     "steamid": settings.STEAM["USER_ID"],
                 },
-            ).json()
+            ).raise_for_status()
+            games = games.json()
             cache.set(CACHE_KEY, games, cache_time)
         except httpx.HTTPError:
             return None
