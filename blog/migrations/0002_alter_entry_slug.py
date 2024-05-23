@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name="entry",
+            model_name="publishedentry",
             name="slug",
             field=models.SlugField(blank=True, max_length=75),
         ),

@@ -10,8 +10,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RenameModel(
-            old_name='Entry',
-            new_name='PublishedEntry',
-        ),
+        migrations.RunPython(migrations.RunPython.noop, migrations.RunPython.noop),
+        # migrations.RenameModel(
+        #     old_name='Entry',
+        #     new_name='PublishedEntry',
+        # ),
     ]

@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name="entry",
+            model_name="publishedentry",
             name="is_draft",
             field=models.GeneratedField(
                 db_persist=False,
