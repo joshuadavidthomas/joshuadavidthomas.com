@@ -6,12 +6,12 @@ from django.db import models
 
 from core.admin.widgets import EasyMDEWidget
 
-from .models import Entry
 from .models import Link
+from .models import PublishedEntry
 from .models import Tag
 
 
-@admin.register(Entry)
+@admin.register(PublishedEntry)
 class EntryAdmin(admin.ModelAdmin):
     actions = ["duplicate_entry"]
     fields = [
@@ -42,7 +42,7 @@ class EntryAdmin(admin.ModelAdmin):
             )
             return
         entry = queryset.first()
-        Entry.objects.create_duplicate(entry)
+        PublishedEntry.objects.create_duplicate(entry)
 
 
 @admin.register(Link)

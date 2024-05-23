@@ -8,7 +8,7 @@ from django.utils.text import slugify
 from core.markdown import md
 from core.models import TimeStamped
 
-from .managers import EntryManager
+from .managers import PublishedEntryManager
 
 
 class Post(TimeStamped, models.Model):
@@ -33,7 +33,7 @@ class Post(TimeStamped, models.Model):
         super().save(*args, **kwargs)
 
 
-class Entry(Post):
+class PublishedEntry(Post):
     summary = models.TextField()
     body = models.TextField()
     card_image = models.URLField(
@@ -52,7 +52,7 @@ class Entry(Post):
         help_text="Draft entries do not show in index pages but can be visited directly if you know the URL",
     )
 
-    objects = EntryManager()
+    objects = PublishedEntryManager()
 
     class Meta:
         verbose_name_plural = "entries"

@@ -7,8 +7,8 @@ from django.utils import timezone
 
 from core.date_utils import get_range_between_dates
 
-from .models import Entry
 from .models import Link
+from .models import PublishedEntry
 
 if TYPE_CHECKING:
     from typing import Any
@@ -20,7 +20,7 @@ class PostService:
         page_number = request.GET.get("page", 1)
 
         entries = (
-            Entry.objects.for_user(request.user)
+            PublishedEntry.objects.for_user(request.user)
             .prefetch_related("tags")
             .reverse_chronological()
         )

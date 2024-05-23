@@ -12,11 +12,13 @@ if TYPE_CHECKING:
 
     from users.models import User
 
-    from .models import Entry
+    from .models import PublishedEntry
 
 
 class _EntryManager(models.Manager["Entry"]):
-    def create_duplicate(self, entry: Entry, is_draft: bool = True) -> Entry:
+    def create_duplicate(
+        self, entry: PublishedEntry, is_draft: bool = True
+    ) -> PublishedEntry:
         duplicate = self.create(
             title=f"{entry.title} (copy)",
             slug=f"{entry.slug}-copy",
@@ -50,7 +52,7 @@ class EntryQuerySet(models.QuerySet["Entry"]):
 
     def paginated(
         self, page_number: int | str | None = 1, per_page: int = 10
-    ) -> Page["Entry"]:
+    ) -> Page["PublishedEntry"]:
         paginator = Paginator(self, per_page)
 
         page_number = page_number or 1
@@ -59,4 +61,4 @@ class EntryQuerySet(models.QuerySet["Entry"]):
         return page_obj
 
 
-EntryManager = _EntryManager.from_queryset(EntryQuerySet)
+PublishedEntryManager = _EntryManager.from_queryset(EntryQuerySet)
