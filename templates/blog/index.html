@@ -37,9 +37,11 @@
                      {% if item.type == 'entry' %}preload="mouseover"{% endif %}>
                     {% if item.type == 'link' %}
                       <span class="mr-1">🔗</span>
+                      {# djLint:off H006 #}
                       <img src="https://s2.googleusercontent.com/s2/favicons?domain_url={{ item.entry.get_absolute_url }}"
                            alt="{{ item.entry.title }} icon"
                            class="inline-block mr-1">
+                      {# djLint:on H006 #}
                     {% endif %}
                     <span class="{% if item.type == 'entry' %}group-hover:underline{% elif item.type == 'link' %}underline{% endif %}">{{ item.entry.title }}</span>
                   </a>

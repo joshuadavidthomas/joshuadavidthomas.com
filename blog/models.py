@@ -39,7 +39,7 @@ class Entry(Post):
     card_image = models.URLField(
         blank=True, null=True, help_text="URL to image for social media cards"
     )
-    is_draft = models.GeneratedField(  # type: ignore[attr-defined]
+    is_draft = models.GeneratedField(
         expression=models.Case(
             models.When(
                 published_at__isnull=False,

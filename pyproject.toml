@@ -17,7 +17,7 @@ exclude_lines = [
   "if not DEBUG:",
   "if settings.DEBUG:",
   "if TYPE_CHECKING:",
-  'def __str__\(self\)\s?\-?\>?\s?\w*\:',
+  'def __str__\(self\)\s?\-?\>?\s?\w*\:'
 ]
 
 [tool.coverage.run]
@@ -31,7 +31,7 @@ django_settings_module = "config.settings"
 blank_line_after_tag = "load,extends,endblock,endpartialdef"
 blank_line_before_tag = "block,partialdef"
 custom_blocks = "partialdef"
-ignore = "H031"                                              # Don't require `meta` tag keywords
+ignore = "H031"  # Don't require `meta` tag keywords
 indent = 2
 profile = "django"
 
@@ -53,13 +53,13 @@ ignore_missing_imports = true
 module = [
   "allauth.*",
   "debug_toolbar.*",
-  "django_twc_toolbox.*", # TODO: remove when I add `py.typed` to this package
+  "django_twc_toolbox.*",  # TODO: remove when I add `py.typed` to this package
   "djclick.*",
   "gunicorn.*",
   "health_check.*",
   "neapolitan.*",
   "qrcode.*",
-  "simple_history.*",
+  "simple_history.*"
 ]
 
 [tool.mypy_django_plugin]
@@ -95,20 +95,20 @@ exclude = [
   "migrations",
   "node_modules",
   "static",
-  "venv",
+  "venv"
 ]
 # Allow autofix for all enabled rules (when `--fix`) is provided.
 fixable = ["A", "B", "C", "D", "E", "F", "I"]
-ignore = ["E501", "E741"]                     # temporary
+ignore = ["E501", "E741"]  # temporary
 indent-width = 4
 # Same as Black.
 line-length = 88
 per-file-ignores = {}
 select = [
-  "B", # flake8-bugbear
-  "E", # Pycodestyle
-  "F", # Pyflakes
-  "I", # isort
+  "B",  # flake8-bugbear
+  "E",  # Pycodestyle
+  "F",  # Pyflakes
+  "I"  # isort
 ]
 # Assume Python 3.12
 target-version = "py312"
