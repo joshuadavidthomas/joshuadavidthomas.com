@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from .models import PublishedEntry
 
 
-class _EntryManager(models.Manager["Entry"]):
+class _PublishedEntryManager(models.Manager["PublishedEntry"]):
     def create_duplicate(
         self, entry: PublishedEntry, is_draft: bool = True
     ) -> PublishedEntry:
@@ -31,7 +31,7 @@ class _EntryManager(models.Manager["Entry"]):
         return duplicate
 
 
-class EntryQuerySet(models.QuerySet["Entry"]):
+class PublishedEntryQuerySet(models.QuerySet["PublishedEntry"]):
     def for_user(self, user: User | AnonymousUser):
         return self.published()
 
@@ -61,4 +61,4 @@ class EntryQuerySet(models.QuerySet["Entry"]):
         return page_obj
 
 
-PublishedEntryManager = _EntryManager.from_queryset(EntryQuerySet)
+PublishedEntryManager = _PublishedEntryManager.from_queryset(PublishedEntryQuerySet)

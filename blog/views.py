@@ -30,6 +30,10 @@ def entry(request: HttpRequest, year: int, slug: str) -> HttpResponse:
 
 def tag(request: HttpRequest, slug: str) -> HttpResponse:
     tag = get_object_or_404(Tag, slug=slug)
-    entries = tag.entry_set.prefetch_related("tags").published().reverse_chronological()
+    entries = (
+        tag.publishedentry_set.prefetch_related("tags")
+        .published()
+        .reverse_chronological()
+    )
     page_obj = entries.paginated(page_number=request.GET.get("page"), per_page=10)
     return render(request, "blog/tag.html", {"tag": tag, "page_obj": page_obj})
