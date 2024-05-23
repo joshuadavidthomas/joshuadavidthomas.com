@@ -20,7 +20,7 @@ class EntriesFeed(Feed):
         return item.title
 
     def item_description(self, item):
-        return item.render_body()
+        return item.render_content()
 
     def item_pubdate(self, item):
         return item.published_at

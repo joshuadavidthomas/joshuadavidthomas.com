@@ -6,9 +6,16 @@ from django.db import models
 
 from core.admin.widgets import EasyMDEWidget
 
+from .models import Entry
 from .models import Link
 from .models import PublishedEntry
 from .models import Tag
+
+
+@admin.register(Entry)
+class EntryAdmin(admin.ModelAdmin):
+    list_display = ["title", "created_at", "published_at"]
+    ordering = ["-published_at", "-created_at"]
 
 
 @admin.register(PublishedEntry)
@@ -18,7 +25,7 @@ class PublishedEntryAdmin(admin.ModelAdmin):
         "title",
         "slug",
         "summary",
-        "body",
+        "content",
         "tags",
         "card_image",
         "created_at",

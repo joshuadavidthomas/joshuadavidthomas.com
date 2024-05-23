@@ -65,8 +65,17 @@ DATABASES = {
         default="sqlite:///db.sqlite3",
         conn_max_age=600,  # 10 minutes
         conn_health_checks=True,
-    )
+    ),
+    "yamdl": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "file:yamdl-db?mode=memory&cache=shared",
+        "TEST": {"MIRROR": "default"},
+    },
 }
+
+DATABASE_ROUTERS = [
+    "yamdl.router.YamdlRouter",
+]
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
@@ -97,6 +106,7 @@ INSTALLED_APPS = [
     "heroicons",
     "neapolitan",
     "simple_history",
+    "yamdl",
     # Django
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -344,6 +354,11 @@ if not DEBUG or env.bool("ENABLE_SENTRY", default=False):
         traces_sampler=sentry_traces_sampler,
         send_default_pii=True,
     )
+
+# yamdl
+YAMDL_DIRECTORIES = [
+    Path(BASE_DIR, "content"),
+]
 
 # 4. Project Settings
 

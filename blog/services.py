@@ -7,8 +7,8 @@ from django.utils import timezone
 
 from core.date_utils import get_range_between_dates
 
+from .models import Entry
 from .models import Link
-from .models import PublishedEntry
 
 if TYPE_CHECKING:
     from typing import Any
@@ -19,11 +19,7 @@ class PostService:
     def get_posts(cls, request: HttpRequest) -> tuple[list[dict[str, Any]], Any]:
         page_number = request.GET.get("page", 1)
 
-        entries = (
-            PublishedEntry.objects.for_user(request.user)
-            .prefetch_related("tags")
-            .reverse_chronological()
-        )
+        entries = Entry.objects.for_user(request.user).reverse_chronological()
 
         page_obj = entries.paginated(page_number=page_number)
 

@@ -10,7 +10,7 @@ from model_bakery import baker
 
 from blog.services import PostService
 
-pytestmark = pytest.mark.django_db
+pytestmark = pytest.mark.django_db(databases=["default"])
 
 
 class TestPostFeedService:

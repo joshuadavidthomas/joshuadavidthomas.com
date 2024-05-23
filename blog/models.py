@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from functools import partial
+
 from django.db import models
 from django.utils import timezone
 from django.utils.safestring import mark_safe
@@ -8,12 +10,18 @@ from django.utils.text import slugify
 from core.markdown import md
 from core.models import TimeStamped
 
+from .managers import EntryQuerySet
 from .managers import PublishedEntryManager
+
+TitleField = partial(models.CharField, max_length=255)
+SlugField = partial(models.SlugField, max_length=75, blank=True, unique=True)
+SummaryField = partial(models.TextField, blank=True)
+ContentField = partial(models.TextField)
 
 
 class Post(TimeStamped, models.Model):
-    title = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=75, blank=True, unique=True)
+    title = TitleField()
+    slug = SlugField()
     tags = models.ManyToManyField("blog.Tag", blank=True)
     published_at = models.DateTimeField(
         blank=True, null=True, help_text="Date and time to publish the entry"
@@ -33,9 +41,40 @@ class Post(TimeStamped, models.Model):
         super().save(*args, **kwargs)
 
 
+class Entry(models.Model):
+    __yamdl__ = True
+
+    title = TitleField()
+    slug = SlugField()
+    summary = models.TextField(blank=True)
+    content = models.TextField()
+
+    created_at = models.DateTimeField()
+    published_at = models.DateTimeField(blank=True, null=True)
+
+    objects = EntryQuerySet.as_manager()
+
+    class Meta:
+        verbose_name_plural = "entries"
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return f"/blog/{self.created_at.year}/{self.slug}/"
+
+    @mark_safe
+    def render_summary(self):
+        return md.render(self.summary)
+
+    @mark_safe
+    def render_content(self):
+        return md.render(self.content)
+
+
 class PublishedEntry(Post):
-    summary = models.TextField()
-    body = models.TextField()
+    summary = SummaryField()
+    content = ContentField()
     card_image = models.URLField(
         blank=True, null=True, help_text="URL to image for social media cards"
     )
@@ -65,8 +104,8 @@ class PublishedEntry(Post):
         return md.render(self.summary)
 
     @mark_safe
-    def render_body(self):
-        return md.render(self.body)
+    def render_content(self):
+        return md.render(self.content)
 
 
 class Link(Post):
