@@ -88,6 +88,7 @@ INSTALLED_APPS = [
     "django_htmx",
     "django_simple_nav",
     "django_tailwind_cli",
+    "django_twc_toolbox",
     "health_check",
     "health_check.db",
     "health_check.cache",
