@@ -2,6 +2,7 @@
 
 !blog/
 !config/
+!content/
 !core/
 !flyio/
 !static/
