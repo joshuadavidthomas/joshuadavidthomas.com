@@ -22,11 +22,11 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,t
   curl \
   git \
   jq \
-	# litefs
-	fuse3 \
-	gosu \
-	sqlite3 \
-	# cleanup
+  # litefs
+  fuse3 \
+  gosu \
+  sqlite3 \
+  # cleanup
   && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* \
   && mkdir -p /app \
   && addgroup -gid "${GID}" --system django \
@@ -81,6 +81,7 @@ COPY --from=py --link /usr/local /usr/local
 COPY --link litefs.yml manage.py package.json redirects.json /app/
 COPY --link blog /app/blog
 COPY --link config /app/config
+COPY --link content /app/content
 COPY --link core /app/core
 COPY --link flyio /app/flyio
 COPY --link templates /app/templates
