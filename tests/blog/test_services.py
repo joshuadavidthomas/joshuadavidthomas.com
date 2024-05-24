@@ -18,7 +18,7 @@ class TestPostFeedService:
         NUM_ENTRIES = 10
 
         baker.make(
-            "blog.PublishedEntry",
+            "blog.Entry",
             published_at=itertools.cycle(
                 timezone.now() - datetime.timedelta(days=i) for i in range(NUM_ENTRIES)
             ),
