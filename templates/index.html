@@ -6,15 +6,15 @@
 {% load urlparse %}
 
 {% block content %}
-  <div class="space-y-28">
+  <div class="space-y-32">
     <div class="mt-10 text-center @sm/main:mt-16">
       <img src="{% static 'me.png' %}"
            width="250"
            height="250"
            alt="A picture of Josh"
            class="mx-auto w-56 h-56 rounded-full @sm/main:w-72 @sm/main:h-72 drop-shadow-md" />
-      <h1 class="mt-6 text-2xl font-bold tracking-tight @sm/main:text-5xl leading-tighter">👋 Hi, my name is Josh.</h1>
-      <p class="mt-2 text-base @sm/main:mt-4 @sm/main:text-2xl">I'm a web developer living in Alabama.</p>
+      <h1 class="mt-6 text-2xl font-bold tracking-tight @sm/main:text-5xl leading-tighter">👋 Hi, my name is Josh</h1>
+      <p class="mt-2 text-base @sm/main:mt-4 @sm/main:text-2xl">I'm a web developer living in Alabama</p>
     </div>
     <div preload="mouseover">
       <div class="flex justify-between items-center">
@@ -24,7 +24,7 @@
           View all 📚
         </a>
       </div>
-      <div class="mt-4 space-y-8">
+      <div class="mt-8 space-y-16">
         {% for entry in entries %}
           <article class="relative group">
             <h3 class="text-xl font-semibold leading-6 text-gray-800 sm:text-2xl dark:text-gray-200 group-hover:text-blue-500 group-hover:underline">
@@ -37,11 +37,6 @@
                   class="mt-2 text-xs text-gray-600 dark:text-gray-300">
               {{ entry.created_at|date:"F j, Y" }}
             </time>
-            {% if entry.is_draft %}
-              <span class="inline-flex items-center py-1 px-2 mt-1 ml-2 text-xs font-medium text-red-700 bg-red-100 rounded-md">
-                Draft
-              </span>
-            {% endif %}
             <div class="flex gap-x-4 items-center mt-1">
               {% if entry.tags %}
                 {% for tag in entry.tags.all %}
@@ -52,7 +47,7 @@
                 {% endfor %}
               {% endif %}
             </div>
-            <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose dark:prose-invert hover:prose-a:text-blue-500">
+            <div class="mt-2 max-w-none text-gray-600 dark:text-gray-200 prose dark:prose-invert hover:prose-a:text-blue-500">
               {{ entry.render_summary }}
             </div>
           </article>

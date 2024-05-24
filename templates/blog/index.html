@@ -29,22 +29,29 @@
             </div>
           </div>
           {% for item in group.items %}
-            <article class="group {% if item.type == 'entry' %}my-16 first-of-type:mt-8{% else %}my-8{% endif %}">
+            <article class="group first-of-type:mt-12 {% if item.type == 'entry' %}my-16{% else %}space-y-2 my-16{% endif %}">
               <div class="flex flex-col justify-between items-start sm:flex-row sm:items-center">
                 <h3 class="{% if item.type == 'entry' %}text-xl sm:text-2xl{% else %}text-base sm:text-lg{% endif %} font-semibold text-gray-800 dark:text-gray-200">
-                  <a href="{{ item.entry.get_absolute_url }}"
-                     class="flex items-start group-hover:text-blue-500"
-                     {% if item.type == 'entry' %}preload="mouseover"{% endif %}>
-                    {% if item.type == 'link' %}
-                      <span class="mr-1">🔗</span>
+                  {% if item.type == 'link' %}
+                    <a href="{{ item.entry.get_absolute_url }}"
+                       class="flex hover:text-blue-500">
+                      <span class="mr-4">🔗</span>
                       {# djLint:off H006 #}
-                      <img src="https://s2.googleusercontent.com/s2/favicons?domain_url={{ item.entry.get_absolute_url }}"
-                           alt="{{ item.entry.title }} icon"
-                           class="inline-block mr-1">
-                      {# djLint:on H006 #}
-                    {% endif %}
-                    <span class="{% if item.type == 'entry' %}group-hover:underline{% elif item.type == 'link' %}underline{% endif %}">{{ item.entry.title }}</span>
-                  </a>
+                      <div class="flex">
+                        <img src="https://s2.googleusercontent.com/s2/favicons?domain_url={{ item.entry.get_absolute_url }}"
+                             alt="{{ item.entry.title }} icon"
+                             class="mt-1.5 mr-2 w-4 h-4">
+                        {# djLint:on H006 #}
+                        <span class="underline">{{ item.entry.title }}</span>
+                      </div>
+                    </a>
+                  {% elif item.type == 'entry' %}
+                    <a href="{{ item.entry.get_absolute_url }}"
+                       class="flex gap-1 items-center hover:text-blue-500"
+                       preload="mouseover">
+                      <span class="group-hover:underline">{{ item.entry.title }}</span>
+                    </a>
+                  {% endif %}
                 </h3>
                 {% if item.entry.is_draft %}
                   <span class="inline-flex items-center py-1 px-2 mt-1 text-sm font-medium text-red-700 bg-red-100 rounded-md sm:ml-2">
@@ -68,7 +75,7 @@
                 </div>
               {% endif %}
               {% if item.type == 'link' and item.entry.comments %}
-                <div class="mt-0 max-w-none text-gray-600 dark:text-gray-200 prose prose-sm dark:prose-invert hover:prose-a:text-blue-500">
+                <div class="!mt-4 max-w-none text-gray-600 dark:text-gray-200 prose prose-sm dark:prose-invert hover:prose-a:text-blue-500">
                   {{ item.entry.render_comments }}
                 </div>
               {% endif %}
