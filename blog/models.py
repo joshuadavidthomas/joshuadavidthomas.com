@@ -12,8 +12,8 @@ from core.models import TimeStamped
 
 from .managers import EntryQuerySet
 
-TitleField = partial(models.CharField, max_length=255)
-SlugField = partial(models.SlugField, max_length=75, blank=True, unique=True)
+TitleField = partial(models.CharField, max_length=255)  # type: ignore[var-annotated]
+SlugField = partial(models.SlugField, max_length=75, blank=True, unique=True)  # type: ignore[type-annotated]
 
 
 class Post(TimeStamped, models.Model):
