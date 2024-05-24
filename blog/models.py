@@ -48,6 +48,7 @@ class Entry(models.Model):
     summary = models.TextField(blank=True)
     content = models.TextField()
     published_at = models.DateTimeField(blank=True, null=True)
+    updated_at = models.DateTimeField(blank=True, null=True)
 
     objects = EntryQuerySet.as_manager()
 
