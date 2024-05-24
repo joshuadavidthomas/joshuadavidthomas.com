@@ -8,7 +8,7 @@ from django.utils.text import slugify
 from core.markdown import md
 from core.models import TimeStamped
 
-from .managers import PublishedEntryManager
+from .managers import EntryQuerySet
 
 
 class Post(TimeStamped, models.Model):
@@ -33,40 +33,38 @@ class Post(TimeStamped, models.Model):
         super().save(*args, **kwargs)
 
 
-class PublishedEntry(Post):
-    summary = models.TextField()
-    body = models.TextField()
-    card_image = models.URLField(
-        blank=True, null=True, help_text="URL to image for social media cards"
-    )
-    is_draft = models.GeneratedField(
-        expression=models.Case(
-            models.When(
-                published_at__isnull=False,
-                then=False,
-            ),
-            default=True,
-        ),
-        output_field=models.BooleanField(),
-        db_persist=False,
-        help_text="Draft entries do not show in index pages but can be visited directly if you know the URL",
-    )
+class Entry(models.Model):
+    __yamdl__ = True
 
-    objects = PublishedEntryManager()
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=75, blank=True, unique=True)
+    summary = models.TextField(blank=True)
+    content = models.TextField()
+    published_at = models.DateTimeField(blank=True, null=True)
+    updated_at = models.DateTimeField(blank=True, null=True)
+
+    objects = EntryQuerySet.as_manager()
 
     class Meta:
-        verbose_name_plural = "published entries"
+        verbose_name_plural = "entries"
+
+    def __str__(self):
+        return self.title
 
     def get_absolute_url(self):
-        return f"/blog/{self.created_at.year}/{self.slug}/"
+        if self.published_at:
+            url = f"/blog/{self.published_at.year}/{self.slug}/"
+        else:
+            url = f"/blog/drafts/{self.slug}/"
+        return url
 
     @mark_safe
     def render_summary(self):
         return md.render(self.summary)
 
     @mark_safe
-    def render_body(self):
-        return md.render(self.body)
+    def render_content(self):
+        return md.render(self.content)
 
 
 class Link(Post):

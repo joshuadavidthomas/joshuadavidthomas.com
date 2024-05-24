@@ -26,13 +26,13 @@
       {{ entry.published_at|date:"F j, Y" }}
     </time>
   </header>
-  {{ entry.render_body }}
+  {{ entry.render_content }}
 {% endblock content %}
 
 {% block extra_body %}
   {% if request.user.is_staff %}
     <div class="flex fixed right-0 bottom-0 z-50 justify-center items-center my-6 mx-6 sm:mx-12 group">
-      <a href="{% url 'admin:blog_publishedentry_change' entry.pk %}"
+      <a href="{% url 'admin:blog_entry_change' entry.pk %}"
          class="p-4 bg-gray-200 rounded-full border border-gray-200 dark:bg-gray-700 dark:border-gray-500 group-hover:bg-gray-300 group-hover:border-gray-300 dark:group-hover:border-gray-400 dark:group-hover:bg-gray-500"
          hx-boost="false">
         <span class="sr-only">Edit</span>

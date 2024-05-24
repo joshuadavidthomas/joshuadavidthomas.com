@@ -5,8 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 
-from .models import PublishedEntry
-from .models import Tag
+from .models import Entry
 from .services import PostService
 
 
@@ -24,16 +23,5 @@ def index(request: HttpRequest) -> HttpResponse:
 
 
 def entry(request: HttpRequest, year: int, slug: str) -> HttpResponse:
-    entry = get_object_or_404(PublishedEntry, slug=slug, created_at__year=year)
+    entry = get_object_or_404(Entry, slug=slug, published_at__year=year)
     return render(request, "blog/entry.html", {"entry": entry})
-
-
-def tag(request: HttpRequest, slug: str) -> HttpResponse:
-    tag = get_object_or_404(Tag, slug=slug)
-    entries = (
-        tag.publishedentry_set.prefetch_related("tags")
-        .published()
-        .reverse_chronological()
-    )
-    page_obj = entries.paginated(page_number=request.GET.get("page"), per_page=10)
-    return render(request, "blog/tag.html", {"tag": tag, "page_obj": page_obj})

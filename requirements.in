@@ -46,3 +46,4 @@ ruff
 sentry-sdk
 types-pygments
 whitenoise
+yamdl

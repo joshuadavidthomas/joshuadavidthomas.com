@@ -5,7 +5,7 @@ from django.utils import timezone
 from django.views.decorators.http import require_GET
 from sentry_sdk import last_event_id
 
-from blog.models import PublishedEntry
+from blog.models import Entry
 
 from .miniflux import get_recently_starred_posts
 from .steam import get_recently_played_games
@@ -40,12 +40,8 @@ def security_txt(request):
 
 @require_GET
 def index(request):
-    entries = PublishedEntry.objects.recent_entries(5)
-    drafts = (
-        PublishedEntry.objects.drafts()
-        if request.user.is_staff
-        else PublishedEntry.objects.none()
-    )
+    entries = Entry.objects.recent_entries(5)
+    drafts = Entry.objects.drafts() if request.user.is_staff else Entry.objects.none()
     games = get_recently_played_games()
     posts = get_recently_starred_posts()
     return render(

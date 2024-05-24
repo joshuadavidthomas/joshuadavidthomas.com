@@ -240,6 +240,7 @@ django==5.0.6 \
     #   django-typer
     #   model-bakery
     #   neapolitan
+    #   yamdl
 django-allauth==0.63.1 \
     --hash=sha256:ef52957992ac3dfc57dec4f7c078bb317b7b47bd7bf6b15f2c12a31c9892ad4c
     # via -r requirements.in
@@ -752,7 +753,9 @@ pyyaml==6.0.1 \
     --hash=sha256:fca0e3a251908a499833aa292323f32437106001d436eca0e6e7833256674585 \
     --hash=sha256:fd1592b3fdf65fff2ad0004b5e363300ef59ced41c2e6b3a99d4089fa8c5435d \
     --hash=sha256:fd66fc5d0da6d9815ba2cebeb4205f95818ff4b79c3ebe268e75d961704af52f
-    # via pre-commit
+    # via
+    #   pre-commit
+    #   yamdl
 qrcode==7.4.2 \
     --hash=sha256:581dca7a029bcb2deef5d01068e39093e80ef00b4a61098a2182eac59d01643a \
     --hash=sha256:9dd969454827e127dbd93696b20747239e6d540e082937c90f14ac95b30f5845
@@ -875,4 +878,8 @@ wheel==0.43.0 \
 whitenoise==6.6.0 \
     --hash=sha256:8998f7370973447fac1e8ef6e8ded2c5209a7b1f67c1012866dbcd09681c3251 \
     --hash=sha256:b1f9db9bf67dc183484d760b99f4080185633136a273a03f6436034a41064146
+    # via -r requirements.in
+yamdl==1.0.0 \
+    --hash=sha256:107b3761b3b3d14f054f9f1aa8d1ffdfb8bdd2b993e275e7cefff525bf7b00bc \
+    --hash=sha256:9096da8f72ffda814686eab37ab1be1c9802faf1b01f9351bdad7c78a938fb74
     # via -r requirements.in

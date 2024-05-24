@@ -21,9 +21,9 @@
             <div class="flex absolute inset-0 items-center" aria-hidden="true">
               <div class="w-full border-t border-gray-300"></div>
             </div>
-            <div class="flex relative justify-end mr-2 sm:mr-4">
+            <div class="flex relative justify-end mr-2 text-center sm:mr-4">
               <time datetime="{{ group.date|date:"Y-m-d" }}"
-                    class="px-3 text-xs font-semibold leading-6 text-gray-800 bg-gray-50 sm:text-sm">
+                    class="px-3 w-40 text-xs font-semibold leading-6 text-gray-800 bg-gray-50 sm:text-sm">
                 {{ group.date|date:"F j, Y" }}
               </time>
             </div>
@@ -63,10 +63,14 @@
                 </div>
               {% endif %}
               {% if item.type == 'entry' %}
-                <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose">{{ item.entry.render_summary }}</div>
+                <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose dark:prose-invert hover:prose-a:text-blue-500">
+                  {{ item.entry.render_summary }}
+                </div>
               {% endif %}
               {% if item.type == 'link' and item.entry.comments %}
-                <div class="mt-0 max-w-none text-gray-600 dark:text-gray-200 prose prose-sm">{{ item.entry.render_comments }}</div>
+                <div class="mt-0 max-w-none text-gray-600 dark:text-gray-200 prose prose-sm dark:prose-invert hover:prose-a:text-blue-500">
+                  {{ item.entry.render_comments }}
+                </div>
               {% endif %}
             </article>
           {% endfor %}
