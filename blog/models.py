@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from functools import partial
-
 from django.db import models
 from django.utils import timezone
 from django.utils.safestring import mark_safe
@@ -12,13 +10,10 @@ from core.models import TimeStamped
 
 from .managers import EntryQuerySet
 
-TitleField = partial(models.CharField, max_length=255)  # type: ignore[var-annotated]
-SlugField = partial(models.SlugField, max_length=75, blank=True, unique=True)  # type: ignore[type-annotated]
-
 
 class Post(TimeStamped, models.Model):
-    title = TitleField()
-    slug = SlugField()
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=75, blank=True, unique=True)
     tags = models.ManyToManyField("blog.Tag", blank=True)
     published_at = models.DateTimeField(
         blank=True, null=True, help_text="Date and time to publish the entry"
@@ -41,8 +36,8 @@ class Post(TimeStamped, models.Model):
 class Entry(models.Model):
     __yamdl__ = True
 
-    title = TitleField()
-    slug = SlugField()
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=75, blank=True, unique=True)
     summary = models.TextField(blank=True)
     content = models.TextField()
     published_at = models.DateTimeField(blank=True, null=True)

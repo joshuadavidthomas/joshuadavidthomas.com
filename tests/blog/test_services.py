@@ -10,20 +10,13 @@ from model_bakery import baker
 
 from blog.services import PostService
 
-pytestmark = pytest.mark.django_db(databases=["default"])
+pytestmark = pytest.mark.django_db
 
 
 class TestPostFeedService:
     def test_get_posts(self):
         NUM_ENTRIES = 10
 
-        baker.make(
-            "blog.Entry",
-            published_at=itertools.cycle(
-                timezone.now() - datetime.timedelta(days=i) for i in range(NUM_ENTRIES)
-            ),
-            _quantity=NUM_ENTRIES,
-        )
         baker.make(
             "blog.Link",
             published_at=itertools.cycle(
