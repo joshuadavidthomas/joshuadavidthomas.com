@@ -52,7 +52,9 @@
                 {% endfor %}
               {% endif %}
             </div>
-            <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose">{{ entry.render_summary }}</div>
+            <div class="mt-5 max-w-none text-gray-600 dark:text-gray-200 prose dark:prose-invert hover:prose-a:text-blue-500">
+              {{ entry.render_summary }}
+            </div>
           </article>
         {% endfor %}
       </div>

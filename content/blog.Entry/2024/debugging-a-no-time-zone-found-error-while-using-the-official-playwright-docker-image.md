@@ -1,7 +1,6 @@
 title: Debugging a "No time zone found" error while using the official Playwright Docker image
 slug: debugging-a-no-time-zone-found-error-while-using-the-official-playwright-docker-image
-summary: I ran into a surprising hiccup after making a change to my `Dockerfile` - the time zone data was missing! Here's how I tracked down the source of the error.
-created_at: 2024-05-01 15:09:00+00:00
+summary: "I ran into a surprising hiccup after making a change to my `Dockerfile`: the time zone data was missing! Here's how I tracked down the source of the error."
 published_at: 2024-05-01 18:48:00+00:00
 
 ---
@@ -60,7 +59,8 @@ As a solution, I decided to leverage the Docker image Microsoft provides at `mcr
 ```
 
 !!! note
-Microsoft does not provide a tag for major or minor versions, only the full version number including the patch, so to ensure there is no drift between the version of Playwright used in the `Dockerfile` stage and the version installed by the application, I also adjusted the `requirements.in` to pin the version there as well:
+
+    Microsoft does not provide a tag for major or minor versions, only the full version number including the patch, so to ensure there is no drift between the version of Playwright used in the `Dockerfile` stage and the version installed by the application, I also adjusted the `requirements.in` to pin the version there as well:
 
     ```linuxconfig
     playwright==1.43.0

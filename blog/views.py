@@ -24,7 +24,7 @@ def index(request: HttpRequest) -> HttpResponse:
 
 
 def entry(request: HttpRequest, year: int, slug: str) -> HttpResponse:
-    entry = get_object_or_404(Entry, slug=slug, created_at__year=year)
+    entry = get_object_or_404(Entry, slug=slug, published_at__year=year)
     return render(request, "blog/entry.html", {"entry": entry})
 
 

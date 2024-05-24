@@ -1,7 +1,6 @@
 title: New Year, New Website
 slug: new-year-new-website
 summary: It's a new year and I've decided to rebuild my personal website.
-created_at: 2024-01-13 03:07:00+00:00
 published_at: 2024-01-13 03:24:00+00:00
 
 ---

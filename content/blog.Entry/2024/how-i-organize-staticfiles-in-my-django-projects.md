@@ -1,7 +1,6 @@
 title: How I organize `staticfiles` in my Django projects
 slug: how-i-organize-staticfiles-in-my-django-projects
 summary: A brief post about how I setup and organize my staticfiles directories in all of my Django projects.
-created_at: 2024-04-20 19:18:00+00:00
 published_at: 2024-04-20 20:26:00+00:00
 
 ---

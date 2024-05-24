@@ -11,7 +11,6 @@ from core.markdown import md
 from core.models import TimeStamped
 
 from .managers import EntryQuerySet
-from .managers import PublishedEntryManager
 
 TitleField = partial(models.CharField, max_length=255)
 SlugField = partial(models.SlugField, max_length=75, blank=True, unique=True)
@@ -48,8 +47,6 @@ class Entry(models.Model):
     slug = SlugField()
     summary = models.TextField(blank=True)
     content = models.TextField()
-
-    created_at = models.DateTimeField()
     published_at = models.DateTimeField(blank=True, null=True)
 
     objects = EntryQuerySet.as_manager()
@@ -61,43 +58,11 @@ class Entry(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return f"/blog/{self.created_at.year}/{self.slug}/"
-
-    @mark_safe
-    def render_summary(self):
-        return md.render(self.summary)
-
-    @mark_safe
-    def render_content(self):
-        return md.render(self.content)
-
-
-class PublishedEntry(Post):
-    summary = SummaryField()
-    content = ContentField()
-    card_image = models.URLField(
-        blank=True, null=True, help_text="URL to image for social media cards"
-    )
-    is_draft = models.GeneratedField(
-        expression=models.Case(
-            models.When(
-                published_at__isnull=False,
-                then=False,
-            ),
-            default=True,
-        ),
-        output_field=models.BooleanField(),
-        db_persist=False,
-        help_text="Draft entries do not show in index pages but can be visited directly if you know the URL",
-    )
-
-    objects = PublishedEntryManager()
-
-    class Meta:
-        verbose_name_plural = "published entries"
-
-    def get_absolute_url(self):
-        return f"/blog/{self.created_at.year}/{self.slug}/"
+        if self.published_at:
+            url = f"/blog/{self.published_at.year}/{self.slug}/"
+        else:
+            url = f"/blog/drafts/{self.slug}/"
+        return url
 
     @mark_safe
     def render_summary(self):
