@@ -14,8 +14,6 @@ from .managers import EntryQuerySet
 
 TitleField = partial(models.CharField, max_length=255)
 SlugField = partial(models.SlugField, max_length=75, blank=True, unique=True)
-SummaryField = partial(models.TextField, blank=True)
-ContentField = partial(models.TextField)
 
 
 class Post(TimeStamped, models.Model):
