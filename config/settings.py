@@ -352,6 +352,7 @@ if not DEBUG or env.bool("ENABLE_SENTRY", default=False):
             LoggingIntegration(event_level=None, level=None),
         ],
         traces_sampler=sentry_traces_sampler,
+        profiles_sample_rate=0.25,
         send_default_pii=True,
     )
 
