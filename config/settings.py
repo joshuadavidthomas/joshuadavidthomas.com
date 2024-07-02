@@ -373,7 +373,6 @@ STEAM = {
     "ACCOUNT_ID": env("STEAM_ACCOUNT_ID", default=""),
 }
 
-MINIFLUX = {
-    "URL": env("MINIFLUX_URL", default=""),
-    "API_KEY": env("MINIFLUX_API_KEY", default=""),
+RAINDROPIO = {
+    "API_KEY": env("RAINDROPIO_API_KEY", default=""),
 }
