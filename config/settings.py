@@ -91,7 +91,6 @@ INSTALLED_APPS = [
     "core.admin.default",
     "users",
     # Third Party
-    "anymail",
     "django_browser_reload",
     "django_extensions",
     "django_htmx",
