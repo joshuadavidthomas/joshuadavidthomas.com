@@ -25,12 +25,12 @@ class AdminSite(admin.AdminSite):
         extra_urlpatterns = [
             path(
                 "setup-2fa/",
-                self.admin_view(AdminSetupTwoFactorAuthView.as_view()),  # type: ignore[type-var]
+                self.admin_view(AdminSetupTwoFactorAuthView.as_view()),
                 name="setup-2fa",
             ),
             path(
                 "confirm-2fa/",
-                self.admin_view(AdminConfirmTwoFactorAuthView.as_view()),  # type: ignore[type-var]
+                self.admin_view(AdminConfirmTwoFactorAuthView.as_view()),
                 name="confirm-2fa",
             ),
         ]

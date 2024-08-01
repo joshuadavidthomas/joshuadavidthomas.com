@@ -45,7 +45,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,t
 
 
 FROM base as py
-COPY --link requirements*.txt ./
+COPY --link requirements.txt ./
 RUN --mount=type=cache,target=/root/.cache/pip --mount=type=cache,target=/root/.cache/uv \
   python -m pip install --upgrade pip uv \
   && uv pip install -r requirements.txt
@@ -86,6 +86,14 @@ COPY --link core /app/core
 COPY --link flyio /app/flyio
 COPY --link templates /app/templates
 COPY --link users /app/users
+
+FROM app as dev
+ENV DEBIAN_FRONTEND noninteractive
+ENV UV_SYSTEM_PYTHON true
+COPY --from=py --link /usr/local /usr/local
+COPY --link requirements.dev.txt ./
+RUN --mount=type=cache,target=/root/.cache/pip --mount=type=cache,target=/root/.cache/uv \
+  uv pip install -r requirements.dev.txt
 
 
 FROM node as node-final

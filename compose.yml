@@ -2,7 +2,7 @@ x-app: &default-app
   build:
     context: .
     dockerfile: Dockerfile
-    target: app
+    target: dev
   env_file: .env
   init: true
   user: "${UID:-1000}:${GID:-1000}"
