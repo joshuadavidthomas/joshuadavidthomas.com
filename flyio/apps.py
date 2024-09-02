@@ -15,7 +15,7 @@ class FlyioConfig(AppConfig):
     verbose_name = "Fly.io"
 
     def ready(self) -> None:
-        if not is_primary_instance():
+        if is_primary_instance():
             return
         for alias in connections:
             install_hook(connections[alias])
