@@ -172,6 +172,7 @@ LOGGING = {
 # https://docs.djangoproject.com/en/dev/ref/middleware/#middleware-ordering
 MIDDLEWARE = [
     # should be first
+    "core.redirects.middleware.region_selection_middleware",
     "core.redirects.middleware.redirect_middleware",
     "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",
