@@ -9,64 +9,79 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
 
 env:
+  CI: true
   FORCE_COLOR: 1
-  CI: True
+  NODE_VERSION: "20"
+  PYTHON_VERSION: "3.12"
 
 permissions:
   contents: read
 
 jobs:
-  setup:
-    runs-on: ubuntu-latest
-    outputs:
-      cache-dir: ${{ steps.pip-cache.outputs.dir }}
-    steps:
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Get pip cache dir
-        id: pip-cache
-        run: |
-          echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
-
   test:
     runs-on: ubuntu-latest
-    needs: setup
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install uv
+        run: |
+          python -m pip install -U pip uv
+
+      - name: Get cache dir
+        id: uv-cache
+        run: |
+          echo "dir=$(uv cache dir)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v4
+        id: cache-uv
+        with:
+          path: ${{ steps.uv-cache.outputs.dir }}
+          key: ${{ runner.os }}-uv-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-uv-
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        run: |
+          echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
 
       - uses: actions/cache@v4
+        id: cache-npm
         with:
-          path: ${{ needs.setup.outputs.cache-dir }}
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-pip-
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
-        env:
-          PIP_CACHE_DIR: ${{ needs.setup.outputs.cache-dir }}
         run: |
-          python -m pip install -U pip uv
-          python -m uv pip install --system -r requirements.txt -r requirements.dev.txt
+          python -m uv pip install --system --constraint requirements.txt --requirement pyproject.toml --extra dev
+          npm install
+
+      - name: Install system packages
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          sudo apt-get update && sudo apt-get install -y --no-install-recommends \
+            build-essential
+          playwright install --with-deps
 
       - name: Run migrations
         run: |
-          python manage.py migrate
+          python -m manage migrate --skip-checks
 
       - name: Build staticfiles
         run: |
-          npm install
-          python manage.py tailwind build
-          python manage.py collectstatic
+          python -m manage tailwind --skip-checks build
+          python -m manage collectstatic --no-input --skip-checks --no-default-ignore
 
       # https://hynek.me/articles/ditch-codecov-python/
       - name: Run tests
@@ -81,62 +96,90 @@ jobs:
         with:
           name: coverage-report-${{ github.run_id }}
           path: htmlcov
-        if: ${{ failure() }}
 
   types:
     runs-on: ubuntu-latest
-    needs: setup
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ env.PYTHON_VERSION }}
 
-      - uses: actions/cache@v4
-        with:
-          path: ${{ needs.setup.outputs.cache-dir }}
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Install dependencies
-        env:
-          PIP_CACHE_DIR: ${{ needs.setup.outputs.cache-dir }}
+      - name: Install uv
         run: |
           python -m pip install -U pip uv
-          python -m uv pip install --system -r requirements.txt -r requirements.dev.txt
+
+      - name: Get cache dir
+        id: uv-cache
+        run: |
+          echo "dir=$(uv cache dir)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v4
+        id: cache-uv
+        with:
+          path: ${{ steps.uv-cache.outputs.dir }}
+          key: ${{ runner.os }}-uv-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-uv-
+
+      - name: Install dependencies
+        run: |
+          python -m uv pip install --system --constraint requirements.txt --requirement pyproject.toml --extra dev
+
+      - name: Install system packages
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          sudo apt-get update && sudo apt-get install -y --no-install-recommends \
+            build-essential
 
       - name: Run mypy
+        env:
+          DATABASE_URL: sqlite:///db.sqlite3
         run: |
           python -m mypy
 
   checks:
     runs-on: ubuntu-latest
-    needs: setup
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install uv
+        run: |
+          python -m pip install -U pip uv
+
+      - name: Get cache dir
+        id: uv-cache
+        run: |
+          echo "dir=$(uv cache dir)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v4
+        id: cache-uv
         with:
-          path: ${{ needs.setup.outputs.cache-dir }}
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          path: ${{ steps.uv-cache.outputs.dir }}
+          key: ${{ runner.os }}-uv-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
-            ${{ runner.os }}-pip-
+            ${{ runner.os }}-uv-
+
+      - name: Install dependencies
+        run: |
+          python -m uv pip install --system --constraint requirements.txt --requirement pyproject.toml --extra dev
 
       - name: Install dependencies
         env:
-          PIP_CACHE_DIR: ${{ needs.setup.outputs.cache-dir }}
+          DEBIAN_FRONTEND: noninteractive
         run: |
-          python -m pip install -U pip uv
-          python -m uv pip install --system -r requirements.txt -r requirements.dev.txt
+          sudo apt-get update && sudo apt-get install -y --no-install-recommends \
+            build-essential
 
       - name: Run deployment checks
         env:
           DEBUG: False
+          DATABASE_URL: sqlite:///db.sqlite3
         run: |
           python -m manage check --deploy
