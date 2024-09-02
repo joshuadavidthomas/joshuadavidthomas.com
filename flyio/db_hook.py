@@ -9,6 +9,8 @@ from .exceptions import WritesAttemptedError
 
 
 def install_hook(connection: BaseDatabaseWrapper, **kwargs: object) -> None:
+    if connection.alias == "yamdl":
+        return
     if blocker not in connection.execute_wrappers:
         connection.execute_wrappers.insert(0, blocker)
 
