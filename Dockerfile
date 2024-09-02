@@ -41,7 +41,9 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,t
   && apt-get update --fix-missing \
   && apt-get install -y --no-install-recommends nodejs \
   && npm install -g npm@latest \
-  && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
+  && apt-get autoremove -y \
+  && apt-get clean -y \
+  && rm -rf /var/lib/apt/lists/*
 
 
 FROM base as py
@@ -51,10 +53,18 @@ RUN --mount=type=cache,target=/root/.cache/pip --mount=type=cache,target=/root/.
   && uv pip install -r requirements.txt
 
 
-FROM node-base as node
+FROM py as py-dev
 COPY --from=py --link /usr/local /usr/local
+COPY --link pyproject.toml ./
+RUN --mount=type=cache,target=/root/.cache/pip --mount=type=cache,target=/root/.cache/uv \
+  uv pip install -c requirements.txt -r pyproject.toml --extra dev
+
+
+FROM node-base as node
+COPY --from=py-dev --link /usr/local /usr/local
 COPY --link package*.json /app
-RUN --mount=type=cache,target=/root/.npm npm install
+RUN --mount=type=cache,target=/root/.npm \
+  npm install
 
 
 FROM node as tailwind
@@ -77,7 +87,6 @@ RUN case ${BUILDARCH} in \
 
 
 FROM base as app
-COPY --from=py --link /usr/local /usr/local
 COPY --link litefs.yml manage.py package.json redirects.json /app/
 COPY --link blog /app/blog
 COPY --link config /app/config
@@ -87,26 +96,34 @@ COPY --link flyio /app/flyio
 COPY --link templates /app/templates
 COPY --link users /app/users
 
-FROM app as dev
+
+FROM mcr.microsoft.com/playwright/python:v1.46.0 as dev
 ENV DEBIAN_FRONTEND noninteractive
 ENV UV_SYSTEM_PYTHON true
-COPY --from=py --link /usr/local /usr/local
-COPY --link requirements.dev.txt ./
-RUN --mount=type=cache,target=/root/.cache/pip --mount=type=cache,target=/root/.cache/uv \
-  uv pip install -r requirements.dev.txt
+COPY --from=py-dev --link /usr/local /usr/local
+COPY --from=app --link /app /app
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,target=/var/lib/apt,sharing=locked \
+  apt-get update --fix-missing \
+  && apt-get install -y --no-install-recommends \
+  # timezone data missing from Ubuntu base image that Playwright uses
+  # (it's normally included in the Python based images)
+  tzdata \
+  # cleanup
+  && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 
 FROM node as node-final
+ENV DATABASE_URL sqlite://:memory:
 COPY --from=tailwind --link /usr/local /usr/local
 COPY --from=app --link /app /app
-COPY --link static /app/static
+COPY --link static/src /app/static/src
 COPY --link postcss.config.mjs tailwind.config.mjs /app/
 RUN python manage.py tailwind --skip-checks build
 
 
 FROM app as static
 ENV DATABASE_URL sqlite://:memory:
-COPY --from=py --link /usr/local /usr/local
+COPY --from=py-dev --link /usr/local /usr/local
 COPY --from=node-final --link /app/static/dist /app/static/dist
 COPY --from=node-final --link /app/package*.json /app/
 COPY --link static/public /app/static/public
