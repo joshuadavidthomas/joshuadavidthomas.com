@@ -91,7 +91,6 @@ INSTALLED_APPS = [
     "core.admin.default",
     "users",
     # Third Party
-    "django_browser_reload",
     "django_extensions",
     "django_htmx",
     "django_simple_nav",
@@ -118,6 +117,7 @@ INSTALLED_APPS = [
 if DEBUG:
     INSTALLED_APPS = [
         "debug_toolbar",
+        "django_browser_reload",
         "whitenoise.runserver_nostatic",
     ] + INSTALLED_APPS
 
@@ -186,7 +186,6 @@ MIDDLEWARE = [
     "simple_history.middleware.HistoryRequestMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
     "django_flyio.middleware.FlyResponseMiddleware",
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
     # should be last
     "django.middleware.cache.FetchFromCacheMiddleware",
 ]
@@ -197,6 +196,10 @@ if DEBUG:
     MIDDLEWARE.insert(
         MIDDLEWARE.index("django.middleware.common.CommonMiddleware") + 1,
         "debug_toolbar.middleware.DebugToolbarMiddleware",
+    )
+    MIDDLEWARE.insert(
+        MIDDLEWARE.index("django_flyio.middleware.FlyResponseMiddleware") + 1,
+        "django_browser_reload.middleware.BrowserReloadMiddleware",
     )
 
 ROOT_URLCONF = "config.urls"
