@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import os
 import sqlite3
 
 from django.db.utils import OperationalError
@@ -49,19 +50,22 @@ def replay_middleware(get_response):
 
 def region_selection_middleware(get_response):
     def middleware(request):
-        region = request.GET.get("region")
+        current_region = os.environ.get("FLY_REGION")
+        requested_region = request.GET.get("region")
 
-        if region:
-            logger.info(f"Region selection requested: {region}")
+        if requested_region and requested_region != current_region:
+            logger.info(f"Region selection requested: {requested_region}")
+            logger.info(f"Current region: {current_region}")
 
             response = HttpResponse()
-            replay_header = f"region={region}"
+            replay_header = f"region={requested_region}"
             response[FLY_REPLAY] = replay_header
 
             logger.info(f"Set {FLY_REPLAY} header: {replay_header}")
             return response
 
-        # If no region is specified, continue with the normal request processing
+        # If no region is specified or we're already in the correct region,
+        # continue with the normal request processing
         response = get_response(request)
         return response
 
