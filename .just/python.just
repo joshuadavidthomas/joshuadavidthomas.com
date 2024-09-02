@@ -9,41 +9,46 @@ fmt:
     @just --fmt --justfile {{ justfile }}
 
 # Run the Playwright codegen command within the 'app' container
+[no-cd]
 codegen *ARGS:
-    @just docker run app "-e DJANGO_VITE_DEV_SERVER_HOST=node" "python manage.py runserver 0.0.0.0:8000 & while ! curl -s http://0.0.0.0:8000 > /dev/null; do sleep 1; done; playwright codegen {{ ARGS }}; kill %1"
+    @just docker command "python manage.py runserver 0.0.0.0:8000 & while ! curl -s http://0.0.0.0:8000 > /dev/null; do sleep 1; done; playwright codegen ; kill %1"
 
 # Run the test suite, generate code coverage, and export html report
-coverage-html: test
+[no-cd]
+coverage-html:
     rm -rf htmlcov
     @just docker command python -m coverage html --skip-covered --skip-empty
 
 # Run the test suite, generate code coverage, and print report to stdout
-coverage-report: test
+[no-cd]
+coverage-report:
     @just docker command python -m coverage report
 
 # Install dependencies
 [no-cd]
 install *ARGS:
-    $python -m uv pip sync {{ ARGS }} requirements.txt requirements.dev.txt
+    $python -m uv pip install {{ ARGS }} --constraint requirements.txt --requirement pyproject.toml --extra dev
 
 # Generate requirements.txt file
 [no-cd]
 lock *ARGS:
     $python -m uv pip compile pyproject.toml --output-file requirements.txt --generate-hashes {{ ARGS }}
-    $python -m uv pip compile pyproject.toml --output-file requirements.dev.txt --generate-hashes --extra dev {{ ARGS }}
 
 # Run tests using pytest within the 'app' container, with optional arguments
+[no-cd]
 test *ARGS:
-    @just docker run app "-e DJANGO_VITE_DEV_SERVER_HOST=node" coverage run -m pytest {{ ARGS }}
+    @just docker command python -m coverage erase
+    @just docker command python -m pytest {{ ARGS }}
 
 # Run tests with Playwright debug mode enabled, in the 'app' container, with optional arguments
+[no-cd]
 test-debug *ARGS:
-    @just docker run app "-e DJANGO_VITE_DEV_SERVER_HOST=node -e PWDEBUG=1" pytest {{ ARGS }}
+    @just docker run app "-e PWDEBUG=1" pytest {{ ARGS }}
 
 # Run mypy on project
 [no-cd]
-types *ARGS:
-    @just docker command python -m mypy {{ ARGS }}
+types:
+    @just docker command python -m mypy
 
 # Update dependencies
 [no-cd]
