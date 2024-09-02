@@ -89,7 +89,6 @@ INSTALLED_APPS = [
     "core",
     "core.admin",
     "core.admin.default",
-    "flyio",
     "users",
     # Third Party
     "django_extensions",
