@@ -17,8 +17,5 @@ class FlyioConfig(AppConfig):
     def ready(self) -> None:
         if is_primary_instance():
             return
-        for alias in connections:
-            if alias == "yamdl":
-                continue
-            install_hook(connections[alias])
+        install_hook(connections["default"])
         connection_created.connect(install_hook)
