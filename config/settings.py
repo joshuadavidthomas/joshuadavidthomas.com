@@ -189,8 +189,8 @@ MIDDLEWARE = [
     "django_flyio.middleware.FlyResponseMiddleware",
     # should be last
     "django.middleware.cache.FetchFromCacheMiddleware",
-    "flyio.middleware.ReplayMiddleware",
     "flyio.middleware.region_selection_middleware",
+    "flyio.middleware.ReplayMiddleware",
 ]
 if DEBUG:
     MIDDLEWARE.remove("django.middleware.cache.UpdateCacheMiddleware")
