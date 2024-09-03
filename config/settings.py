@@ -173,8 +173,6 @@ LOGGING = {
 # https://docs.djangoproject.com/en/dev/ref/middleware/#middleware-ordering
 MIDDLEWARE = [
     # should be first
-    "flyio.middleware.region_selection_middleware",
-    "flyio.middleware.ReplayMiddleware",
     "core.redirects.middleware.redirect_middleware",
     "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",
@@ -191,6 +189,8 @@ MIDDLEWARE = [
     "django_flyio.middleware.FlyResponseMiddleware",
     # should be last
     "django.middleware.cache.FetchFromCacheMiddleware",
+    "flyio.middleware.ReplayMiddleware",
+    "flyio.middleware.region_selection_middleware",
 ]
 if DEBUG:
     MIDDLEWARE.remove("django.middleware.cache.UpdateCacheMiddleware")
