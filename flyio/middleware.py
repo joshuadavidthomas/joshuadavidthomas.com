@@ -30,16 +30,19 @@ class ReplayMiddleware:
 
 def region_selection_middleware(get_response):
     def middleware(request):
+        response = get_response(request)
+
+        if response.has_header(FLY_REPLAY):
+            return response
+
         current_region = os.environ.get("FLY_REGION")
         requested_region = request.GET.get("region")
 
         if requested_region and requested_region != current_region:
-            response = HttpResponse()
+            response = HttpResponse(status=HTTPStatus.TEMPORARY_REDIRECT)
             replay_header = f"region={requested_region}"
             response[FLY_REPLAY] = replay_header
-            return response
 
-        response = get_response(request)
         return response
 
     return middleware
