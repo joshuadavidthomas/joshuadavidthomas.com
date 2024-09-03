@@ -174,7 +174,7 @@ LOGGING = {
 MIDDLEWARE = [
     # should be first
     "flyio.middleware.region_selection_middleware",
-    "flyio.middleware.replay_middleware",
+    "flyio.middleware.ReplayMiddleware",
     "core.redirects.middleware.redirect_middleware",
     "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",

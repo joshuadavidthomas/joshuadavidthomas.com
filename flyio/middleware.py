@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import logging
 import os
+from http import HTTPStatus
 
 from django.http import HttpResponse
 
@@ -10,31 +10,22 @@ from .machines import get_primary_instance
 
 FLY_REPLAY = "fly-replay"
 
-# Get an instance of a logger
-logger = logging.getLogger(__name__)
 
+class ReplayMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
 
-def replay_middleware(get_response):
-    def middleware(request):
-        try:
-            response = get_response(request)
-        except WritesAttemptedError as e:
-            logger.warning(f"Caught exception in replay middleware: {type(e).__name__}")
-            logger.warning(f"Exception details: {str(e)}")
+    def __call__(self, request):
+        return self.get_response(request)
 
-            primary = get_primary_instance()
-            logger.info(f"Redirecting to primary instance: {primary}")
+    def process_exception(self, request, exception):
+        if not isinstance(exception, WritesAttemptedError):
+            return
 
-            response = HttpResponse()
-            response[FLY_REPLAY] = f"instance={primary}"
-
-            logger.info(f"Set {FLY_REPLAY} header: {response[FLY_REPLAY]}")
-        else:
-            logger.debug("Request processed without replay")
-
+        primary = get_primary_instance()
+        response = HttpResponse(status=HTTPStatus.CONFLICT)
+        response[FLY_REPLAY] = f"instance={primary}"
         return response
-
-    return middleware
 
 
 def region_selection_middleware(get_response):
@@ -43,18 +34,11 @@ def region_selection_middleware(get_response):
         requested_region = request.GET.get("region")
 
         if requested_region and requested_region != current_region:
-            logger.info(f"Region selection requested: {requested_region}")
-            logger.info(f"Current region: {current_region}")
-
             response = HttpResponse()
             replay_header = f"region={requested_region}"
             response[FLY_REPLAY] = replay_header
-
-            logger.info(f"Set {FLY_REPLAY} header: {replay_header}")
             return response
 
-        # If no region is specified or we're already in the correct region,
-        # continue with the normal request processing
         response = get_response(request)
         return response
 
