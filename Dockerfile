@@ -137,7 +137,9 @@ COPY --from=py --link /usr/local /usr/local
 COPY --from=app --chown=${UID}:${GID} --link /app /app
 COPY --from=static --chown=${UID}:${GID} --link /app/staticfiles /app/staticfiles
 COPY --from=flyio/litefs:0.5 /usr/local/bin/litefs /usr/local/bin/litefs
-RUN apt-get remove -y --purge \
+RUN mkdir -p /app/.cache \
+  && chown ${UID}:${GID} /app/.cache \
+  && apt-get remove -y --purge \
   build-essential \
   curl \
   git \
