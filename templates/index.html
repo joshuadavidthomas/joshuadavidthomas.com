@@ -5,6 +5,10 @@
 {% load time %}
 {% load urlparse %}
 
+{% block css %}
+  <link rel="preload" as="image" href="{% static 'me.png' %}">
+{% endblock css %}
+
 {% block content %}
   <div class="space-y-32">
     <div class="mt-10 text-center @sm/main:mt-16">
@@ -12,6 +16,7 @@
            width="250"
            height="250"
            alt="A picture of Josh"
+           fetchpriority="high"
            class="mx-auto w-56 h-56 rounded-full @sm/main:w-72 @sm/main:h-72 drop-shadow-md" />
       <h1 class="mt-6 text-2xl font-bold tracking-tight @sm/main:text-5xl leading-tighter">👋 Hi, my name is Josh</h1>
       <p class="mt-2 text-base @sm/main:mt-4 @sm/main:text-2xl">I'm a web developer living in Alabama</p>
