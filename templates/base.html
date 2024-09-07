@@ -33,9 +33,22 @@
       }
     </style>
     {% tailwind_css %}
-    <script src="{% static 'vendor/js/htmx.min.js' %}" defer></script>
-    <script src="https://unpkg.com/htmx.org/dist/ext/head-support.js" defer></script>
-    <script src="https://unpkg.com/htmx.org/dist/ext/preload.js" defer></script>
+    <script src="https://unpkg.com/htmx.org@2.0.2/dist/htmx.min.js"
+            integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ"
+            crossorigin="anonymous"
+            defer></script>
+    <script src="https://unpkg.com/htmx-ext-head-support@2.0.2/head-support.js"
+            integrity="sha384-alEpTwaoXBHw9xh1d3fDZ4lNnOqQYkcIaRQTSQXgSZnAhcnj1H4F27lOZ1Eci1Sp"
+            crossorigin="anonymous"
+            defer></script>
+    <script src="https://unpkg.com/htmx-ext-preload@2.0.1/preload.js"
+            integrity="sha384-RKN7eKLXIb5YEIk2f3Gk2dAWySh5p13qfjNHwDevzo8XdDPuzL3SE7WoMgcjZ9wn"
+            crossorigin="anonymous"
+            defer></script>
+    <script src="https://unpkg.com/idiomorph@0.3.0/dist/idiomorph-ext.min.js"
+            integrity="sha384-01awMgY2Qxoo57dFZwehcB4wqi9TunC6fiF9hpPaDsLu+ayOG+WvoatvgPWquZh8"
+            crossorigin="anonymous"
+            defer></script>
     {% django_htmx_script %}
     <script>
       document.addEventListener("htmx:afterSettle", (event) => {
@@ -47,7 +60,10 @@
         }
       });
     </script>
-    <script src="{% static 'vendor/js/alpinejs.min.js' %}" defer></script>
+    <script src="https://unpkg.com/alpinejs@3.14.1/dist/cdn.min.js"
+              integrity="sha384-l8f0VcPi/M1iHPv8egOnY/15TDwqgbOR1anMIJWvU6nLRgZVLTLSaNqi/TOoT5Fh"
+              crossorigin="anonymous"
+              defer></script>
     <script defer
             src="https://umami.app.joshthomas.cool/script.js"
             data-website-id="b6f60db8-10ad-4791-83ca-6612b341bfa4"></script>
