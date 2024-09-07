@@ -34,9 +34,9 @@
       }
     </style>
     {% tailwind_css %}
-    <script src="{% static 'vendor/js/htmx.min.js' %}"></script>
-    <script src="https://unpkg.com/htmx.org/dist/ext/head-support.js"></script>
-    <script src="https://unpkg.com/htmx.org/dist/ext/preload.js"></script>
+    <script src="{% static 'vendor/js/htmx.min.js' %}" defer></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/head-support.js" defer></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/preload.js" defer></script>
     {% django_htmx_script %}
     <script>
       document.addEventListener("htmx:afterSettle", (event) => {
