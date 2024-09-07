@@ -55,7 +55,7 @@ CACHES = {
     if DEBUG
     else {
         "BACKEND": "django.core.cache.backends.filebased.FileBasedCache",
-        "LOCATION": BASE_DIR / ".cache",
+        "LOCATION": str(BASE_DIR / ".cache"),
     }
 }
 
