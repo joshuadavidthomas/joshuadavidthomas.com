@@ -1,9 +1,67 @@
 {% extends "admin/base.html" %}
 
-{% load tailwind_cli %}
-
 {% block extrahead %}
-  {% tailwind_css %}
+  <style>
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.mt-6 {
+  margin-top: 1.5rem;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.w-full {
+  width: 100%;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.bg-\[var\(--button-bg\)\] {
+  background-color: var(--button-bg);
+}
+.bg-\[var\(--button-hover-bg\)\] {
+  background-color: var(--button-hover-bg);
+}
+.p-3 {
+  padding: 0.75rem;
+}
+.text-center {
+  text-align: center;
+}
+.\!text-\[var\(--button-fg\)\] {
+  color: var(--button-fg)!important;
+}
+.hover\:bg-\[var\(--button-hover-bg\)\]:hover {
+  background-color: var(--button-hover-bg);
+}
+@media (min-width: 768px) {
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
+  .md\:mt-6 {
+    margin-top: 1.5rem;
+  }
+}
+  </style>
 {% endblock extrahead %}
 
 {% block bodyclass %}
