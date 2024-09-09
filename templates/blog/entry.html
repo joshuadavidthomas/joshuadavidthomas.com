@@ -118,7 +118,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   {{ entry.render_content }}
 {% endblock content %}
 
-{% block extra_body %}
+{% block body_end %}
   {% if request.user.is_staff %}
     <div class="flex fixed right-0 bottom-0 z-50 justify-center items-center my-6 mx-6 sm:mx-12 group">
       <a href="{% url 'admin:blog_entry_change' entry.pk %}"
@@ -129,4 +129,4 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
       </a>
     </div>
   {% endif %}
-{% endblock extra_body %}
+{% endblock body_end %}

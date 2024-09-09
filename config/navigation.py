@@ -9,6 +9,7 @@ class MainNav(Nav):
     items = [
         NavItem(title="Home", url="index"),
         NavItem(title="Blog", url="blog:index"),
+        NavItem(title="Talks", url="talks:index"),
         NavItem(
             title="Admin",
             url="admin:index",

@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 const defaultColors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
@@ -108,6 +109,24 @@ export default {
       });
 
       addUtilities(newUtilities, ["responsive"]);
+    }),
+    plugin(function ({ addBase, theme }) {
+      const colors = theme("colors");
+      const colorVariables = {};
+
+      Object.keys(colors).forEach((colorKey) => {
+        const color = colors[colorKey];
+        if (typeof color === "object") {
+          Object.keys(color).forEach((shade) => {
+            colorVariables[`--tw-color-${colorKey}-${shade}`] = color[shade];
+          });
+          colorVariables[`--tw-color-${colorKey}`] = color[500];
+        } else {
+          colorVariables[`--tw-color-${colorKey}`] = color;
+        }
+      });
+
+      addBase({ ":root": colorVariables });
     }),
     plugin(function ({ addBase, theme }) {
       const colors = theme("colors");

@@ -74,7 +74,7 @@ DATABASES = {
 }
 
 DATABASE_ROUTERS = [
-    "yamdl.router.YamdlRouter",
+    "core.yamdl.router.YamdlRouter",
 ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
@@ -90,7 +90,9 @@ INSTALLED_APPS = [
     "core.admin",
     "core.admin.default",
     "core.components",
+    "core.yamdl",
     "flyio",
+    "talks",
     "users",
     # Third Party
     "django_extensions",
@@ -106,7 +108,6 @@ INSTALLED_APPS = [
     "heroicons",
     "neapolitan",
     "simple_history",
-    "yamdl",
     # Django
     "django.contrib.auth",
     "django.contrib.contenttypes",

@@ -14,6 +14,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("blog/", include("blog.urls")),
     path("health/", MainView.as_view()),
+    path("talks/", include("talks.urls")),
     path("404/", core_views.custom_error_404, name="404"),
     path("500/", core_views.custom_error_500, name="500"),
     path("", core_views.index, name="index"),

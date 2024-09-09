@@ -31,7 +31,7 @@
           {% for item in group.items %}
             <article class="group first-of-type:mt-12 pr-2 {% if item.type == 'entry' %}my-16{% else %}space-y-2 {% if item.entry.comments %}my-16{% else %}my-12{% endif %}{% endif %}">
               <div class="flex flex-col justify-between items-start sm:flex-row sm:items-center">
-                <h3 class="{% if item.type == 'entry' %}text-2xl sm:text-3xl{% else %}text-lg sm:text-xl{% endif %} font-semibold text-gray-800 dark:text-gray-200">
+                <h3 class="{% if item.type == 'entry' %}text-2xl sm:text-3xl{% else %}text-lg sm:text-xl{% endif %} text-gray-800 dark:text-gray-200">
                   {% if item.type == 'link' %}
                     <a href="{{ item.entry.get_absolute_url }}"
                        class="flex hover:text-blue-500">

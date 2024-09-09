@@ -7,24 +7,16 @@
 <!DOCTYPE html>
 <html lang="en"
       class="text-gray-900 bg-gray-50 dark:text-gray-100 dark:bg-gray-900">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>
 
-      {% block title %}
-        {{ site.title }}
-      {% endblock title %}
+  {% block head %}
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    </title>
-    <meta name="description" content="The personal website of Josh Thomas.">
-    <meta name="author" content="Josh Thomas">
-    <meta name="keywords"
-          content="Josh Thomas,Josh,Thomas,Joshua Thomas,Joshua,Personal,Website">
-    <meta name="view-transition" content="same-origin" />
+      {% block head_start %}
+      {% endblock head_start %}
 
-    {% block css %}
-    {% endblock css %}
+      <title>
 
     <style>
 ::view-transition-old(root),
@@ -72,55 +64,99 @@
             async
             src="//gc.zgo.at/count.js"></script>
 
-    {% block javascript_head %}
-    {% endblock javascript_head %}
+      {% block javascript_head %}
+      {% endblock javascript_head %}
 
-  </head>
-  <body class="flex{% if debug %} debug-screens{% endif %}"
-        hx-boost="true"
-        hx-ext="head-support, preload">
-    <div class="flex-1 px-2.5 min-h-full lg:px-0">
-      <header class="pt-4 mx-auto max-w-2xl text-lg font-semibold">
-        <div class="flex justify-between items-center">
-          <h1 class="text-2xl">
-            <a href="{% url 'index' %}" preload="mouseover">Josh Thomas</a>
-          </h1>
-          <div class="flex justify-center items-center mt-1 space-x-2.5 sm:space-x-4">
-            {% django_simple_nav "config.navigation.SocialNav" %}
-          </div>
-        </div>
-        {% django_simple_nav "config.navigation.MainNav" %}
-      </header>
-      <main
-        {# djLint:off #}class="@container/main hg-grid-2xl pb-24 {% block main_classes %}{% endblock main_classes %}"{# djLint:on #}
-        >
+      {% block javascript_head_end %}
+      {% endblock javascript_head_end %}
 
-        {% block content %}
-        {% endblock content %}
+      {% block head_end %}
+      {% endblock head_end %}
 
-      </main>
-    </div>
-    {% if request.user.is_authenticated %}
-      <div id="adminBar"
-           class="hidden sticky inset-y-0 w-64 h-screen bg-white border-l shadow-inner">
-        <div id="pageStats" class="flex justify-center items-center my-4"></div>
+    </head>
+  {% endblock head %}
+
+  {% block body %}
+    <body class="flex{% if debug %} debug-screens{% endif %}"
+          hx-boost="true"
+          hx-ext="head-support, preload">
+
+      {% block body_start %}
+      {% endblock body_start %}
+
+      <div class="flex-1 px-2.5 min-h-full lg:px-0">
+
+        {% block header %}
+          <header class="pt-4 mx-auto max-w-2xl text-lg font-semibold">
+
+            {% block header_start %}
+            {% endblock header_start %}
+
+            {% block header_content %}
+              <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold font-brico">
+                  <a href="{% url 'index' %}" preload="mouseover">Josh Thomas</a>
+                </h1>
+                <div class="flex justify-center items-center mt-1 space-x-2.5 sm:space-x-4">
+                  {% django_simple_nav "config.navigation.SocialNav" %}
+                </div>
+              </div>
+              {% django_simple_nav "config.navigation.MainNav" %}
+            {% endblock header_content %}
+
+            {% block header_end %}
+            {% endblock header_end %}
+
+          </header>
+        {% endblock header %}
+
+        {% block main %}
+          <main
+            {# djLint:off #}class="@container/main hg-grid-2xl pb-24 {% block main_classes %}{% endblock main_classes %}"{# djLint:on #}
+            >
+
+            {% block content_start %}
+            {% endblock content_start %}
+
+            {% block content %}
+            {% endblock content %}
+
+            {% block content_end %}
+            {% endblock content_end %}
+
+          </main>
+        {% endblock main %}
+
       </div>
-    {% endif %}
+      {% if request.user.is_authenticated %}
+        <div id="adminBar"
+             class="hidden sticky inset-y-0 w-64 h-screen bg-white border-l shadow-inner">
+          <div id="pageStats" class="flex justify-center items-center my-4"></div>
+        </div>
+      {% endif %}
 
-    {% block extra_body %}
-    {% endblock extra_body %}
+      {% block javascript_foot_start %}
+      {% endblock javascript_foot_start %}
 
-    <script>
-    var t = setInterval(function() {
-        if (window.goatcounter && window.goatcounter.visit_count) {
-            clearInterval(t)
-            window.goatcounter.visit_count({ append: '#pageStats' })
-        }
-    }, 100)
-    </script>
+      <script>
+        var t = setInterval(function() {
+            if (window.goatcounter && window.goatcounter.visit_count) {
+                clearInterval(t)
+                window.goatcounter.visit_count({ append: '#pageStats' })
+            }
+        }, 100)
+      </script>
 
-    {% block javascript_foot %}
-    {% endblock javascript_foot %}
+      {% block javascript_foot %}
+      {% endblock javascript_foot %}
 
-  </body>
+      {% block javascript_foot_end %}
+      {% endblock javascript_foot_end %}
+
+      {% block body_end %}
+      {% endblock body_end %}
+
+    </body>
+  {% endblock body %}
+
 </html>

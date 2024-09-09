@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load talks %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/reveal.css' %}">
+  <link rel="stylesheet"
+        href="{% static 'css/reveal_themes/white.css' %}"
+        id="theme">
+  <link rel="stylesheet"
+        href="{% static 'js/reveal_plugins/highlight/monokai.css' %}">
+{% endblock css %}
+
+{% block content %}
+  <article class="mt-8 h-[42rem] stretch-to-full">
+    <div class="reveal">
+      <div class="slides">
+        <section class="text-red-50 bg-red-600">
+          <h1>{{ talk.title }}</h1>
+        </section>
+        {% for section in sections %}
+          <section data-markdown class="{{ section.colors }}">
+            {% if section.title %}
+              <textarea data-template>
+                # {{ section.title }}
+
+                ---
+
+                {% render_section section %}
+              </textarea>
+            {% else %}
+              <textarea data-template>
+                {% render_section section %}
+              </textarea>
+            {% endif %}
+          </section>
+        {% endfor %}
+        <section data-markdown class="text-indigo-50 bg-indigo-600">
+          <textarea data-template>
+            <img src="{% url 'talks:qrcode' slug=talk.slug %}" class="h-full bg-white" />
+            ---
+            <span class="italic font-extralight">That’s all folks!</span>
+          </textarea>
+        </section>
+      </div>
+    </div>
+  </article>
+{% endblock content %}
+
+{% block javascript_foot %}
+  <script src="{% static 'js/reveal.js' %}"></script>
+  <script src="{% static 'js/reveal_plugins/highlight/highlight.js' %}"></script>
+  <script src="{% static 'js/reveal_plugins/markdown/markdown.js' %}"></script>
+  <script src="{% static 'js/reveal_plugins/notes/notes.js' %}"></script>
+  <script>
+			Reveal.initialize({
+        disableLayout: true,
+        centered: true,
+				controls: false,
+        embedded: true,
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				progress: false,
+        transition: 'none',
+        minScale: 0.2,
+        maxScale: 1.5,
+			});
+      Reveal.addEventListener('ready', function(event) {
+        document.querySelectorAll('.reveal .slides section').forEach(function(section) {
+          var wrapper = document.createElement('div');
+          wrapper.className = 'content-wrapper';
+          while (section.firstChild) {
+            wrapper.appendChild(section.firstChild);
+          }
+          section.appendChild(wrapper);
+        });
+      });
+  </script>
+{% endblock javascript_foot %}
