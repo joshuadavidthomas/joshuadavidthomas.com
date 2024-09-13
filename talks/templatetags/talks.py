@@ -2,11 +2,9 @@ from __future__ import annotations
 
 from django import template
 
-from talks.models import Section
-
 register = template.Library()
 
 
 @register.simple_tag(takes_context=True)
-def render_section(context, section: Section):
-    return template.Template(section.content).render(context)
+def render_content(context, content):
+    return template.Template(content).render(context)

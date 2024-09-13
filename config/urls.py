@@ -4,6 +4,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import include
 from django.urls import path
+from django.urls import re_path
 from health_check.views import MainView
 
 from core import views as core_views
@@ -17,6 +18,7 @@ urlpatterns = [
     path("talks/", include("talks.urls")),
     path("404/", core_views.custom_error_404, name="404"),
     path("500/", core_views.custom_error_500, name="500"),
+    re_path(r"^(?P<path>.*)$", core_views.content),
     path("", core_views.index, name="index"),
 ]
 

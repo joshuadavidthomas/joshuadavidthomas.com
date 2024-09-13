@@ -17,11 +17,8 @@ def index(request: HttpRequest) -> HttpResponse:
 
 def talk(request: HttpRequest, slug: str) -> HttpResponse:
     talk = get_object_or_404(Talk, slug=slug)
-    sections = talk.sections.all().order_by("order")
     form = modelform_factory(Talk, fields=["title"])
-    return render(
-        request, "talks/talk.html", {"talk": talk, "sections": sections, "form": form()}
-    )
+    return render(request, "talks/talk.html", {"talk": talk, "form": form()})
 
 
 def qrcode(request: HttpRequest, slug: str) -> FileResponse:

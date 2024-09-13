@@ -10,15 +10,17 @@ from django.http import HttpRequest
 from django_twc_toolbox.urls import reverse
 from qrcode.image.svg import SvgPathImage
 
-from core.yamdl.loader import ModelLoader
-
 
 class Talk(models.Model):
     __yamdl__ = True
 
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=75, blank=True, unique=True)
-    colors = models.CharField(max_length=255, null=True)
+    description = models.TextField()
+    stinger = models.TextField(default="Thanks!")
+    content = models.TextField()
+    slides_url = models.URLField(blank=True, default="")
+    video_url = models.URLField(blank=True, default="")
 
     def __str__(self) -> str:
         return self.title
@@ -41,30 +43,4 @@ class Talk(models.Model):
 
     @classmethod
     def from_yaml(cls, file_path: Path, **data: object):
-        talk, _ = cls.objects.get_or_create(
-            slug=file_path.parent.stem,
-            defaults={"title": data.get("talk_title"), "colors": data.get("class")},
-        )
-
-        if file_path.suffix in ModelLoader.EXT_MARKDOWN and file_path.is_file():
-            Section.objects.create(
-                talk=talk,
-                title=data.get("section_title"),
-                order=file_path.stem,
-                colors=data.get("class", "bg-white text-gray-900"),
-                content=data.get("content"),
-            )
-
-        return talk
-
-
-class Section(models.Model):
-    __yamdl__ = True
-
-    talk = models.ForeignKey(
-        "talks.Talk", on_delete=models.DO_NOTHING, related_name="sections"
-    )
-    title = models.CharField(max_length=255, null=True)
-    order = models.PositiveSmallIntegerField()
-    colors = models.CharField(max_length=255)
-    content = models.TextField()
+        return cls.objects.create(slug=file_path.stem, **data)

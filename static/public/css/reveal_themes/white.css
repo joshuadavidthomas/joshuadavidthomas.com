@@ -23,8 +23,29 @@ section.has-dark-background h6 {
   --base-font-sans: InterVariable, sans-serif;
   --base-font-serif: serif;
   --base-font-mono: MonoLisa, monospace;
-  --base-font-size: calc(1vh * 4);
   --base-line-height: 1;
+
+  --base-font-size: 0.5rem;
+  /* sm */
+  @media (min-width: 640px) {
+    --base-font-size: 0.75rem;
+  }
+  /* md */
+  @media (min-width: 768px) {
+    --base-font-size: 1rem;
+  }
+  /* lg */
+  @media (min-width: 1024px) {
+    --base-font-size: 2rem;
+  }
+  /* xl */
+  @media (min-width: 1280px) {
+    --base-font-size: 2.25rem;
+  }
+  /* 2xl */
+  @media (min-width: 1024px) {
+    --base-font-size: 2.5rem;
+  }
 
   --r-background-color: var(--tw-color-white, #fff);
 
