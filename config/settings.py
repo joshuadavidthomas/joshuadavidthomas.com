@@ -89,6 +89,7 @@ INSTALLED_APPS = [
     "core",
     "core.admin",
     "core.admin.default",
+    "core.components",
     "flyio",
     "users",
     # Third Party
@@ -244,6 +245,7 @@ STORAGES = {
 
 # https://nickjanetakis.com/blog/django-4-1-html-templates-are-cached-by-default-with-debug-true
 DEFAULT_LOADERS = [
+    "django_cotton.cotton_loader.Loader",
     "django.template.loaders.filesystem.Loader",
     "django.template.loaders.app_directories.Loader",
 ]
@@ -270,6 +272,9 @@ TEMPLATES = [
                     "template_partials.loader.Loader",
                     DEFAULT_LOADERS if DEBUG else CACHED_LOADERS,
                 )
+            ],
+            "builtins": [
+                "django_cotton.templatetags.cotton",
             ],
         },
     },
