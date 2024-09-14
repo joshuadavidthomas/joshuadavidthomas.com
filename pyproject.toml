@@ -118,6 +118,7 @@ ignore_missing_imports = true
 module = [
   "allauth.*",
   "debug_toolbar.*",
+  "django_cotton.*",
   "django_twc_toolbox.*",  # TODO: remove when I add `py.typed` to this package
   "djclick.*",
   "gunicorn.*",
