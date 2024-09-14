@@ -56,6 +56,9 @@ export default {
         mono: ["MonoLisa", ...defaultTheme.fontFamily.mono],
         sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
       },
+      screens: {
+        xs: "425px",
+      },
     },
   },
   plugins: [
