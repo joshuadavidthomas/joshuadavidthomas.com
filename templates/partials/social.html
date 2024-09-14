@@ -6,7 +6,7 @@
     {% if item.icon_template %}
       {% include item.icon_template %}
     {% else %}
-      {% heroicon_outline item.icon class="w-4 h-4 sm:w-6 sm:h-6 hover:text-gray-800 dark:hover:text-gray-300 hover:drop-shadow" %}
+      {% heroicon_outline item.icon class="w-4 h-4 hover:text-gray-800 xs:w-6 xs:h-6 dark:hover:text-gray-300 hover:drop-shadow" %}
     {% endif %}
   </a>
 {% endfor %}
