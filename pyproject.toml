@@ -17,7 +17,7 @@ dependencies = [
   "django-tailwind-cli>=2.15.0",
   "django-template-partials>=24.4",
   "django-twc-toolbox[crud]>=0.16.0",
-  "django<5.1",
+  "django<5.2",
   "djangorestframework>=3.15.2",
   "environs[django]>=11.0.0",
   "gunicorn>=23.0.0",
