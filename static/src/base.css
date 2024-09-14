@@ -1,0 +1,24 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: theme("fontFamily.brico");
+  line-height: theme("lineHeight.snug");
+}
+
+h1 {
+  font-weight: theme("fontWeight.black");
+}
+
+h2,
+h3,
+h4 {
+  font-weight: theme("fontWeight.extrabold");
+}
+
+h5,
+h6 {
+  font-weight: theme("fontWeight.bold");
+}

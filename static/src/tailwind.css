@@ -1,61 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "./base.css";
 
-@layer base {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: theme("fontFamily.brico");
-    line-height: theme("lineHeight.snug");
-  }
-  h1 {
-    font-weight: theme("fontWeight.black");
-  }
-  h2,
-  h3,
-  h4 {
-    font-weight: theme("fontWeight.extrabold");
-  }
-  h5,
-  h6 {
-    font-weight: theme("fontWeight.bold");
-  }
-}
+@import "tailwindcss/components";
+@import "./typography.css";
 
-@layer components {
-  .prose h1,
-  .prose h2,
-  .prose h3,
-  .prose h4 {
-    position: relative;
-    cursor: default;
-
-    .header-anchor {
-      display: none;
-    }
-
-    &:hover {
-      .header-anchor {
-        display: inline-block;
-        position: absolute;
-        left: -1.5rem;
-        padding-right: 1.5rem;
-        text-decoration-line: none;
-
-        &:hover {
-          text-decoration-line: underline;
-        }
-      }
-    }
-  }
-}
-
-@layer utilities {
-  .scrollbar-stable {
-    scrollbar-gutter: stable both-edges;
-  }
-}
+@import "tailwindcss/utilities";
+@import "./utilities.css";

@@ -73,95 +73,6 @@ export default {
       addVariant("htmx-swapping", ["&.htmx-swapping", ".htmx-swapping &"]);
       addVariant("htmx-added", ["&.htmx-added", ".htmx-added &"]);
     }),
-    plugin(function ({ addComponents, theme }) {
-      addComponents({
-        ".prose .admonition": {
-          borderRadius: theme("borderRadius.md"),
-          borderWidth: theme("borderWidth.2"),
-          padding: theme("spacing.4"),
-          fontSize: theme("fontSize.sm"),
-          marginTop: theme("spacing.5"),
-          marginRight: theme("spacing.2"),
-          marginBottom: theme("spacing.5"),
-          marginLeft: theme("spacing.2"),
-          backgroundColor: theme("colors.blue.50"),
-          borderColor: theme("colors.blue.200"),
-          color: theme("colors.blue.900"),
-          "@media (prefers-color-scheme: dark)": {
-            backgroundColor: theme("colors.blue.950"),
-            borderColor: theme("colors.blue.900"),
-            color: theme("colors.blue.100"),
-          },
-        },
-        ".prose .admonition > *": {
-          marginTop: theme("spacing.5"),
-          marginRight: "0",
-          marginBottom: theme("spacing.5"),
-          marginLeft: "0",
-          width: "auto",
-          "&:first-child": {
-            marginTop: "0",
-          },
-          "&:last-child": {
-            marginBottom: "0",
-          },
-        },
-        ".prose .admonition-title": {
-          fontWeight: theme("fontWeight.bold"),
-          textTransform: "uppercase",
-        },
-        ".prose .admonition.tip": {
-          backgroundColor: theme("colors.green.50"),
-          borderColor: theme("colors.green.200"),
-          color: theme("colors.green.900"),
-          "@media (prefers-color-scheme: dark)": {
-            backgroundColor: theme("colors.green.950"),
-            borderColor: theme("colors.green.900"),
-            color: theme("colors.green.100"),
-          },
-        },
-        ".prose .admonition.info": {
-          backgroundColor: theme("colors.gray.100"),
-          borderColor: theme("colors.gray.200"),
-          color: theme("colors.gray.900"),
-          "@media (prefers-color-scheme: dark)": {
-            backgroundColor: theme("colors.gray.800"),
-            borderColor: theme("colors.gray.700"),
-            color: theme("colors.gray.100"),
-          },
-        },
-        ".prose .admonition.caution": {
-          backgroundColor: theme("colors.orange.50"),
-          borderColor: theme("colors.orange.200"),
-          color: theme("colors.orange.900"),
-          "@media (prefers-color-scheme: dark)": {
-            backgroundColor: theme("colors.orange.950"),
-            borderColor: theme("colors.orange.900"),
-            color: theme("colors.orange.100"),
-          },
-        },
-        ".prose .admonition.danger": {
-          backgroundColor: theme("colors.red.50"),
-          borderColor: theme("colors.red.200"),
-          color: theme("colors.red.900"),
-          "@media (prefers-color-scheme: dark)": {
-            backgroundColor: theme("colors.red.950"),
-            borderColor: theme("colors.red.900"),
-            color: theme("colors.red.100"),
-          },
-        },
-        ".prose .admonition.warning": {
-          backgroundColor: theme("colors.yellow.50"),
-          borderColor: theme("colors.yellow.200"),
-          color: theme("colors.yellow.900"),
-          "@media (prefers-color-scheme: dark)": {
-            backgroundColor: theme("colors.yellow.950"),
-            borderColor: theme("colors.yellow.900"),
-            color: theme("colors.yellow.100"),
-          },
-        },
-      });
-    }),
     plugin(function ({ addUtilities, theme }) {
       const widths = theme("maxWidth");
       const gridUtilities = {};
@@ -198,43 +109,23 @@ export default {
 
       addUtilities(newUtilities, ["responsive"]);
     }),
-    plugin(function ({ addComponents, theme }) {
+    plugin(function ({ addBase, theme }) {
       const colors = theme("colors");
-      return addComponents({
-        ".prose .not-prose": {
-          marginTop: theme("spacing.5"),
-          marginBottom: theme("spacing.5"),
-          "> pre": {
-            backgroundColor: colors.gray[800],
-            borderRadius: theme("borderRadius.md"),
-            color: colors.gray[200],
-            fontSize: theme("fontSize.sm"),
-            fontWeight: theme("fontWeight.normal"),
-            lineHeight: theme("lineHeight.6"),
-            overflowX: "auto",
-            paddingTop: theme("spacing.5"),
-            paddingRight: theme("spacing.5"),
-            paddingLeft: theme("spacing.5"),
-            "@media (prefers-color-scheme: dark)": {
-              backgroundColor: colors.gray[700],
-            },
-            code: {
-              color: "inherit",
-              backgroundColor: "initial",
-              borderRadius: "0",
-              borderWidth: "0",
-              lineHeight: "inherit",
-              padding: "0",
-              "&::before": {
-                content: "none",
-              },
-              "&::after": {
-                content: "none",
-              },
-            },
-          },
-        },
+      const colorVariables = {};
+
+      Object.keys(colors).forEach((colorKey) => {
+        const color = colors[colorKey];
+        if (typeof color === "object") {
+          Object.keys(color).forEach((shade) => {
+            colorVariables[`--tw-color-${colorKey}-${shade}`] = color[shade];
+          });
+          colorVariables[`--tw-color-${colorKey}`] = color[500];
+        } else {
+          colorVariables[`--tw-color-${colorKey}`] = color;
+        }
       });
+
+      addBase({ ":root": colorVariables });
     }),
   ],
 };
