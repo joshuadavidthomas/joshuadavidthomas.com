@@ -1,4 +1,5 @@
 const defaultColors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 
 // https://noumenal.es/notes/tailwind/django-integration/
@@ -37,10 +38,9 @@ const getTemplateFiles = () => {
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./core/markdown.py",
-    "./templates/**/*.svg",
-  ].concat(getTemplateFiles()),
+  content: ["./core/markdown.py", "./templates/**/*.svg"].concat(
+    getTemplateFiles(),
+  ),
   theme: {
     extend: {
       colors: {
@@ -50,6 +50,10 @@ export default {
         tertiary: defaultColors.green,
         aspect: defaultColors.orange,
         danger: defaultColors.red,
+      },
+      fontFamily: {
+        brico: ["BricolageGrotesque", ...defaultTheme.fontFamily.sans],
+        sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
       },
     },
   },
