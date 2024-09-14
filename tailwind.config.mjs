@@ -53,6 +53,7 @@ export default {
       },
       fontFamily: {
         brico: ["BricolageGrotesque", ...defaultTheme.fontFamily.sans],
+        mono: ["MonoLisa", ...defaultTheme.fontFamily.mono],
         sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
       },
     },
