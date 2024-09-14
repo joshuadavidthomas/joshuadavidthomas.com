@@ -1,0 +1,157 @@
+.prose {
+  h1,
+  h2,
+  h3,
+  h4 {
+    position: relative;
+    cursor: default;
+
+    .header-anchor {
+      display: none;
+    }
+
+    &:hover {
+      .header-anchor {
+        display: inline-block;
+        position: absolute;
+        left: -1.5rem;
+        padding-right: 1.5rem;
+        text-decoration-line: none;
+
+        &:hover {
+          text-decoration-line: underline;
+        }
+      }
+    }
+  }
+
+  .admonition {
+    background-color: theme("colors.blue.50");
+    border-color: theme("colors.blue.200");
+    border-radius: theme("borderRadius.md");
+    border-width: theme("borderWidth.2");
+    color: theme("colors.blue.900");
+    padding: theme("spacing.4");
+    font-size: theme("fontSize.sm");
+    margin-top: theme("spacing.5");
+    margin-right: theme("spacing.2");
+    margin-bottom: theme("spacing.5");
+    margin-left: theme("spacing.2");
+
+    @media (prefers-color-scheme: dark) {
+      background-color: theme("colors.blue.950");
+      border-color: theme("colors.blue.900");
+      color: theme("colors.blue.100");
+    }
+
+    .admonition-title {
+      font-weight: theme("fontWeight.bold");
+      text-transform: uppercase;
+    }
+
+    > * {
+      margin-top: theme("spacing.5");
+      margin-right: 0;
+      margin-bottom: theme("spacing.5");
+      margin-left: 0;
+      width: auto;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .tip {
+      background-color: theme("colors.green.50");
+      border-color: theme("colors.green.200");
+      color: theme("colors.green.900");
+
+      @media (prefers-color-scheme: dark) {
+        background-color: theme("colors.green.950");
+        border-color: theme("colors.green.900");
+        color: theme("colors.green.100");
+      }
+    }
+
+    .info {
+      background-color: theme("colors.gray.100");
+      border-color: theme("colors.gray.200");
+      color: theme("colors.gray.900");
+
+      @media (prefers-color-scheme: dark) {
+        background-color: theme("colors.gray.800");
+        border-color: theme("colors.gray.700");
+        color: theme("colors.gray.100");
+      }
+    }
+
+    .caution {
+      background-color: theme("colors.orange.50");
+      border-color: theme("colors.orange.200");
+      color: theme("colors.orange.900");
+
+      @media (prefers-color-scheme: dark) {
+        background-color: theme("colors.orange.950");
+        border-color: theme("colors.orange.900");
+        color: theme("colors.orange.100");
+      }
+    }
+
+    .danger {
+      background-color: theme("colors.red.50");
+      border-color: theme("colors.red.200");
+      color: theme("colors.red.900");
+
+      @media (prefers-color-scheme: dark) {
+        background-color: theme("colors.red.950");
+        border-color: theme("colors.red.900");
+        color: theme("colors.red.100");
+      }
+    }
+
+    .warning {
+      background-color: theme("colors.yellow.50");
+      border-color: theme("colors.yellow.200");
+      color: theme("colors.yellow.900");
+
+      @media (prefers-color-scheme: dark) {
+        background-color: theme("colors.yellow.950");
+        border-color: theme("colors.yellow.900");
+        color: theme("colors.yellow.100");
+      }
+    }
+  }
+
+  > pre,
+  .admonition > pre {
+    @apply stretch-to-6xl xl:stretch-to-7xl;
+    padding: 0;
+    font-size: theme("fontSize.base");
+
+    @screen xl {
+      font-size: theme("fontSize.lg");
+    }
+
+    &:not(.admonition pre) {
+      font-size: theme("fontSize.lg");
+
+      @screen xl {
+        font-size: theme("fontSize.2xl");
+      }
+    }
+
+    > code {
+      display: flex;
+      > div.highlight {
+        flex: 1;
+      }
+    }
+
+    pre {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}

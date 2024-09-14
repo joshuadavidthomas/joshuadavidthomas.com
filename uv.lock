@@ -864,7 +864,7 @@ requires-dist = [
     { name = "attrs", specifier = ">=24.2.0" },
     { name = "coverage", extras = ["toml"], marker = "extra == 'dev'", specifier = ">=7.6.1" },
     { name = "croniter", specifier = ">=3.0.3" },
-    { name = "django", specifier = "<5.1" },
+    { name = "django", specifier = "<5.2" },
     { name = "django-allauth", extras = ["socialaccount"], specifier = ">=64.2.1" },
     { name = "django-browser-reload", marker = "extra == 'dev'", specifier = ">=1.15.0" },
     { name = "django-click", specifier = ">=2.4.0" },
