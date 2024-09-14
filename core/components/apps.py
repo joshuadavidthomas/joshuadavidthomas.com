@@ -8,11 +8,11 @@ from django_cotton.apps import wrap_loaders as cotton_wrap_loaders
 def wrap_loaders(name):
     for template_config in settings.TEMPLATES:
         engine_name = (
-            template_config.get("NAME") or template_config["BACKEND"].split(".")[-2]
+            template_config.get("NAME") or template_config["BACKEND"].split(".")[-2]  # type: ignore[attr-defined]
         )
         if engine_name == name:
             options = template_config.setdefault("OPTIONS", {})
-            loaders = options.setdefault("loaders", [])
+            loaders = options.setdefault("loaders", [])  # type: ignore[attr-defined]
 
             # find the inner-most loaders, which is an iterable of only strings
             while not all(isinstance(loader, str) for loader in loaders):
@@ -29,7 +29,7 @@ def wrap_loaders(name):
             # if django-cotton's templatetag is in the builtins, we good
             builtins_already_configured = (
                 "django_cotton.templatetags.cotton"
-                in options.setdefault("builtins", [])
+                in options.setdefault("builtins", [])  # type: ignore[attr-defined]
             )
 
             # if aren't already configured, fallback to using django-cotton's wrapper
