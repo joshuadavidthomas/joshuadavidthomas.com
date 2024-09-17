@@ -1,0 +1,20 @@
+{% load heroicons %}
+
+{% for item in items %}
+  <a href={{ item.url }}{% if item.title == "Mastodon" %} rel="me"{% endif %} hx-boost="false">
+    <span class="sr-only">{{ item.title }}</span>
+    {% if item.title == "Mastodon" %}
+      <c-icon.mastodon class="size-4 xs:size-6 hover:text-[#6364FF]" />
+    {% elif item.title == "Bluesky" %}
+      <c-icon.bluesky class="size-4 xs:size-6 hover:text-[#0285FF]" />
+    {% elif item.title == "GitHub" %}
+      <c-icon.github class="size-4 xs:size-6 hover:text-[#6e5494]" />
+    {% elif item.title == "LinkedIn" %}
+      <c-icon.linkedin class="size-4 xs:size-6 hover:text-[#0077b5]" />
+    {% elif item.title == "RSS" %}
+      <c-icon.rss class="size-4 xs:size-6 hover:text-[#FFA500]" />
+    {% else %}
+      {% heroicon_outline item.icon class="hover:text-gray-800 size-4 xs:size-6 dark:hover:text-gray-300 hover:drop-shadow" %}
+    {% endif %}
+  </a>
+{% endfor %}
