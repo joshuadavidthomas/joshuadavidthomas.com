@@ -96,7 +96,7 @@ blank_line_after_tag = "load,extends,endblock,endpartialdef"
 blank_line_before_tag = "block,partialdef"
 custom_blocks = "partialdef"
 custom_html = "c-\\w+"
-ignore = "H031"  # Don't require `meta` tag keywords
+ignore = "H030,H031"  # Don't require `meta` tag description or keywords
 indent = 2
 profile = "django"
 

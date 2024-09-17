@@ -25,3 +25,8 @@ def qrcode(request: HttpRequest, slug: str) -> FileResponse:
     talk = get_object_or_404(Talk, slug=slug)
     buffer = talk.make_qrcode(request)
     return FileResponse(buffer, content_type="image/svg+xml")
+
+
+def talk_form(request: HttpRequest, slug: str) -> HttpResponse:
+    form = modelform_factory(Talk, fields=["title"])
+    return render(request, "talks/form.html", {"form": form()})

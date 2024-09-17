@@ -1,0 +1,8 @@
+{% extends "talks/dcus2024/base.html" %}
+
+{% block content %}
+  <h1>Form Submitted Successfully</h1>
+  <p>Date: {{ date }}</p>
+  <p>DateTime: {{ datetime }}</p>
+  <a href="{% url 'talks:dcus2024:date' %}">Submit another form</a>
+{% endblock content %}

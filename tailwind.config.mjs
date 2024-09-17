@@ -1,4 +1,3 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
 const defaultColors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
@@ -39,9 +38,11 @@ const getTemplateFiles = () => {
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./core/markdown.py", "./templates/**/*.svg"].concat(
-    getTemplateFiles(),
-  ),
+  content: [
+    "./core/markdown.py",
+    "./content/**/*.md",
+    "./templates/**/*.svg",
+  ].concat(getTemplateFiles()),
   theme: {
     extend: {
       colors: {
@@ -56,6 +57,38 @@ export default {
         brico: ["BricolageGrotesque", ...defaultTheme.fontFamily.sans],
         mono: ["MonoLisa", ...defaultTheme.fontFamily.mono],
         sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
+      },
+      fontSize: {
+        "10xl": ["10rem", { lineHeight: "1" }],
+        "11xl": ["12rem", { lineHeight: "1" }],
+      },
+      lineHeight: {
+        11: "2.75rem",
+        12: "3rem",
+        13: "3.25rem",
+        14: "3.5rem",
+        15: "3.75rem",
+        16: "4rem",
+        17: "4.25rem",
+        18: "4.5rem",
+        19: "4.75rem",
+        20: "5rem",
+        21: "5.25rem",
+        22: "5.5rem",
+        23: "5.75rem",
+        24: "6rem",
+        25: "6.25rem",
+        26: "6.5rem",
+        27: "6.75rem",
+        28: "7rem",
+        29: "7.25rem",
+        30: "7.5rem",
+        31: "7.75rem",
+        32: "8rem",
+      },
+      listStyleType: {
+        square: "square",
+        circle: "circle",
       },
       screens: {
         xs: "425px",

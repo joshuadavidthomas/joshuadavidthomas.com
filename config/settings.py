@@ -289,6 +289,8 @@ USE_TZ = True
 
 WSGI_APPLICATION = "config.wsgi.application"
 
+X_FRAME_OPTIONS = "SAMEORIGIN"
+
 # 2. Django Contrib Settings
 
 # django.contrib.auth
@@ -335,6 +337,9 @@ ANYMAIL = {
 # django-debug-toolbar
 DEBUG_TOOLBAR_CONFIG = {
     "ROOT_TAG_EXTRA_ATTRS": "hx-preserve",
+    "SHOW_TOOLBAR_CALLBACK": lambda request: not any(
+        p in request.path for p in ["/talks/dcus2024"]
+    ),
 }
 
 # django-tailwind-cli

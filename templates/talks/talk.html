@@ -1,5 +1,7 @@
+{# djlint: off H006,H013,H021 #}
 {% extends "base.html" %}
 
+{% load heroicons %}
 {% load static %}
 {% load talks %}
 
@@ -12,43 +14,103 @@
         href="{% static 'js/reveal_plugins/highlight/monokai.css' %}">
 {% endblock css %}
 
-{% block content %}
-  <article class="mt-8 h-[42rem] stretch-to-full">
+{% block body %}
+  <body class="w-full h-full debug-screens">
     <div class="reveal">
-      <div class="slides">
-        <section class="text-red-50 bg-red-600">
-          <h1>{{ talk.title }}</h1>
+      <div class="bg-gray-100 slides">
+        <section class="title red">
+          <h1 class="!w-11/12">{{ talk.title }}</h1>
+        </section>
+        <section class="title red *:gap-8">
+          <img src="{% static 'me.png' %}"
+               width="250"
+               height="250"
+               alt="A picture of Josh"
+               fetchpriority="high"
+               class="mx-auto rounded-full ring-4 ring-red-50 size-72 drop-shadow-md" />
+          <h2 class="!w-11/12">👋 Hi, my name is Josh</h2>
+          <aside class="notes">
+            Personal bio goes here.
+          </aside>
+        </section>
+        <section>
+          <img src="{% static "westervelt-logo.png" %}"
+               alt="The Westervelt Company Logo"
+               class="w-1/2">
+          <ul class="!list-none !space-y-8">
+            <li>
+              <a href="https://westervelt.com"
+                 class="flex items-center !font-semibold gap-4 !text-gray-900">
+                {% heroicon_outline "link" class="size-12" %}
+                https://westervelt.com
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/westerveltco"
+                 class="flex items-center !font-semibold gap-4 !text-gray-900">
+                <c-icon.github class="size-12" />
+                westerveltco
+              </a>
+            </li>
+          </ul>
         </section>
         <section data-markdown>
           <textarea data-template>
             {% render_content talk.content %}
           </textarea>
         </section>
-        <section data-markdown class="text-indigo-50 bg-indigo-600">
-          <textarea data-template>
-            <img src="{% url 'talks:qrcode' slug=talk.slug %}" class="h-full bg-white" />
-            ---
-            <span class="italic font-extralight">{{ talk.stinger }}</span>
-          </textarea>
+        <section class="conclusion indigo">
+          <img src="{% url 'talks:qrcode' slug=talk.slug %}" class="h-full bg-white" />
+        </section>
+        <section class="conclusion indigo" style="font-size: var(--font-size)">
+          <ul class="!list-none !space-y-8">
+            <li>
+              <a href="https://joshthomas.dev"
+                 class="flex items-center !font-semibold gap-4 !text-indigo-50">
+                {% heroicon_outline "link" class="size-12" %}
+                https://joshthomas.dev
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/joshuadavidthomas"
+                 class="flex items-center !font-semibold gap-4 !text-indigo-50">
+                <c-icon.github class="size-12" />
+                joshuadavidthomas
+              </a>
+            </li>
+            <li>
+              <a href="https://joshthomas.dev/@josh"
+                 class="flex items-center gap-4 !text-indigo-50 !font-semibold">
+                <c-icon.mastodon class="size-12" />
+                @josh@joshthomas.dev
+              </a>
+            </li>
+            <li>
+              <a href="https://bsky.app/profile/joshthomas.dev"
+                 class="flex items-center gap-4 !text-indigo-50 !font-semibold">
+                <c-icon.bluesky class="size-12" />
+                @joshthomas.dev
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="conclusion indigo" style="font-size: var(--font-size)">
+          <span class="italic font-extralight">{{ talk.stinger }}</span>
         </section>
       </div>
     </div>
-  </article>
-{% endblock content %}
-
-{% block javascript_foot %}
-  <script src="{% static 'js/reveal.js' %}"></script>
-  <script src="{% static 'js/reveal_plugins/highlight/highlight.js' %}"></script>
-  <script src="{% static 'js/reveal_plugins/markdown/markdown.js' %}"></script>
-  <script src="{% static 'js/reveal_plugins/notes/notes.js' %}"></script>
-  <script>
+    <script src="{% static 'js/reveal.js' %}"></script>
+    <script src="{% static 'js/reveal_plugins/highlight/highlight.js' %}"></script>
+    <script src="{% static 'js/reveal_plugins/markdown/markdown.js' %}"></script>
+    <script src="{% static 'js/reveal_plugins/notes/notes.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@2.3.0/plugin/mermaid/mermaid.js"></script>
+    <script>
 			Reveal.initialize({
         disableLayout: true,
         centered: true,
 				controls: false,
-        embedded: true,
         hash: true,
-        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMermaid ],
 				progress: false,
         transition: 'none',
         minScale: 0.2,
@@ -64,5 +126,6 @@
           section.appendChild(wrapper);
         });
       });
-  </script>
-{% endblock javascript_foot %}
+    </script>
+  </body>
+{% endblock body %}
