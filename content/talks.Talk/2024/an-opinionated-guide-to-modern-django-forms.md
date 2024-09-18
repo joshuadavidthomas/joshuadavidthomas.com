@@ -219,13 +219,27 @@ class ErrorList {
     <img src="{% static 'guinan-3.jpg' %}" alt="Guinan" class="w-full -scale-x-[1]" x-show="clickCount >= 20 && clickCount < 30"/>
     <p class="font-brico font-semibold">Guinan</p>
   </button>
-  <button type="button" class="flex flex-col items-center justify-center border-red-500 border-2 shadow-lg bg-red-500/10 hover:bg-red-500/75 rounded-md">
+  <button type="button" class="flex flex-col items-center justify-center border-red-500 border-2 shadow-lg bg-red-500/10 hover:bg-red-500/75 rounded-md" @click="Reveal.right()">
     <img src="{% static 'q-1.jpg' %}" alt="Q" class="w-full -scale-x-[1]" x-show="clickCount < 10"/>
     <img src="{% static 'q-2.jpg' %}" alt="Q" class="w-full" x-show="clickCount >= 10 && clickCount < 20"/>
     <img src="{% static 'q-3.jpg' %}" alt="Q" class="w-full" x-show="clickCount >= 20 && clickCount < 30"/>
     <p class="font-brico font-semibold">Q</p>
   </button>
-  <div class="absolute right-0 -bottom-8 text-xs font-medium">
+  <div class="fixed right-2 top-2 text-xs font-medium">
     Click count: <span x-text="clickCount"></span>
   </div>
+  <template x-if="clickCount > 1">
+    <div class="z-10 bg-gray-900/75 fixed inset-0 flex items-center justify-center">
+      <div class="uppercase fixed inset-0 z-10 flex items-center justify-center flex-col text-8xl font-medium">
+        <p>Captain Jean-Luc Picard</p>
+        <p>USS Enterprise</p>
+      </div>
+      <img src="{% static 'picard-ytmnd.jpg' %}" alt="Captain Jean Luc Picard of the USS Enterprise" class="h-full col-start-1" />
+      <audio src="{% static 'captain-jean-luc.wav' %}" loop autoplay></audio>
+    </div>
+  </template>
 </div>
+
+---
+
+<iframe src="/talks/dcus2024/password-reset/"></iframe>
