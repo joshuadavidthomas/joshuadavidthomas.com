@@ -108,6 +108,7 @@ INSTALLED_APPS = [
     "heroicons",
     "neapolitan",
     "simple_history",
+    "template_partials",
     # Django
     "django.contrib.auth",
     "django.contrib.contenttypes",

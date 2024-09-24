@@ -10,12 +10,11 @@
   <link rel="stylesheet"
         href="{% static 'css/reveal_themes/white.css' %}"
         id="theme">
-  <link rel="stylesheet"
-        href="{% static 'js/reveal_plugins/highlight/monokai.css' %}">
+  <link rel="stylesheet" href="{% static 'css/a11y-light.css' %}">
 {% endblock css %}
 
 {% block body %}
-  <body class="w-full h-full debug-screens">
+  <body class="w-full h-full">
     <div class="reveal">
       <div class="bg-gray-100 slides">
         <section class="title red">
@@ -59,8 +58,14 @@
             {% render_content talk.content %}
           </textarea>
         </section>
-        <section class="conclusion indigo">
-          <img src="{% url 'talks:qrcode' slug=talk.slug %}" class="h-full bg-white" />
+        <section class="conclusion indigo !py-24">
+          <img src="{% url 'talks:qrcode' slug=talk.slug %}"
+               class="h-full bg-white drop-shadow-lg drop-shadow-indigo-50" />
+          <a href="{{ talk.get_absolute_url }}"
+             class="flex items-center !font-semibold gap-4 !text-indigo-50 text-3xl mt-8">
+            {% heroicon_outline "link" class="size-12" %}
+            https://joshthomas.dev{{ talk.get_absolute_url }}
+          </a>
         </section>
         <section class="conclusion indigo" style="font-size: var(--font-size)">
           <ul class="!list-none !space-y-8">

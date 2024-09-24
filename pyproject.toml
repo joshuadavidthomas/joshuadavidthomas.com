@@ -224,5 +224,6 @@ dev-dependencies = [
   "pytest-randomly>=3.15.0",
   "pytest-xdist>=3.6.1",
   "ruff>=0.6.5",
-  "types-pygments>=2.18.0.20240506"
+  "types-pygments>=2.18.0.20240506",
+  "uv>=0.4.12"
 ]

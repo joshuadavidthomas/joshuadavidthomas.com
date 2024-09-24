@@ -23,18 +23,9 @@
       {% endblock css %}
 
       {% include "_fonts.html" %}
-      <script src="https://unpkg.com/htmx.org@2.0.2/dist/htmx.min.js"
-              integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ"
-              crossorigin="anonymous"
-              defer></script>
-      <script src="https://unpkg.com/htmx-ext-head-support@2.0.2/head-support.js"
-              integrity="sha384-alEpTwaoXBHw9xh1d3fDZ4lNnOqQYkcIaRQTSQXgSZnAhcnj1H4F27lOZ1Eci1Sp"
-              crossorigin="anonymous"
-              defer></script>
-      <script src="https://unpkg.com/idiomorph@0.3.0/dist/idiomorph-ext.min.js"
-              integrity="sha384-01awMgY2Qxoo57dFZwehcB4wqi9TunC6fiF9hpPaDsLu+ayOG+WvoatvgPWquZh8"
-              crossorigin="anonymous"
-              defer></script>
+      <script src="{% static 'js/htmx.2.0.2.min.js' %}" defer></script>
+      <script src="{% static 'js/htmx-ext.head-support.2.0.2.js' %}" defer></script>
+      <script src="{% static 'js/htmx-ext.morphdom-swap.2.0.0.js' %}" defer></script>
       {% django_htmx_script %}
       <script>
       document.addEventListener("htmx:afterSettle", (event) => {
@@ -43,10 +34,7 @@
         }
       });
       </script>
-      <script src="https://unpkg.com/alpinejs@3.14.1/dist/cdn.min.js"
-              integrity="sha384-l8f0VcPi/M1iHPv8egOnY/15TDwqgbOR1anMIJWvU6nLRgZVLTLSaNqi/TOoT5Fh"
-              crossorigin="anonymous"
-              defer></script>
+      <script src="{% static 'js/alpinejs.3.14.1.min.js' %}" defer></script>
 
       {% block javascript_head %}
       {% endblock javascript_head %}
@@ -58,29 +46,25 @@
   {% endblock head %}
 
   {% block body %}
-    <body hx-ext="head-support">
+    <body class="flex min-h-screen" hx-ext="head-support">
 
       {% block body_start %}
       {% endblock body_start %}
 
-      <div class="px-2.5 min-h-full lg:px-0">
+      {% block main %}
+        <main class="flex-1 @container/main">
 
-        {% block main %}
-          <main class="@container/main">
+          {% block content_start %}
+          {% endblock content_start %}
 
-            {% block content_start %}
-            {% endblock content_start %}
+          {% block content %}
+          {% endblock content %}
 
-            {% block content %}
-            {% endblock content %}
+          {% block content_end %}
+          {% endblock content_end %}
 
-            {% block content_end %}
-            {% endblock content_end %}
-
-          </main>
-        {% endblock main %}
-
-      </div>
+        </main>
+      {% endblock main %}
 
       {% block javascript_foot %}
       {% endblock javascript_foot %}
