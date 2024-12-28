@@ -61,9 +61,9 @@ dependencies = [
   "whitenoise>=6.7.0",
   "yamdl>=1.0.0"
 ]
+dynamic = ["version"]
 name = "joshthomasdev"
 requires-python = ">=3.12,<3.13"
-dynamic = ["version"]
 
 [tool.bumpver]
 commit = true
