@@ -62,8 +62,8 @@ dependencies = [
   "yamdl>=1.0.0"
 ]
 name = "joshthomasdev"
-requires-python = ">=3.12"
-version = "2024.11.1"
+requires-python = ">=3.12,<3.13"
+dynamic = ["version"]
 
 [tool.bumpver]
 commit = true
@@ -106,6 +106,9 @@ profile = "django"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/joshthomasdev"]
+
+[tool.hatch.version]
+path = "src/joshthomasdev/__init__.py"
 
 [tool.mypy]
 check_untyped_defs = true
