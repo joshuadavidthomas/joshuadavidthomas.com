@@ -107,8 +107,8 @@ EOT
 
 FROM py-deps AS static
 
-COPY --from=node-final --link /app/static/dist /app/static/dist
-COPY --from=node-final --link /app/package*.json /app/
+COPY --from=node-deps --link /app/static/dist /app/static/dist
+COPY --from=node-deps --link /app/package*.json /app/
 COPY --link . /app/
 RUN uv run manage.py tailwind --skip-checks build \
   && uv run manage.py collectstatic --noinput --clear --skip-checks --no-default-ignore
