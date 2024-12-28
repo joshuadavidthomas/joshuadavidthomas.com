@@ -9,16 +9,13 @@ FROM python:${PYTHON_VERSION}-slim AS base
 
 SHELL ["/bin/sh", "-exc"]
 ARG NODE_VERSION
-
 ENV DEBIAN_FRONTEND=noninteractive \
   UV_LINK_MODE=copy \
   UV_COMPILE_BYTECODE=1 \
   UV_PYTHON_DOWNLOADS=never \
   UV_PYTHON=python${PYTHON_VERSION} \
   UV_PROJECT_ENVIRONMENT=/app
-
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
-
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   --mount=type=cache,target=/var/lib/apt,sharing=locked \
   <<EOT
@@ -45,7 +42,6 @@ EOT
 
 FROM base AS python-deps
 
-# Install dependencies without the application
 COPY pyproject.toml uv.lock /_lock/
 RUN --mount=type=cache,target=/root/.cache <<EOT
 cd /_lock
@@ -55,7 +51,6 @@ uv sync \
     --no-install-project
 EOT
 
-# Install the application without dependencies
 COPY . /src
 RUN --mount=type=cache,target=/root/.cache \
   uv pip install \
@@ -116,12 +111,9 @@ SHELL ["/bin/sh", "-exc"]
 ARG DJANGO_PORT
 ARG UID
 ARG GID
-
 ENV PATH=/app/bin:$PATH \
   PYTHONPATH=/app \
   PYTHONUNBUFFERED=1
-
-# Install only runtime dependencies
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   --mount=type=cache,target=/var/lib/apt,sharing=locked \
   <<EOT
@@ -141,16 +133,13 @@ mkdir -p /app
 chown ${UID}:${GID} /app
 EOT
 
-# Copy only what's needed in the correct order
 COPY --from=python-deps --chown=${UID}:${GID} /app /app
 COPY --from=static --chown=${UID}:${GID} /src/staticfiles /app/staticfiles
 COPY --chown=${UID}:${GID} . /app/
 COPY --from=flyio/litefs:0.5 /usr/local/bin/litefs /usr/local/bin/litefs
-
 USER django
 WORKDIR /app
 
-# Optional: Run smoke tests
 RUN <<EOT
 python -V
 python -Im site
