@@ -61,9 +61,9 @@ dependencies = [
   "whitenoise>=6.7.0",
   "yamdl>=1.0.0"
 ]
-dynamic = ["version"]
 name = "joshthomasdev"
 requires-python = ">=3.12,<3.13"
+version = "2024.12.6"
 
 [tool.bumpver]
 commit = true
@@ -74,7 +74,10 @@ tag = true
 version_pattern = "YYYY.MM.INC1"
 
 [tool.bumpver.file_patterns]
-"src/joshthomasdev/__init__.py" = ['__version__ = "{version}"']
+"pyproject.toml" = [
+  'version = "{version}"',
+  'current_version = "{version}"'
+]
 "tests/test_version.py" = ['assert __version__ == "{version}"']
 
 [tool.coverage.report]
@@ -106,9 +109,6 @@ profile = "django"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/joshthomasdev"]
-
-[tool.hatch.version]
-path = "src/joshthomasdev/__init__.py"
 
 [tool.mypy]
 check_untyped_defs = true

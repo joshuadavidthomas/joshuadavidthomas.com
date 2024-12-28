@@ -2,7 +2,7 @@ x-app: &default-app
   build:
     context: .
     dockerfile: Dockerfile
-    target: py-dev
+    target: python-dev
   env_file:
     - path: .env
       required: false
