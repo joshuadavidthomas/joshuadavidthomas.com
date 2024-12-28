@@ -1,13 +1,9 @@
 *
 
-!blog/
-!config/
 !content/
-!core/
-!flyio/
 !static/
 !templates/
-!users/
+!src/
 !litefs.yml
 !manage.py
 !package*.json

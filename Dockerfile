@@ -1,117 +1,113 @@
-# syntax=docker/dockerfile:1
-ARG DJANGO_PORT=8000
+# syntax=docker/dockerfile:1.9
 ARG PYTHON_VERSION=3.12
 ARG NODE_VERSION=20
 ARG UID=1000
 ARG GID=1000
 
-FROM python:${PYTHON_VERSION}-slim as base
+
+FROM python:${PYTHON_VERSION}-slim AS base
 
 SHELL ["/bin/sh", "-exc"]
 ARG NODE_VERSION
-ARG UID
-ARG GID
-ENV DEBIAN_FRONTEND noninteractive
-ENV DEBUG False
-ENV PYTHONPATH /app
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-ENV PIP_DISABLE_PIP_VERSION_CHECK 1
-ENV UV_LINK_MODE copy
-ENV UV_COMPILE_BYTECODE 1
-ENV UV_PYTHON_DOWNLOADS never
-ENV UV_PYTHON python${PYTHON_VERSION}
-ENV UV_PROJECT_ENVIRONMENT /app
+
+ENV DEBIAN_FRONTEND=noninteractive \
+  UV_LINK_MODE=copy \
+  UV_COMPILE_BYTECODE=1 \
+  UV_PYTHON_DOWNLOADS=never \
+  UV_PYTHON=python${PYTHON_VERSION} \
+  UV_PROJECT_ENVIRONMENT=/app
+
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   --mount=type=cache,target=/var/lib/apt,sharing=locked \
-  apt-get update -qy \
-  && apt-get install -qyy \
-  -o APT::Install-Recommends=false \
-  -o APT::Install-Suggests=false \
-  build-essential \
-  curl \
-  git \
-  jq \
-  && curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
-  && apt-get update -qy \
-  && apt-get install -qyy \
-  -o APT::Install-Recommends=false \
-  -o APT::Install-Suggests=false \
-  nodejs \
-  && npm install -g npm@latest \
-  && apt-get clean -y \
-  && rm -rf /var/lib/apt/lists/*
+  <<EOT
+apt-get update -qy
+apt-get install -qyy \
+    -o APT::Install-Recommends=false \
+    -o APT::Install-Suggests=false \
+    build-essential \
+    ca-certificates \
+    curl \
+    git \
+    jq
+curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash -
+apt-get update -qy
+apt-get install -qyy \
+    -o APT::Install-Recommends=false \
+    -o APT::Install-Suggests=false \
+    nodejs
+npm install -g npm@latest
+apt-get clean
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+EOT
 
 
-FROM base AS py-deps
+FROM base AS python-deps
 
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
+# Install dependencies without the application
 COPY pyproject.toml uv.lock /_lock/
 RUN --mount=type=cache,target=/root/.cache <<EOT
-cd /_lock || exit
+cd /_lock
 uv sync \
     --locked \
     --no-dev \
     --no-install-project
 EOT
 
-
-FROM py-deps AS py-dev
-
+# Install the application without dependencies
 COPY . /src
+RUN --mount=type=cache,target=/root/.cache \
+  uv pip install \
+  --python=$UV_PROJECT_ENVIRONMENT \
+  --no-deps \
+  /src
+
+
+FROM python-deps AS python-dev
+
+WORKDIR /src
 RUN --mount=type=cache,target=/root/.cache <<EOT
-cd /src || exit 1
 uv sync \
     --locked \
     --dev
 EOT
 
 
-FROM py-deps AS py-prod
-
-COPY . /src
-RUN --mount=type=cache,target=/root/.cache <<EOT
-cd /src || exit
-uv sync \
-  --locked \
-  --no-dev \
-  --no-editable
-EOT
-
-
-FROM py-deps as node-deps
+FROM python-deps AS node-deps
 
 ARG UID
 ARG GID
 ARG BUILDARCH
 ARG BUILDVARIANT
-COPY . /src
+
+WORKDIR /src
 RUN --mount=type=cache,target=/root/.npm <<EOT
-cd /src || exit
 npm install
+
 case ${BUILDARCH} in
-  arm64)
-    case ${BUILDVARIANT} in
-      v7) TAILWINDCSS_ARCH=armv7 ;;
-      *)  TAILWINDCSS_ARCH=arm64 ;;
-    esac ;;
-  *) TAILWINDCSS_ARCH=x64 ;;
+    arm64)
+        case ${BUILDVARIANT} in
+            v7) TAILWINDCSS_ARCH=armv7 ;;
+            *)  TAILWINDCSS_ARCH=arm64 ;;
+        esac ;;
+    *) TAILWINDCSS_ARCH=x64 ;;
 esac
 TAILWINDCSS_VERSION=$(jq -r '.dependencies.tailwindcss // .devDependencies.tailwindcss' package.json | sed 's/^[^0-9]*//')
-curl -L https://github.com/tailwindlabs/tailwindcss/releases/download/v${TAILWINDCSS_VERSION}/tailwindcss-linux-${TAILWINDCSS_ARCH} -o /usr/local/bin/tailwindcss-linux-${TAILWINDCSS_ARCH}-${TAILWINDCSS_VERSION}
-chmod 755 /usr/local/bin/tailwindcss-linux-${TAILWINDCSS_ARCH}-${TAILWINDCSS_VERSION}
-chown ${UID}:${GID} /usr/local/bin/tailwindcss-linux-${TAILWINDCSS_ARCH}-${TAILWINDCSS_VERSION}
+curl -fsSL "https://github.com/tailwindlabs/tailwindcss/releases/download/v${TAILWINDCSS_VERSION}/tailwindcss-linux-${TAILWINDCSS_ARCH}" \
+    -o "/usr/local/bin/tailwindcss-linux-${TAILWINDCSS_ARCH}-${TAILWINDCSS_VERSION}"
+chmod 755 "/usr/local/bin/tailwindcss-linux-${TAILWINDCSS_ARCH}-${TAILWINDCSS_VERSION}"
+chown ${UID}:${GID} "/usr/local/bin/tailwindcss-linux-${TAILWINDCSS_ARCH}-${TAILWINDCSS_VERSION}"
 EOT
 
 
-FROM py-deps AS static
+FROM node-deps AS static
 
-COPY --from=node-deps --link /app/static/dist /app/static/dist
-COPY --from=node-deps --link /app/package*.json /app/
-COPY --link . /app/
-RUN uv run manage.py tailwind --skip-checks build \
-  && uv run manage.py collectstatic --noinput --clear --skip-checks --no-default-ignore
+WORKDIR /src
+RUN <<EOT
+uv run manage.py tailwind --skip-checks build
+uv run manage.py collectstatic --noinput --clear --skip-checks --no-default-ignore
+EOT
 
 
 FROM python:${PYTHON_VERSION}-slim AS final
@@ -120,33 +116,46 @@ SHELL ["/bin/sh", "-exc"]
 ARG DJANGO_PORT
 ARG UID
 ARG GID
-ENV PATH=/app/bin:$PATH
-ENV PYTHONPATH /app
-ENV PYTHONUNBUFFERED 1
 
+ENV PATH=/app/bin:$PATH \
+  PYTHONPATH=/app \
+  PYTHONUNBUFFERED=1
+
+# Install only runtime dependencies
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   --mount=type=cache,target=/var/lib/apt,sharing=locked \
-  apt-get update -qy && \
-  apt-get install -qyy \
-  -o APT::Install-Recommends=false \
-  -o APT::Install-Suggests=false \
-  # litefs
-  fuse3 \
-  gosu \
-  sqlite3 \
-  && apt-get clean -y \
-  && rm -rf /var/lib/apt/lists/* \
-  && groupadd -g "${GID}" --system django \
-  && useradd -u "${UID}" -g "${GID}" --home /app --system django \
-  && mkdir -p /app \
-  && chown ${UID}:${GID} /app
+  <<EOT
+apt-get update -qy
+apt-get install -qyy \
+    -o APT::Install-Recommends=false \
+    -o APT::Install-Suggests=false \
+    fuse3 \
+    gosu \
+    sqlite3
+apt-get clean
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY --from=py-deps --chown=${UID}:${GID} --link /app /app
-COPY --from=static --chown=${UID}:${GID} --link /app/staticfiles /app/staticfiles
-COPY --chown=${UID}:${GID} --link . /app/
+groupadd -g "${GID}" --system django
+useradd -l -u "${UID}" -g "${GID}" -d /app --system django
+mkdir -p /app
+chown ${UID}:${GID} /app
+EOT
+
+# Copy only what's needed in the correct order
+COPY --from=python-deps --chown=${UID}:${GID} /app /app
+COPY --from=static --chown=${UID}:${GID} /src/staticfiles /app/staticfiles
+COPY --chown=${UID}:${GID} . /app/
 COPY --from=flyio/litefs:0.5 /usr/local/bin/litefs /usr/local/bin/litefs
 
 USER django
 WORKDIR /app
+
+# Optional: Run smoke tests
+RUN <<EOT
+python -V
+python -Im site
+EOT
+
+STOPSIGNAL SIGINT
 EXPOSE ${DJANGO_PORT}
-ENTRYPOINT litefs mount
+ENTRYPOINT ["litefs", "mount"]
