@@ -10,7 +10,7 @@ from django.utils import timezone
 if TYPE_CHECKING:
     from django.contrib.auth.models import AnonymousUser
 
-    from users.models import User
+    from joshthomasdev.users.models import User
 
     from .models import Entry
 

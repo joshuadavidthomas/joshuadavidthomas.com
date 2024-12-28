@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from config import __version__
+from joshthomasdev import __version__
 
 
 def test_version():
