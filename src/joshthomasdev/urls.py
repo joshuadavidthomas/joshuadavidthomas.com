@@ -12,7 +12,7 @@ urlpatterns = [
     path(".well-known/security.txt", core_views.security_txt),
     path("robots.txt", core_views.robots_txt),
     path("admin/", admin.site.urls),
-    path("blog/", include("blog.urls")),
+    path("blog/", include("joshthomasdev.blog.urls")),
     path("health/", MainView.as_view()),
     path("404/", core_views.custom_error_404, name="404"),
     path("500/", core_views.custom_error_500, name="500"),

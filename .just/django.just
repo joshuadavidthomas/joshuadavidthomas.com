@@ -10,7 +10,7 @@ fmt:
 
 # Run a Django management command
 manage *COMMAND:
-    @just docker command python -m manage {{ COMMAND }}
+    @just docker command uv run manage.py {{ COMMAND }}
 
 alias mm := makemigrations
 

@@ -7,7 +7,6 @@ x-app: &default-app
     - path: .env
       required: false
   init: true
-  user: "${UID:-1000}:${GID:-1000}"
   volumes:
     - .:/src:cached
   working_dir: /src

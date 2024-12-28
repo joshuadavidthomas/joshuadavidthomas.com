@@ -166,7 +166,7 @@ LOGGING = {
 # https://docs.djangoproject.com/en/dev/ref/middleware/#middleware-ordering
 MIDDLEWARE = [
     # should be first
-    "flyio.middleware.ReplayMiddleware",
+    "joshthomasdev.flyio.middleware.ReplayMiddleware",
     "joshthomasdev.core.redirects.middleware.redirect_middleware",
     "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",
@@ -183,7 +183,7 @@ MIDDLEWARE = [
     "django_flyio.middleware.FlyResponseMiddleware",
     # should be last
     "django.middleware.cache.FetchFromCacheMiddleware",
-    "flyio.middleware.region_selection_middleware",
+    "joshthomasdev.flyio.middleware.region_selection_middleware",
 ]
 if DEBUG:
     MIDDLEWARE.remove("django.middleware.cache.UpdateCacheMiddleware")
@@ -198,7 +198,7 @@ if DEBUG:
         "django_browser_reload.middleware.BrowserReloadMiddleware",
     )
 
-ROOT_URLCONF = "config.urls"
+ROOT_URLCONF = "joshthomasdev.urls"
 
 SECRET_KEY = env(
     "SECRET_KEY",
@@ -278,7 +278,7 @@ USE_I18N = False
 
 USE_TZ = True
 
-WSGI_APPLICATION = "config.wsgi.application"
+WSGI_APPLICATION = "joshthomasdev.wsgi.application"
 
 # 2. Django Contrib Settings
 

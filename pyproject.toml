@@ -93,7 +93,7 @@ omit = ["*/migrations/*"]
 source = ["joshthomasdev"]
 
 [tool.django-stubs]
-django_settings_module = "config.settings"
+django_settings_module = "joshthomasdev.settings"
 
 [tool.djlint]
 blank_line_after_tag = "load,extends,endblock,endpartialdef"
