@@ -24,8 +24,8 @@ default:
 # Install and update all dependencies
 bootstrap:
     @just docker build
-    uv python install
-    uv sync --locked
+    @just py install
+    @just node install
 
 # Clean up local development environment
 clean:

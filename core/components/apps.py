@@ -38,7 +38,7 @@ def wrap_loaders(name):
 
 
 class ComponentsConfig(AppConfig):
-    name = "joshthomasdev.core.components"
+    name = "core.components"
     label = "core_components"
     verbose_name = "Components"
 

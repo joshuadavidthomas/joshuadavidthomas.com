@@ -34,7 +34,7 @@ proxy:
 exec:
   - cmd: "python manage.py migrate"
     if-candidate: true
-  - cmd: "python -m gunicorn joshthomasdev.wsgi:application --config python:joshthomasdev.gunicorn"
+  - cmd: "python -m gunicorn config.wsgi:application --config python:config.gunicorn"
 
 # The lease section specifies how the cluster will be managed. We're using the
 # "consul" lease type so that our application can dynamically change the primary.

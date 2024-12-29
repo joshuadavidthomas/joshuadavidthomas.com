@@ -1,9 +1,13 @@
 *
 
+!blog/
+!config/
 !content/
+!core/
+!flyio/
 !static/
 !templates/
-!src/
+!users/
 !litefs.yml
 !manage.py
 !package*.json
@@ -12,7 +16,6 @@
 !redirects.json
 !requirements*.txt
 !tailwind.config.mjs
-!uv.lock
 
 **/*~
 **/*.log
