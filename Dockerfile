@@ -134,7 +134,6 @@ EOT
 
 COPY --from=python-deps --chown=${UID}:${GID} /app /app
 COPY --from=static --chown=${UID}:${GID} /src/staticfiles /app/staticfiles
-COPY --chown=${UID}:${GID} . /app/
 COPY --from=flyio/litefs:0.5 /usr/local/bin/litefs /usr/local/bin/litefs
 USER django
 WORKDIR /app
