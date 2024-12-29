@@ -7,6 +7,9 @@ app = "joshthomasdev"
 console_command = "/app/manage.py shell_plus"
 primary_region = "atl"
 
+[build.args]
+DJANGO_PORT = "8000"
+
 [deploy]
 strategy = "rolling"
 
