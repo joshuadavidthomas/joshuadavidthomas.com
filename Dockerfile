@@ -108,7 +108,6 @@ EOT
 FROM python:${PYTHON_VERSION}-slim AS final
 
 SHELL ["/bin/sh", "-exc"]
-ARG DJANGO_PORT
 ARG UID
 ARG GID
 ENV PATH=/app/bin:$PATH \
@@ -146,5 +145,5 @@ python -Im site
 EOT
 
 STOPSIGNAL SIGINT
-EXPOSE ${DJANGO_PORT}
+EXPOSE 8000
 ENTRYPOINT ["litefs", "mount"]

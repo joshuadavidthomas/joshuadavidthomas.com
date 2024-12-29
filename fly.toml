@@ -7,16 +7,13 @@ app = "joshthomasdev"
 console_command = "/app/manage.py shell_plus"
 primary_region = "atl"
 
-[build.args]
-DJANGO_PORT = "8000"
-
 [deploy]
 strategy = "rolling"
 
 [env]
 ALLOWED_HOSTS = "joshthomasdev.fly.dev,joshthomas.dev"
 DEBUG = "False"
-DJANGO_PORT = "8000"
+PORT = "8000"
 SENTRY_DSN = "https://e237604f24df72180f8e7a4a39f9219d@o4505514140303360.ingest.sentry.io/4506202808320000"
 SENTRY_ENV = "production"
 
