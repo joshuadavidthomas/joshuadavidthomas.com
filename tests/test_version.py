@@ -4,4 +4,4 @@ from joshthomasdev import __version__
 
 
 def test_version():
-    assert __version__ == "2024.12.7"
+    assert __version__ == "2024.12.8"
