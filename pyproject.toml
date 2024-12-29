@@ -80,7 +80,7 @@ version_pattern = "YYYY.MM.INC1"
 ]
 "tests/test_version.py" = ['assert __version__ == "{version}"']
 "uv.lock" = [
-  '^\[\[package\]\]\nname = "joshthomasdev"\nversion = "{version}"'
+    '^name = "joshthomasdev"\nversion = "{version}"$'
 ]
 
 [tool.coverage.report]
