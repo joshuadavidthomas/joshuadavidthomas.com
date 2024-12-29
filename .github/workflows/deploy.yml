@@ -38,7 +38,16 @@ jobs:
           uv run --with bumpver bumpver update
           eval $(uv run --with bumpver bumpver show --env)
           echo "{current_version}=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+
+      - name: Regenerate uv.lock
+        run: |
           uv sync
+          if git diff --quiet uv.lock; then
+            echo "No changes to uv.lock"
+          else
+            git add uv.lock
+            git commit -m "Update uv.lock"
+          fi
 
       - name: Push Release Build to GitHub
         run: |
