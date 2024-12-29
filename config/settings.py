@@ -13,12 +13,12 @@ from environs import Env
 from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
 
-from joshthomasdev.core.redirects import Redirects
-from joshthomasdev.core.sentry import sentry_traces_sampler
+from core.redirects import Redirects
+from core.sentry import sentry_traces_sampler
 
 # 0. Setup
 
-BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
+BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 env = Env()
 env.read_env(Path(BASE_DIR, ".env").as_posix())
@@ -85,13 +85,13 @@ FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 
 INSTALLED_APPS = [
     # First Party
-    "joshthomasdev.blog",
-    "joshthomasdev.core",
-    "joshthomasdev.core.admin",
-    "joshthomasdev.core.admin.default",
-    "joshthomasdev.core.components",
-    "joshthomasdev.flyio",
-    "joshthomasdev.users",
+    "blog",
+    "core",
+    "core.admin",
+    "core.admin.default",
+    "core.components",
+    "flyio",
+    "users",
     # Third Party
     "django_extensions",
     "django_htmx",
@@ -155,9 +155,17 @@ LOGGING = {
             "handlers": ["stdout"],
             "level": env("DJANGO_LOG_LEVEL", default="INFO"),
         },
-        "joshthomasdev": {
+        "blog": {
             "handlers": ["stdout"],
-            "level": env("JOSHTHOMASDEV_LOG_LEVEL", default="INFO"),
+            "level": env("BLOG_LOG_LEVEL", default="INFO"),
+        },
+        "core": {
+            "handlers": ["stdout"],
+            "level": env("CORE_LOG_LEVEL", default="INFO"),
+        },
+        "users": {
+            "handlers": ["stdout"],
+            "level": env("USERS_LOG_LEVEL", default="INFO"),
         },
     },
 }
@@ -166,8 +174,8 @@ LOGGING = {
 # https://docs.djangoproject.com/en/dev/ref/middleware/#middleware-ordering
 MIDDLEWARE = [
     # should be first
-    "joshthomasdev.flyio.middleware.ReplayMiddleware",
-    "joshthomasdev.core.redirects.middleware.redirect_middleware",
+    "flyio.middleware.ReplayMiddleware",
+    "core.redirects.middleware.redirect_middleware",
     "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -183,7 +191,7 @@ MIDDLEWARE = [
     "django_flyio.middleware.FlyResponseMiddleware",
     # should be last
     "django.middleware.cache.FetchFromCacheMiddleware",
-    "joshthomasdev.flyio.middleware.region_selection_middleware",
+    "flyio.middleware.region_selection_middleware",
 ]
 if DEBUG:
     MIDDLEWARE.remove("django.middleware.cache.UpdateCacheMiddleware")
@@ -198,7 +206,7 @@ if DEBUG:
         "django_browser_reload.middleware.BrowserReloadMiddleware",
     )
 
-ROOT_URLCONF = "joshthomasdev.urls"
+ROOT_URLCONF = "config.urls"
 
 SECRET_KEY = env(
     "SECRET_KEY",
@@ -256,7 +264,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "joshthomasdev.core.context_processors.metadata",
+                "core.context_processors.metadata",
             ],
             "debug": DEBUG,
             "loaders": [
@@ -278,7 +286,7 @@ USE_I18N = False
 
 USE_TZ = True
 
-WSGI_APPLICATION = "joshthomasdev.wsgi.application"
+WSGI_APPLICATION = "config.wsgi.application"
 
 # 2. Django Contrib Settings
 

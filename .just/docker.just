@@ -16,7 +16,7 @@ build *ARGS:
 # Build production stack using docker compose
 [no-cd]
 build-prod:
-    docker build --target final .
+    docker compose -f compose.yml -f compose.prod.yml build
 
 # Stop and remove all containers, networks, images, and volumes
 [no-cd]

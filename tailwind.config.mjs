@@ -38,10 +38,9 @@ const getTemplateFiles = () => {
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./src/joshthomasdev/core/markdown.py",
-    "./templates/**/*.svg",
-  ].concat(getTemplateFiles()),
+  content: ["./core/markdown.py", "./templates/**/*.svg"].concat(
+    getTemplateFiles(),
+  ),
   theme: {
     extend: {
       colors: {
