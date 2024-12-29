@@ -730,7 +730,7 @@ wheels = [
 
 [[package]]
 name = "joshthomasdev"
-version = "2024.12.11"
+version = "2024.12.12"
 source = { editable = "." }
 dependencies = [
     { name = "attrs" },
