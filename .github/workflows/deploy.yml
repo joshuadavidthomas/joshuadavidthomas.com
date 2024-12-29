@@ -38,6 +38,7 @@ jobs:
           bumpver update
           eval $(bumpver show --env)
           echo "{current_version}=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+          uv sync
 
       - name: Push Release Build to GitHub
         run: |
