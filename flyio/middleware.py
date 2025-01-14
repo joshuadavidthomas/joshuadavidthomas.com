@@ -39,7 +39,7 @@ def region_selection_middleware(get_response):
             response = HttpResponse(status=HTTPStatus.TEMPORARY_REDIRECT)
             replay_header = f"region={requested_region}"
             if response.has_header(FLY_REPLAY):
-                response[FLY_REPLAY] += f";{ replay_header }"
+                response[FLY_REPLAY] += f";{replay_header}"
             else:
                 response[FLY_REPLAY] = replay_header
 
